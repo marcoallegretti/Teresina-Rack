@@ -13,3 +13,7 @@ _autosave-*
 # OS
 .DS_Store
 Thumbs.db
+
+# Autorouter intermediates
+*.dsn
+*.ses
