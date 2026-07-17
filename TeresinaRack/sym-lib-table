@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "TeresinaRack")(type "KiCad")(uri "${KIPRJMOD}/TeresinaRack.kicad_sym")(options "")(descr "Teresina project symbols (AS4C16M32MSA SDRAM, IS25LP064A flash)"))
+)
