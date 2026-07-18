@@ -21,3 +21,9 @@ Thumbs.db
 # Logs
 logs/
 *.log
+
+# Internal working files & generated outputs (kept out of the repo)
+scratchpad/
+fab/
+*_drc_violations.json
+*_2d_view.svg
