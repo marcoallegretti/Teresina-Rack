@@ -1,5 +1,8 @@
 # Teresina-Rack
 
+**Version 0.1.0-alpha0** — design-validated (DRC/ERC/SPICE/DFM clean), **not yet fabricated or
+hardware-tested**. Treat everything below as pre-production until a first build is verified.
+
 An open, self-fabricatable clone of the [Electro-Smith Daisy Patch SM](https://electro-smith.com/products/patch-sm)
 — the Eurorack DSP submodule — built around the STM32H750 + 64 MB SDRAM, designed to run **stock
 [libDaisy](https://github.com/electro-smith/libDaisy) `DaisyPatchSM` firmware unmodified** and to drop

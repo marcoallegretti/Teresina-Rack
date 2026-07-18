@@ -43306,7 +43306,7 @@
 		(uuid "c1951da6-4f84-404d-b4c5-442752c8fb61")
 	)
 	(gr_text "2026-07"
-		(at 26.5 38.6 0)
+		(at 31.5 38.6 0)
 		(layer "F.SilkS")
 		(uuid "9519b2c6-2982-464a-be3e-3672c5b0ac4f")
 		(effects
@@ -43316,8 +43316,8 @@
 			)
 		)
 	)
-	(gr_text "TeresinaRack v1.0"
-		(at 14 38.6 0)
+	(gr_text "TeresinaRack 0.1.0-alpha0"
+		(at 16.5 38.6 0)
 		(layer "F.SilkS")
 		(uuid "ac9685fe-45cb-4e2e-83fa-1f9e0ba665f9")
 		(effects
