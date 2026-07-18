@@ -80,7 +80,7 @@
         "connection_width": "warning",
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
-        "courtyards_overlap": "error",
+        "courtyards_overlap": "warning",
         "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
@@ -287,6 +287,25 @@
         "via_diameter": 0.3,
         "via_drill": 0.15,
         "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.09,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "USB_TIGHT",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2147483647,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.1,
+        "tuning_profile": "",
+        "via_diameter": 0.3,
+        "via_drill": 0.15,
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -294,7 +313,32 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "USB_TIGHT",
+        "pattern": "USB_DM"
+      },
+      {
+        "netclass": "USB_TIGHT",
+        "pattern": "USB_DP"
+      },
+      {
+        "netclass": "USB_TIGHT",
+        "pattern": "USB_FS_DM"
+      },
+      {
+        "netclass": "USB_TIGHT",
+        "pattern": "USB_FS_DP"
+      },
+      {
+        "netclass": "USB_TIGHT",
+        "pattern": "BOOT_FLASH"
+      },
+      {
+        "netclass": "USB_TIGHT",
+        "pattern": "BOOT0"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {

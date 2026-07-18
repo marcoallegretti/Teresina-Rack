@@ -21848,7 +21848,7 @@
 		)
 		(uuid "56a08660-6ec3-4516-8d04-708019711668")
 	)
-	(label "USB_DM"
+	(label "USB_FS_DM"
 		(at 127.62 402.54 180)
 		(effects
 			(font
@@ -21858,7 +21858,7 @@
 		)
 		(uuid "acbdecc0-eb9d-4cab-8615-6c42a5caf5f7")
 	)
-	(label "USB_DP"
+	(label "USB_FS_DP"
 		(at 127.62 400.0 180)
 		(effects
 			(font
@@ -24060,7 +24060,7 @@
 		)
 		(uuid "6510139b-8e67-474f-b302-705bbaf0861e")
 	)
-	(label "USB_DM"
+	(label "USB_FS_DM"
 		(at 194.92 700.0 0)
 		(effects
 			(font
@@ -24080,7 +24080,7 @@
 		)
 		(uuid "47190944-bd43-4a07-9012-e1c52bb461bd")
 	)
-	(label "USB_DP"
+	(label "USB_FS_DP"
 		(at 194.92 702.54 0)
 		(effects
 			(font
@@ -25080,7 +25080,9 @@
 				)
 			)
 		)
-	)
+		(property "LCSC" "C25128" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "0402WGF510KTCE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 	(symbol
 		(lib_id "Device:C")
 		(at 250 840 0)
@@ -34355,7 +34357,269 @@
 		)
 		(uuid "b14e44e7-c01b-4779-9a4a-77c31cf149ed")
 	)
-	(sheet_instances
+		(label "USB_FS_DM"
+		(at 185.56 71.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "075bd4f1-d3c6-4609-9395-28be99dbcc16")
+	)
+	(label "USB_FS_DP"
+		(at 185.56 73.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "40876c20-52cc-4448-9fd1-bb405efc1f6a")
+	)
+	(label "BOOT_FLASH"
+		(at 114.44 147.46 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9ec1100a-046e-46ba-affd-ac8185ce43f3")
+	)
+	(label "BOOT_FLASH"
+		(at 500 461.19 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b11acb84-1280-49e0-930b-faef2c5c9bf9")
+	)
+	(label "BOOT0"
+		(at 500 468.81 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d48ec933-9655-4460-ab60-3e918e1085a5")
+	)
+	(label "BOOT0"
+		(at 520 461.19 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dac040de-eef9-4d8c-ad05-421568e1d10c")
+	)
+	(label "GND"
+		(at 520 468.81 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "46b0861c-0e9e-4a2a-bcd5-235258c67f16")
+	)
+(symbol
+		(lib_id "Device:R")
+		(at 500 465 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "99c67369-e08c-4cdd-be8a-e9e753185298")
+		(property "Reference" "R201"
+			(at 480.06 462.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4K7"
+			(at 480.06 467.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 478.222 465 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 480 465 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 480 465 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0402WGF4701TCE" (at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25900" (at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fb7c35fb-5e62-47e3-a5b6-c4b7c853cc65")
+		)
+		(pin "2"
+			(uuid "3a997d41-678b-4401-a63e-2b7418c1499c")
+		)
+		(instances
+			(project "TeresinaRack"
+				(path "/933fb46f-5218-4b28-95eb-39f983e7bb80"
+					(reference "R201")
+					(unit 1)
+				)
+			)
+		)
+	)
+(symbol
+		(lib_id "Device:C")
+		(at 520 465 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8eb842ca-ce85-4bad-9fd1-9144dce285a6")
+		(property "Reference" "C201"
+			(at 459.74 436.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2uF"
+			(at 459.74 441.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 460.965 436.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 460 440 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 460 440 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10A225KO8NNNC" (at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23630" (at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f3977316-5391-4252-ac6b-3b1162a02e9a")
+		)
+		(pin "2"
+			(uuid "3939e01a-05d7-4b6f-8753-e66ead740500")
+		)
+		(instances
+			(project "TeresinaRack"
+				(path "/933fb46f-5218-4b28-95eb-39f983e7bb80"
+					(reference "C201")
+					(unit 1)
+				)
+			)
+		)
+	)
+(sheet_instances
 		(path "/"
 			(page "1")
 		)
@@ -40232,7 +40496,7 @@
 				)
 			)
 		)
-		(property "Value" "100K"
+		(property "Value" "120K"
 			(at 1342.16 535.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40275,7 +40539,7 @@
 				)
 			)
 		)
-		(property "MPN" "0402WGF1003TCE" (at 0 0 0)
+		(property "MPN" "0402WGF1203TCE" (at 0 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40283,7 +40547,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25741" (at 0 0 0)
+		(property "LCSC" "C25750" (at 0 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40327,7 +40591,7 @@
 				)
 			)
 		)
-		(property "Value" "51K5"
+		(property "Value" "62K"
 			(at 1387.16 535.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40384,7 +40648,9 @@
 				)
 			)
 		)
-	)
+		(property "LCSC" "C2909375" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "FRC0402F6202TS" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 	(symbol
 		(lib_id "Device:R")
 		(at 1430 536 0)
@@ -40691,7 +40957,7 @@
 				)
 			)
 		)
-		(property "Value" "100K"
+		(property "Value" "120K"
 			(at 1567.16 535.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40734,7 +41000,7 @@
 				)
 			)
 		)
-		(property "MPN" "0402WGF1003TCE" (at 0 0 0)
+		(property "MPN" "0402WGF1203TCE" (at 0 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40742,7 +41008,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25741" (at 0 0 0)
+		(property "LCSC" "C25750" (at 0 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40786,7 +41052,7 @@
 				)
 			)
 		)
-		(property "Value" "51K5"
+		(property "Value" "62K"
 			(at 1612.16 535.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40843,7 +41109,9 @@
 				)
 			)
 		)
-	)
+		(property "LCSC" "C2909375" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "FRC0402F6202TS" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 	(symbol
 		(lib_id "Device:R")
 		(at 1340 552 0)

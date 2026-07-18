@@ -1,0 +1,7 @@
+(version 1)
+
+# USB/boot nets thread the BGA fanout fields; 0.09 mm spacing is within JLCPCB
+# 10-layer capability (3.5 mil) and equals the board's min_clearance rule.
+(rule tight_usb_boot
+  (condition "A.NetClass == 'USB_TIGHT' || B.NetClass == 'USB_TIGHT'")
+  (constraint clearance (min 0.09mm)))
