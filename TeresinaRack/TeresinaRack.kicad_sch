@@ -5499,7 +5499,7 @@
 							)
 						)
 					)
-					(number "J7"
+					(number "J1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5517,7 +5517,7 @@
 							)
 						)
 					)
-					(number "J1"
+					(number "J2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5643,7 +5643,7 @@
 							)
 						)
 					)
-					(number "F7"
+					(number "J3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5769,7 +5769,7 @@
 							)
 						)
 					)
-					(number "J2"
+					(number "F7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5841,7 +5841,7 @@
 							)
 						)
 					)
-					(number "J3"
+					(number "J7"
 						(effects
 							(font
 								(size 1.27 1.27)

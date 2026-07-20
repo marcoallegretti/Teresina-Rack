@@ -22,7 +22,7 @@ into carriers such as [kivu12 / eurorack-blocks](https://github.com/ohmtech-rdi/
 
 | | |
 |---|---|
-| Outline | **68 × 40 mm**, 1.6 mm, 10-layer, castellated 40-pad edge connector |
+| Outline | **68 × 40 mm**, 1.6 mm, 12-layer, castellated 40-pad edge connector |
 | MCU | STM32H750IBK6 (UFBGA-176, 480 MHz Cortex-M7) |
 | RAM | AS4C16M32MSA — 64 MB SDRAM, 32-bit FMC bus |
 | Flash | IS25LP064A — 8 MB QSPI |
@@ -72,7 +72,7 @@ Known (accepted) deviations from the original: gate-out series resistors are 1K 
 
 ## Design choices
 
-**10 layers with two fully solid power planes.** The dual-BGA density (STM32 + SDRAM, 0.65 mm pitch,
+**12 layers with two fully solid power planes.** The dual-BGA density (STM32 + SDRAM, 0.65 mm pitch,
 via-in-pad fanout) cannot be routed on 8 layers *and* keep unbroken planes. Rather than fragment the
 ground plane (bad for an audio module), the board uses:
 
@@ -83,12 +83,13 @@ ground plane (bad for an audio module), the board uses:
 | In2–In5 | signal (FMC/SDRAM bus, QSPI, SDMMC, analog interconnect) |
 | **In6** | **+3V3 plane — 100 % solid, zero signal traces** |
 | In7, In8 | signal (sparse: FMC_A4, USB pairs, boot strap) |
+| In9, In10 | signal (SDRAM control/address reroute: SDCLK, SDCKE0, BA0, A2, A9) |
 | B.Cu | components, escapes, GND pour |
 
 Every signal has a continuous ground return path directly under it. 18 GND stitching vias tie the
 outer pours to the plane; dedicated return vias accompany the USB layer transitions.
 
-**Via-in-pad BGA fanout** (253 vias, 0.3 mm / 0.15 mm drill) — JLCPCB resin-plugs via-in-pad by
+**Via-in-pad BGA fanout** (821 vias, 0.3 mm / 0.15 mm drill) — JLCPCB resin-plugs via-in-pad by
 default on 6+ layer boards, so this is standard process, not an exotic option.
 
 **Sourcing-driven values.** Every one of the 199 placed parts has an LCSC part number (54 BOM
@@ -119,19 +120,19 @@ capability. Everything else keeps ≥ 0.10 mm. One 0402 (R201) sits between the 
 
 ## Fabrication (JLCPCB)
 
-The board is entirely within **standard** JLCPCB 10-layer process — verified line-by-line against
+The board is entirely within **standard** JLCPCB 12-layer process — verified line-by-line against
 their published capability sheet:
 
-| Parameter | This board | JLCPCB 10-layer capability |
+| Parameter | This board | JLCPCB 12-layer capability |
 |---|---|---|
 | Min track / spacing | 0.10 / 0.09 mm | 0.09 / 0.09 mm (3.5 mil) |
 | Vias | 0.30 mm ring / 0.15 mm drill | ≥ 0.25 mm / 0.15 mm |
 | Hole-to-hole | ≥ 0.20 mm | 0.20 mm |
 | Copper-to-edge | 0.20 mm | ≥ 0.20 mm |
-| Via-in-pad (253×, BGA) | yes | resin plug + cap — *default* for 6+ layers |
+| Via-in-pad (821×, BGA) | yes | resin plug + cap — *default* for 6+ layers |
 | Castellated edge (40 pads) | yes | supported (select at order) |
 
-**Order settings:** 10 layers · 1.6 mm · no controlled impedance needed · **castellated holes: yes**
+**Order settings:** 12 layers · 1.6 mm · no controlled impedance needed · **castellated holes: yes**
 · via covering: *epoxy filled & capped* (default for this layer count). Both BGAs are on the top
 side; assembly is double-sided (opamps/passives on the bottom).
 
