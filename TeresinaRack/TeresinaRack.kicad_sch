@@ -41703,7 +41703,7 @@
 				)
 			)
 		)
-		(property "Value" "100K"
+		(property "Value" "1M"
 			(at 1612.16 551.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41754,7 +41754,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25741" (at 0 0 0)
+		(property "LCSC" "C26083" (at 0 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -41988,7 +41988,7 @@
 				)
 			)
 		)
-		(property "Value" "100K"
+		(property "Value" "1M"
 			(at 1432.16 567.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -42039,7 +42039,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25741" (at 0 0 0)
+		(property "LCSC" "C26083" (at 0 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)
