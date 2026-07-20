@@ -32453,7 +32453,7 @@
 		)
 		(uuid "492fa89b-6652-4c1d-a59f-df2450768027")
 	)
-	(label "N_OLA"
+	(label "OL_INV"
 		(at 770.0 488.81 90)
 		(effects
 			(font
@@ -32653,7 +32653,7 @@
 		)
 		(uuid "38f2118e-8325-4160-9137-4d2e3308ae5b")
 	)
-	(label "N_ORA"
+	(label "OR_INV"
 		(at 830.0 488.81 90)
 		(effects
 			(font
@@ -41798,7 +41798,7 @@
 				)
 			)
 		)
-		(property "Value" "100K"
+		(property "Value" "10K"
 			(at 1342.16 567.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41849,7 +41849,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25741" (at 0 0 0)
+		(property "LCSC" "C72443" (at 0 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -42083,7 +42083,7 @@
 				)
 			)
 		)
-		(property "Value" "100K"
+		(property "Value" "10K"
 			(at 1477.16 567.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -42134,7 +42134,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25741" (at 0 0 0)
+		(property "LCSC" "C72443" (at 0 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -66,9 +66,17 @@ Boot/flashing behaves like the original:
   *software* re-boot to DFU (`System::ResetToBootloader`), important when the module is racked.
 - USB VBUS back-feeds +12 V through a Schottky so the MCU can be flashed without rack power.
 
-Known (accepted) deviations from the original: gate-out series resistors are 1K instead of 100R
-(drives high-impedance inputs; no functional difference), and the PA9 VBUS-sense divider is omitted
-(libDaisy does not enable VBUS sensing; pin left unconnected is within absolute maximum ratings).
+Corrections applied to match the official Rev3 (this revision, from an evidence-based re-audit): the
+audio-output MFB feedback cap (18 pF, C120/C123) was moved to the op-amp inverting input — the canonical
+MFB placement, restoring the codec-to-single-ended CMRR and phase margin; and the gate-in **collector
+pull-up was set to 10 kΩ** (was 100 kΩ) to match the official and stay robust if firmware enables an
+internal pull-down on PG13/PG14.
+
+Remaining (accepted, benign) deviations from the original: the gate-in base pull-down is 100 kΩ (official
+1 MΩ) and the 1 kΩ collector series resistor is omitted — both keep the input 12 V-tolerant and detect
+standard 0/+5 V gates; gate-out uses an MCP6004 as a comparator (VTH 1.65 V) + 1 kΩ series instead of the
+official linear amp + 100 R — an equally-valid, arguably cleaner digital-gate output; and the PA9
+VBUS-sense divider is omitted (libDaisy does not enable VBUS sensing; pin unconnected is within abs-max).
 
 ## Design choices
 
@@ -93,8 +101,8 @@ outer pours to the plane; dedicated return vias accompany the USB layer transiti
 default on 6+ layer boards, so this is standard process, not an exotic option.
 
 **Sourcing-driven values.** Every one of the 199 placed parts has an LCSC part number (54 BOM
-groups). Where an official value was unobtainable (51.5 kΩ does not exist in JLC's catalogue), the
-*official alternative from the real Patch SM* (120K/62K) was used instead — same transfer function.
+groups). Component values follow the official Rev3 schematic; the CV-output gain uses the official
+120K/62K (×1.5167) directly (these are the values on the real Patch SM schematic, not a substitution).
 
 ## Validation results
 
