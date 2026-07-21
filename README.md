@@ -22,14 +22,14 @@ into carriers such as [kivu12 / eurorack-blocks](https://github.com/ohmtech-rdi/
 
 | | |
 |---|---|
-| Outline | **68 × 40 mm**, 1.6 mm, 12-layer, castellated 40-pad edge connector |
+| Outline | **68 × 40 mm**, 1.6 mm, 12-layer, 40-pad through-hole pin-header connector |
 | MCU | STM32H750IBK6 (UFBGA-176, 480 MHz Cortex-M7) |
 | RAM | ISSI IS42S32160F-6BLI — 512 Mbit (64 MB) 16M×32 SDRAM, 3.3 V, 166 MHz, 32-bit FMC bus |
 | Flash | IS25LP064A — 8 MB QSPI |
 | Codec | PCM3060 (24-bit / 96 kHz), SAI1, control on I²C2 |
 | Analog | TL074 audio front-end, 3× MCP6004 CV/gate conversion, LM4040-10 V reference |
 | Power | Eurorack ±12 V in → reverse protection → TPS62170 buck (+3V3) + LD1117-5.0 LDO (+5V); ferrite-isolated +3V3A (STM32 analog) and +5VA (PCM3060 analog) rails |
-| I/O (via the 40 castellated pads) | 2× audio in (AC), 2× audio out (DC), 8× bipolar CV in (−5…+5 V), 4× 0–3.3 V ADC in, 2× CV out (0–5 V), 2× gate in, 2× gate out, USB (FS + HS pairs), SDMMC, SPI2, I²C1, +5 V/+3V3 out |
+| I/O (via the 40 pin-header pads) | 2× audio in (AC), 2× audio out (DC), 8× bipolar CV in (−5…+5 V), 4× 0–3.3 V ADC in, 2× CV out (0–5 V), 2× gate in, 2× gate out, USB (FS + HS pairs), SDMMC, SPI2, I²C1, +5 V/+3V3 out |
 | On-board | micro-USB (DFU flashing), SWD header, reset + boot buttons, power/user LEDs |
 
 ## Compatibility contract (verified against official sources)
@@ -40,7 +40,7 @@ datasheet v1.0.5, `Patch-SM_pinout.csv`, and the `DAISY_PATCH_SM.kicad_mod` foot
 
 | Check | Result |
 |---|---|
-| Castellated pad positions vs official footprint | **40/40 exact** (position *and* numbering — carrier interlock guaranteed) |
+| J5 pad positions vs official `DAISY_PATCH_SM` footprint | **40/40 exact** (position *and* numbering — carrier interlock guaranteed) |
 | Pad functions vs official pinout CSV | **40/40** |
 | STM32 ball assignments used by libDaisy firmware | **43/43** (CV_1–8, ADC_9–12, SDMMC1, SPI2, I²C1/I²C2, SAI1, USB, gates, DAC1, LED, boot) |
 | Analog circuits vs official Rev3 schematic | **Component-for-component identical** (see below) |
@@ -125,9 +125,9 @@ All checks run on the committed design files with KiCad 10, the
 
 | Check | Result |
 |---|---|
-| KiCad DRC (severity: all) | **0 errors, 0 unconnected items** |
+| KiCad DRC (severity: all) | **0 errors, 0 unconnected** · 414 warnings, all cosmetic (376 silk clipped-by-mask/edge, 2 courtyard, 2 back-text) — each enumerated & measured |
 | Copper planes | In1 = 0 traces, In6 = 0 traces (both fully solid) |
-| KiCad ERC | 3 benign pin-type notes (STM32 VCAP pin pair — verified 2×2.2 µF valid config) |
+| KiCad ERC | **0 real electrical errors** · 3 power-type `pin_to_pin` (STM32 dual-VCAP / GND↔GND / PWR_FLAG — benign), ~244 off-grid endpoints (schematic off-grid; netlist fully connected), 3 stray NC-flags on verified-correctly-wired pins (U8, R201), 1 lib-mismatch |
 | Schematic ↔ PCB congruence | **all pad-nodes congruent** — 0 mismatched nets, 0 missing (re-verified) |
 | SPICE (auto-generated testbenches) | **59/59 subcircuits pass** — RC filters, dividers, buck feedback (exactly 3.30 V), references |
 | SPICE (manual, audio MFB filter) | flat ±0.12 dB to 20 kHz, gain ×2.167, fc ≈ 144 kHz |
@@ -135,10 +135,17 @@ All checks run on the committed design files with KiCad 10, the
 | Thermal analysis | score 100/100, no findings |
 | EMC pre-compliance | no critical findings; USB-FS return paths stitched; buck input ferrite-filtered |
 
-Clearance note: USB and boot-strap nets thread the BGA fanout fields at a minimum spacing of
-**0.09 mm** — declared explicitly in `TeresinaRack.kicad_dru` and within JLCPCB's 3.5 mil (0.089 mm)
-capability. Everything else keeps ≥ 0.10 mm. One 0402 (R201) sits between the U1/U2 courtyards with
-1.33 mm / 0.32 mm real pad-to-pad gaps — flagged as a courtyard warning, assembly-safe.
+**Independently re-audited (adversarial pass) — accepted margin items, with measured evidence:**
+- **Min spacing 0.09 mm** where USB/boot nets thread the BGA fanout (declared in `TeresinaRack.kicad_dru`;
+  equals JLCPCB's 3.5 mil limit — zero margin). Everything else keeps ≥ 0.10 mm.
+- **STM32 VCAP** decoupling: closest cap (C13) is **12 mm** from the balls. *Accepted* — the H7 core-LDO
+  tolerates this, and relocating it would require ripping up FMC escape routing (risk > benefit). C14 is a
+  redundant far cap.
+- **SDRAM decoupling improved**: added C204–C207 (100 nF 0402, F.Cu under U3) → every +3V3 ball now within
+  5 mm of a cap (**was 4/14, now 14/14**).
+- **R201** 0402 between the U1/U2 courtyards: real pad gaps **1.33 / 0.33 mm** — assembly-safe (a courtyard-
+  margin warning, not a collision).
+- **Via annular 0.075 mm** and **drill 0.15 mm** (813 vias) sit at JLC's finest tier — meets spec, zero margin.
 
 ## Fabrication (JLCPCB)
 
@@ -152,11 +159,13 @@ their published capability sheet:
 | Hole-to-hole | ≥ 0.20 mm | 0.20 mm |
 | Copper-to-edge | 0.20 mm | ≥ 0.20 mm |
 | Via-in-pad (829×, BGA) | yes | resin plug + cap — *default* for 6+ layers |
-| Castellated edge (40 pads) | yes | supported (select at order) |
+| J5 connector (40 pads) | **through-hole pin-header** (`DAISY_PATCH_SM`) | THT assembly optional at order |
 
-**Order settings:** 12 layers · 1.6 mm · no controlled impedance needed · **castellated holes: yes**
-· via covering: *epoxy filled & capped* (default for this layer count). Both BGAs are on the top
-side; assembly is double-sided (opamps/passives on the bottom).
+**Order settings:** 12 layers · 1.6 mm · no controlled impedance · via covering *epoxy filled & capped*
+(default for this layer count). **J5 is a through-hole 2.54 mm pin-header — there are NO castellated
+holes;** if you don't want to hand-solder the 40 pins, enable JLC through-hole (THT) assembly for J5.
+Assembly is double-sided and the two BGAs are on **opposite** sides — **U1 (STM32) top, U3 (SDRAM)
+bottom** — with opamps/passives on both sides.
 
 **Generating the fabrication package** (outputs land in `TeresinaRack/fab/`, kept out of git):
 
@@ -167,8 +176,9 @@ kicad-cli pcb export pos --format csv --units mm --side both --use-drill-file-or
 ```
 
 BOM: every footprint carries `LCSC` and `MPN` fields — export with your preferred BOM tool grouped
-by the `LCSC` field (51 groups / 204 parts). `J5` is the castellated connector itself — exclude it
-from assembly. Fiducials: 3 on top (the BGA side), 2 on bottom, on GND, excluded from BOM/position files.
+by the `LCSC` field (51 groups / 208 parts). `J5` is the through-hole pin-header — exclude it from SMD
+assembly (populate the pins by hand, or add it as a THT assembly line). Fiducials: 3 on top, 2 on
+bottom, on GND, excluded from BOM/position files.
 
 ## Firmware
 
