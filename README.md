@@ -162,7 +162,7 @@ kicad-cli pcb export pos --format csv --units mm --side both --use-drill-file-or
 
 BOM: every footprint carries `LCSC` and `MPN` fields — export with your preferred BOM tool grouped
 by the `LCSC` field (51 groups / 204 parts). `J5` is the castellated connector itself — exclude it
-from assembly. Fiducials: 3 on top (the BGA side), 3 on bottom, on GND, excluded from BOM/position files.
+from assembly. Fiducials: 3 on top (the BGA side), 2 on bottom, on GND, excluded from BOM/position files.
 
 ## Firmware
 
