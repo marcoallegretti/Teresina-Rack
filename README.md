@@ -66,17 +66,17 @@ Boot/flashing behaves like the original:
   *software* re-boot to DFU (`System::ResetToBootloader`), important when the module is racked.
 - USB VBUS back-feeds +12 V through a Schottky so the MCU can be flashed without rack power.
 
-Corrections applied to match the official Rev3 (this revision, from an evidence-based re-audit): the
-audio-output MFB feedback cap (18 pF, C120/C123) was moved to the op-amp inverting input — the canonical
-MFB placement, restoring the codec-to-single-ended CMRR and phase margin; and the gate-in **collector
-pull-up was set to 10 kΩ** (was 100 kΩ) to match the official and stay robust if firmware enables an
-internal pull-down on PG13/PG14.
+Corrections applied to match the official Rev3 (evidence-based re-audit against the Rev3 schematic): in the
+audio-output differential MFB, the **18 pF feedback caps** (C120/C123) sit at the op-amp inverting input and
+the **100 pF bridge caps** (C121/C124) span the two input junctions (N_OLA/N_OLB, N_ORA/N_ORB) — the
+canonical differential-MFB topology, restoring codec-to-single-ended CMRR and phase margin; and the gate-in
+stage is now component-for-component identical to the official — **base pull-down 1 MΩ**, **collector
+pull-up 10 kΩ**, and the **1 kΩ collector series resistor** (R202/R203, into PG13/PG14) fitted.
 
-Remaining (accepted, benign) deviations from the original: the gate-in base pull-down is 100 kΩ (official
-1 MΩ) and the 1 kΩ collector series resistor is omitted — both keep the input 12 V-tolerant and detect
-standard 0/+5 V gates; gate-out uses an MCP6004 as a comparator (VTH 1.65 V) + 1 kΩ series instead of the
-official linear amp + 100 R — an equally-valid, arguably cleaner digital-gate output; and the PA9
-VBUS-sense divider is omitted (libDaisy does not enable VBUS sensing; pin unconnected is within abs-max).
+Remaining (accepted, benign) deviations from the original: gate-out uses an MCP6004 as a comparator
+(VTH 1.65 V) + 1 kΩ series instead of the official linear amp + 100 R — an equally-valid, arguably cleaner
+digital-gate output; and the PA9 VBUS-sense divider is omitted (libDaisy does not enable VBUS sensing; pin
+unconnected is within abs-max).
 
 ## Design choices
 
@@ -97,10 +97,10 @@ ground plane (bad for an audio module), the board uses:
 Every signal has a continuous ground return path directly under it. 18 GND stitching vias tie the
 outer pours to the plane; dedicated return vias accompany the USB layer transitions.
 
-**Via-in-pad BGA fanout** (821 vias, 0.3 mm / 0.15 mm drill) — JLCPCB resin-plugs via-in-pad by
+**Via-in-pad BGA fanout** (825 vias, 0.3 mm / 0.15 mm drill) — JLCPCB resin-plugs via-in-pad by
 default on 6+ layer boards, so this is standard process, not an exotic option.
 
-**Sourcing-driven values.** Every one of the 199 placed parts has an LCSC part number (54 BOM
+**Sourcing-driven values.** Every one of the 201 placed parts has an LCSC part number (51 BOM
 groups). Component values follow the official Rev3 schematic; the CV-output gain uses the official
 120K/62K (×1.5167) directly (these are the values on the real Patch SM schematic, not a substitution).
 
@@ -114,7 +114,7 @@ All checks run on the committed design files with KiCad 10, the
 | KiCad DRC (severity: all) | **0 errors, 0 unconnected items** |
 | Copper planes | In1 = 0 traces, In6 = 0 traces (both fully solid) |
 | KiCad ERC | 3 benign pin-type notes (STM32 VCAP pin pair — verified 2×2.2 µF valid config) |
-| Schematic ↔ PCB congruence | **832/832 pin-nodes pad-exact**, 0 missing, 0 extra |
+| Schematic ↔ PCB congruence | **all pad-nodes congruent** — 0 mismatched nets, 0 missing (re-verified) |
 | SPICE (auto-generated testbenches) | **59/59 subcircuits pass** — RC filters, dividers, buck feedback (exactly 3.30 V), references |
 | SPICE (manual, audio MFB filter) | flat ±0.12 dB to 20 kHz, gain ×2.167, fc ≈ 144 kHz |
 | Gerber manufacturability analysis | **0 defects** (no mask slivers, acid traps, copper slivers) |
@@ -137,7 +137,7 @@ their published capability sheet:
 | Vias | 0.30 mm ring / 0.15 mm drill | ≥ 0.25 mm / 0.15 mm |
 | Hole-to-hole | ≥ 0.20 mm | 0.20 mm |
 | Copper-to-edge | 0.20 mm | ≥ 0.20 mm |
-| Via-in-pad (821×, BGA) | yes | resin plug + cap — *default* for 6+ layers |
+| Via-in-pad (825×, BGA) | yes | resin plug + cap — *default* for 6+ layers |
 | Castellated edge (40 pads) | yes | supported (select at order) |
 
 **Order settings:** 12 layers · 1.6 mm · no controlled impedance needed · **castellated holes: yes**
@@ -153,7 +153,7 @@ kicad-cli pcb export pos --format csv --units mm --side both --use-drill-file-or
 ```
 
 BOM: every footprint carries `LCSC` and `MPN` fields — export with your preferred BOM tool grouped
-by the `LCSC` field (54 groups / 199 parts). `J5` is the castellated connector itself — exclude it
+by the `LCSC` field (51 groups / 201 parts). `J5` is the castellated connector itself — exclude it
 from assembly. Fiducials: 3 on top (the BGA side), 1 on bottom, on GND, excluded from BOM/position files.
 
 ## Firmware
