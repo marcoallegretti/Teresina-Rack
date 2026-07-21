@@ -33283,7 +33283,7 @@
 				)
 			)
 		)
-		(property "MPN" "LM4040B30FTA"
+		(property "MPN" "LM4040C10IDBZR"
 			(at 0 0 0)
 			(effects
 				(font
@@ -33292,7 +33292,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C460604"
+		(property "LCSC" "C201738"
 			(at 0 0 0)
 			(effects
 				(font
@@ -35115,6 +35115,403 @@
 		)
 		(uuid "5fdceeaf-50bb-4aa5-9369-fba9fdf64ea8")
 	)
+	(label "+5VA"
+		(at 362.54 352.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "62e7040a-35e6-4f89-967d-102544651105")
+	)
+	(symbol
+		(lib_id "Device:FerriteBead")
+		(at 255 825 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e756cbf5-5c7c-489e-abc3-2cdfdeb44b20")
+		(property "Reference" "FB9"
+			(at 251.19 825.635 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "600R@100MHz"
+			(at 258.81 825 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+			(at 253.222 825 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255 825 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ferrite bead"
+			(at 255 825 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8ca2fe1f-961c-484d-a38e-22ade22b74c9")
+		)
+		(pin "2"
+			(uuid "2361c173-d9dd-4ec3-ba36-5c5ac826cfa0")
+		)
+		(instances
+			(project "TeresinaRack"
+				(path "/933fb46f-5218-4b28-95eb-39f983e7bb80"
+					(reference "FB9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 240 833 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f92c9e57-398b-47d3-82c0-d876a42d3c40")
+		(property "Reference" "C202"
+			(at 240.635 835.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 240.635 830.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 240.965 829.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240 833 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 240 833 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dbebb5a5-a66c-488c-a52f-716376888cc4")
+		)
+		(pin "2"
+			(uuid "7b64e8f1-9ef8-4b42-b274-b26b31fddbcc")
+		)
+		(instances
+			(project "TeresinaRack"
+				(path "/933fb46f-5218-4b28-95eb-39f983e7bb80"
+					(reference "C202")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 270 833 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2e8f9056-d53c-490b-ab0b-dbafe11b4681")
+		(property "Reference" "C203"
+			(at 270.635 835.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 270.635 830.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 270.965 829.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 270 833 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 270 833 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ec562217-62e5-424f-92f6-23de83167ccf")
+		)
+		(pin "2"
+			(uuid "b891c2bf-2e84-4c48-aee9-cfb3100292bb")
+		)
+		(instances
+			(project "TeresinaRack"
+				(path "/933fb46f-5218-4b28-95eb-39f983e7bb80"
+					(reference "C203")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "+5V"
+		(at 255.0 821.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c8234cd6-cd2d-43f5-8b5e-a3ac2f1d42cc")
+	)
+	(label "+5VA"
+		(at 255.0 828.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4bc870c8-1c18-44d4-95b8-f35859df364d")
+	)
+	(label "+5VA"
+		(at 240.0 829.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d60d1202-48e6-4be7-8db6-ff3e0d3a2a35")
+	)
+	(label "GND"
+		(at 240.0 836.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e440b221-e4ed-4e67-a902-68e3ed46f43f")
+	)
+	(label "+5VA"
+		(at 270.0 829.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "595358a6-7ccb-4bfc-b308-7427ed15ee25")
+	)
+	(label "GND"
+		(at 270.0 836.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "075460b1-9bf7-42b8-9e9a-db0fcbe2d9a9")
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 285 825 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "940509b1-8ed8-468f-9e5e-8ff95c510f02")
+		(property "Reference" "#FLG10"
+			(at 285 826.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 285 828.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 285 825 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 285 825 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 285 825 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "342881b7-4d0b-4b0e-ba37-183da9bc37d0")
+		)
+		(instances
+			(project "TeresinaRack"
+				(path "/933fb46f-5218-4b28-95eb-39f983e7bb80"
+					(reference "#FLG10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "+5VA"
+		(at 285.0 825.0 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7adfd76e-440c-4a02-88dc-0fa350663a56")
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
@@ -35329,16 +35726,6 @@
 			(justify left bottom)
 		)
 		(uuid "7b5c1c3a-1ac7-479f-9b10-93e1574ec9f0")
-	)
-	(label "+3V3A"
-		(at 362.54 352.06 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "916da813-44c3-487c-bab9-c63a63229d85")
 	)
 	(label "CODEC_IN_L"
 		(at 347.3 374.92 0)

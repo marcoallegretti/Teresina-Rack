@@ -28,7 +28,7 @@ into carriers such as [kivu12 / eurorack-blocks](https://github.com/ohmtech-rdi/
 | Flash | IS25LP064A — 8 MB QSPI |
 | Codec | PCM3060 (24-bit / 96 kHz), SAI1, control on I²C2 |
 | Analog | TL074 audio front-end, 3× MCP6004 CV/gate conversion, LM4040-10 V reference |
-| Power | Eurorack ±12 V in → reverse protection → TPS62170 buck (+3V3) + LD1117-5.0 LDO (+5V), ferrite-isolated +3V3A analog rail |
+| Power | Eurorack ±12 V in → reverse protection → TPS62170 buck (+3V3) + LD1117-5.0 LDO (+5V); ferrite-isolated +3V3A (STM32 analog) and +5VA (PCM3060 analog) rails |
 | I/O (via the 40 castellated pads) | 2× audio in (AC), 2× audio out (DC), 8× bipolar CV in (−5…+5 V), 4× 0–3.3 V ADC in, 2× CV out (0–5 V), 2× gate in, 2× gate out, USB (FS + HS pairs), SDMMC, SPI2, I²C1, +5 V/+3V3 out |
 | On-board | micro-USB (DFU flashing), SWD header, reset + boot buttons, power/user LEDs |
 
@@ -66,12 +66,20 @@ Boot/flashing behaves like the original:
   *software* re-boot to DFU (`System::ResetToBootloader`), important when the module is racked.
 - USB VBUS back-feeds +12 V through a Schottky so the MCU can be flashed without rack power.
 
-Corrections applied to match the official Rev3 (evidence-based re-audit against the Rev3 schematic): in the
-audio-output differential MFB, the **18 pF feedback caps** (C120/C123) sit at the op-amp inverting input and
-the **100 pF bridge caps** (C121/C124) span the two input junctions (N_OLA/N_OLB, N_ORA/N_ORB) — the
-canonical differential-MFB topology, restoring codec-to-single-ended CMRR and phase margin; and the gate-in
-stage is now component-for-component identical to the official — **base pull-down 1 MΩ**, **collector
-pull-up 10 kΩ**, and the **1 kΩ collector series resistor** (R202/R203, into PG13/PG14) fitted.
+Corrections applied from a full evidence-based re-audit (official Rev3 schematic + component datasheets):
+
+- **Codec analog supply (critical).** The PCM3060 requires **5 V for its analog supply** (datasheet V_CC =
+  4.5–5.5 V; "5 V for analog, 3.3 V for digital"); pin 24 (V_CC) had been tied to the 3.3 V analog rail,
+  which starves the codec analog section — wrong VCOM (1.65 V vs 2.5 V) and reduced/distorted audio levels.
+  Fixed by adding a dedicated ferrite-filtered **+5VA** rail (FB9 off +5 V, with 100 nF + 10 µF local
+  decoupling) feeding U4 pin 24 — restoring correct VCOM and full-scale audio.
+- **Audio-output MFB.** 18 pF feedback caps (C120/C123) at the op-amp inverting input; 100 pF bridge caps
+  (C121/C124) across the two input junctions (N_OLA/N_OLB, N_ORA/N_ORB) — the canonical differential-MFB
+  topology, restoring codec-to-single-ended CMRR and phase margin.
+- **Gate-in.** Now component-for-component identical to the official — base pull-down 1 MΩ, collector
+  pull-up 10 kΩ, and the 1 kΩ collector series resistor (R202/R203, into PG13/PG14) fitted.
+- **Voltage reference.** U16 sourcing corrected to a genuine 10 V LM4040 (LM4040C10IDBZR / C201738) — the
+  BOM had carried a 3.0 V part number against the 10 V value, which would have broken CV in/out scaling.
 
 Remaining (accepted, benign) deviations from the original: gate-out uses an MCP6004 as a comparator
 (VTH 1.65 V) + 1 kΩ series instead of the official linear amp + 100 R — an equally-valid, arguably cleaner
@@ -97,10 +105,10 @@ ground plane (bad for an audio module), the board uses:
 Every signal has a continuous ground return path directly under it. 18 GND stitching vias tie the
 outer pours to the plane; dedicated return vias accompany the USB layer transitions.
 
-**Via-in-pad BGA fanout** (825 vias, 0.3 mm / 0.15 mm drill) — JLCPCB resin-plugs via-in-pad by
+**Via-in-pad BGA fanout** (829 vias, 0.3 mm / 0.15 mm drill) — JLCPCB resin-plugs via-in-pad by
 default on 6+ layer boards, so this is standard process, not an exotic option.
 
-**Sourcing-driven values.** Every one of the 201 placed parts has an LCSC part number (51 BOM
+**Sourcing-driven values.** Every one of the 204 placed parts has an LCSC part number (51 BOM
 groups). Component values follow the official Rev3 schematic; the CV-output gain uses the official
 120K/62K (×1.5167) directly (these are the values on the real Patch SM schematic, not a substitution).
 
@@ -137,7 +145,7 @@ their published capability sheet:
 | Vias | 0.30 mm ring / 0.15 mm drill | ≥ 0.25 mm / 0.15 mm |
 | Hole-to-hole | ≥ 0.20 mm | 0.20 mm |
 | Copper-to-edge | 0.20 mm | ≥ 0.20 mm |
-| Via-in-pad (825×, BGA) | yes | resin plug + cap — *default* for 6+ layers |
+| Via-in-pad (829×, BGA) | yes | resin plug + cap — *default* for 6+ layers |
 | Castellated edge (40 pads) | yes | supported (select at order) |
 
 **Order settings:** 12 layers · 1.6 mm · no controlled impedance needed · **castellated holes: yes**
@@ -153,7 +161,7 @@ kicad-cli pcb export pos --format csv --units mm --side both --use-drill-file-or
 ```
 
 BOM: every footprint carries `LCSC` and `MPN` fields — export with your preferred BOM tool grouped
-by the `LCSC` field (51 groups / 201 parts). `J5` is the castellated connector itself — exclude it
+by the `LCSC` field (51 groups / 204 parts). `J5` is the castellated connector itself — exclude it
 from assembly. Fiducials: 3 on top (the BGA side), 1 on bottom, on GND, excluded from BOM/position files.
 
 ## Firmware
