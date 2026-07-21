@@ -5457,7 +5457,7 @@
 				)
 				(hide yes)
 			)
-			(property "Datasheet" "https://www.alliancememory.com/wp-content/uploads/pdf/mobile_sdram/20171206_AllianceMemory_512M_LPSDRAM_AS4C16M32MSA-6BIN(TR)_rev1.0_Dec2017.pdf"
+			(property "Datasheet" "https://www.issi.com/WW/pdf/42-45S32160F.pdf"
 				(at 0 -7.62 0)
 				(effects
 					(font
@@ -5466,7 +5466,7 @@
 				)
 				(hide yes)
 			)
-			(property "Description" "512Mb (16M x 32) Mobile LP-SDRAM, 166MHz, 90-ball FBGA (8x13mm). NOTE: nominal 1.8V part."
+			(property "Description" "512Mb (16M x 32) SDRAM, 3.3V, 166MHz (-6, CL3), 90-ball TF-BGA (8x13mm). JEDEC-standard ballmap; drop-in for AS4C16M32-family footprint."
 				(at 0 -10.16 0)
 				(effects
 					(font
@@ -5643,7 +5643,7 @@
 							)
 						)
 					)
-					(number "J3"
+					(number "F7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5769,7 +5769,7 @@
 							)
 						)
 					)
-					(number "F7"
+					(number "J3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -18382,7 +18382,7 @@
 				)
 			)
 		)
-		(property "Value" "AS4C16M32MSA-6BIN"
+		(property "Value" "IS42S32160F-6BLI"
 			(at 560.07 209.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18403,7 +18403,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.alliancememory.com/wp-content/uploads/pdf/mobile_sdram/20171206_AllianceMemory_512M_LPSDRAM_AS4C16M32MSA-6BIN(TR)_rev1.0_Dec2017.pdf"
+		(property "Datasheet" "https://www.issi.com/WW/pdf/42-45S32160F.pdf"
 			(at 560 142.38 0)
 			(hide yes)
 			(show_name no)
@@ -18414,7 +18414,7 @@
 				)
 			)
 		)
-		(property "Description" "512Mb (16M x 32) Mobile LP-SDRAM, 166MHz, 90-ball FBGA (8x13mm). NOTE: nominal 1.8V part."
+		(property "Description" "512Mb (16M x 32) SDRAM, 3.3V, 166MHz, 90-ball FBGA (8x13mm) — JEDEC ballmap (AS4C16M32 / IS42S32160 compatible)."
 			(at 560 139.84 0)
 			(hide yes)
 			(show_name no)
@@ -18425,7 +18425,7 @@
 				)
 			)
 		)
-		(property "MPN" "AS4C16M32MSA-6BIN"
+		(property "MPN" "IS42S32160F-6BLI"
 			(at 560.0 150.0 0)
 			(effects
 				(font
@@ -18434,7 +18434,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "TBD-verify-stock"
+		(property "LCSC" "C1348852"
 			(at 560.0 150.0 0)
 			(effects
 				(font

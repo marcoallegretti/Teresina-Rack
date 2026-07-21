@@ -24,7 +24,7 @@ into carriers such as [kivu12 / eurorack-blocks](https://github.com/ohmtech-rdi/
 |---|---|
 | Outline | **68 × 40 mm**, 1.6 mm, 12-layer, castellated 40-pad edge connector |
 | MCU | STM32H750IBK6 (UFBGA-176, 480 MHz Cortex-M7) |
-| RAM | AS4C16M32MSA — 64 MB SDRAM, 32-bit FMC bus |
+| RAM | ISSI IS42S32160F-6BLI — 512 Mbit (64 MB) 16M×32 SDRAM, 3.3 V, 166 MHz, 32-bit FMC bus |
 | Flash | IS25LP064A — 8 MB QSPI |
 | Codec | PCM3060 (24-bit / 96 kHz), SAI1, control on I²C2 |
 | Analog | TL074 audio front-end, 3× MCP6004 CV/gate conversion, LM4040-10 V reference |
@@ -108,9 +108,15 @@ outer pours to the plane; dedicated return vias accompany the USB layer transiti
 **Via-in-pad BGA fanout** (829 vias, 0.3 mm / 0.15 mm drill) — JLCPCB resin-plugs via-in-pad by
 default on 6+ layer boards, so this is standard process, not an exotic option.
 
-**Sourcing-driven values.** Every one of the 204 placed parts has an LCSC part number (51 BOM
-groups). Component values follow the official Rev3 schematic; the CV-output gain uses the official
-120K/62K (×1.5167) directly (these are the values on the real Patch SM schematic, not a substitution).
+**Sourcing-driven values.** All 51 distinct LCSC part numbers across the 204 placed parts were
+verified present in JLCPCB's live assembly library with stock (23 are "Extended" parts, ~$69 one-time
+setup total; the rest Basic/Preferred, no per-part fee). The **SDRAM is ISSI IS42S32160F-6BLI**
+(LCSC C1348852): the Alliance `AS4C16M32` family the Daisy uses isn't stocked at JLC, and its `-MSA`
+variant is a 1.8 V-class *mobile* part that Daisy runs out-of-spec at 3.3 V — so this board uses the
+pin-identical, **native-3.3 V** ISSI equivalent (same 90-ball footprint, same 16M×32 / 166 MHz-CL3
+timing, libDaisy-compatible with no firmware change). Component values follow the official Rev3
+schematic; the CV-output gain uses the official 120K/62K (×1.5167) directly (real Patch SM values,
+not a substitution).
 
 ## Validation results
 

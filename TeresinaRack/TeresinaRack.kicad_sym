@@ -262,7 +262,7 @@
         (name "A2"
           (effects (font (size 1.27 1.27)))
         )
-        (number "J3"
+        (number "F7"
           (effects (font (size 1.27 1.27)))
         )
       )
@@ -332,7 +332,7 @@
         (name "A9"
           (effects (font (size 1.27 1.27)))
         )
-        (number "F7"
+        (number "J3"
           (effects (font (size 1.27 1.27)))
         )
       )
