@@ -149,6 +149,17 @@ All checks run on the committed design files with KiCad 10, the
 
 ## Fabrication (JLCPCB)
 
+> ⚠️ **Cost note & roadmap — this board is currently 12-layer, which makes it expensive to fabricate.**
+> A 12-layer order at JLCPCB runs into the **hundreds of € for only a handful of boards** (before customs
+> and taxes), and the 0.15 mm vias push it into JLCPCB's finest, priciest fabrication tier. The layer
+> count grew during the dual-BGA (STM32 + SDRAM) routing to keep the routing tractable — **not** because
+> the design fundamentally requires 12 layers.
+>
+> **The top priority for cost reduction is cutting the layer count: first from 12 to 8 layers, then to 6.**
+> This needs the dense STM32/SDRAM BGA-escape region re-routed more efficiently (interactive PCB layout)
+> and is tracked as **future work**. An automated reduction was attempted and is not tractable with the
+> current routing tooling — it requires hand-routing the BGA escapes.
+
 The board is entirely within **standard** JLCPCB 12-layer process — verified line-by-line against
 their published capability sheet:
 
