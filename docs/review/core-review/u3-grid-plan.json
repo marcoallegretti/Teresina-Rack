@@ -1,0 +1,5991 @@
+{
+  "scope": "Read-only graphic/grid normalization proposal, not a memory qualification or part selection",
+  "grid_mm": "1.27",
+  "source_sheet": "/workspace/cloud-setup/redesign/organized-candidate/memory-flash.kicad_sch",
+  "source_sha256": "ab4e9596826987d599b8cc1634b64db1a3b6d20c0fda2a2fa3e465795c5713b0",
+  "symbol_library_id_before": "TeresinaRack:AS4C16M32MSA",
+  "suggested_neutral_library_id": "TeresinaRack:SDRAM_16Mx32_FBGA90",
+  "physical_U3_value_MPN_SKU_footprint_unchanged": true,
+  "instance_anchor_unchanged": [
+    "48.26",
+    "77.47",
+    "0"
+  ],
+  "pin_count": 90,
+  "individual_connected_stubs": 85,
+  "individual_no_connect_markers": 5,
+  "minimum_same_side_pin_spacing_mm": {
+    "0": "2.54",
+    "180": "2.54"
+  },
+  "collisions": [],
+  "source_cache_external_pin_tables_match": true,
+  "body_rectangle_optional_grid_change": {
+    "old_start_mm": [
+      "-22.86",
+      "62.00"
+    ],
+    "old_end_mm": [
+      "22.86",
+      "-62.00"
+    ],
+    "new_start_mm": [
+      "-22.86",
+      "62.23"
+    ],
+    "new_end_mm": [
+      "22.86",
+      "-62.23"
+    ]
+  },
+  "moves": [
+    {
+      "number": "J1",
+      "name": "CLK",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "58.00"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "58.42"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "19.47"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "19.05"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "8da693e5-7727-4a83-a104-1fb6a758400c",
+          "old_points_mm": [
+            [
+              "22.86",
+              "19.47"
+            ],
+            [
+              "19.05",
+              "19.47"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "19.05"
+            ],
+            [
+              "19.05",
+              "19.05"
+            ]
+          ],
+          "label_uuid": "c20d0fa2-5f9b-4f22-aafd-4c5f6046ffa1",
+          "label_name": "FMC_SDCLK",
+          "old_label_at_mm": [
+            "19.05",
+            "19.47"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "19.05"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "J2",
+      "name": "CKE",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "55.46"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "55.88"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "22.01"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "21.59"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "044c5d87-c21e-4198-bf71-7b4c3d21b3cb",
+          "old_points_mm": [
+            [
+              "22.86",
+              "22.01"
+            ],
+            [
+              "19.05",
+              "22.01"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "21.59"
+            ],
+            [
+              "19.05",
+              "21.59"
+            ]
+          ],
+          "label_uuid": "1645e219-8c47-40fe-bd65-e9819b9a1665",
+          "label_name": "FMC_SDCKE0",
+          "old_label_at_mm": [
+            "19.05",
+            "22.01"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "21.59"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "J8",
+      "name": "CS#",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "52.92"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "53.34"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "24.55"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "24.13"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "c81a7928-558b-4b7e-bb7b-aaacf526c38d",
+          "old_points_mm": [
+            [
+              "22.86",
+              "24.55"
+            ],
+            [
+              "19.05",
+              "24.55"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "24.13"
+            ],
+            [
+              "19.05",
+              "24.13"
+            ]
+          ],
+          "label_uuid": "f53205f1-dc46-403f-962f-ec7cfea288f1",
+          "label_name": "FMC_SDNE0",
+          "old_label_at_mm": [
+            "19.05",
+            "24.55"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "24.13"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "J9",
+      "name": "RAS#",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "50.38"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "50.80"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "27.09"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "26.67"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "dfc794b6-8cd2-4693-a51c-19c8bc8fd030",
+          "old_points_mm": [
+            [
+              "22.86",
+              "27.09"
+            ],
+            [
+              "19.05",
+              "27.09"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "26.67"
+            ],
+            [
+              "19.05",
+              "26.67"
+            ]
+          ],
+          "label_uuid": "697f096f-51e7-4d96-8f49-f2a9a5be8275",
+          "label_name": "FMC_SDNRAS",
+          "old_label_at_mm": [
+            "19.05",
+            "27.09"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "26.67"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "K7",
+      "name": "CAS#",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "47.84"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "48.26"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "29.63"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "29.21"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "3640d43c-6b74-404d-b4b9-1669157a6f2d",
+          "old_points_mm": [
+            [
+              "22.86",
+              "29.63"
+            ],
+            [
+              "19.05",
+              "29.63"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "29.21"
+            ],
+            [
+              "19.05",
+              "29.21"
+            ]
+          ],
+          "label_uuid": "4d18099b-88c8-4501-8a0a-16ca19bc2346",
+          "label_name": "FMC_SDNCAS",
+          "old_label_at_mm": [
+            "19.05",
+            "29.63"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "29.21"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "K8",
+      "name": "WE#",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "45.30"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "45.72"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "32.17"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "31.75"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "59ed527f-f06e-4961-a85c-5ac243281dcb",
+          "old_points_mm": [
+            [
+              "22.86",
+              "32.17"
+            ],
+            [
+              "19.05",
+              "32.17"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "31.75"
+            ],
+            [
+              "19.05",
+              "31.75"
+            ]
+          ],
+          "label_uuid": "12ebf8bb-f8f2-46d2-84cf-a8720cc53213",
+          "label_name": "FMC_SDNWE",
+          "old_label_at_mm": [
+            "19.05",
+            "32.17"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "31.75"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "G8",
+      "name": "A0",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "42.76"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "43.18"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "34.71"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "34.29"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "0dc72952-7c40-4c5d-9849-9f42e4695265",
+          "old_points_mm": [
+            [
+              "22.86",
+              "34.71"
+            ],
+            [
+              "19.05",
+              "34.71"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "34.29"
+            ],
+            [
+              "19.05",
+              "34.29"
+            ]
+          ],
+          "label_uuid": "968e03ba-64cc-4631-9124-7d6beaa52d97",
+          "label_name": "FMC_A0",
+          "old_label_at_mm": [
+            "19.05",
+            "34.71"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "34.29"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "G9",
+      "name": "A1",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "40.22"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "40.64"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "37.25"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "36.83"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "c2d609a4-be6f-4ce8-ad26-a15c14993d18",
+          "old_points_mm": [
+            [
+              "22.86",
+              "37.25"
+            ],
+            [
+              "19.05",
+              "37.25"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "36.83"
+            ],
+            [
+              "19.05",
+              "36.83"
+            ]
+          ],
+          "label_uuid": "a31c0089-5f50-4d9d-9ab2-32f9b9fd0889",
+          "label_name": "FMC_A1",
+          "old_label_at_mm": [
+            "19.05",
+            "37.25"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "36.83"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "F7",
+      "name": "A2",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "37.68"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "38.10"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "39.79"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "39.37"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "01d2aa33-733e-41a7-9b86-1a6231d901b0",
+          "old_points_mm": [
+            [
+              "22.86",
+              "39.79"
+            ],
+            [
+              "19.05",
+              "39.79"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "39.37"
+            ],
+            [
+              "19.05",
+              "39.37"
+            ]
+          ],
+          "label_uuid": "81e91542-456f-4867-8fdf-8a759c199e97",
+          "label_name": "FMC_A2",
+          "old_label_at_mm": [
+            "19.05",
+            "39.79"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "39.37"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "F3",
+      "name": "A3",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "35.14"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "35.56"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "42.33"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "41.91"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "29ca1a05-46b5-43ad-90e2-e310865232e4",
+          "old_points_mm": [
+            [
+              "22.86",
+              "42.33"
+            ],
+            [
+              "19.05",
+              "42.33"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "41.91"
+            ],
+            [
+              "19.05",
+              "41.91"
+            ]
+          ],
+          "label_uuid": "c708c1d5-eb58-4752-a750-80442684335e",
+          "label_name": "FMC_A3",
+          "old_label_at_mm": [
+            "19.05",
+            "42.33"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "41.91"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "G1",
+      "name": "A4",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "32.60"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "33.02"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "44.87"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "44.45"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "be6dc5a3-73d9-4e8f-b944-affb4c69daa5",
+          "old_points_mm": [
+            [
+              "22.86",
+              "44.87"
+            ],
+            [
+              "19.05",
+              "44.87"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "44.45"
+            ],
+            [
+              "19.05",
+              "44.45"
+            ]
+          ],
+          "label_uuid": "b984e8d4-4f51-4200-865e-ae4d630d55c0",
+          "label_name": "FMC_A4",
+          "old_label_at_mm": [
+            "19.05",
+            "44.87"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "44.45"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "G2",
+      "name": "A5",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "30.06"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "30.48"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "47.41"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "46.99"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "e3125955-f1cb-41e2-893a-e9b735ef8241",
+          "old_points_mm": [
+            [
+              "22.86",
+              "47.41"
+            ],
+            [
+              "19.05",
+              "47.41"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "46.99"
+            ],
+            [
+              "19.05",
+              "46.99"
+            ]
+          ],
+          "label_uuid": "9c9201b0-6d5c-4d7e-b52a-5b35a4469d70",
+          "label_name": "FMC_A5",
+          "old_label_at_mm": [
+            "19.05",
+            "47.41"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "46.99"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "G3",
+      "name": "A6",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "27.52"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "27.94"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "49.95"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "49.53"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "9dc5e1a9-e171-455d-8d20-9af992c07c54",
+          "old_points_mm": [
+            [
+              "22.86",
+              "49.95"
+            ],
+            [
+              "19.05",
+              "49.95"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "49.53"
+            ],
+            [
+              "19.05",
+              "49.53"
+            ]
+          ],
+          "label_uuid": "af2b822c-6573-4f58-8885-517d351efd51",
+          "label_name": "FMC_A6",
+          "old_label_at_mm": [
+            "19.05",
+            "49.95"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "49.53"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "H1",
+      "name": "A7",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "24.98"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "25.40"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "52.49"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "52.07"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "546c15c5-1e71-4931-a553-d826fd5a57ac",
+          "old_points_mm": [
+            [
+              "22.86",
+              "52.49"
+            ],
+            [
+              "19.05",
+              "52.49"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "52.07"
+            ],
+            [
+              "19.05",
+              "52.07"
+            ]
+          ],
+          "label_uuid": "1446f854-1384-4e25-a48a-2359ba5c67fe",
+          "label_name": "FMC_A7",
+          "old_label_at_mm": [
+            "19.05",
+            "52.49"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "52.07"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "H2",
+      "name": "A8",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "22.44"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "22.86"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "55.03"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "54.61"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "2b772bda-556e-487b-abd7-e2d038e47ee8",
+          "old_points_mm": [
+            [
+              "22.86",
+              "55.03"
+            ],
+            [
+              "19.05",
+              "55.03"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "54.61"
+            ],
+            [
+              "19.05",
+              "54.61"
+            ]
+          ],
+          "label_uuid": "35ff3092-d232-445d-b087-508cffa62171",
+          "label_name": "FMC_A8",
+          "old_label_at_mm": [
+            "19.05",
+            "55.03"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "54.61"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "J3",
+      "name": "A9",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "19.90"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "20.32"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "57.57"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "57.15"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "d6e98902-7f18-439f-9fcc-610a56cfc401",
+          "old_points_mm": [
+            [
+              "22.86",
+              "57.57"
+            ],
+            [
+              "19.05",
+              "57.57"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "57.15"
+            ],
+            [
+              "19.05",
+              "57.15"
+            ]
+          ],
+          "label_uuid": "e3be1f9a-da8d-4436-be98-8ea6fe0d567d",
+          "label_name": "FMC_A9",
+          "old_label_at_mm": [
+            "19.05",
+            "57.57"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "57.15"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "G7",
+      "name": "A10",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "17.36"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "17.78"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "60.11"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "59.69"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "13da886c-6896-4ea7-a857-85e5e338ce81",
+          "old_points_mm": [
+            [
+              "22.86",
+              "60.11"
+            ],
+            [
+              "19.05",
+              "60.11"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "59.69"
+            ],
+            [
+              "19.05",
+              "59.69"
+            ]
+          ],
+          "label_uuid": "3592f2d3-16cf-4c19-822e-efb035fe1222",
+          "label_name": "FMC_A10",
+          "old_label_at_mm": [
+            "19.05",
+            "60.11"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "59.69"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "H9",
+      "name": "A11",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "14.82"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "15.24"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "62.65"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "62.23"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "14f505f0-4d6a-444d-ac9c-9ba6be88fe73",
+          "old_points_mm": [
+            [
+              "22.86",
+              "62.65"
+            ],
+            [
+              "19.05",
+              "62.65"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "62.23"
+            ],
+            [
+              "19.05",
+              "62.23"
+            ]
+          ],
+          "label_uuid": "ccbed019-6093-453b-8587-86de4afe3e20",
+          "label_name": "FMC_A11",
+          "old_label_at_mm": [
+            "19.05",
+            "62.65"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "62.23"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "H3",
+      "name": "A12",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "12.28"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "12.70"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "65.19"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "64.77"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "65a20ee4-96f0-4676-a036-dc1f639f2224",
+          "old_points_mm": [
+            [
+              "22.86",
+              "65.19"
+            ],
+            [
+              "19.05",
+              "65.19"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "64.77"
+            ],
+            [
+              "19.05",
+              "64.77"
+            ]
+          ],
+          "label_uuid": "152ec8b0-34bd-4f96-83aa-309eee70ebdb",
+          "label_name": "FMC_A12",
+          "old_label_at_mm": [
+            "19.05",
+            "65.19"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "64.77"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "J7",
+      "name": "BA0",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "9.74"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "10.16"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "67.73"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "67.31"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "3e08ef49-ddde-4ec9-87d3-6db0b513a3d8",
+          "old_points_mm": [
+            [
+              "22.86",
+              "67.73"
+            ],
+            [
+              "19.05",
+              "67.73"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "67.31"
+            ],
+            [
+              "19.05",
+              "67.31"
+            ]
+          ],
+          "label_uuid": "bfe6c1c3-10f1-4acd-8ffa-7f5976cd6b37",
+          "label_name": "FMC_BA0",
+          "old_label_at_mm": [
+            "19.05",
+            "67.73"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "67.31"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "H8",
+      "name": "BA1",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "7.20"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "7.62"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "70.27"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "69.85"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "065dd2e1-9dc9-4a93-af03-ba9e5497d11b",
+          "old_points_mm": [
+            [
+              "22.86",
+              "70.27"
+            ],
+            [
+              "19.05",
+              "70.27"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "69.85"
+            ],
+            [
+              "19.05",
+              "69.85"
+            ]
+          ],
+          "label_uuid": "e8c60ba9-a14d-42e6-bb90-75d1d63cb604",
+          "label_name": "FMC_BA1",
+          "old_label_at_mm": [
+            "19.05",
+            "70.27"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "69.85"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "K9",
+      "name": "DQM0",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "4.66"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "5.08"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "72.81"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "72.39"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "47e2fb0e-354e-47f2-afa1-79aaf43a0d22",
+          "old_points_mm": [
+            [
+              "22.86",
+              "72.81"
+            ],
+            [
+              "19.05",
+              "72.81"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "72.39"
+            ],
+            [
+              "19.05",
+              "72.39"
+            ]
+          ],
+          "label_uuid": "399c4a0f-70ea-48e2-a8ff-0e352bea4730",
+          "label_name": "FMC_NBL0",
+          "old_label_at_mm": [
+            "19.05",
+            "72.81"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "72.39"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "K1",
+      "name": "DQM1",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "2.12"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "2.54"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "75.35"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "74.93"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "6a5a2e06-0384-40ed-82ac-98116717f65d",
+          "old_points_mm": [
+            [
+              "22.86",
+              "75.35"
+            ],
+            [
+              "19.05",
+              "75.35"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "74.93"
+            ],
+            [
+              "19.05",
+              "74.93"
+            ]
+          ],
+          "label_uuid": "bb2bac55-742d-4423-8ae3-1afeba44b401",
+          "label_name": "FMC_NBL1",
+          "old_label_at_mm": [
+            "19.05",
+            "75.35"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "74.93"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "F8",
+      "name": "DQM2",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-0.42"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-0.00"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "77.89"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "77.47"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "04f16e8a-2b22-48b8-9a6e-8b84b48879c4",
+          "old_points_mm": [
+            [
+              "22.86",
+              "77.89"
+            ],
+            [
+              "19.05",
+              "77.89"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "77.47"
+            ],
+            [
+              "19.05",
+              "77.47"
+            ]
+          ],
+          "label_uuid": "02c2c5d4-14df-4051-b826-6a20a463f968",
+          "label_name": "FMC_NBL2",
+          "old_label_at_mm": [
+            "19.05",
+            "77.89"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "77.47"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "F2",
+      "name": "DQM3",
+      "electrical_type": "input",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-2.96"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-2.54"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "80.43"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "80.01"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "f12775c7-7795-4b44-ab52-ad802f92812a",
+          "old_points_mm": [
+            [
+              "22.86",
+              "80.43"
+            ],
+            [
+              "19.05",
+              "80.43"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "80.01"
+            ],
+            [
+              "19.05",
+              "80.01"
+            ]
+          ],
+          "label_uuid": "47a17d4f-d5f7-4431-a684-1b6f4b1ad902",
+          "label_name": "FMC_NBL3",
+          "old_label_at_mm": [
+            "19.05",
+            "80.43"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "80.01"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "A3",
+      "name": "VSS",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-6.00"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-6.35"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "83.47"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "83.82"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "7c31632f-1dd1-46ef-ad41-8d32e17d795a",
+          "old_points_mm": [
+            [
+              "22.86",
+              "83.47"
+            ],
+            [
+              "19.05",
+              "83.47"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "83.82"
+            ],
+            [
+              "19.05",
+              "83.82"
+            ]
+          ],
+          "label_uuid": "afa21a0c-ff96-4da1-a934-49a441fe355a",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "83.47"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "83.82"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "F1",
+      "name": "VSS",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-8.54"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-8.89"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "86.01"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "86.36"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "e09b05ca-1445-4d6c-8bda-f0119d7dbf2a",
+          "old_points_mm": [
+            [
+              "22.86",
+              "86.01"
+            ],
+            [
+              "19.05",
+              "86.01"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "86.36"
+            ],
+            [
+              "19.05",
+              "86.36"
+            ]
+          ],
+          "label_uuid": "206c77ca-8f1b-4d34-b39f-2458ace8aeec",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "86.01"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "86.36"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "L3",
+      "name": "VSS",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-11.08"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-11.43"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "88.55"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "88.90"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "2bc82214-aa59-4dcf-9aaf-bc264d497110",
+          "old_points_mm": [
+            [
+              "22.86",
+              "88.55"
+            ],
+            [
+              "19.05",
+              "88.55"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "88.90"
+            ],
+            [
+              "19.05",
+              "88.90"
+            ]
+          ],
+          "label_uuid": "9f370f0b-8b40-4b5e-9024-f427bcbf7eef",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "88.55"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "88.90"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "R3",
+      "name": "VSS",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-13.62"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-13.97"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "91.09"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "91.44"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "0c516a4f-4e2b-401b-b7c0-e8e7ec9b9b32",
+          "old_points_mm": [
+            [
+              "22.86",
+              "91.09"
+            ],
+            [
+              "19.05",
+              "91.09"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "91.44"
+            ],
+            [
+              "19.05",
+              "91.44"
+            ]
+          ],
+          "label_uuid": "ba1872f0-5c6a-4cfd-852d-4c5bd6a304ff",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "91.09"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "91.44"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "B3",
+      "name": "VSSQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-16.16"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-16.51"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "93.63"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "93.98"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "3f48cea3-4769-480f-b758-bd0ef241e0d7",
+          "old_points_mm": [
+            [
+              "22.86",
+              "93.63"
+            ],
+            [
+              "19.05",
+              "93.63"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "93.98"
+            ],
+            [
+              "19.05",
+              "93.98"
+            ]
+          ],
+          "label_uuid": "8bba7222-ae76-4b6e-bbb1-31316a7dd7c9",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "93.63"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "93.98"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "B8",
+      "name": "VSSQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-18.70"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-19.05"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "96.17"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "96.52"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "997a4847-0a20-4c4e-b9d3-fc917d36ca6b",
+          "old_points_mm": [
+            [
+              "22.86",
+              "96.17"
+            ],
+            [
+              "19.05",
+              "96.17"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "96.52"
+            ],
+            [
+              "19.05",
+              "96.52"
+            ]
+          ],
+          "label_uuid": "d946f1b5-b5a9-471b-9d3a-357680780ca3",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "96.17"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "96.52"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "C1",
+      "name": "VSSQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-21.24"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-21.59"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "98.71"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "99.06"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "b32c1dc1-030b-4d1b-8f65-886582ff5ecb",
+          "old_points_mm": [
+            [
+              "22.86",
+              "98.71"
+            ],
+            [
+              "19.05",
+              "98.71"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "99.06"
+            ],
+            [
+              "19.05",
+              "99.06"
+            ]
+          ],
+          "label_uuid": "3d93a23b-8e50-4ae2-a6c2-8fc8bffc4492",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "98.71"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "99.06"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "D1",
+      "name": "VSSQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-23.78"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-24.13"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "101.25"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "101.60"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "2fc48e22-69cd-4ed6-91cb-3b4585a0bb8e",
+          "old_points_mm": [
+            [
+              "22.86",
+              "101.25"
+            ],
+            [
+              "19.05",
+              "101.25"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "101.60"
+            ],
+            [
+              "19.05",
+              "101.60"
+            ]
+          ],
+          "label_uuid": "a3bee863-4d43-451a-96b9-1f51e9896cac",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "101.25"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "101.60"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "E9",
+      "name": "VSSQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-26.32"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-26.67"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "103.79"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "104.14"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "6428ea36-eebe-43cf-aba9-56a1e0f3be3d",
+          "old_points_mm": [
+            [
+              "22.86",
+              "103.79"
+            ],
+            [
+              "19.05",
+              "103.79"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "104.14"
+            ],
+            [
+              "19.05",
+              "104.14"
+            ]
+          ],
+          "label_uuid": "9211bdf3-9b81-4e3f-b7bf-68fbba487e38",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "103.79"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "104.14"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "L9",
+      "name": "VSSQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-28.86"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-29.21"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "106.33"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "106.68"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "ebd54cc4-4459-4b9a-80c7-7aea2e451c9e",
+          "old_points_mm": [
+            [
+              "22.86",
+              "106.33"
+            ],
+            [
+              "19.05",
+              "106.33"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "106.68"
+            ],
+            [
+              "19.05",
+              "106.68"
+            ]
+          ],
+          "label_uuid": "d7c1b023-e574-4d7e-a195-3bb60f6ac991",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "106.33"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "106.68"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "M1",
+      "name": "VSSQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-31.40"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-31.75"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "108.87"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "109.22"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "1d342a9b-8e5e-4ad1-ad27-2d230b9d407b",
+          "old_points_mm": [
+            [
+              "22.86",
+              "108.87"
+            ],
+            [
+              "19.05",
+              "108.87"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "109.22"
+            ],
+            [
+              "19.05",
+              "109.22"
+            ]
+          ],
+          "label_uuid": "d8a34f41-a2e9-4d39-a844-921f771ad0e0",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "108.87"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "109.22"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "N1",
+      "name": "VSSQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-33.94"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-34.29"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "111.41"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "111.76"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "664ed405-9989-4fc1-8b7d-341dce99deee",
+          "old_points_mm": [
+            [
+              "22.86",
+              "111.41"
+            ],
+            [
+              "19.05",
+              "111.41"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "111.76"
+            ],
+            [
+              "19.05",
+              "111.76"
+            ]
+          ],
+          "label_uuid": "d7a57d6d-cdb2-4276-be88-82eeebdd47ce",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "111.41"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "111.76"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "P3",
+      "name": "VSSQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-36.48"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-36.83"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "113.95"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "114.30"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "a392ccb5-8985-4e89-8c81-7d14e63c7d5d",
+          "old_points_mm": [
+            [
+              "22.86",
+              "113.95"
+            ],
+            [
+              "19.05",
+              "113.95"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "114.30"
+            ],
+            [
+              "19.05",
+              "114.30"
+            ]
+          ],
+          "label_uuid": "39c20b9f-d816-4f3d-a1f7-871acf628c6b",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "113.95"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "114.30"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "P8",
+      "name": "VSSQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-39.02"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-39.37"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "116.49"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "116.84"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.35"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "d386772c-bc78-4497-ab3a-9bb247e5751d",
+          "old_points_mm": [
+            [
+              "22.86",
+              "116.49"
+            ],
+            [
+              "19.05",
+              "116.49"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "22.86",
+              "116.84"
+            ],
+            [
+              "19.05",
+              "116.84"
+            ]
+          ],
+          "label_uuid": "5c52b9bd-78d6-4c6d-893f-fee006c7f40a",
+          "label_name": "GND",
+          "old_label_at_mm": [
+            "19.05",
+            "116.49"
+          ],
+          "new_label_at_mm": [
+            "19.05",
+            "116.84"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.35"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "E3",
+      "name": "NC",
+      "electrical_type": "no_connect",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-42.00"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-41.91"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "119.47"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "119.38"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.09"
+      ],
+      "stub_moves": [],
+      "no_connect_uuid": "74200134-06df-4e72-992c-337b5d5713e8"
+    },
+    {
+      "number": "E7",
+      "name": "NC",
+      "electrical_type": "no_connect",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-44.54"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-44.45"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "122.01"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "121.92"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.09"
+      ],
+      "stub_moves": [],
+      "no_connect_uuid": "bb0d505e-27cc-476c-8a5c-f654bd8d173d"
+    },
+    {
+      "number": "H7",
+      "name": "NC",
+      "electrical_type": "no_connect",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-47.08"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-46.99"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "124.55"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "124.46"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.09"
+      ],
+      "stub_moves": [],
+      "no_connect_uuid": "db9b34fd-8239-4104-b071-8accabb22b83"
+    },
+    {
+      "number": "K2",
+      "name": "NC",
+      "electrical_type": "no_connect",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-49.62"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-49.53"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "127.09"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "127.00"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.09"
+      ],
+      "stub_moves": [],
+      "no_connect_uuid": "c9855094-0569-46c3-b41a-a0e656d85bf9"
+    },
+    {
+      "number": "K3",
+      "name": "NC",
+      "electrical_type": "no_connect",
+      "shape": "line",
+      "direction_degrees": "0",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "-25.40",
+        "-52.16"
+      ],
+      "new_local_mm": [
+        "-25.40",
+        "-52.07"
+      ],
+      "old_connection_world_mm": [
+        "22.86",
+        "129.63"
+      ],
+      "new_connection_world_mm": [
+        "22.86",
+        "129.54"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.09"
+      ],
+      "stub_moves": [],
+      "no_connect_uuid": "c2a20187-50d3-4c1f-a9a0-d3894b226961"
+    },
+    {
+      "number": "R8",
+      "name": "DQ0",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "58.00"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "58.42"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "19.47"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "19.05"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "519de265-d3c9-4fe7-8ca0-b04dc2c65d60",
+          "old_points_mm": [
+            [
+              "73.66",
+              "19.47"
+            ],
+            [
+              "77.47",
+              "19.47"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "19.05"
+            ],
+            [
+              "77.47",
+              "19.05"
+            ]
+          ],
+          "label_uuid": "2c677a2d-bd3d-4c0f-8a1e-1148ae29e838",
+          "label_name": "FMC_D0",
+          "old_label_at_mm": [
+            "77.47",
+            "19.47"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "19.05"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "N7",
+      "name": "DQ1",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "55.46"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "55.88"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "22.01"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "21.59"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "e84c084b-af0e-4959-9cba-cd1119f87c2e",
+          "old_points_mm": [
+            [
+              "73.66",
+              "22.01"
+            ],
+            [
+              "77.47",
+              "22.01"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "21.59"
+            ],
+            [
+              "77.47",
+              "21.59"
+            ]
+          ],
+          "label_uuid": "ecd80255-83af-41af-bb9f-81ce78075b7c",
+          "label_name": "FMC_D1",
+          "old_label_at_mm": [
+            "77.47",
+            "22.01"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "21.59"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "R9",
+      "name": "DQ2",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "52.92"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "53.34"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "24.55"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "24.13"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "b5517455-5aed-4f85-ae37-eaea6764821b",
+          "old_points_mm": [
+            [
+              "73.66",
+              "24.55"
+            ],
+            [
+              "77.47",
+              "24.55"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "24.13"
+            ],
+            [
+              "77.47",
+              "24.13"
+            ]
+          ],
+          "label_uuid": "6a001b7a-c7af-4259-ae60-a6abe1288f79",
+          "label_name": "FMC_D2",
+          "old_label_at_mm": [
+            "77.47",
+            "24.55"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "24.13"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "N8",
+      "name": "DQ3",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "50.38"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "50.80"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "27.09"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "26.67"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "147de82b-88de-49a9-95ed-57acf45690a8",
+          "old_points_mm": [
+            [
+              "73.66",
+              "27.09"
+            ],
+            [
+              "77.47",
+              "27.09"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "26.67"
+            ],
+            [
+              "77.47",
+              "26.67"
+            ]
+          ],
+          "label_uuid": "ce41ead5-c149-46f3-ba3e-1e1efe18347c",
+          "label_name": "FMC_D3",
+          "old_label_at_mm": [
+            "77.47",
+            "27.09"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "26.67"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "P9",
+      "name": "DQ4",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "47.84"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "48.26"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "29.63"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "29.21"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "d3c114e9-eafe-407b-bf12-59fb917afb03",
+          "old_points_mm": [
+            [
+              "73.66",
+              "29.63"
+            ],
+            [
+              "77.47",
+              "29.63"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "29.21"
+            ],
+            [
+              "77.47",
+              "29.21"
+            ]
+          ],
+          "label_uuid": "7522e3f4-58dc-4bd5-ae0d-53ed74a9498d",
+          "label_name": "FMC_D4",
+          "old_label_at_mm": [
+            "77.47",
+            "29.63"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "29.21"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "M8",
+      "name": "DQ5",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "45.30"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "45.72"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "32.17"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "31.75"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "2631a9c5-f504-4fbc-8e72-3940c3564be4",
+          "old_points_mm": [
+            [
+              "73.66",
+              "32.17"
+            ],
+            [
+              "77.47",
+              "32.17"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "31.75"
+            ],
+            [
+              "77.47",
+              "31.75"
+            ]
+          ],
+          "label_uuid": "d41696e1-39b7-4a62-ac11-4544e9341a61",
+          "label_name": "FMC_D5",
+          "old_label_at_mm": [
+            "77.47",
+            "32.17"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "31.75"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "M7",
+      "name": "DQ6",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "42.76"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "43.18"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "34.71"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "34.29"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "f909fdb4-1c11-4bc3-b0f1-a3cb48252855",
+          "old_points_mm": [
+            [
+              "73.66",
+              "34.71"
+            ],
+            [
+              "77.47",
+              "34.71"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "34.29"
+            ],
+            [
+              "77.47",
+              "34.29"
+            ]
+          ],
+          "label_uuid": "2f515793-30c6-4801-a2f9-1d70f70eed6a",
+          "label_name": "FMC_D6",
+          "old_label_at_mm": [
+            "77.47",
+            "34.71"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "34.29"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "L8",
+      "name": "DQ7",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "40.22"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "40.64"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "37.25"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "36.83"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "7c7cf720-f9c4-4456-ab11-a86a53e0523b",
+          "old_points_mm": [
+            [
+              "73.66",
+              "37.25"
+            ],
+            [
+              "77.47",
+              "37.25"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "36.83"
+            ],
+            [
+              "77.47",
+              "36.83"
+            ]
+          ],
+          "label_uuid": "0682cfb0-a931-4cca-b88e-699792906e9e",
+          "label_name": "FMC_D7",
+          "old_label_at_mm": [
+            "77.47",
+            "37.25"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "36.83"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "L2",
+      "name": "DQ8",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "37.68"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "38.10"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "39.79"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "39.37"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "72adf54d-89ab-40e8-946d-621d032d145a",
+          "old_points_mm": [
+            [
+              "73.66",
+              "39.79"
+            ],
+            [
+              "77.47",
+              "39.79"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "39.37"
+            ],
+            [
+              "77.47",
+              "39.37"
+            ]
+          ],
+          "label_uuid": "73e0019d-6c7b-41c1-9a99-466eb1fdc881",
+          "label_name": "FMC_D8",
+          "old_label_at_mm": [
+            "77.47",
+            "39.79"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "39.37"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "M3",
+      "name": "DQ9",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "35.14"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "35.56"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "42.33"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "41.91"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "354c2373-a2e0-4fd7-bad5-567f745c8721",
+          "old_points_mm": [
+            [
+              "73.66",
+              "42.33"
+            ],
+            [
+              "77.47",
+              "42.33"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "41.91"
+            ],
+            [
+              "77.47",
+              "41.91"
+            ]
+          ],
+          "label_uuid": "9a51177f-fa48-4922-9e4d-5624a7ef1300",
+          "label_name": "FMC_D9",
+          "old_label_at_mm": [
+            "77.47",
+            "42.33"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "41.91"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "M2",
+      "name": "DQ10",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "32.60"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "33.02"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "44.87"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "44.45"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "d5e1df87-14e6-4964-aaf4-0149c5f74d65",
+          "old_points_mm": [
+            [
+              "73.66",
+              "44.87"
+            ],
+            [
+              "77.47",
+              "44.87"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "44.45"
+            ],
+            [
+              "77.47",
+              "44.45"
+            ]
+          ],
+          "label_uuid": "8e456fc3-5adc-4f58-8932-dd5066c3828b",
+          "label_name": "FMC_D10",
+          "old_label_at_mm": [
+            "77.47",
+            "44.87"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "44.45"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "P1",
+      "name": "DQ11",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "30.06"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "30.48"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "47.41"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "46.99"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "ccdb1c39-a619-4ca7-97ea-d92a1ab2a64b",
+          "old_points_mm": [
+            [
+              "73.66",
+              "47.41"
+            ],
+            [
+              "77.47",
+              "47.41"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "46.99"
+            ],
+            [
+              "77.47",
+              "46.99"
+            ]
+          ],
+          "label_uuid": "1a955878-47dd-49a3-9ad0-b1f1a2d61f29",
+          "label_name": "FMC_D11",
+          "old_label_at_mm": [
+            "77.47",
+            "47.41"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "46.99"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "N2",
+      "name": "DQ12",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "27.52"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "27.94"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "49.95"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "49.53"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "0db63c2e-3b24-4fb1-9280-c27e68b4aed3",
+          "old_points_mm": [
+            [
+              "73.66",
+              "49.95"
+            ],
+            [
+              "77.47",
+              "49.95"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "49.53"
+            ],
+            [
+              "77.47",
+              "49.53"
+            ]
+          ],
+          "label_uuid": "2f536047-4f5d-4732-8aee-8372a80bcf9f",
+          "label_name": "FMC_D12",
+          "old_label_at_mm": [
+            "77.47",
+            "49.95"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "49.53"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "R1",
+      "name": "DQ13",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "24.98"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "25.40"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "52.49"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "52.07"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "9193c85a-14b2-465a-b70f-80fcaf7c75de",
+          "old_points_mm": [
+            [
+              "73.66",
+              "52.49"
+            ],
+            [
+              "77.47",
+              "52.49"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "52.07"
+            ],
+            [
+              "77.47",
+              "52.07"
+            ]
+          ],
+          "label_uuid": "649254ae-9d0a-43be-bde7-8b5e22ff1ee7",
+          "label_name": "FMC_D13",
+          "old_label_at_mm": [
+            "77.47",
+            "52.49"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "52.07"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "N3",
+      "name": "DQ14",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "22.44"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "22.86"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "55.03"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "54.61"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "22759bee-5a84-424f-a00a-fee0f052c9b4",
+          "old_points_mm": [
+            [
+              "73.66",
+              "55.03"
+            ],
+            [
+              "77.47",
+              "55.03"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "54.61"
+            ],
+            [
+              "77.47",
+              "54.61"
+            ]
+          ],
+          "label_uuid": "3a2c2e44-60d2-45c8-8f68-15ddc770c63c",
+          "label_name": "FMC_D14",
+          "old_label_at_mm": [
+            "77.47",
+            "55.03"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "54.61"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "R2",
+      "name": "DQ15",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "19.90"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "20.32"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "57.57"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "57.15"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "05b7841b-b1ef-49dc-9309-e8a39ae39c82",
+          "old_points_mm": [
+            [
+              "73.66",
+              "57.57"
+            ],
+            [
+              "77.47",
+              "57.57"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "57.15"
+            ],
+            [
+              "77.47",
+              "57.15"
+            ]
+          ],
+          "label_uuid": "10ca7ba9-e00e-46ff-928e-bc47e041604d",
+          "label_name": "FMC_D15",
+          "old_label_at_mm": [
+            "77.47",
+            "57.57"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "57.15"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "E8",
+      "name": "DQ16",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "17.36"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "17.78"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "60.11"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "59.69"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "1fd9c1ee-84f3-4dfe-b9e2-d9ce74d89523",
+          "old_points_mm": [
+            [
+              "73.66",
+              "60.11"
+            ],
+            [
+              "77.47",
+              "60.11"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "59.69"
+            ],
+            [
+              "77.47",
+              "59.69"
+            ]
+          ],
+          "label_uuid": "bf864664-93fc-4313-993d-3d5f32f1387e",
+          "label_name": "FMC_D16",
+          "old_label_at_mm": [
+            "77.47",
+            "60.11"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "59.69"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "D7",
+      "name": "DQ17",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "14.82"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "15.24"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "62.65"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "62.23"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "013b1b0b-081f-4413-87d1-5efccd1c0663",
+          "old_points_mm": [
+            [
+              "73.66",
+              "62.65"
+            ],
+            [
+              "77.47",
+              "62.65"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "62.23"
+            ],
+            [
+              "77.47",
+              "62.23"
+            ]
+          ],
+          "label_uuid": "59eeda0f-9184-4fad-8e5f-22578e54ff4e",
+          "label_name": "FMC_D17",
+          "old_label_at_mm": [
+            "77.47",
+            "62.65"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "62.23"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "D8",
+      "name": "DQ18",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "12.28"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "12.70"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "65.19"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "64.77"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "1cb14541-fd97-4bf4-8280-73bb0357e721",
+          "old_points_mm": [
+            [
+              "73.66",
+              "65.19"
+            ],
+            [
+              "77.47",
+              "65.19"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "64.77"
+            ],
+            [
+              "77.47",
+              "64.77"
+            ]
+          ],
+          "label_uuid": "5445b953-51a3-4402-ae78-24c7339a1e9f",
+          "label_name": "FMC_D18",
+          "old_label_at_mm": [
+            "77.47",
+            "65.19"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "64.77"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "B9",
+      "name": "DQ19",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "9.74"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "10.16"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "67.73"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "67.31"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "294624d9-2ecd-4cf4-ba59-9e379936d5bb",
+          "old_points_mm": [
+            [
+              "73.66",
+              "67.73"
+            ],
+            [
+              "77.47",
+              "67.73"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "67.31"
+            ],
+            [
+              "77.47",
+              "67.31"
+            ]
+          ],
+          "label_uuid": "2a9520af-5e2b-4147-a026-215a7c4ee10a",
+          "label_name": "FMC_D19",
+          "old_label_at_mm": [
+            "77.47",
+            "67.73"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "67.31"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "C8",
+      "name": "DQ20",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "7.20"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "7.62"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "70.27"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "69.85"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "9f76089b-3fc4-41fc-a79d-c876444576b5",
+          "old_points_mm": [
+            [
+              "73.66",
+              "70.27"
+            ],
+            [
+              "77.47",
+              "70.27"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "69.85"
+            ],
+            [
+              "77.47",
+              "69.85"
+            ]
+          ],
+          "label_uuid": "8a345eee-f9d7-4944-b2ea-a5470c83bf68",
+          "label_name": "FMC_D20",
+          "old_label_at_mm": [
+            "77.47",
+            "70.27"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "69.85"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "A9",
+      "name": "DQ21",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "4.66"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "5.08"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "72.81"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "72.39"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "b8132229-1f8a-403f-8c93-6b77811c0ee6",
+          "old_points_mm": [
+            [
+              "73.66",
+              "72.81"
+            ],
+            [
+              "77.47",
+              "72.81"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "72.39"
+            ],
+            [
+              "77.47",
+              "72.39"
+            ]
+          ],
+          "label_uuid": "4ee1144f-623d-4f60-990a-310ff4f49492",
+          "label_name": "FMC_D21",
+          "old_label_at_mm": [
+            "77.47",
+            "72.81"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "72.39"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "C7",
+      "name": "DQ22",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "2.12"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "2.54"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "75.35"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "74.93"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "edd9cb58-e383-4a68-9261-6e085974ad08",
+          "old_points_mm": [
+            [
+              "73.66",
+              "75.35"
+            ],
+            [
+              "77.47",
+              "75.35"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "74.93"
+            ],
+            [
+              "77.47",
+              "74.93"
+            ]
+          ],
+          "label_uuid": "069309d7-0b74-497d-b0ca-0042186f8521",
+          "label_name": "FMC_D22",
+          "old_label_at_mm": [
+            "77.47",
+            "75.35"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "74.93"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "A8",
+      "name": "DQ23",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-0.42"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-0.00"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "77.89"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "77.47"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "486ede03-6341-4ded-a930-cc048fe0161e",
+          "old_points_mm": [
+            [
+              "73.66",
+              "77.89"
+            ],
+            [
+              "77.47",
+              "77.89"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "77.47"
+            ],
+            [
+              "77.47",
+              "77.47"
+            ]
+          ],
+          "label_uuid": "808e8f16-1574-4920-82f3-ab81e3b15478",
+          "label_name": "FMC_D23",
+          "old_label_at_mm": [
+            "77.47",
+            "77.89"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "77.47"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "A2",
+      "name": "DQ24",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-2.96"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-2.54"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "80.43"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "80.01"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "efd47cbc-1d87-4f61-9ac0-06b5c800bc7b",
+          "old_points_mm": [
+            [
+              "73.66",
+              "80.43"
+            ],
+            [
+              "77.47",
+              "80.43"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "80.01"
+            ],
+            [
+              "77.47",
+              "80.01"
+            ]
+          ],
+          "label_uuid": "325bb30d-dc1b-42e7-bdf2-03f34c9ff040",
+          "label_name": "FMC_D24",
+          "old_label_at_mm": [
+            "77.47",
+            "80.43"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "80.01"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "C3",
+      "name": "DQ25",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-5.50"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-5.08"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "82.97"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "82.55"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "328b0f3c-891d-4fce-8ec2-4aa619883461",
+          "old_points_mm": [
+            [
+              "73.66",
+              "82.97"
+            ],
+            [
+              "77.47",
+              "82.97"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "82.55"
+            ],
+            [
+              "77.47",
+              "82.55"
+            ]
+          ],
+          "label_uuid": "e39c1703-b84e-4090-978b-0610098e2663",
+          "label_name": "FMC_D25",
+          "old_label_at_mm": [
+            "77.47",
+            "82.97"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "82.55"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "A1",
+      "name": "DQ26",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-8.04"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-7.62"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "85.51"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "85.09"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "0ee6439d-4fe6-4a02-ba3b-b7b3edfbbe18",
+          "old_points_mm": [
+            [
+              "73.66",
+              "85.51"
+            ],
+            [
+              "77.47",
+              "85.51"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "85.09"
+            ],
+            [
+              "77.47",
+              "85.09"
+            ]
+          ],
+          "label_uuid": "808d6cef-2951-42e0-88ba-f02c3cf6734e",
+          "label_name": "FMC_D26",
+          "old_label_at_mm": [
+            "77.47",
+            "85.51"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "85.09"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "C2",
+      "name": "DQ27",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-10.58"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-10.16"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "88.05"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "87.63"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "5e5ebae0-a109-4ae0-8087-b6f7e47047a4",
+          "old_points_mm": [
+            [
+              "73.66",
+              "88.05"
+            ],
+            [
+              "77.47",
+              "88.05"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "87.63"
+            ],
+            [
+              "77.47",
+              "87.63"
+            ]
+          ],
+          "label_uuid": "7acf70a6-048d-40d4-8353-538aeeac7252",
+          "label_name": "FMC_D27",
+          "old_label_at_mm": [
+            "77.47",
+            "88.05"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "87.63"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "B1",
+      "name": "DQ28",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-13.12"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-12.70"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "90.59"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "90.17"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "92b7ee02-247e-4c41-86f6-3092d4e7fe75",
+          "old_points_mm": [
+            [
+              "73.66",
+              "90.59"
+            ],
+            [
+              "77.47",
+              "90.59"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "90.17"
+            ],
+            [
+              "77.47",
+              "90.17"
+            ]
+          ],
+          "label_uuid": "88de12e0-70fc-4d5a-94eb-6d62940232c7",
+          "label_name": "FMC_D28",
+          "old_label_at_mm": [
+            "77.47",
+            "90.59"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "90.17"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "D2",
+      "name": "DQ29",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-15.66"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-15.24"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "93.13"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "92.71"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "27e8fe71-1860-42ca-8b27-7c8060afc55f",
+          "old_points_mm": [
+            [
+              "73.66",
+              "93.13"
+            ],
+            [
+              "77.47",
+              "93.13"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "92.71"
+            ],
+            [
+              "77.47",
+              "92.71"
+            ]
+          ],
+          "label_uuid": "6a594200-ded5-4ebb-bc4e-bb317de9f609",
+          "label_name": "FMC_D29",
+          "old_label_at_mm": [
+            "77.47",
+            "93.13"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "92.71"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "D3",
+      "name": "DQ30",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-18.20"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-17.78"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "95.67"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "95.25"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "9a0ff90e-701e-4603-a811-c49565ad838c",
+          "old_points_mm": [
+            [
+              "73.66",
+              "95.67"
+            ],
+            [
+              "77.47",
+              "95.67"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "95.25"
+            ],
+            [
+              "77.47",
+              "95.25"
+            ]
+          ],
+          "label_uuid": "12971240-262f-4e69-a57b-4f4164fef7e5",
+          "label_name": "FMC_D30",
+          "old_label_at_mm": [
+            "77.47",
+            "95.67"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "95.25"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "E2",
+      "name": "DQ31",
+      "electrical_type": "bidirectional",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-20.74"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-20.32"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "98.21"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "97.79"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "-0.42"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "f5c35969-4016-45c9-9465-32cbc9694ecb",
+          "old_points_mm": [
+            [
+              "73.66",
+              "98.21"
+            ],
+            [
+              "77.47",
+              "98.21"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "97.79"
+            ],
+            [
+              "77.47",
+              "97.79"
+            ]
+          ],
+          "label_uuid": "23564815-a23f-4fcc-a83f-b4c4c9589ee0",
+          "label_name": "FMC_D31",
+          "old_label_at_mm": [
+            "77.47",
+            "98.21"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "97.79"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "-0.42"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "A7",
+      "name": "VDD",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-24.00"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-24.13"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "101.47"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "101.60"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "27c32512-9d20-4267-9cdc-df5e766c065e",
+          "old_points_mm": [
+            [
+              "73.66",
+              "101.47"
+            ],
+            [
+              "77.47",
+              "101.47"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "101.60"
+            ],
+            [
+              "77.47",
+              "101.60"
+            ]
+          ],
+          "label_uuid": "8e8dd887-b3c5-4e1e-afec-9a24a92cfb39",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "101.47"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "101.60"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "F9",
+      "name": "VDD",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-26.54"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-26.67"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "104.01"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "104.14"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "1f923b5c-ec83-420c-80a7-73bd91feab4d",
+          "old_points_mm": [
+            [
+              "73.66",
+              "104.01"
+            ],
+            [
+              "77.47",
+              "104.01"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "104.14"
+            ],
+            [
+              "77.47",
+              "104.14"
+            ]
+          ],
+          "label_uuid": "f67cc0bb-6ff3-441a-9365-1f6684ab68f6",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "104.01"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "104.14"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "L7",
+      "name": "VDD",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-29.08"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-29.21"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "106.55"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "106.68"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "e5f5d325-a904-4b5f-ab3d-beeee0b5ae88",
+          "old_points_mm": [
+            [
+              "73.66",
+              "106.55"
+            ],
+            [
+              "77.47",
+              "106.55"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "106.68"
+            ],
+            [
+              "77.47",
+              "106.68"
+            ]
+          ],
+          "label_uuid": "11f72e28-5f1f-4146-8322-8cc772804988",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "106.55"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "106.68"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "R7",
+      "name": "VDD",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-31.62"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-31.75"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "109.09"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "109.22"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "1c1a9c38-9f9f-41b2-8793-2f85d3c913d3",
+          "old_points_mm": [
+            [
+              "73.66",
+              "109.09"
+            ],
+            [
+              "77.47",
+              "109.09"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "109.22"
+            ],
+            [
+              "77.47",
+              "109.22"
+            ]
+          ],
+          "label_uuid": "d78aa72d-cd5d-4dc9-9b74-f3a42fe205df",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "109.09"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "109.22"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "B2",
+      "name": "VDDQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-34.16"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-34.29"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "111.63"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "111.76"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "df1f39ed-7cbb-4875-9242-c4085d88b144",
+          "old_points_mm": [
+            [
+              "73.66",
+              "111.63"
+            ],
+            [
+              "77.47",
+              "111.63"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "111.76"
+            ],
+            [
+              "77.47",
+              "111.76"
+            ]
+          ],
+          "label_uuid": "29c9b882-1038-4d84-a280-c1592ffc5e6f",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "111.63"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "111.76"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "B7",
+      "name": "VDDQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-36.70"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-36.83"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "114.17"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "114.30"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "f81dd985-3eca-40ea-a3f7-e5b709679b66",
+          "old_points_mm": [
+            [
+              "73.66",
+              "114.17"
+            ],
+            [
+              "77.47",
+              "114.17"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "114.30"
+            ],
+            [
+              "77.47",
+              "114.30"
+            ]
+          ],
+          "label_uuid": "fcaecd0d-85ed-472c-b67e-14d0ad71479d",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "114.17"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "114.30"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "C9",
+      "name": "VDDQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-39.24"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-39.37"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "116.71"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "116.84"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "12dfa017-5e59-4200-a834-9fc57e3abfca",
+          "old_points_mm": [
+            [
+              "73.66",
+              "116.71"
+            ],
+            [
+              "77.47",
+              "116.71"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "116.84"
+            ],
+            [
+              "77.47",
+              "116.84"
+            ]
+          ],
+          "label_uuid": "4b4e1ac4-f528-4a82-949d-f046380e3dca",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "116.71"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "116.84"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "D9",
+      "name": "VDDQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-41.78"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-41.91"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "119.25"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "119.38"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "6932f589-9ffd-46a8-89f5-293352fc82c9",
+          "old_points_mm": [
+            [
+              "73.66",
+              "119.25"
+            ],
+            [
+              "77.47",
+              "119.25"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "119.38"
+            ],
+            [
+              "77.47",
+              "119.38"
+            ]
+          ],
+          "label_uuid": "d4cad645-3a0b-4f57-a96b-1aa4161ca5b1",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "119.25"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "119.38"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "E1",
+      "name": "VDDQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-44.32"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-44.45"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "121.79"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "121.92"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "602d5fb1-a3e1-48fc-8f32-8763ffa12644",
+          "old_points_mm": [
+            [
+              "73.66",
+              "121.79"
+            ],
+            [
+              "77.47",
+              "121.79"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "121.92"
+            ],
+            [
+              "77.47",
+              "121.92"
+            ]
+          ],
+          "label_uuid": "2a70d56e-7fd8-4244-874a-0c39d7029934",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "121.79"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "121.92"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "L1",
+      "name": "VDDQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-46.86"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-46.99"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "124.33"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "124.46"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "4c072020-0aac-4a3c-99b0-4737c90af5c3",
+          "old_points_mm": [
+            [
+              "73.66",
+              "124.33"
+            ],
+            [
+              "77.47",
+              "124.33"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "124.46"
+            ],
+            [
+              "77.47",
+              "124.46"
+            ]
+          ],
+          "label_uuid": "1427da0b-2717-49f3-8afd-ff7bb245b0c3",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "124.33"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "124.46"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "M9",
+      "name": "VDDQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-49.40"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-49.53"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "126.87"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "127.00"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "3f0ca4fd-2e2f-4368-850c-36007cc80129",
+          "old_points_mm": [
+            [
+              "73.66",
+              "126.87"
+            ],
+            [
+              "77.47",
+              "126.87"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "127.00"
+            ],
+            [
+              "77.47",
+              "127.00"
+            ]
+          ],
+          "label_uuid": "364c5181-13da-468a-906d-6293dbba8c8b",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "126.87"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "127.00"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "N9",
+      "name": "VDDQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-51.94"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-52.07"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "129.41"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "129.54"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "03cf5d04-8b9b-4b18-a141-70ce4c1cc0bb",
+          "old_points_mm": [
+            [
+              "73.66",
+              "129.41"
+            ],
+            [
+              "77.47",
+              "129.41"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "129.54"
+            ],
+            [
+              "77.47",
+              "129.54"
+            ]
+          ],
+          "label_uuid": "fe2a5055-f38d-4408-8e82-0af130a1151c",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "129.41"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "129.54"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "P2",
+      "name": "VDDQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-54.48"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-54.61"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "131.95"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "132.08"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "0a440418-e550-4665-8078-61a7932ecb1f",
+          "old_points_mm": [
+            [
+              "73.66",
+              "131.95"
+            ],
+            [
+              "77.47",
+              "131.95"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "132.08"
+            ],
+            [
+              "77.47",
+              "132.08"
+            ]
+          ],
+          "label_uuid": "fc8b02c4-10b4-4518-82b8-ab35d6582dc9",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "131.95"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "132.08"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    },
+    {
+      "number": "P7",
+      "name": "VDDQ",
+      "electrical_type": "power_in",
+      "shape": "line",
+      "direction_degrees": "180",
+      "length_mm": "2.54",
+      "old_local_mm": [
+        "25.40",
+        "-57.02"
+      ],
+      "new_local_mm": [
+        "25.40",
+        "-57.15"
+      ],
+      "old_connection_world_mm": [
+        "73.66",
+        "134.49"
+      ],
+      "new_connection_world_mm": [
+        "73.66",
+        "134.62"
+      ],
+      "world_delta_mm": [
+        "0.00",
+        "0.13"
+      ],
+      "stub_moves": [
+        {
+          "wire_uuid": "12c7077d-66e7-4020-854f-f6f2e7ac7fa9",
+          "old_points_mm": [
+            [
+              "73.66",
+              "134.49"
+            ],
+            [
+              "77.47",
+              "134.49"
+            ]
+          ],
+          "new_points_mm": [
+            [
+              "73.66",
+              "134.62"
+            ],
+            [
+              "77.47",
+              "134.62"
+            ]
+          ],
+          "label_uuid": "f071b8ab-c79e-4639-979f-7d97d0df1d83",
+          "label_name": "+3V3",
+          "old_label_at_mm": [
+            "77.47",
+            "134.49"
+          ],
+          "new_label_at_mm": [
+            "77.47",
+            "134.62"
+          ],
+          "translate_all_label_property_at_by_mm": [
+            "0.00",
+            "0.13"
+          ]
+        }
+      ],
+      "no_connect_uuid": null
+    }
+  ],
+  "acceptance_constraints": [
+    "Preserve all 90 unique pin numbers, names, electrical types, shapes, lengths, directions and visibility.",
+    "Keep supply balls individually represented; never stack or coalesce same-net pins.",
+    "Update external library and every cached copy identically; verify the actual source hash before applying.",
+    "Move both endpoints of each of the 85 horizontal stubs and its global label/properties by the explicit world delta; preserve UUIDs and label names.",
+    "Move all five NC markers to the new pin endpoints, preserving their UUIDs.",
+    "Leave instantiated U3 Value, MPN, LCSC, Datasheet and footprint unchanged; RAM remains unqualified.",
+    "Use a neutral graphic symbol identity and remove unsupported drop-in wording; pin-map agreement does not establish electrical qualification.",
+    "Native netlist must retain all 90 U3 pin-net functions and all other component connections in the complete project.",
+    "The 86 U3 off-grid ERC records should disappear; introduce no new ERC errors/warnings and keep library/cache definitions identical.",
+    "Review the rendered page and confirm no physical PCB or firmware edits."
+  ],
+  "related_identity_metadata_plan": {
+    "generic_library_Value": "SDRAM_16Mx32_FBGA90",
+    "generic_Description": "16M x32 SDRAM, 90-ball FBGA. Pin-map reference: ISSI IS42/45S32160F. Supply, timing and compatibility require exact MPN qualification.",
+    "candidate_U3_Description": "IS42S32160F-6BLI candidate, 512Mb (16M x32), 3.3 V SDRAM, 90-ball FBGA 8x13 mm; clock/refresh compatibility not qualified.",
+    "MPN_selection_unchanged": true
+  }
+}

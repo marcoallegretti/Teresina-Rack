@@ -1,0 +1,77 @@
+{
+  "review_type": "Independent read-only review of implemented digital-only boot adapter; bounded source and linked-artifact acceptance, no hardware qualification",
+  "sha256": {
+    "bootloader-source/bootloader/main.cpp": "72fea0ff76f2e77c44bbd145e325dd47a5d84776bd8ebc95c3dad5a82fcb275f",
+    "bootloader-source/shared/bootloader.cpp": "9c617851a97fd51996ec40b40f6cb30e6b94fb965e7eff43fac0d4b53ee5f2c2",
+    "bootloader-source/shared/bootloader.h": "aeec7d75a5b5c1368e2ee9ae5759980be168654a7c255aba3afe47291768d30d",
+    "bootloader-source/shared/dfu.cpp": "38b4c3d9427811ae156bb530ae612d81840b1ef59aa3de159e67e88402cca006",
+    "bootloader-source/shared/usbd_desc.c": "a2632d8be7a4319cf91d4680b14014f909fae6b92d61ccfddfaf9d7e665710bb",
+    "libDaisy/src/daisy_patch_sm.cpp": "0cdd76b1b838134225406b2abacdfdb813f97fd5cba48e7db960876e404cb529",
+    "libDaisy/src/dev/codec_pcm3060.cpp": "7d6d9695c0b621ab9fea1606da714eaa24c5eb8a18a0151f8cc0db2a96afb14d",
+    "libDaisy/src/hid/switch.cpp": "1ea44f0e73bf02997115c79000916292b252dfa0aa78f081d856bdd780b870e8",
+    "libDaisy/src/sys/system.cpp": "887ec08fc96348f1259eb664fcd127e8483d7a07e7856668dd571115576877f3",
+    "libDaisy/src/per/tim.cpp": "4a5c6a45f4433ffe8ceb59b9bed22f6db4b161a96c32a142c3c7a54ec6ee3b39",
+    "libDaisy/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c": "5e4654091d24a458d9681e401c3bb22cbd972068271ce7ba092969ea84559b3b"
+  },
+  "upstream_shared_byte_equality": {
+    "dfu.h": true,
+    "usbd_dfu_if.h": true,
+    "usbd_desc.c": true,
+    "dfu_log.h": true,
+    "bootloader.h": false,
+    "bootloader.cpp": false,
+    "dfu.cpp": true
+  },
+  "required_conditions": [
+    "startup_process before System initialization",
+    "same patched opt-in System/SDRAM profile; core review separate",
+    "same IS25LP064A memory-mapped QSPI PF8/PF9/PF7/PF6/PF10/PG6",
+    "Boot.Init LED PC7, invalid Pin() preserving PG3 normal/NOPULL fallback",
+    "TIM5 initial Config period 2*GetPClk1Freq()/1000-1; interrupt enabled; ProcessControls callback installed after boot.Init and before Start",
+    "1kHz timer started before IoInit; no main-loop-only debounce",
+    "timer.DeInit before system.DeInit on shared reset-mediated handoff",
+    "retain disabled DCache and existing optimization/DFU configuration"
+  ],
+  "qualification": [
+    "USB-only enumeration/download/reset handoff",
+    "timeout100ms/2000ms/UINT32_MAX states",
+    "pressed/released/held boot button and blink cadence under concurrent DFU/SD",
+    "no analog peripheral dependencies in linked executable",
+    "unmodified shared reset/DFU/flash code and final symbol/map audit",
+    "production hardware, rail current and timing remain unqualified"
+  ],
+  "exact_shared_changes": {
+    "bootloader.cpp_pure_callback_body_factoring": true,
+    "bootloader.h_only_public_declaration": true
+  },
+  "linked_artifacts": {
+    "bootloader-source/bootloader/build/dsy_bootloader_v6_4-teresina-intdfu-2000ms.elf": {
+      "sha256": "1aa76ac2d17813a1d70c62a21bc4e7753a8c8642e1d24f2f2bf729fb0ceb2d56",
+      "bytes": 1836468,
+      "mtime_ns": 1791909312559791798
+    },
+    "bootloader-source/bootloader/build/dsy_bootloader_v6_4-teresina-intdfu-2000ms.bin": {
+      "sha256": "233d70f5fe24a7941fffa6cd1e90966cacebe9886d3fbf1fa3f26c75f19954a8",
+      "bytes": 107388,
+      "mtime_ns": 1791909312566187526
+    }
+  },
+  "implemented_source_and_link_checks": {
+    "early_startup_process": true,
+    "normal_NOPULL_button_fallback": true,
+    "same_QSPI_pins_device_mode": true,
+    "TIM5_initial_ARR_239199": true,
+    "callback_installed_before_start_and_start_before_IoInit": true,
+    "timer_Stop_and_DeInit_before_System_DeInit": true,
+    "DCache_disabled_immediately_after_System_Init": true,
+    "ProcessControls_exact_old_AudioProcess_body": true,
+    "shared_reset_DFU_flash_unchanged": true,
+    "linked_main_DCache_bit_clear_and_clean_invalidate_sequence_before_SDRAM": true,
+    "linked_status_TIM5_ProcessControls_symbols": true,
+    "no_linked_Patch_PCM3060_AudioHandle_SaiHandle_AdcHandle_DacHandle_symbols": true,
+    "build_FLASH_bytes": 107388,
+    "build_FLASH_capacity_bytes": 131072,
+    "strict_expected_timer_clock_239200000_fail_closed": true
+  },
+  "acceptance": "Accepted for bounded implemented source/linked integration scope after DCache policy restored; core SDRAM/clock audit and physical qualification separate"
+}

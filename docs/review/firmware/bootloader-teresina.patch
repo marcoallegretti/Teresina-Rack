@@ -1,0 +1,134 @@
+--- a/bootloader/main.cpp
++++ b/bootloader/main.cpp
+@@ -1,51 +1,65 @@
+ #include "bootloader.h"
+-#include "daisy_seed.h"
+-
++#include "daisy.h"
+ using namespace daisy;
+ 
+-DaisySeed hw;
+ Bootloader boot;
+-
+-// Deinit callback for DaisySeed-based build. Stops audio and de-inits the hardware.
+-void DaisyDeInitCallback(void* context)
++struct DigitalHardware
+ {
+-	DaisySeed* seed = reinterpret_cast<DaisySeed*>(context);
+-	if (seed)
+-	{
+-		seed->StopAudio();
+-		seed->DeInit();
+-	}
++    System system;
++    SdramHandle sdram;
++    QSPIHandle qspi;
++    TimerHandle status_timer;
++};
++DigitalHardware hw;
++[[noreturn]] void InitFailed()
++{
++    __disable_irq();
++    while(true) { __NOP(); }
+ }
+-
+-void AudioCallback(AudioHandle::InputBuffer  in,
+-				   AudioHandle::OutputBuffer out,
+-				   size_t                    size)
++void StatusTick(void* context)
+ {
+-	for (size_t i = 0; i < size; i++)
+-	{
+-		out[0][i] = out[1][i] = 0;
+-	}
+-
+-	boot.AudioProcess(in, out, size);
++    static_cast<Bootloader*>(context)->ProcessControls();
+ }
+-
+-int main(void) {
+-
+-	uint32_t timeout_ms = startup_process();
+-
+-	hw.Configure();
+-	hw.Init(true);
+-
+-	SCB_DisableDCache();
+-
+-	boot.Init(hw.qspi, Pin(daisy::PORTC, 7), Pin(), timeout_ms, DaisyDeInitCallback, (void*)&hw);
+-
+-	hw.StartAudio(AudioCallback);
+-
+-	boot.IoInit();
+-
+-	while(1)
+-	{
+-		boot.LoopProcess();
+-	}
++void DigitalDeInit(void* context)
++{
++    auto* hardware=static_cast<DigitalHardware*>(context);
++    if(hardware->status_timer.Stop()!=TimerHandle::Result::OK
++       || hardware->status_timer.DeInit()!=TimerHandle::Result::OK)
++        InitFailed();
++    hardware->system.DeInit();
+ }
++int main()
++{
++    const uint32_t timeout_ms=startup_process();
++    System::Config syscfg; syscfg.Boost();
++    hw.system.Init(syscfg);
++    // Preserve the official USB/DFU policy: its buffers are not cache-managed.
++    SCB_DisableDCache();
++    if(hw.sdram.Init()!=SdramHandle::Result::OK) InitFailed();
++    QSPIHandle::Config qspi_cfg;
++    qspi_cfg.device=QSPIHandle::Config::Device::IS25LP064A;
++    qspi_cfg.mode=QSPIHandle::Config::Mode::MEMORY_MAPPED;
++    qspi_cfg.pin_config.io0=Pin(PORTF,8);
++    qspi_cfg.pin_config.io1=Pin(PORTF,9);
++    qspi_cfg.pin_config.io2=Pin(PORTF,7);
++    qspi_cfg.pin_config.io3=Pin(PORTF,6);
++    qspi_cfg.pin_config.clk=Pin(PORTF,10);
++    qspi_cfg.pin_config.ncs=Pin(PORTG,6);
++    if(hw.qspi.Init(qspi_cfg)!=QSPIHandle::Result::OK) InitFailed();
++    // Keep the official normal/NOPULL BOOT0 fallback selected by an invalid pin.
++    if(boot.Init(hw.qspi,Pin(PORTC,7),Pin(),timeout_ms,DigitalDeInit,&hw)
++       !=Bootloader::Result::OK) InitFailed();
++    TimerHandle::Config timer_cfg;
++    timer_cfg.periph=TimerHandle::Config::Peripheral::TIM_5;
++    timer_cfg.dir=TimerHandle::Config::CounterDir::UP;
++    timer_cfg.enable_irq=true;
++    const uint32_t timer_hz=System::GetPClk1Freq()*2u;
++    if(timer_hz!=239200000u) InitFailed();
++    // Set ARR before Init: the timer enables ARR preload.
++    timer_cfg.period=timer_hz/1000u-1u;
++    if(hw.status_timer.Init(timer_cfg)!=TimerHandle::Result::OK) InitFailed();
++    hw.status_timer.SetCallback(StatusTick,&boot);
++    if(hw.status_timer.Start()!=TimerHandle::Result::OK) InitFailed();
++    if(boot.IoInit()!=Bootloader::Result::OK) InitFailed();
++    while(true) boot.LoopProcess();
++}
+--- a/shared/bootloader.cpp
++++ b/shared/bootloader.cpp
+@@ -390,6 +390,11 @@
+ }
+ 
+ void Bootloader::AudioProcess(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
++{
++  ProcessControls();
++}
++
++void Bootloader::ProcessControls()
+ {
+   ManageLed();
+ 
+--- a/shared/bootloader.h
++++ b/shared/bootloader.h
+@@ -76,6 +76,7 @@
+      *  audio-based firmware updating in the future.
+      */
+     void AudioProcess(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size);
++    void ProcessControls();
+ 
+     /** Handles the main bootloader state machine, and jumps to
+      *  the target application if the conditions are right.

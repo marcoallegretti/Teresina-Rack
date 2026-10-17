@@ -1,0 +1,44 @@
+[
+  {
+    "file": "C1348852.pdf",
+    "url": "https://datasheet.lcsc.com/datasheet/pdf/69b92f7b55b6d6826cdb34801f64d6a4.pdf?productCode=C1348852",
+    "sha256": "7c25725ba75188fd44631ac0be0deed9da2f1a8b7307eda1bbc1c46a8a532713",
+    "tls_verification": true
+  },
+  {
+    "file": "C2841348.pdf",
+    "url": "https://datasheet.lcsc.com/datasheet/pdf/97654d42c7d9fec286d704fdf709ab76.pdf?productCode=C2841348",
+    "sha256": "7e9b9a9c872b6b72cdc36a87901a869155ca2f2c10df03d4ea9f6b541a502d24",
+    "tls_verification": true
+  },
+  {
+    "file": "C13738.pdf",
+    "url": "https://datasheet.lcsc.com/datasheet/pdf/a84bd8d530dd46e4b0f6d0ee59d8a89c.pdf?productCode=C13738",
+    "sha256": "7bc18549e407d8e381075b0f5fc696e48cf0fa060aeee67971925f43cfdfbb8b",
+    "tls_verification": true
+  },
+  {
+    "file": "rm0433.pdf",
+    "url": "https://www.st.com/resource/en/reference_manual/rm0433-stm32h742-stm32h743753-and-stm32h750-value-line-advanced-armbased-32bit-mcus-stmicroelectronics.pdf",
+    "sha256": "672a9433d6602da224e5215f571beed2be0e683cb025526f4afe9db61c26b6a0",
+    "tls_verification": true
+  },
+  {
+    "file": "alliance-msa.pdf",
+    "url": "https://www.alliancememory.com/wp-content/uploads/20171206_AllianceMemory_512M_LPSDRAM_AS4C16M32MSA-6BINTR_rev1.0_Dec2017.pdf",
+    "sha256": "481509d2e75702448b7937e8bd61498053ec97eb4523f3c30e78bfee0b0a0e76",
+    "tls_verification": true
+  },
+  {
+    "file": "AS4C16M32SB.pdf",
+    "url": "https://www.alliancememory.com/wp-content/uploads/AllianceMemory_512Mb_AS4C16M32SB-6BxN_Datasheet_16Feb2023_ver1.0.pdf",
+    "sha256": "22f13f2e76e025bc50a6a94e4f8224700e3b8c54a561620e98997355f1513673",
+    "tls_verification": true
+  },
+  {
+    "file": "AS4C16M32SC.pdf",
+    "url": "https://www.alliancememory.com/wp-content/uploads/AllianceMemory_512M-SDRAM_Cdie_AS4C16M32SC-AS4C32M16SC-AS4C64M8SC-7TIN_Sept2018_rev1.0.pdf",
+    "sha256": "c5ebcbe48d28b0fec9e8dd818e0974e5b238cc55d59a1e4f770427244f7a128a",
+    "tls_verification": true
+  }
+]

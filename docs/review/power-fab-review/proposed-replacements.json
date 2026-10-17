@@ -1,0 +1,398 @@
+{
+  "date": "2026-10-13",
+  "scope": "Draft component candidates. No design, routing, source, or firmware changes performed. No production or order approval.",
+  "inventory_scope": {
+    "distinct_native_LCSC_codes_checked": 51,
+    "all_nominal_capacitor_mismatches": [
+      {
+        "ref": "C13",
+        "declared": "2.2uF",
+        "actual": "22uF",
+        "MPN": "CL10A226MQ8NRNC",
+        "LCSC": "C59461"
+      },
+      {
+        "ref": "C14",
+        "declared": "2.2uF",
+        "actual": "22uF",
+        "MPN": "CL10A226MQ8NRNC",
+        "LCSC": "C59461"
+      },
+      {
+        "ref": "C50",
+        "declared": "2.2uF",
+        "actual": "22uF",
+        "MPN": "CL10A226MQ8NRNC",
+        "LCSC": "C59461"
+      },
+      {
+        "ref": "C100",
+        "declared": "2.2uF",
+        "actual": "22uF",
+        "MPN": "CL21A226MAQNNNE",
+        "LCSC": "C45783"
+      },
+      {
+        "ref": "C103",
+        "declared": "2.2uF",
+        "actual": "22uF",
+        "MPN": "CL21A226MAQNNNE",
+        "LCSC": "C45783"
+      }
+    ],
+    "resistor_LCSC_fixes": [
+      {
+        "references": [
+          "R168",
+          "R169"
+        ],
+        "MPN": "0402WGF1002TCE",
+        "old_LCSC": "C72443",
+        "actual_old_component": "KMR221GLFS tactile switch",
+        "correct_LCSC": "C25744",
+        "footprint": "Resistor_SMD:R_0402_1005Metric",
+        "retail_stock": 305200,
+        "datasheet_metadata_source": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C25744"
+      }
+    ],
+    "switch_mismatch": {
+      "references": [
+        "SW1",
+        "SW2"
+      ],
+      "declared_MPN": "KMR231NGLFS",
+      "LCSC": "C72443",
+      "actual_orderable_MPN": "KMR221GLFS",
+      "status": "Exact switch actuator/force/height/land-pattern review required; no substitution approved."
+    }
+  },
+  "stock_semantics": "Stock counts above are LCSC retail at retrieval; neither reservations nor JLC assembly allocations. JLC/basic/preferred/assembly sourcing remains unverified.",
+  "search_reliability": "jlcsearch MPN text queries returned unrelated records and were not accepted. Candidate discovery used q-free package/subcategory lists followed by exact LCSC product pages and manufacturer-branded PDFs. Direct wmsc detail succeeds with browser User-Agent/Referer; values were independently compared to source netlist.",
+  "candidates": [
+    {
+      "references": [
+        "FB3",
+        "FB5",
+        "FB7",
+        "FB8",
+        "FB9"
+      ],
+      "MPN": "MPZ2012S601ATD25",
+      "manufacturer": "TDK",
+      "LCSC": "C81034",
+      "footprint": "Inductor_SMD:L_0805_2012Metric",
+      "package": "0805",
+      "nominal_specifications": {
+        "impedance_at_100MHz_ohm": 600,
+        "tolerance_percent": 25,
+        "dcr_max_ohm": 0.1,
+        "current_rating_A": 2.0,
+        "temperature_range_C": [
+          -55,
+          125
+        ]
+      },
+      "source_url": "https://www.lcsc.com/product-detail/C81034.html",
+      "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/97b8fd8f95d483658715dd96ac1acb6d.pdf?productCode=C81034",
+      "datasheet_local": "/workspace/cloud-setup/redesign/power-fab-review/C81034.pdf",
+      "datasheet_sha256": "143ae0aef04553d143fec94e5bc5d2fe6f513bbfed074774858fa6630f3cdfb4",
+      "datasheet_evidence_pages": [
+        1,
+        2
+      ],
+      "retail_stock": 147520,
+      "retail_unit_price_usd": 0.0199,
+      "status": "verified part candidate; circuit/layout validation required",
+      "open_engineering_concerns": [
+        "Rated current derates above85\u00b0C; manufacturer PDF p1 graph. Validate DC-bias impedance curves at actual load and required filter attenuation.",
+        "Preserve local decoupling on both sides; ferrite downstream of regulator local stability capacitor.",
+        "Existing generic0805 land pattern needs final comparison to manufacturer p2 terminal dimensions."
+      ]
+    },
+    {
+      "references": [
+        "FB1",
+        "FB2"
+      ],
+      "MPN": "BLM18KG601SN1D",
+      "manufacturer": "muRata",
+      "LCSC": "C85833",
+      "footprint": "Inductor_SMD:L_0603_1608Metric",
+      "package": "0603",
+      "nominal_specifications": {
+        "impedance_at_100MHz_ohm": 600,
+        "tolerance_percent": 25,
+        "dcr_initial_max_ohm": 0.15,
+        "dcr_after_reliability_test_max_ohm": 0.165,
+        "current_rating_A_at85C": 1.3,
+        "current_rating_A_at125C": 1.0
+      },
+      "source_url": "https://www.lcsc.com/product-detail/C85833.html",
+      "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/2d503a4b167da9bb5d0eb4a3fa711314.pdf?productCode=C85833",
+      "datasheet_local": "/workspace/cloud-setup/redesign/power-fab-review/C85833.pdf",
+      "datasheet_sha256": "f2b3b23d6ae4da86504c9a7e7893101bb1edb7bca93ec37ce86eff580ff8c099",
+      "datasheet_evidence_pages": [
+        1,
+        6
+      ],
+      "retail_stock": 894850,
+      "retail_unit_price_usd": 0.0093,
+      "status": "verified part candidate; circuit/layout validation required",
+      "open_engineering_concerns": [
+        "Review whether these are obsolete A_IN/A_OUT/UNREG regulator branches before populating.",
+        "Manufacturer reference specification requires supplier-approved detailed specifications; validate bias/noise attenuation and derating."
+      ]
+    },
+    {
+      "references": [
+        "L1"
+      ],
+      "MPN": "FTC322510S2R2MBCA",
+      "manufacturer": "cjiang",
+      "LCSC": "C18724399",
+      "footprint": "TeresinaRack:FTC322510S (new manufacturer land pattern), or existing Inductor_SMD:L_1210_3225Metric only after measured pad-overlap review",
+      "package": "1210",
+      "nominal_specifications": {
+        "inductance_uH": 2.2,
+        "tolerance_percent": 20,
+        "dcr_typical_ohm": 0.055,
+        "dcr_max_ohm": 0.066,
+        "Irms_table_typical_A": 3.7,
+        "Irms_table_second_bound_A": 3.4,
+        "Isat_table_typical_A": 4.0,
+        "Isat_table_second_bound_A": 3.5,
+        "body_mm": [
+          3.2,
+          2.5,
+          1.0
+        ]
+      },
+      "source_url": "https://www.lcsc.com/product-detail/C18724399.html",
+      "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/77df80da131e4870f452feed30b2f415.pdf?productCode=C18724399",
+      "datasheet_local": "/workspace/cloud-setup/redesign/power-fab-review/C18724399.pdf",
+      "datasheet_sha256": "146e29e9a6233da066112f587949a79f0f3e96bf73b53234b26b0683e3c65f82",
+      "datasheet_evidence_pages": [
+        4,
+        5,
+        6,
+        20
+      ],
+      "retail_stock": 72940,
+      "retail_unit_price_usd": 0.1378,
+      "status": "verified part candidate; circuit/layout validation required",
+      "open_engineering_concerns": [
+        "Source p20 labels current columns Typical/Max but second currents are LOWER; conservatively use3.4A/3.5A as listed bounds and obtain manufacturer confirmation of threshold definitions.",
+        "Confirm inductance under bias at calculated peak and temperature, including TI current-limit overshoot and \u00b120% tolerance.",
+        "Land-pattern p5/p6 lists A3.20,B1.00,C2.50mm; verify diagram and actual solder joints before selecting existing generic1210.",
+        "TI proves2.2\u00b5H with nominal22\u00b5F LC combination, but recommends3.3\u00b5H for full-current low-input operation. This candidate does not validate full low-input load by itself."
+      ]
+    },
+    {
+      "references": [
+        "C57",
+        "C59",
+        "C112",
+        "C113",
+        "C63"
+      ],
+      "MPN": "CL05B104KB54PNC",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "LCSC": "C307331",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "package": "0402",
+      "nominal_specifications": {
+        "capacitance_nF": 100,
+        "voltage_rating_V": 50,
+        "dielectric": "X7R",
+        "tolerance_percent": 10
+      },
+      "source_url": "https://www.lcsc.com/product-detail/C307331.html",
+      "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf?productCode=C307331",
+      "datasheet_local": "/workspace/cloud-setup/redesign/power-fab-review/C307331.pdf",
+      "datasheet_sha256": "96baebe4bd0ce363e87be28b5b003f511f1502e084a6fc4f02333ded56c808f6",
+      "datasheet_evidence_pages": [
+        4
+      ],
+      "retail_stock": 36500,
+      "retail_unit_price_usd": 0.0056,
+      "status": "verified part candidate; circuit/layout validation required",
+      "open_engineering_concerns": [
+        "Manufacturer catalog plus exact LCSC properties confirm nominal/voltage/package; actual DC-bias curve and effective capacitance at17V remain unquantified.",
+        "Review all other high-voltage100nF rail locations from native connectivity, not the old BOM group alone.",
+        "No circuit function or nominal capacitance changes."
+      ]
+    },
+    {
+      "references": [
+        "C13",
+        "C14",
+        "C50"
+      ],
+      "MPN": "CL10A225KO8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "LCSC": "C23630",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "package": "0603",
+      "nominal_specifications": {
+        "capacitance_uF": 2.2,
+        "voltage_rating_V": 16,
+        "dielectric": "X5R",
+        "tolerance_percent": 10
+      },
+      "source_url": "https://www.lcsc.com/product-detail/C23630.html",
+      "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf?productCode=C23630",
+      "datasheet_local": "/workspace/cloud-setup/redesign/power-fab-review/C23630.pdf",
+      "datasheet_sha256": "96baebe4bd0ce363e87be28b5b003f511f1502e084a6fc4f02333ded56c808f6",
+      "datasheet_evidence_pages": [
+        4
+      ],
+      "retail_stock": 1482400,
+      "retail_unit_price_usd": 0.0085,
+      "status": "verified part candidate; circuit/layout validation required",
+      "open_engineering_concerns": [
+        "C13/C14 are STM32 VCAP; core review must verify local topology, separate pin requirements, low ESR and effective capacitance at internal regulator voltage.",
+        "C50 is on obsolete A_OUT branch; replace only if branch is retained.",
+        "This restores displayed2.2\u00b5F instead of actual22\u00b5F and uses same footprint size."
+      ]
+    },
+    {
+      "references": [
+        "C100",
+        "C103"
+      ],
+      "MPN": "CL21B225KBYNNNE",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "LCSC": "C2762602",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "package": "0805",
+      "nominal_specifications": {
+        "capacitance_uF": 2.2,
+        "voltage_rating_V": 50,
+        "dielectric": "X7R",
+        "tolerance_percent": 10
+      },
+      "source_url": "https://www.lcsc.com/product-detail/C2762602.html",
+      "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/795373d432c2f73e9e5af1f8f1a729a4.pdf?productCode=C2762602",
+      "datasheet_local": "/workspace/cloud-setup/redesign/power-fab-review/C2762602.pdf",
+      "datasheet_sha256": "60d2289c4f6ae7a9aeae0810ab4ce598134ec4dd58bbcd14e0b7cf1743bff684",
+      "datasheet_evidence_pages": [],
+      "retail_stock": 59100,
+      "retail_unit_price_usd": 0.0535,
+      "status": "verified nominal/package metadata; part-specific bias review pending",
+      "open_engineering_concerns": [
+        "Linked C2762602 PDF is a scanned multi-page Samsung catalog; per-part coverage/part-specific bias not established. Nominal/package/type/rating verified against independent Samsung numbering catalog p4 and exact LCSC metadata.",
+        "Confirm manufacturer PDF family/part-number coverage and DC-bias/distortion at audio-input voltage extremes before analog acceptance.",
+        "Nominal capacitance restores documented2.2\u00b5F input coupling rather than current22\u00b5F; recompute high-pass corners with complete input network and tolerances.",
+        "50V voltage rating provides margin for carrier maximum audio input and internal bias; it does not certify dynamic protection."
+      ],
+      "independent_nominal_basis": {
+        "source_url": "https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf?productCode=C59461",
+        "local_pdf": "/workspace/cloud-setup/redesign/power-fab-review/C59461.pdf",
+        "pdf_page": 4,
+        "decoded_fields": "CL21=0805, B=X7R,225=2.2\u00b5F,K=\u00b110%,B=50V,Y=1.25mm thickness"
+      }
+    },
+    {
+      "references": [
+        "D1",
+        "D2",
+        "D5"
+      ],
+      "MPN": "SS14",
+      "manufacturer": "MDD(Microdiode Semiconductor)",
+      "LCSC": "C2480",
+      "footprint": "Diode_SMD:D_SMA",
+      "package": "SMA(DO-214AC)",
+      "nominal_specifications": {
+        "continuous_dc_blocking_V": 40,
+        "average_forward_current_A": 1,
+        "Vf_max_V_at1A": 0.55,
+        "reverse_leakage_max_A_at40V25C": 0.0003,
+        "reverse_leakage_max_A_at40V100C": 0.01,
+        "reference_theta_JA_C_per_W": 90,
+        "junction_max_C": 150
+      },
+      "source_url": "https://www.lcsc.com/product-detail/C2480.html",
+      "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/9977bb85cd7e349115b7bcb7054cfa0d.pdf?productCode=C2480",
+      "datasheet_local": "/workspace/cloud-setup/redesign/power-fab-review/C2480.pdf",
+      "datasheet_sha256": "1c2e8ca38c0a1afef95e4e329afc215094264244d161999f40765f5ef79d5720",
+      "datasheet_evidence_pages": [
+        1,
+        2
+      ],
+      "retail_stock": 914350,
+      "retail_unit_price_usd": 0.0088,
+      "status": "verified part candidate; circuit/layout validation required",
+      "open_engineering_concerns": [
+        "Exact manufacturer MDD; never substitute another SS14 brand PDF.",
+        "Correct cathode/anode orientation and actual package pad number mapping against diode stripe and datasheet.",
+        "Larger SMA footprint requires placement/clearance review. ThetaJA90\u00b0C/W is on5x5cm copper reference; cannot credit it on three diode footprints without layout analysis.",
+        "Evaluate loaded forward voltage, current surges, simultaneous USB/reversedcarrier, high-temperature backfeed/leakage and actual rail current. Datasheet1A rating must not be interpreted as unlimited1A in any copper geometry."
+      ]
+    },
+    {
+      "references": [
+        "U7 architecture alternative"
+      ],
+      "MPN": "MIC29302WU",
+      "manufacturer": "TECH PUBLIC",
+      "LCSC": "C18221475",
+      "footprint": "Package_TO_SOT_SMD:TO-263-5_TabPin3 (candidate; verify manufacturer p8)",
+      "package": "TO-263-5",
+      "nominal_specifications": {
+        "manufacturer_identity": "TECH PUBLIC, not Microchip/Micrel despite same family name",
+        "maximum_continuous_input_V": 26,
+        "output_current_A": 3,
+        "output": "adjustable; configure5V",
+        "reference_nominal_V": 1.24,
+        "dropout_max_V_at3A": 0.6,
+        "junction_max_C": 125,
+        "theta_JC_C_per_W": 2
+      },
+      "source_url": "https://www.lcsc.com/product-detail/C18221475.html",
+      "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/9ed924bdc6ca071b0c44dcea921ab954.pdf?productCode=C18221475",
+      "datasheet_local": "/workspace/cloud-setup/redesign/power-fab-review/C18221475.pdf",
+      "datasheet_sha256": "e690de72652ec0eccced3edc4ca7f78150280ff0a4852315f16f2079a93fdacf",
+      "datasheet_evidence_pages": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8
+      ],
+      "retail_stock": 4320,
+      "retail_unit_price_usd": 0.4449,
+      "status": "engineering alternative only; must not be applied as a simple BOM fix",
+      "open_engineering_concerns": [
+        "NOT a drop-in. New symbol/TO2635 footprint, ground-tab verification, enable treatment and feedback divider needed. Pin1EN,2VIN,3GND,4OUT,5ADJ from exact TECH PUBLIC source.",
+        "Manufacturer p7 requires local output\u226510\u00b5F full-load; very low ESR can cause instability. Use validated tantalum/aluminum or manufacturer-supported ESR solution; ceramic-only existing caps are not accepted.",
+        "At12V/17V this remains a linear regulator with several watts athigh output load; compute regulator/PCB/ambient thermal budget and exported current.3A silicon rating does not solve dissipation.",
+        "Manufacturer regulation characterization beginsVin>=Vout+1V; low-input6Vafterdiode worst-case guaranteed5V needs separate analysis despite low typicaldropout.",
+        "Cannot claim original external800mAabsolute limit as continuous guarantee; compare complete workload and temperature qualification to original.",
+        "A synchronousbuck5V stage may be preferable thermally, but requires an independently reviewed architecture, inductor, LC loop, analog ripple/EMC and USB behavior. No such architecture approved in this draft."
+      ]
+    }
+  ],
+  "unresolved_reference_candidates": [
+    {
+      "MPN": "SRP2010-2R2M",
+      "manufacturer": "Bourns",
+      "datasheet": "https://www.bourns.com/docs/product-datasheets/srp2010.pdf",
+      "status": "Original official candidate2.2\u00b5H\u00b120%,DCR150m\u03a9,Irms1.7A,Isat1.9A verified; exact stockedLCSC mapping not found, so not represented as an orderable stocked item."
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "MPN": "AP7361C-FGE-7",
+      "LCSC": "C460398",
+      "reason": "6V input maximum, cannot replace high-input5Vregulator."
+    },
+    {
+      "MPN": "LM2940IMPX-5.0/NOPB-HXY",
+      "LCSC": "C49006632",
+      "manufacturer": "HXY",
+      "reason": "Exact HXY PDF p1 says2.3V dropout and pins1VIN/2GND/3VOUT; unlike assumptions from genuineTI family name. Cannot meet6Vminimum5Vregulation and not pin-compatibleLD1117. Never useTI datasheet for this part."
+    }
+  ]
+}

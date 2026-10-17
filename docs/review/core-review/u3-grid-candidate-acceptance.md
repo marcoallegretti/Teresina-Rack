@@ -1,0 +1,15 @@
+# Bounded acceptance: SDRAM graphic normalization
+
+**Accepted for the graphic/grid scope only.** Independently checked the final organized candidate memory sheet (`0ea64a9c1405b5cf63ac45ae74cea62bb00fd6741b90de5112d2c89d06ada50a`) against the pre-edit proposal and the core candidate, then checked the fresh native XML/ERC and PDF from 2026-10-13 13:51 UTC. No CAD files were changed by this review.
+
+All 90 physical ball numbers, names, electrical types, shapes, lengths, directions and visibility settings are unchanged. Their 90 connection positions are distinct and on the 1.27 mm grid, with a minimum 2.54 mm spacing on each side. All 85 separate stubs and global labels match the proposed connections; all five individual NC markers reach their intended pins. No supply balls were stacked or coalesced. Instance coordinates remain unchanged. F8 and A8 compare numerically equal at zero; `0.00` versus `-0.00` was a representation difference, not a geometry defect.
+
+The neutral `SDRAM_16Mx32_FBGA90` cached definition exactly matches the appended external-library alias. Every pre-existing external definition remains unchanged. U3 Value, MPN, LCSC code, Datasheet and footprint remain unchanged; its revised description explicitly identifies the ISSI part as an unqualified candidate. The generic graphic alias does not assert electrical compatibility between ISSI and the original Alliance mobile SDRAM. UUID regeneration during sheet organization is allowed here because connection equivalence is verified independently by physical reference and pin number.
+
+The fresh native netlist (`cf3a57233874b9b04c34a0a223bac344ed61dc286abbc000010b809699c71151`) retains all 211 components and 856 exported pin nodes with identical complete connectivity partitions, pin functions/types and physical component fields versus the core candidate. U3's documentary description is the explicit metadata exception. The independently detected earlier auxiliary-CV T-junction disconnections have been corrected and are absent from this export.
+
+ERC now has zero off-grid warnings and zero violations on `/memory-flash/`. Project totals are three inherited `pin_to_pin` errors and one unrelated U6 library mismatch warning. The VCAP power-output pairing is consistent with the previously reviewed ST unified-VCAP topology; this review does not erase or waive the remaining project records. Rendered PDF page 4 keeps the individual pins and NC markers readable. Its compact top-left arrangement could use the available page space more effectively, but no pin coalescence or altered interpretation was found.
+
+This acceptance does not qualify the RAM choice, SDRAM refresh timing, any PCB placement/routing, oscillator loading, firmware or production readiness. The previously documented stock-firmware refresh conflict remains a blocker. No RAM selection or firmware change was made.
+
+Machine-readable evidence: `u3-grid-candidate-raw-audit.json`. Reproducible read-only audit: `audit-u3-grid-candidate.py`. Render reviewed: `u3-normalized-page.png`.

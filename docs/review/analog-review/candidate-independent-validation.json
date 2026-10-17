@@ -1,0 +1,73 @@
+{
+  "verdict": "Candidate matches exact reviewed schematic scope",
+  "raw_expected_tree_equals_candidate": true,
+  "exact_raw_edits": 10,
+  "net_deltas": [
+    {
+      "pin": "C141.1",
+      "before": "/+5V",
+      "after": "/+3V3A"
+    },
+    {
+      "pin": "C142.1",
+      "before": "/+5V",
+      "after": "/+3V3A"
+    },
+    {
+      "pin": "U13.4",
+      "before": "/+5V",
+      "after": "/+3V3A"
+    },
+    {
+      "pin": "U14.4",
+      "before": "/+5V",
+      "after": "/+3V3A"
+    }
+  ],
+  "field_deltas": [
+    {
+      "component": "R162",
+      "field": "Value",
+      "before": "1K",
+      "after": "100R"
+    },
+    {
+      "component": "R162",
+      "field": "MPN",
+      "before": "0402WGF1001TCE",
+      "after": "RC0402FR-07100RL"
+    },
+    {
+      "component": "R162",
+      "field": "LCSC",
+      "before": "C11702",
+      "after": "C106232"
+    },
+    {
+      "component": "R163",
+      "field": "Value",
+      "before": "1K",
+      "after": "100R"
+    },
+    {
+      "component": "R163",
+      "field": "MPN",
+      "before": "0402WGF1001TCE",
+      "after": "RC0402FR-07100RL"
+    },
+    {
+      "component": "R163",
+      "field": "LCSC",
+      "before": "C11702",
+      "after": "C106232"
+    }
+  ],
+  "native_pin_attributes_preserved": true,
+  "unchanged_component_count": 209,
+  "pin_count": 850,
+  "remaining_u15_supply": "/+5V",
+  "remaining_c143_supply": "/+5V",
+  "capacitor_assignment": "Explicit new intent C141\u2192U13,C142\u2192U14,C143\u2192U15; not original grouping evidence.",
+  "source_sha_matches_candidate_scope": true,
+  "erc_exact_violations_unchanged": true
+}

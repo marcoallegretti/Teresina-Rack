@@ -1,0 +1,355 @@
+--- a/Makefile
++++ b/Makefile
+@@ -300,6 +300,14 @@
+ -DDATA_IN_D2_SRAM
+ # ^ added for easy startup access
+ 
++TERESINA_SDRAM_PROFILE ?= 0
++ifeq ($(TERESINA_SDRAM_PROFILE),0)
++else ifeq ($(TERESINA_SDRAM_PROFILE),1)
++C_DEFS += -DTERESINA_SDRAM_PROFILE=1
++else
++$(error TERESINA_SDRAM_PROFILE must be exactly 0 or 1)
++endif
++
+ # File I/O Abstract Interface for FatFS:
+ C_DEFS += -DFILEIO_ENABLE_FATFS_READER
+ 
+@@ -398,3 +406,10 @@
+ # dependencies
+ #######################################
+ -include $(wildcard $(BUILD_DIR)/*.dep)
++
++# Force a rebuild when the selected board profile changes in this build directory.
++TERESINA_PROFILE_STAMP = $(BUILD_DIR)/.teresina-profile-$(TERESINA_SDRAM_PROFILE)
++$(TERESINA_PROFILE_STAMP): | $(BUILD_DIR)
++	@rm -f $(BUILD_DIR)/.teresina-profile-0 $(BUILD_DIR)/.teresina-profile-1
++	@touch $@
++$(OBJECTS): $(TERESINA_PROFILE_STAMP)
+--- a/core/Makefile
++++ b/core/Makefile
+@@ -292,7 +292,7 @@
+ $(BUILD_DIR)/%.o: %.s Makefile | $(BUILD_DIR)
+ 	$(AS) -c $(ASFLAGS) $< -o $@
+ 
+-$(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile
++$(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile $(LDSCRIPT) $(LIBDAISY_DIR)/build/libdaisy.a
+ 	$(CXX) $(OBJECTS) $(LDFLAGS) -o $@
+ 
+ $(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
+--- a/src/daisy_patch_sm.cpp
++++ b/src/daisy_patch_sm.cpp
+@@ -231,6 +231,16 @@
+ 
+         auto memory       = System::GetProgramMemoryRegion();
+         auto boot_version = System::GetBootloaderVersion();
++#if defined(TERESINA_SDRAM_PROFILE)
++        // SDRAM-resident code and legacy external-memory handoffs are unsupported.
++        if(memory == System::MemoryRegion::SDRAM
++           || (boot_version == System::BootInfo::Version::LT_v6_0
++               && memory != System::MemoryRegion::INTERNAL_FLASH))
++        {
++            __disable_irq();
++            while(true) { __NOP(); }
++        }
++#endif
+ 
+         // When using the bootloader prior to v6, clocks have been already configured
+         if(boot_version == System::BootInfo::Version::LT_v6_0
+@@ -247,7 +257,15 @@
+                && memory == System::MemoryRegion::INTERNAL_FLASH))
+         {
+             /** FMC SDRAM */
++#if defined(TERESINA_SDRAM_PROFILE)
++            if(sdram.Init() != SdramHandle::Result::OK)
++            {
++                __disable_irq();
++                while(true) { __NOP(); }
++            }
++#else
+             sdram.Init();
++#endif
+         }
+         if(memory != System::MemoryRegion::QSPI)
+         {
+--- a/src/dev/sdram.cpp
++++ b/src/dev/sdram.cpp
+@@ -1,5 +1,8 @@
+ #include <stm32h7xx_hal.h>
+ #include "dev/sdram.h"
++#if defined(TERESINA_SDRAM_PROFILE)
++#include "dev/teresina_sdram_profile.h"
++#endif
+ 
+ // TODO:
+ // - Consider alternative to libdaisy.h inclusion for board specific details.
+@@ -39,8 +42,59 @@
+ 
+ static dsy_sdram_t dsy_sdram;
+ 
++#if defined(TERESINA_SDRAM_PROFILE)
++static bool TeresinaRefreshCount(uint32_t& count)
++{
++    using namespace daisy::teresina_sdram;
++    const uint32_t sdcr = FMC_SDRAM_DEVICE->SDCR[0];
++    const uint32_t geometry_mask = FMC_SDCRx_NC | FMC_SDCRx_NR
++        | FMC_SDCRx_MWID | FMC_SDCRx_NB | FMC_SDCRx_CAS;
++    const uint32_t expected_geometry = FMC_SDRAM_COLUMN_BITS_NUM_9
++        | FMC_SDRAM_ROW_BITS_NUM_13 | FMC_SDRAM_MEM_BUS_WIDTH_32
++        | FMC_SDRAM_INTERN_BANKS_NUM_4 | FMC_SDRAM_CAS_LATENCY_3;
++    if((sdcr & geometry_mask) != expected_geometry)
++        return false;
++    const ClockSnapshot clock = {
++        HSE_VALUE,
++        (RCC->PLLCKSELR & RCC_PLLCKSELR_DIVM2) >> RCC_PLLCKSELR_DIVM2_Pos,
++        ((RCC->PLL2DIVR & RCC_PLL2DIVR_N2) >> RCC_PLL2DIVR_N2_Pos) + 1,
++        (RCC->PLL2FRACR & RCC_PLL2FRACR_FRACN2) >> RCC_PLL2FRACR_FRACN2_Pos,
++        ((RCC->PLL2DIVR & RCC_PLL2DIVR_P2) >> RCC_PLL2DIVR_P2_Pos) + 1,
++        ((RCC->PLL2DIVR & RCC_PLL2DIVR_Q2) >> RCC_PLL2DIVR_Q2_Pos) + 1,
++        ((RCC->PLL2DIVR & RCC_PLL2DIVR_R2) >> RCC_PLL2DIVR_R2_Pos) + 1,
++        (sdcr & FMC_SDCRx_SDCLK) >> FMC_SDCRx_SDCLK_Pos,
++        (RCC->CR & RCC_CR_HSERDY) != 0,
++        (RCC->CR & RCC_CR_PLL2RDY) != 0,
++        (RCC->PLLCFGR & RCC_PLLCFGR_DIVR2EN) != 0,
++        (RCC->PLLCFGR & RCC_PLLCFGR_PLL2FRACEN) != 0,
++        (RCC->PLLCKSELR & RCC_PLLCKSELR_PLLSRC) == RCC_PLLCKSELR_PLLSRC_HSE,
++        __HAL_RCC_GET_FMC_SOURCE() == RCC_FMCCLKSOURCE_PLL2,
++        (RCC->CR & RCC_CR_HSEBYP) == 0,
++        (RCC->PLLCFGR & RCC_PLLCFGR_PLL2RGE) == RCC_PLL2VCIRANGE_2,
++        (RCC->PLLCFGR & RCC_PLLCFGR_PLL2VCOSEL) == 0
++    };
++    uint32_t sdclk_hz;
++    if(!ValidateClock(clock, sdclk_hz))
++        return false;
++    const uint32_t t = FMC_SDRAM_DEVICE->SDTR[0];
++    const uint32_t forbidden =
++        ((t & FMC_SDTRx_TWR) >> FMC_SDTRx_TWR_Pos) + 1
++        + ((t & FMC_SDTRx_TRP) >> FMC_SDTRx_TRP_Pos) + 1
++        + ((t & FMC_SDTRx_TRC) >> FMC_SDTRx_TRC_Pos) + 1
++        + ((t & FMC_SDTRx_TRCD) >> FMC_SDTRx_TRCD_Pos) + 1 + 4;
++    return CalculateCount(sdclk_hz, forbidden, count);
++}
++#endif
++
+ SdramHandle::Result SdramHandle::Init()
+ {
++#if defined(TERESINA_SDRAM_PROFILE)
++    // HAL_SDRAM_Init clears SDRTR. Reject live reinitialization before that write.
++    __HAL_RCC_FMC_CLK_ENABLE();
++    if((FMC_SDRAM_DEVICE->SDRTR & FMC_SDRTR_COUNT) != 0
++       || (FMC_SDRAM_DEVICE->SDCR[0] & FMC_SDCRx_SDCLK) != 0)
++        return Result::ERR;
++#endif
+     if(PeriphInit() != Result::OK)
+     {
+         return Result::ERR;
+@@ -109,6 +163,11 @@
+     FMC_SDRAM_CommandTypeDef Command;
+ 
+     __IO uint32_t tmpmrd = 0;
++#if defined(TERESINA_SDRAM_PROFILE)
++    uint32_t refresh_count;
++    if(!TeresinaRefreshCount(refresh_count))
++        return Result::ERR;
++#endif
+     /* Step 3:  Configure a clock configuration enable command */
+     Command.CommandMode            = FMC_SDRAM_CMD_CLK_ENABLE;
+     Command.CommandTarget          = FMC_SDRAM_CMD_TARGET_BANK1;
+@@ -116,7 +175,12 @@
+     Command.ModeRegisterDefinition = 0;
+ 
+     /* Send the command */
++#if defined(TERESINA_SDRAM_PROFILE)
++    if(HAL_SDRAM_SendCommand(&dsy_sdram.hsdram, &Command, 0x1000) != HAL_OK)
++        return Result::ERR;
++#else
+     HAL_SDRAM_SendCommand(&dsy_sdram.hsdram, &Command, 0x1000);
++#endif
+ 
+     /* Step 4: Insert 100 ms delay */
+     HAL_Delay(100);
+@@ -129,7 +193,12 @@
+     Command.ModeRegisterDefinition = 0;
+ 
+     /* Send the command */
++#if defined(TERESINA_SDRAM_PROFILE)
++    if(HAL_SDRAM_SendCommand(&dsy_sdram.hsdram, &Command, 0x1000) != HAL_OK)
++        return Result::ERR;
++#else
+     HAL_SDRAM_SendCommand(&dsy_sdram.hsdram, &Command, 0x1000);
++#endif
+ 
+     /* Step 6 : Configure a Auto-Refresh command */
+     Command.CommandMode            = FMC_SDRAM_CMD_AUTOREFRESH_MODE;
+@@ -138,7 +207,12 @@
+     Command.ModeRegisterDefinition = 0;
+ 
+     /* Send the command */
++#if defined(TERESINA_SDRAM_PROFILE)
++    if(HAL_SDRAM_SendCommand(&dsy_sdram.hsdram, &Command, 0x1000) != HAL_OK)
++        return Result::ERR;
++#else
+     HAL_SDRAM_SendCommand(&dsy_sdram.hsdram, &Command, 0x1000);
++#endif
+ 
+     /* Step 7: Program the external memory mode register */
+     tmpmrd = (uint32_t)SDRAM_MODEREG_BURST_LENGTH_4
+@@ -152,10 +226,20 @@
+     Command.ModeRegisterDefinition = tmpmrd;
+ 
+     /* Send the command */
++#if defined(TERESINA_SDRAM_PROFILE)
++    if(HAL_SDRAM_SendCommand(&dsy_sdram.hsdram, &Command, 0x1000) != HAL_OK)
++        return Result::ERR;
++#else
+     HAL_SDRAM_SendCommand(&dsy_sdram.hsdram, &Command, 0x1000);
++#endif
+ 
+     //HAL_SDRAM_ProgramRefreshRate(hsdram, 0x56A - 20);
++#if defined(TERESINA_SDRAM_PROFILE)
++    if(HAL_SDRAM_ProgramRefreshRate(&dsy_sdram.hsdram, refresh_count) != HAL_OK)
++        return Result::ERR;
++#else
+     HAL_SDRAM_ProgramRefreshRate(&dsy_sdram.hsdram, 0x81A - 20);
++#endif
+     return Result::OK;
+ }
+ 
+--- /dev/null
++++ b/src/dev/teresina_sdram_profile.h
+@@ -0,0 +1,54 @@
++#pragma once
++#include <cstdint>
++
++// IS42S32160F-6BLI prototype profile, -40..85 C. Hardware qualification pending.
++namespace daisy
++{
++namespace teresina_sdram
++{
++constexpr uint32_t kRows = 8192;
++constexpr uint32_t kTargetSweepUs = 32000;
++constexpr uint32_t kLowerClockAllowancePpm = 1000;
++constexpr uint32_t kSchedulingTicks = 20;
++
++struct ClockSnapshot
++{
++    uint32_t hse_hz, m, n, fraction, p, q, r, sdclk_divider;
++    bool hse_ready, pll2_ready, r_enabled, fraction_enabled;
++    bool source_hse, source_pll2, crystal_mode, range_valid, wide_vco;
++};
++
++inline bool CalculateCount(uint32_t sdclk_hz, uint32_t forbidden_count,
++                           uint32_t& count)
++{
++    const uint64_t lower_hz = uint64_t(sdclk_hz)
++        * (1000000 - kLowerClockAllowancePpm) / 1000000;
++    const uint64_t budget = lower_hz * kTargetSweepUs
++        / (uint64_t(kRows) * 1000000);
++    if(budget < kSchedulingTicks + 1 + 58)
++        return false;
++    const uint64_t candidate = budget - kSchedulingTicks - 1;
++    if(candidate > 0x1fff || candidate == forbidden_count)
++        return false;
++    count = static_cast<uint32_t>(candidate);
++    return true;
++}
++
++inline bool ValidateClock(const ClockSnapshot& c, uint32_t& sdclk_hz)
++{
++    if(!c.hse_ready || !c.pll2_ready || !c.r_enabled || !c.fraction_enabled
++       || !c.source_hse || !c.source_pll2 || !c.crystal_mode
++       || !c.range_valid || !c.wide_vco
++       || c.hse_hz != 16000000 || c.m != 3 || c.n != 37
++       || c.fraction != 4096 || c.p != 8 || c.q != 2 || c.r != 1 || c.sdclk_divider != 2)
++        return false;
++    const uint64_t kernel = uint64_t(c.hse_hz)
++        * (uint64_t(c.n) * 8192 + c.fraction)
++        / (uint64_t(c.m) * c.r * 8192);
++    if(kernel != 200000000 || kernel / c.sdclk_divider != 100000000)
++        return false;
++    sdclk_hz = static_cast<uint32_t>(kernel / c.sdclk_divider);
++    return true;
++}
++} // namespace teresina_sdram
++} // namespace daisy
+--- a/src/sys/system.cpp
++++ b/src/sys/system.cpp
+@@ -215,6 +215,17 @@
+ // TODO: DONT FORGET TO IMPLEMENT CLOCK CONFIG
+ void System::Init(const System::Config& config)
+ {
++#if defined(TERESINA_SDRAM_PROFILE)
++    // Reject unsupported silicon and live clock changes before ConfigureClocks.
++    __HAL_RCC_FMC_CLK_ENABLE();
++    if(HAL_GetREVID() != REV_ID_V
++       || (FMC_SDRAM_DEVICE->SDRTR & FMC_SDRTR_COUNT) != 0
++       || (FMC_SDRAM_DEVICE->SDCR[0] & FMC_SDCRx_SDCLK) != 0)
++    {
++        __disable_irq();
++        while(true) { __NOP(); }
++    }
++#endif
+     cfg_ = config;
+     HAL_Init();
+     if(!config.skip_clocks)
+@@ -401,13 +412,21 @@
+     {
+         case Config::SysClkFreq::FREQ_480MHZ:
+             __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
++            #if defined(TERESINA_SDRAM_PROFILE)
++            plln_val      = 299;
++#else
+             plln_val      = 240;
++#endif
+             flash_latency = FLASH_LATENCY_4;
+             break;
+         case Config::SysClkFreq::FREQ_400MHZ:
+         default:
+             __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
++            #if defined(TERESINA_SDRAM_PROFILE)
++            plln_val      = 249;
++#else
+             plln_val      = 200;
++#endif
+             flash_latency = FLASH_LATENCY_2;
+             break;
+     }
+@@ -424,13 +443,22 @@
+     RCC_OscInitStruct.HSI48State    = RCC_HSI48_ON;
+     RCC_OscInitStruct.PLL.PLLState  = RCC_PLL_ON;
+     RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
++#if defined(TERESINA_SDRAM_PROFILE)
++    // HSE16MHz / 5 = 3.2MHz, inside RGE1. Boost478.4/default398.4MHz.
++    RCC_OscInitStruct.PLL.PLLM      = 5;
++#else
+     RCC_OscInitStruct.PLL.PLLM      = 4;
++#endif
+     //
+     RCC_OscInitStruct.PLL.PLLN      = plln_val;
+     RCC_OscInitStruct.PLL.PLLP      = 2;
+     RCC_OscInitStruct.PLL.PLLQ      = 5; // was 4 in cube
+     RCC_OscInitStruct.PLL.PLLR      = 2;
++#if defined(TERESINA_SDRAM_PROFILE)
++    RCC_OscInitStruct.PLL.PLLRGE    = RCC_PLL1VCIRANGE_1;
++#else
+     RCC_OscInitStruct.PLL.PLLRGE    = RCC_PLL1VCIRANGE_2;
++#endif
+     RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;
+     RCC_OscInitStruct.PLL.PLLFRACN  = 0;
+     if(HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+@@ -475,8 +503,15 @@
+     */
+ 
+     // New Timing
++#if defined(TERESINA_SDRAM_PROFILE)
++    // 16MHz / 3 = 5.333MHz, inside PLL2 RGE2 (4..8MHz).
++    // (37 + 4096/8192) / 3 preserves every nominal PLL2 output.
++    PeriphClkInitStruct.PLL2.PLL2N     = 37;
++    PeriphClkInitStruct.PLL2.PLL2M     = 3;
++#else
+     PeriphClkInitStruct.PLL2.PLL2N     = 12; // Max supported freq of FMC;
+     PeriphClkInitStruct.PLL2.PLL2M     = 1;
++#endif
+     PeriphClkInitStruct.PLL2.PLL2P     = 8; // 25MHz
+     PeriphClkInitStruct.PLL2.PLL2Q     = 2; // 100MHz
+     PeriphClkInitStruct.PLL2.PLL2R     = 1; // 200MHz

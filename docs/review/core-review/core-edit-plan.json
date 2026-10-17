@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.0",
+  "scope": "Source-backed digital-core repairs; no firmware changes and no CAD edits performed by this reviewer",
+  "approved_current_repairs": [
+    {
+      "references": [
+        "C13",
+        "C14"
+      ],
+      "fields": {
+        "Value": "2.2uF",
+        "MPN": "CL21B225KAFNNNE",
+        "LCSC": "C19110",
+        "Footprint": "Capacitor_SMD:C_0805_2012Metric"
+      },
+      "pin_nets": {
+        "1": "/VCAP",
+        "2": "GND"
+      },
+      "qualification": "Verified nominal BOM and package correction; production qualification remains bounded by typical manufacturer models",
+      "placement": {
+        "C13": "Local to U1.F13",
+        "C14": "Local to U1.M10",
+        "rule": "One local 2.2uF capacitor at each ball, short ground return, retain shared VCAP net"
+      },
+      "sources": [
+        {
+          "url": "https://www.lcsc.com/product-detail/C19110.html",
+          "basis": "Exact complete order MPN and SKU"
+        },
+        {
+          "url": "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL21B225KAFNNN",
+          "basis": "Manufacturer exact electrical base specification and typical curves"
+        },
+        {
+          "url": "https://www.st.com/resource/en/application_note/an4938-getting-started-with-stm32h74x75x-hardware-development-stmicroelectronics.pdf",
+          "pdf_page": 12,
+          "basis": "VCAP1 and VCAP2 must be interconnected and each bypassed locally"
+        }
+      ],
+      "release_gates": [
+        "Effective capacitance and ESR over actual voltage, temperature, aging and procurement variation",
+        "Do not treat separate typical DC-bias and temperature curves as a guaranteed combined envelope",
+        "Prototype regulator stability and startup validation"
+      ]
+    },
+    {
+      "references": [
+        "Y1"
+      ],
+      "strategy": "Repair existing YXC package only",
+      "fields": {
+        "Value": "16MHz",
+        "MPN": "X322516MLB4SI",
+        "LCSC": "C13738",
+        "lib_id": "Device:Crystal_GND24",
+        "Footprint": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
+      },
+      "pin_nets": {
+        "1": "/OSC_IN",
+        "2": "GND",
+        "3": "/OSC_OUT",
+        "4": "GND"
+      },
+      "old_to_new_signal_pin_map": {
+        "1": "1",
+        "2": "3"
+      },
+      "qualification": "Symbol, ground-case connections and manufacturer land pattern verified; exact ordered load and drive remain unresolved",
+      "pads_mm": {
+        "1": {
+          "x": -1.1,
+          "y": 0.85,
+          "width": 1.4,
+          "height": 1.2
+        },
+        "2": {
+          "x": 1.1,
+          "y": 0.85,
+          "width": 1.4,
+          "height": 1.2
+        },
+        "3": {
+          "x": 1.1,
+          "y": -0.85,
+          "width": 1.4,
+          "height": 1.2
+        },
+        "4": {
+          "x": -1.1,
+          "y": -0.85,
+          "width": 1.4,
+          "height": 1.2
+        }
+      },
+      "sources": [
+        {
+          "url": "https://www.yxc.hk/uploadfiles/2026/09/YXC-YSX321SL.pdf",
+          "pdf_page": 1,
+          "basis": "Direct manufacturer package, case pins and land pattern"
+        }
+      ],
+      "release_gates": [
+        "Exact manufacturer specification for X322516MLB4SI CL and drive limit; retail CL9pF alone is insufficient",
+        "Final-layout load-capacitance and startup/drive measurements"
+      ],
+      "C37_C38_numeric_edit_approved": false
+    }
+  ],
+  "qualified_source_alternative": {
+    "reference": "Y1",
+    "replace_existing_yxc_fields": true,
+    "fields": {
+      "Value": "16MHz",
+      "MPN": "ECS-160-8-33Q-RES-TR",
+      "LCSC": "C6844087",
+      "lib_id": "Device:Crystal_GND24",
+      "Footprint": "TeresinaRack:Crystal_ECS_ECX33Q_3.2x2.5mm"
+    },
+    "part_number_decode": {
+      "160": "16.000MHz",
+      "8": "8pF load",
+      "33Q": "ECX-33Q 3.2x2.5mm four-pad",
+      "R": "Initial tolerance +/-15ppm",
+      "E": "Frequency stability +/-50ppm",
+      "S": "-40..+125C",
+      "TR": "1000-per-reel tape packing"
+    },
+    "electrical_specs": {
+      "frequency_MHz": 16,
+      "CL_pF": 8,
+      "C0_max_pF": 7,
+      "ESR_max_ohm": 80,
+      "drive_max_uW": 100,
+      "aging_first_year_max_ppm": 5
+    },
+    "pin_nets": {
+      "1": "/OSC_IN",
+      "2": "GND",
+      "3": "/OSC_OUT",
+      "4": "GND"
+    },
+    "package_height_max_mm": 0.8,
+    "manufacturer_matched_custom_footprint_required": true,
+    "pads_mm": {
+      "1": {
+        "x": -1.15,
+        "y": 0.9,
+        "width": 1.3,
+        "height": 1.1
+      },
+      "2": {
+        "x": 1.15,
+        "y": 0.9,
+        "width": 1.3,
+        "height": 1.1
+      },
+      "3": {
+        "x": 1.15,
+        "y": -0.9,
+        "width": 1.3,
+        "height": 1.1
+      },
+      "4": {
+        "x": -1.15,
+        "y": -0.9,
+        "width": 1.3,
+        "height": 1.1
+      }
+    },
+    "generic_3225_footprint_is_exact_match": false,
+    "gain_check": {
+      "method": "AN2867 Rev24 pp13-14 maximum-critical-transconductance criterion",
+      "gmcrit_mA_per_V": 0.7276661932835161,
+      "STM32H750_Gmcritmax_mA_per_V": 1.5,
+      "passed": true,
+      "note": "Gmcritmax already includes factor5; do not demand another factor5 margin"
+    },
+    "conservative_drive_current_bound": {
+      "Irms_max_mA": 1.118033988749895,
+      "Ipp_sinusoidal_max_mA": 3.16227766016838,
+      "basis": "Using ESRmax80ohm and drive max100uW"
+    },
+    "capacitor_retuning": {
+      "equation": "C37=C38=2*(8pF-totalCstray)",
+      "conditional_start_value_pF": 10,
+      "assumed_totalCstray_pF_for_start_value": 3,
+      "status": "Calculated prototype starting value, not final production approval",
+      "dielectric": "C0G/NP0",
+      "required_exact_capacitor_MPN_SKU": "GRM1555C1H100JA01D / C76946",
+      "tuning_examples": {
+        "Cstray1pF": "14pF each",
+        "Cstray2pF": "12pF each",
+        "Cstray3pF": "10pF each",
+        "Cstray4pF": "8pF each"
+      },
+      "conditional_prototype_changes": {
+        "references": [
+          "C37",
+          "C38"
+        ],
+        "fields": {
+          "Value": "10pF",
+          "MPN": "GRM1555C1H100JA01D",
+          "LCSC": "C76946",
+          "Footprint": "Capacitor_SMD:C_0402_1005Metric"
+        },
+        "nets_unchanged": true,
+        "manufacturer_source": {
+          "url": "https://datasheet.lcsc.com/datasheet/pdf/1c6af07abaa9451a8a7a76981760389d.pdf?productCode=C76946",
+          "pdf_page": 1,
+          "basis": "Manufacturer full part-number system,10pF,+/-5%,C0G,50V andD tape packing"
+        },
+        "status": "Approved conditional prototype population for an explicit3pF totalstray design target; finalproduction values require frequency/drive/startup closure"
+      },
+      "capacitor_stock_at_review": {
+        "LCSC_retail_units": 296600,
+        "production_assembly_allocation_verified": false
+      }
+    },
+    "stock_at_review": {
+      "LCSC_retail_units": 13,
+      "production_stock_qualified": false,
+      "note": "Prototype quantity only, not reserved and not JLC assembly allocation"
+    },
+    "sources": [
+      {
+        "url": "https://ecsxtal.com/store/pdf/ECX-33Q.pdf",
+        "pdf_pages": [
+          1,
+          2
+        ],
+        "revision": "2023",
+        "basis": "Full manufacturer numbering code, electrical limits, connections and suggested lands"
+      },
+      {
+        "url": "https://www.lcsc.com/product-detail/C6844087.html",
+        "basis": "Exact stocked SKU and corroborating electrical attributes"
+      }
+    ],
+    "release_gates": [
+      "Frequency accuracy must meet final reference-hardware requirement; this part has looser published tolerance/stability than the existing YXC retail claim",
+      "Final load capacitance and HSE frequency verified for final geometry",
+      "Startup and drive remain within manufacturer limits across rail and operating temperature",
+      "If series resistor is needed, recalculate oscillator critical transconductance including added loss",
+      "Production sourcing and JLC assembly allocation"
+    ],
+    "qualification": "Manufacturer-decoded component with passing STM32 selection criterion; adoption and production release remain conditional on accuracy, final load, drive/startup and sourcing"
+  },
+  "invariants": [
+    "U1 STM32H750IBK6 and all ball assignments remain unchanged",
+    "U2 IS25LP064A-JBLE and all QSPI port assignments remain unchanged",
+    "16MHz firmware clock remains unchanged",
+    "F13 and M10 share the VCAP net, with separate local capacitors to ground",
+    "RAM is not qualified with unchanged stock refresh settings; these edits do not close that blocker"
+  ],
+  "post_edit_independent_checks": [
+    "Native XML contains exact selected MPN/SKU/value/footprint at C13,C14,Y1 and any changed C37,C38",
+    "Native XML maps Y1.1 toOSC_IN,Y1.3 toOSC_OUT,Y1.2/Y1.4 toGND",
+    "Native XML retains U1.F13/U1.M10 and both capacitor pin1 on oneVCAP net; capacitor pin2 onGND",
+    "Native library pins2and4 are stacked and pin4hidden; both must appear connected in the native netlist",
+    "All U1/U2/U3 pad function and net assignments unchanged",
+    "Footprint pad positions/sizes checked against the chosen manufacturer, including backside/rotation normalization",
+    "Native ERC and PCB synchronization reviewed; DRC/copper hygiene performed after eventual routing"
+  ]
+}

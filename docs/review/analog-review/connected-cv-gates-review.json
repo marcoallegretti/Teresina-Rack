@@ -1,0 +1,34 @@
+{
+  "verdict": "Pages8CVinputs and10gates pass scoped electrical and visual review; other sheet visual drafts remain unaccepted",
+  "native_components": 211,
+  "native_pins": 856,
+  "all_native_graph_and_nonsheet_fields_equal_core": true,
+  "PDF_is_newer_than_reviewed_sheets": true,
+  "PDF_sha256": "7858c939f83941d0150aae558f4b1d315d48d2372115f0903426158d988bd244",
+  "sheet_hashes": {
+    "cv-inputs.kicad_sch": "9db2bf8c9303a0cb984e265e51a9e8a313756a651a894931f3c0807df8a3102c",
+    "gates.kicad_sch": "582763309b7356191d7d491df8c71f8dfac553b324a10db55d82dcc995cb16cf"
+  },
+  "ERC_counts": {
+    "('warning', 'endpoint_off_grid')": 86,
+    "('warning', 'lib_symbol_mismatch')": 2,
+    "('error', 'pin_to_pin')": 3
+  },
+  "visual_evidence_files": [
+    "connected-page-08.png",
+    "connected-page-10.png"
+  ],
+  "visual_checks": [
+    "Eight CV channels visibly show input100k+bias200k and33k/220pF parallel feedback, plus inputs grounded",
+    "Gate1/2 feedback sensed before100\u03a9series andclosedthrough62k/120k",
+    "Two transistor input stages show100kseries/1Mbasepulldown/10kcollector-pullup/1kMCUseries",
+    "No material text/pin/body collisions found at reviewed PDF scale; channel andnetlabels legible",
+    "No hidden feedback topology: loops physically drawn and native channel mapping retained"
+  ],
+  "limits": [
+    "Diagram does not imply capacitor PCBplacement/ownership acceptance",
+    "Negative B-E protection and loaded analog qualification remain pending",
+    "Other grid sheets retain presentation rejection",
+    "NoPCB orproduction acceptance"
+  ]
+}

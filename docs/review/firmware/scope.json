@@ -1,0 +1,125 @@
+{
+  "libDaisy_commit": "08087203debc646d3710ec8caa35bac6cf20ab5e",
+  "bootloader_commit": "8b279a8e25922b786c24a6cbd1d499cdc1e76934",
+  "bootloader_library_dependency_override": "pinned libDaisy v9.0.0, same patched archive as application",
+  "changed_lib_files": [
+    "Makefile",
+    "core/Makefile",
+    "src/dev/sdram.cpp",
+    "src/daisy_patch_sm.cpp",
+    "src/sys/system.cpp",
+    "src/dev/teresina_sdram_profile.h"
+  ],
+  "patched_sha256": {
+    "Makefile": "0f52afe06098da325a64258ff23da0fe262b3f83ad92ad90ab1354d1b144e94e",
+    "core/Makefile": "09871cf8a8111f79e7a05035d102d34c782c573fc6ad71f3f422ff7837f16383",
+    "src/dev/sdram.cpp": "bc444b20e964b6b50b4ef98660c53034e541b03a09fd5913e26b1fc2d7de3df8",
+    "src/daisy_patch_sm.cpp": "0cdd76b1b838134225406b2abacdfdb813f97fd5cba48e7db960876e404cb529",
+    "src/sys/system.cpp": "887ec08fc96348f1259eb664fcd127e8483d7a07e7856668dd571115576877f3",
+    "src/dev/teresina_sdram_profile.h": "adac3a71a55661fd64c8aea1f372c112c94bb245097193d37398472998069bc2"
+  },
+  "profile_opt_in": "make TERESINA_SDRAM_PROFILE=1",
+  "refresh_target_ms": 32,
+  "nominal_sdclk_hz": 100000000,
+  "lower_clock_allocation_ppm": 1000,
+  "expected_count": 369,
+  "supported_prototype_execution": "internal flash; v6 reset-mediated QSPI/internal SRAM, no SDRAM access before board Init",
+  "unsupported": "stock binaries, legacy external-memory boots, SDRAM-resident code/stack/early data, live second Init, clock changes or retained SDRAM across reset",
+  "status": "Crossbuild, host arithmetic, exact source reconstruction and bounded independent source/linked reviews complete; hardware and production unqualified.",
+  "cpu_clock_modes": {
+    "Boost": "478.4MHz integerM5/N299/P2, VOS0",
+    "Default": "398.4MHz integerM5/N249/P2, VOS1",
+    "configuration_enum_names": "upstream names retained, actual rates reported by GetSysClkFreq"
+  },
+  "pll2": {
+    "M": 3,
+    "N": 37,
+    "FRACN": 4096,
+    "R": 1,
+    "P": 8,
+    "Q": 2,
+    "RGE": "4..8MHz",
+    "kernel_hz": 200000000,
+    "sdclk_hz": 100000000,
+    "note": "all nominal PLL2 outputs preserved"
+  },
+  "silicon": "RevV required before System clock configuration",
+  "fresh_init_guard": "COUNTzero and SDCLKdisabled checked before both System clock changes and HAL_SDRAM_Init",
+  "profile_switch_safety": "configuration stamp invalidates stale objects when profile0/1changes; concurrent conflicting profiles in one builddir unsupported",
+  "link_safety": "core Makefile ELF depends on SDK archive and linker script; profile0/1 stamp rebuild checked",
+  "sources": {
+    "libDaisy": {
+      "commit": "08087203debc646d3710ec8caa35bac6cf20ab5e",
+      "changed_files": {
+        "Makefile": {
+          "base_sha256": "641a4b58e5be587e3c238d4981c898afcfb0094f17776f82eac7a66d86f23ca4",
+          "candidate_sha256": "0f52afe06098da325a64258ff23da0fe262b3f83ad92ad90ab1354d1b144e94e"
+        },
+        "core/Makefile": {
+          "base_sha256": "f35c28f380141a0a317ff72654529806bf2f166a2f7284bff6abefbaa3b7007c",
+          "candidate_sha256": "09871cf8a8111f79e7a05035d102d34c782c573fc6ad71f3f422ff7837f16383"
+        },
+        "src/daisy_patch_sm.cpp": {
+          "base_sha256": "61165173c8eb3fc5b26b4ae14b7c392b5112224588d36a64d4053f5a7a97ad28",
+          "candidate_sha256": "0cdd76b1b838134225406b2abacdfdb813f97fd5cba48e7db960876e404cb529"
+        },
+        "src/dev/sdram.cpp": {
+          "base_sha256": "ae7ba228184b0ac68ce2aa08f3bbe0ac74fc4f51ae1087e01000a23bb2815b8a",
+          "candidate_sha256": "bc444b20e964b6b50b4ef98660c53034e541b03a09fd5913e26b1fc2d7de3df8"
+        },
+        "src/dev/teresina_sdram_profile.h": {
+          "base_sha256": null,
+          "candidate_sha256": "adac3a71a55661fd64c8aea1f372c112c94bb245097193d37398472998069bc2"
+        },
+        "src/sys/system.cpp": {
+          "base_sha256": "361a9a54b9a4791f2bafe9de5d5d8c151a2b5031ee0fba3cc0ef50a3ec30bdba",
+          "candidate_sha256": "887ec08fc96348f1259eb664fcd127e8483d7a07e7856668dd571115576877f3"
+        }
+      },
+      "patch_sha256": "bb2a35363e26949827c61dcb0887192e3335f334e068b464d4aac589850881ba",
+      "upstream_gitlinks": {
+        "Drivers/CMSIS-DSP": "3a04f817a4380c00ff51f9bcdc6c4e4bb7a18b80",
+        "Drivers/CMSIS-Device/ST/STM32H7xx": "6dac8c24d7b38ab20806d27dd7d8285a6433b8f7",
+        "Drivers/CMSIS_5": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+        "Drivers/STM32H7xx_HAL_Driver": "404a70d4c19c124636c78801ff7c0dbc87bc4256",
+        "Middlewares/ST/STM32_USB_Device_Library": "7b5e6886d2f11ad15d2b46364e8a96984358f639",
+        "tests/googletest": "9d43b27f7a873596496a2ea70721b3f9eb82df01"
+      },
+      "archive_EOL_only_files": [
+        "doc/DoxygenLayout.xml",
+        "libdaisy-Debug.vgdbsettings",
+        "libdaisy-Release.vgdbsettings",
+        "libdaisy.sln",
+        "libdaisy.vcxproj",
+        "libdaisy.vcxproj.filters",
+        "stm32.props",
+        "stm32.xml"
+      ]
+    },
+    "bootloader": {
+      "commit": "8b279a8e25922b786c24a6cbd1d499cdc1e76934",
+      "changed_files": {
+        "bootloader/main.cpp": {
+          "base_sha256": "d2500e96385fb92191a93e3fe975bcf3a7e7026bb653fe13c9bf672ace6f5f4a",
+          "candidate_sha256": "72fea0ff76f2e77c44bbd145e325dd47a5d84776bd8ebc95c3dad5a82fcb275f"
+        },
+        "shared/bootloader.cpp": {
+          "base_sha256": "d942753170e357c0dec18278d7b8b6dcf004adae7ac317a6a1fb02af411a6efe",
+          "candidate_sha256": "9c617851a97fd51996ec40b40f6cb30e6b94fb965e7eff43fac0d4b53ee5f2c2"
+        },
+        "shared/bootloader.h": {
+          "base_sha256": "056b42a2ef6786cac7accddd3dc77045b864a552412b0fa74a127f13f45d9b23",
+          "candidate_sha256": "aeec7d75a5b5c1368e2ee9ae5759980be168654a7c255aba3afe47291768d30d"
+        }
+      },
+      "patch_sha256": "035b33be0245d109dc164dad30316ac134d7c8508f89a36ab37c794ae9d3ff2a",
+      "upstream_gitlinks": {
+        "libDaisy": "24be4afea00d71988019fe8dd9fd9fc8fc5bf72c"
+      },
+      "archive_EOL_only_files": []
+    }
+  },
+  "boot_adapter": "Digital-only System/SDRAM/QSPI/TIM5, DCache off; ProcessControls exactly factors old AudioProcess control body. Reset/DFU/QSPI storage code unchanged.",
+  "timing_limit": "Unchanged TimerHandle microsecond conversion bias approx +0.08368% Boost/+0.10050% Default; no exact timing-equivalence claim",
+  "boot_io_limit": "Upstream IoInit ignores several internal USB/SD init errors; top-level result is not comprehensive propagation"
+}

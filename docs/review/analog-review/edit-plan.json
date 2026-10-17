@@ -1,0 +1,379 @@
+{
+  "status": "Source-backed edit plan only; no CAD modifications performed",
+  "base_candidate": "/workspace/cloud-setup/redesign/candidate/TeresinaRack.kicad_sch",
+  "base_sha256": "846c078a53bb90ccb1fe10185bcc48ca868152e61c342ccca25629dc10c48879",
+  "official_basis": {
+    "schematic": "../sources/ES_Daisy_Patch_SM_Schematic.pdf",
+    "pdf_page": 4,
+    "printed_sheet": "4/4 Eurorack Conversions",
+    "gate1": "U13A pins3+GPIO,2\u2212feedback,1out,R10=120k toGND,R11=62k feedback,R12=100R output",
+    "gate2": "U13B pins5+GPIO,6\u2212feedback,7out,R13=120k toGND,R16=62k feedback,R17=100R output",
+    "label_caution": "Official sheet4 labels internal driver nets GATEOUT2\u2192OUTPUT_GATE1 and GATEOUT1\u2192OUTPUT_GATE2. Do not rename/swap MCU outputs by those names. Preserve clone GATE_OUT_1=PC14 and GATE_OUT_2=PC13 mappings; match physical output functions and existing native pins."
+  },
+  "label_edits": [
+    {
+      "type": "label",
+      "uuid": "4192a531-5568-4b72-a100-fa67c0809b4b",
+      "pin": "R160.1",
+      "old": "+3V3",
+      "new": "GATEOUT_1_O",
+      "position": [
+        1385,
+        548.19,
+        0
+      ]
+    },
+    {
+      "type": "label",
+      "uuid": "9e1adec3-5dc1-4533-accf-e3a83ac643ee",
+      "pin": "R160.2",
+      "old": "VTH",
+      "new": "GATEOUT_FB_1",
+      "position": [
+        1385,
+        555.81,
+        0
+      ]
+    },
+    {
+      "type": "label",
+      "uuid": "1e3b68e5-a981-4c5c-8866-a470145a5dc5",
+      "pin": "R161.1",
+      "old": "VTH",
+      "new": "GATEOUT_FB_1",
+      "position": [
+        1430,
+        548.19,
+        0
+      ]
+    },
+    {
+      "type": "label",
+      "uuid": "11b2ef6f-0887-412f-85ee-735632f6b390",
+      "pin": "U15.9",
+      "old": "VTH",
+      "new": "GATEOUT_FB_1",
+      "position": [
+        1192.38,
+        582.54,
+        0
+      ]
+    },
+    {
+      "type": "label",
+      "uuid": "a5f40b26-3ef3-4c39-87af-3c68c4e31cbe",
+      "pin": "U15.13",
+      "old": "VTH",
+      "new": "GATEOUT_FB_2",
+      "position": [
+        1192.38,
+        642.54,
+        0
+      ]
+    }
+  ],
+  "component_property_edits": [
+    {
+      "reference": "R160",
+      "uuid": "dc8c4121-81c3-4a03-af1b-8887dd3d6240",
+      "old": {
+        "Value": "100K",
+        "MPN": "0402WGF1003TCE",
+        "LCSC": "C25741"
+      },
+      "new": {
+        "Value": "62K",
+        "MPN": "FRC0402F6202TS",
+        "LCSC": "C2909375"
+      }
+    },
+    {
+      "reference": "R161",
+      "uuid": "59ed34e6-aff5-4452-884b-9e4cadb14e50",
+      "old": {
+        "Value": "100K",
+        "MPN": "0402WGF1003TCE",
+        "LCSC": "C25741"
+      },
+      "new": {
+        "Value": "120K",
+        "MPN": "0402WGF1203TCE",
+        "LCSC": "C25750"
+      }
+    },
+    {
+      "reference": "Q1",
+      "uuid": "c0d2bfee-6df3-4454-96f1-d14277140c22",
+      "old": {
+        "MPN": "MMBT3904(RANGE:100-300)",
+        "LCSC": "C20526",
+        "Datasheet": "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf",
+        "Manufacturer": null
+      },
+      "new": {
+        "MPN": "MMBT3904(RANGE:100-300)",
+        "LCSC": "C20526",
+        "Datasheet": "https://datasheet.lcsc.com/datasheet/pdf/9335632bcfa83df8351353eab379720e.pdf?productCode=C20526&from=product",
+        "Manufacturer": "Jiangsu Changjing Electronics (JSCJ)"
+      },
+      "electrical_or_footprint_change": false
+    },
+    {
+      "reference": "Q2",
+      "uuid": "a407a774-6c31-46bb-8f49-a6da5c557eac",
+      "old": {
+        "MPN": "MMBT3904(RANGE:100-300)",
+        "LCSC": "C20526",
+        "Datasheet": "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf",
+        "Manufacturer": null
+      },
+      "new": {
+        "MPN": "MMBT3904(RANGE:100-300)",
+        "LCSC": "C20526",
+        "Datasheet": "https://datasheet.lcsc.com/datasheet/pdf/9335632bcfa83df8351353eab379720e.pdf?productCode=C20526&from=product",
+        "Manufacturer": "Jiangsu Changjing Electronics (JSCJ)"
+      },
+      "electrical_or_footprint_change": false
+    },
+    {
+      "reference": "C100",
+      "uuid": "7420d3b3-f39a-456c-9598-7f9fc5c2fddb",
+      "old": {
+        "Value": "2.2uF",
+        "MPN": "CL21A226MAQNNNE",
+        "LCSC": "C45783",
+        "Datasheet": "",
+        "Manufacturer": null
+      },
+      "new": {
+        "Value": "2.2uF",
+        "MPN": "CL21B225KBYNNNE",
+        "LCSC": "C2762602",
+        "Datasheet": "https://datasheet.lcsc.com/datasheet/pdf/795373d432c2f73e9e5af1f8f1a729a4.pdf?productCode=C2762602&from=product",
+        "Manufacturer": "Samsung Electro-Mechanics"
+      },
+      "retained_footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "candidate_rating": "Selected Samsung2.2\u00b5F\u00b110%50V X7R0805; nominal thickness1.25mm from Ycode. Compatible with existing0805 footprint; exact cap-to-landmark/courtyard/height validation pending.",
+      "electrical_effect": "Ordered nominal C becomes2.2uF rather than22uF; schematic declared value and nominal intended transfer unchanged."
+    },
+    {
+      "reference": "C103",
+      "uuid": "2ccfa0b8-4496-42dd-98a2-2f074cfd8c8f",
+      "old": {
+        "Value": "2.2uF",
+        "MPN": "CL21A226MAQNNNE",
+        "LCSC": "C45783",
+        "Datasheet": "",
+        "Manufacturer": null
+      },
+      "new": {
+        "Value": "2.2uF",
+        "MPN": "CL21B225KBYNNNE",
+        "LCSC": "C2762602",
+        "Datasheet": "https://datasheet.lcsc.com/datasheet/pdf/795373d432c2f73e9e5af1f8f1a729a4.pdf?productCode=C2762602&from=product",
+        "Manufacturer": "Samsung Electro-Mechanics"
+      },
+      "retained_footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "candidate_rating": "Selected Samsung2.2\u00b5F\u00b110%50V X7R0805; nominal thickness1.25mm from Ycode. Compatible with existing0805 footprint; exact cap-to-landmark/courtyard/height validation pending.",
+      "electrical_effect": "Ordered nominal C becomes2.2uF rather than22uF; schematic declared value and nominal intended transfer unchanged."
+    }
+  ],
+  "new_components": [
+    {
+      "reference": "R171",
+      "template_reference": "R156",
+      "symbol_uuid": "5d2069a4-a36d-44b2-9a40-00bcfd19bcfc",
+      "pin_uuids": {
+        "1": "e08dda97-50cc-4a61-85dc-bda0fdcb103a",
+        "2": "1f441ef4-e2ff-47b3-bc42-2d1c6d0eb685"
+      },
+      "position": [
+        1340,
+        620,
+        0
+      ],
+      "unit": 1,
+      "lib_id": "Device:R",
+      "footprint": "Resistor_SMD:R_0402_1005Metric",
+      "properties": {
+        "Value": "62K",
+        "MPN": "FRC0402F6202TS",
+        "LCSC": "C2909375"
+      },
+      "instance": {
+        "project": "TeresinaRack",
+        "path": "/933fb46f-5218-4b28-95eb-39f983e7bb80",
+        "reference": "R171",
+        "unit": 1
+      },
+      "direct_labels": [
+        {
+          "type": "label",
+          "uuid": "fe077d38-84ca-42c6-b175-dcfd3eb4f256",
+          "position": [
+            1340,
+            616.19,
+            0
+          ],
+          "name": "GATEOUT_2_O",
+          "pin": 1
+        },
+        {
+          "type": "label",
+          "uuid": "c08d1d48-8613-4685-9faf-b002d5c4cf57",
+          "position": [
+            1340,
+            623.81,
+            0
+          ],
+          "name": "GATEOUT_FB_2",
+          "pin": 2
+        }
+      ],
+      "template_property_translation": "Translate nonzero position annotations by new_symbol_position minus template_symbol_position; preserve hidden MPN/LCSC (0,0) positions; update Reference in both property and project instance. Generate no new wires."
+    },
+    {
+      "reference": "R172",
+      "template_reference": "R154",
+      "symbol_uuid": "1ebe3fbd-7726-4058-8253-3a7f56b7e4b6",
+      "pin_uuids": {
+        "1": "870068ce-c31c-469f-b187-988b84be17e7",
+        "2": "377bdf91-a19c-4a94-a3d4-244c8bd2651e"
+      },
+      "position": [
+        1385,
+        620,
+        0
+      ],
+      "unit": 1,
+      "lib_id": "Device:R",
+      "footprint": "Resistor_SMD:R_0402_1005Metric",
+      "properties": {
+        "Value": "120K",
+        "MPN": "0402WGF1203TCE",
+        "LCSC": "C25750"
+      },
+      "instance": {
+        "project": "TeresinaRack",
+        "path": "/933fb46f-5218-4b28-95eb-39f983e7bb80",
+        "reference": "R172",
+        "unit": 1
+      },
+      "direct_labels": [
+        {
+          "type": "label",
+          "uuid": "40ae9346-0927-4230-8ad6-4dca7b4b2377",
+          "position": [
+            1385,
+            616.19,
+            0
+          ],
+          "name": "GATEOUT_FB_2",
+          "pin": 1
+        },
+        {
+          "type": "label",
+          "uuid": "ec6508a7-f605-4e84-b4d8-f282da31a5f9",
+          "position": [
+            1385,
+            623.81,
+            0
+          ],
+          "name": "GND",
+          "pin": 2
+        }
+      ],
+      "template_property_translation": "Translate nonzero position annotations by new_symbol_position minus template_symbol_position; preserve hidden MPN/LCSC (0,0) positions; update Reference in both property and project instance. Generate no new wires."
+    }
+  ],
+  "remove_components": [],
+  "removed_net": "VTH (all four old labels renamed; R160/R161 reused)",
+  "unchanged_gate_output_series": {
+    "R162": {
+      "Value": "100R",
+      "MPN": "RC0402FR-07100RL",
+      "LCSC": "C106232"
+    },
+    "R163": {
+      "Value": "100R",
+      "MPN": "RC0402FR-07100RL",
+      "LCSC": "C106232"
+    }
+  },
+  "expected_existing_pin_net_deltas": [
+    {
+      "pin": "R160.1",
+      "before": "/+3V3",
+      "after": "/GATEOUT_1_O"
+    },
+    {
+      "pin": "R160.2",
+      "before": "/VTH",
+      "after": "/GATEOUT_FB_1"
+    },
+    {
+      "pin": "R161.1",
+      "before": "/VTH",
+      "after": "/GATEOUT_FB_1"
+    },
+    {
+      "pin": "U15.9",
+      "before": "/VTH",
+      "after": "/GATEOUT_FB_1"
+    },
+    {
+      "pin": "U15.13",
+      "before": "/VTH",
+      "after": "/GATEOUT_FB_2"
+    }
+  ],
+  "expected_new_pins": {
+    "R171.1": "/GATEOUT_2_O",
+    "R171.2": "/GATEOUT_FB_2",
+    "R172.1": "/GATEOUT_FB_2",
+    "R172.2": "GND"
+  },
+  "expected_feedback_nets": {
+    "/GATEOUT_FB_1": [
+      "U15.9",
+      "R160.2",
+      "R161.1"
+    ],
+    "/GATEOUT_FB_2": [
+      "U15.13",
+      "R171.2",
+      "R172.1"
+    ]
+  },
+  "expected_component_count": 211,
+  "uuid_uniqueness_checked_against_base": true,
+  "qualification_notes": [
+    "Restores closed-loop official transfer but does not measure loading/cable/short/temperature behavior.",
+    "Exact JSCJ C20526 identification resolves the generic vendor gap, not the reverse B-E stress:6V VEBO remains below theunclamped\u221210.91V demanded at\u221212V gate.",
+    "Official reduced schematic discloses2.2uF audio cap but not manufacturer/dielectric/package; candidate uses existing0805 footprint and verified50V nominal part, not claimed physical identity.",
+    "All old CV rail remediation must remain unchanged. PCB parity and final placement/routing are separate."
+  ],
+  "audio_cap_selection": {
+    "selected": {
+      "MPN": "CL21B225KBYNNNE",
+      "LCSC": "C2762602",
+      "nominal_uF": 2.2,
+      "voltage_V": 50,
+      "dielectric": "X7R",
+      "package": "0805"
+    },
+    "reviewed_alternative": {
+      "MPN": "CL21A225KBQNNNE",
+      "LCSC": "C377773",
+      "nominal_uF": 2.2,
+      "voltage_V": 50,
+      "dielectric": "X5R",
+      "package": "0805"
+    },
+    "selection_basis": "Both exact LCSC metadata and readable Samsung numbering catalog independently support nominal C,50V rating,\u00b110%,0805 package. Keep staged X7R because its documented dielectric temperature envelope extends\u221255\u2026125\u00b0C versus X5R\u221255\u202685\u00b0C, with same nominal value/rating/package, and avoids unnecessary divergence from reviewed BOM candidate. The C2762602-linked160-page PDF is raster-only; exact per-part bias/THD coverage is unestablished. Neither part has source-backed effectiveC or audio distortion evidence, so X7R is not claimed superior for noise or microphonics.",
+    "official_identity_gap": "Reduced Rev3 schematic supplies2.2uF nominal and generic capacitor symbol, but no exact manufacturer/dielectric/package; cannot assert physical identity.",
+    "nominal_input_coupling_fc_Hz": 1.0878670067798724,
+    "nominal_input_dc_cap_voltage_typical_V": 2.5,
+    "steady_fault_assumption": "At external input\u221217V and VCOM+2.75V, capacitor steady differential\u224819.75V, below50V rating. This assumes opamp summing node settles toVCOM and does not certify switching/transient/absent-rail faults. No 25V-only substitution is mandated."
+  }
+}

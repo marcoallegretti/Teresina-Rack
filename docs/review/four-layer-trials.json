@@ -1,0 +1,325 @@
+{
+  "scope": {
+    "source_sha256": "526624d7e45ad2807d9467746a51554c834c6a301e7d7b57e1265abd3de4e2bb",
+    "scope": "isolated BGA escape study; existing placement retained; no whole-board routability/return-path/timing approval",
+    "constraints": {
+      "trace_mm": 0.09,
+      "copper_clearance_mm": 0.09,
+      "via_diameter_mm": 0.3,
+      "via_drill_mm": 0.15,
+      "annular_mm": 0.075,
+      "drill_to_copper_mm": 0.2,
+      "hole_to_hole_mm": 0.2
+    },
+    "manufacturer_source": "https://jlcpcb.com/capabilities/pcb-capabilities"
+  },
+  "trials": [
+    {
+      "name": "U1-4-full-outer",
+      "board_sha256": "913ea37dcac66ec5e620fa974b99f0bc74441b0e71f1eb42854efa1ec577941c",
+      "router_summary": {
+        "component": "U1",
+        "requested": 114,
+        "escaped": 114,
+        "failed": 0,
+        "unescaped_nets": [],
+        "skipped_nc": 0,
+        "clearance": 0.09,
+        "track_width": 0.09,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "drc_grazes": {
+          "pad_via": 0,
+          "via_segment": 0,
+          "pad_segment": 0,
+          "segment_segment": 0,
+          "total": 0
+        },
+        "min_clearance_used": 0.09,
+        "deferred_fanout_nets": [],
+        "plane_drop": {
+          "nets": {
+            "GND": {
+              "gap": 36,
+              "in_pad": 0,
+              "existing": 0,
+              "pour": 0,
+              "failed": 3
+            },
+            "+3V3": {
+              "gap": 13,
+              "in_pad": 0,
+              "existing": 0,
+              "pour": 0,
+              "failed": 3
+            }
+          },
+          "gap_vias": 49,
+          "pad_vias": 0,
+          "skipped_existing": 0,
+          "skipped_pour": 0,
+          "track_connects": 0,
+          "pour_tracks": 0,
+          "failed": 6,
+          "pour_served_pads": {}
+        },
+        "env_knobs": {
+          "KICAD_CLI": "/workspace/cloud-setup/bin/kicad-cli"
+        }
+      },
+      "native_drc": {
+        "errors": 33,
+        "warnings": 580,
+        "unconnected_items": 499,
+        "types": {
+          "hole_clearance": 33,
+          "track_dangling": 116,
+          "via_dangling": 49,
+          "courtyards_overlap": 2,
+          "silk_edge_clearance": 16,
+          "lib_footprint_issues": 1,
+          "silk_overlap": 195,
+          "silk_over_copper": 199,
+          "nonmirrored_text_on_back_layer": 2
+        }
+      },
+      "hygiene_log": "/workspace/cloud-setup/redesign/pilots/U1-4-full-outer-hygiene.log",
+      "krt_drc_log": "/workspace/cloud-setup/redesign/pilots/U1-4-full-outer-krt-drc.log",
+      "production_accepted": false
+    },
+    {
+      "name": "U1-4-hole-aware",
+      "board_sha256": "171b4777e0ad4d8a0478634d474d92f8c1d49188f4b09328e59609155d178490",
+      "router_summary": {
+        "component": "U1",
+        "requested": 114,
+        "escaped": 114,
+        "failed": 0,
+        "unescaped_nets": [],
+        "skipped_nc": 0,
+        "clearance": 0.125,
+        "track_width": 0.09,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "drc_grazes": {
+          "pad_via": 0,
+          "via_segment": 0,
+          "pad_segment": 0,
+          "segment_segment": 0,
+          "total": 0
+        },
+        "min_clearance_used": 0.125,
+        "deferred_fanout_nets": [],
+        "plane_drop": {
+          "nets": {
+            "GND": {
+              "gap": 36,
+              "in_pad": 0,
+              "existing": 0,
+              "pour": 0,
+              "failed": 3
+            },
+            "+3V3": {
+              "gap": 13,
+              "in_pad": 0,
+              "existing": 0,
+              "pour": 0,
+              "failed": 3
+            }
+          },
+          "gap_vias": 49,
+          "pad_vias": 0,
+          "skipped_existing": 0,
+          "skipped_pour": 0,
+          "track_connects": 0,
+          "pour_tracks": 0,
+          "failed": 6,
+          "pour_served_pads": {}
+        },
+        "env_knobs": {
+          "KICAD_CLI": "/workspace/cloud-setup/bin/kicad-cli"
+        }
+      },
+      "native_drc": {
+        "errors": 0,
+        "warnings": 580,
+        "unconnected_items": 499,
+        "types": {
+          "track_dangling": 116,
+          "via_dangling": 49,
+          "courtyards_overlap": 2,
+          "silk_edge_clearance": 16,
+          "lib_footprint_issues": 1,
+          "silk_overlap": 195,
+          "silk_over_copper": 199,
+          "nonmirrored_text_on_back_layer": 2
+        }
+      },
+      "hygiene_log": "/workspace/cloud-setup/redesign/pilots/U1-4-hole-aware-hygiene.log",
+      "krt_drc_log": "/workspace/cloud-setup/redesign/pilots/U1-4-hole-aware-krt-drc.log",
+      "production_accepted": false
+    },
+    {
+      "name": "U1-4-filled-pad",
+      "board_sha256": "8638b43049a499e32fc707b4a7cc1f44772172410c24a333f33fb0378423810b",
+      "router_summary": {
+        "component": "U1",
+        "requested": 114,
+        "escaped": 114,
+        "failed": 0,
+        "unescaped_nets": [],
+        "skipped_nc": 0,
+        "clearance": 0.125,
+        "track_width": 0.09,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "drc_grazes": {
+          "pad_via": 0,
+          "via_segment": 0,
+          "pad_segment": 0,
+          "segment_segment": 0,
+          "total": 0
+        },
+        "min_clearance_used": 0.125,
+        "deferred_fanout_nets": [],
+        "plane_drop": {
+          "nets": {
+            "GND": {
+              "gap": 36,
+              "in_pad": 3,
+              "existing": 0,
+              "pour": 0,
+              "failed": 0
+            },
+            "+3V3": {
+              "gap": 13,
+              "in_pad": 3,
+              "existing": 0,
+              "pour": 0,
+              "failed": 0
+            }
+          },
+          "gap_vias": 49,
+          "pad_vias": 6,
+          "skipped_existing": 0,
+          "skipped_pour": 0,
+          "track_connects": 0,
+          "pour_tracks": 0,
+          "failed": 0,
+          "pour_served_pads": {}
+        },
+        "env_knobs": {
+          "KICAD_CLI": "/workspace/cloud-setup/bin/kicad-cli"
+        }
+      },
+      "native_drc": {
+        "errors": 0,
+        "warnings": 586,
+        "unconnected_items": 499,
+        "types": {
+          "track_dangling": 116,
+          "via_dangling": 55,
+          "courtyards_overlap": 2,
+          "silk_edge_clearance": 16,
+          "lib_footprint_issues": 1,
+          "silk_overlap": 195,
+          "silk_over_copper": 199,
+          "nonmirrored_text_on_back_layer": 2
+        }
+      },
+      "hygiene_log": "/workspace/cloud-setup/redesign/pilots/U1-4-filled-pad-hygiene.log",
+      "krt_drc_log": "/workspace/cloud-setup/redesign/pilots/U1-4-filled-pad-krt-drc.log",
+      "production_accepted": false
+    },
+    {
+      "name": "U3-4-hole-aware",
+      "board_sha256": "a94e00d0bbe53323770eff7f7d8ded02d96183c9e4b4d4a343d8aef589ff9a51",
+      "router_summary": {
+        "component": "U3",
+        "requested": 57,
+        "escaped": 57,
+        "failed": 0,
+        "unescaped_nets": [],
+        "skipped_nc": 5,
+        "clearance": 0.125,
+        "track_width": 0.09,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "drc_grazes": {
+          "pad_via": 0,
+          "via_segment": 0,
+          "pad_segment": 0,
+          "segment_segment": 0,
+          "total": 0
+        },
+        "min_clearance_used": 0.125,
+        "deferred_fanout_nets": [],
+        "plane_drop": {
+          "nets": {
+            "GND": {
+              "gap": 8,
+              "in_pad": 0,
+              "existing": 0,
+              "pour": 0,
+              "failed": 6
+            },
+            "+3V3": {
+              "gap": 9,
+              "in_pad": 0,
+              "existing": 0,
+              "pour": 0,
+              "failed": 5
+            }
+          },
+          "gap_vias": 17,
+          "pad_vias": 0,
+          "skipped_existing": 0,
+          "skipped_pour": 0,
+          "track_connects": 0,
+          "pour_tracks": 0,
+          "failed": 11,
+          "pour_served_pads": {}
+        },
+        "env_knobs": {
+          "KICAD_CLI": "/workspace/cloud-setup/bin/kicad-cli"
+        }
+      },
+      "native_drc": {
+        "errors": 3,
+        "warnings": 487,
+        "unconnected_items": 499,
+        "types": {
+          "hole_clearance": 3,
+          "track_dangling": 57,
+          "via_dangling": 15,
+          "courtyards_overlap": 2,
+          "silk_edge_clearance": 16,
+          "lib_footprint_issues": 1,
+          "silk_overlap": 195,
+          "silk_over_copper": 199,
+          "nonmirrored_text_on_back_layer": 2
+        }
+      },
+      "hygiene_log": "/workspace/cloud-setup/redesign/pilots/U3-4-hole-aware-hygiene.log",
+      "krt_drc_log": "/workspace/cloud-setup/redesign/pilots/U3-4-hole-aware-krt-drc.log",
+      "production_accepted": false
+    }
+  ],
+  "limitations": [
+    "All214footprints retained at inherited placement; no inherited routing or zones.",
+    "Router supplies synthetic plane prediction only; no actual plane connectivity or return-path approval.",
+    "All trials retain499nativeunconnecteditems. Terminal stubs and plane drops are deliberately unfinished.",
+    "MCU114unique signal targets;116escaped signal-pad branches.",
+    "SDRAM trial has3nativeholeclearance records involving C204 and11missing power/ground drops;2vias intersect C206 paste.",
+    "No full bus routes, timing, impedance, power-current or complete four-layer placement review.",
+    "No escalation to6or8layers; current evidence does not establish failure of4layers."
+  ]
+}

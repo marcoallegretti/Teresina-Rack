@@ -1,0 +1,486 @@
+{
+  "verification_basis": "Native XML pins and raw PCB pad geometry checked against PCM3060 p7-8, ST TL074 p1/SO14 drawing, Microchip MCP6004 p1/table3-1, TI LM4040 p4, nominal onsemi MMBT3904L p1. Q1/Q2 actual orderable vendor remains unresolved. Unconnected pads have no PCB net by design. All used nets match native connectivity after removing root slash. Conventional package numbering matches datasheet top view.",
+  "pin_maps": {
+    "U4": {
+      "15": {
+        "symbol_function": "~{RST}_15",
+        "net": "/+3V3",
+        "pcb_net": "+3V3"
+      },
+      "7": {
+        "symbol_function": "V_{DD}_7",
+        "net": "/+3V3",
+        "pcb_net": "+3V3"
+      },
+      "24": {
+        "symbol_function": "V_{CC}_24",
+        "net": "/+5VA",
+        "pcb_net": "+5VA"
+      },
+      "25": {
+        "symbol_function": "V_{IN}L_25",
+        "net": "/CODEC_IN_L",
+        "pcb_net": "CODEC_IN_L"
+      },
+      "26": {
+        "symbol_function": "V_{IN}R_26",
+        "net": "/CODEC_IN_R",
+        "pcb_net": "CODEC_IN_R"
+      },
+      "20": {
+        "symbol_function": "V_{OUT}L+_20",
+        "net": "/CODEC_OUT_L+",
+        "pcb_net": "CODEC_OUT_L+"
+      },
+      "19": {
+        "symbol_function": "V_{OUT}L-_19",
+        "net": "/CODEC_OUT_L-",
+        "pcb_net": "CODEC_OUT_L-"
+      },
+      "18": {
+        "symbol_function": "V_{OUT}R+_18",
+        "net": "/CODEC_OUT_R+",
+        "pcb_net": "CODEC_OUT_R+"
+      },
+      "17": {
+        "symbol_function": "V_{OUT}R-_17",
+        "net": "/CODEC_OUT_R-",
+        "pcb_net": "CODEC_OUT_R-"
+      },
+      "21": {
+        "symbol_function": "V_{COM}_21",
+        "net": "/CODEC_VCOM",
+        "pcb_net": "CODEC_VCOM"
+      },
+      "1": {
+        "symbol_function": "MC/SCL/FMT_1",
+        "net": "/I2C2_SCL",
+        "pcb_net": "I2C2_SCL"
+      },
+      "2": {
+        "symbol_function": "MD/SDA/DEMP_2",
+        "net": "/I2C2_SDA",
+        "pcb_net": "I2C2_SDA"
+      },
+      "11": {
+        "symbol_function": "LRCK2_11",
+        "net": "/SAI1_FS",
+        "pcb_net": "SAI1_FS"
+      },
+      "4": {
+        "symbol_function": "LRCK1_4",
+        "net": "/SAI1_FS",
+        "pcb_net": "SAI1_FS"
+      },
+      "6": {
+        "symbol_function": "SCKI1_6",
+        "net": "/SAI1_MCLK",
+        "pcb_net": "SAI1_MCLK"
+      },
+      "9": {
+        "symbol_function": "SCKI2_9",
+        "net": "/SAI1_MCLK",
+        "pcb_net": "SAI1_MCLK"
+      },
+      "10": {
+        "symbol_function": "BCK2_10",
+        "net": "/SAI1_SCK",
+        "pcb_net": "SAI1_SCK"
+      },
+      "5": {
+        "symbol_function": "BCK1_5",
+        "net": "/SAI1_SCK",
+        "pcb_net": "SAI1_SCK"
+      },
+      "3": {
+        "symbol_function": "DOUT_3",
+        "net": "/SAI1_SDA",
+        "pcb_net": "SAI1_SDA"
+      },
+      "12": {
+        "symbol_function": "DIN_12",
+        "net": "/SAI1_SDB",
+        "pcb_net": "SAI1_SDB"
+      },
+      "16": {
+        "symbol_function": "SGND_16",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "22": {
+        "symbol_function": "AGND2_22",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "23": {
+        "symbol_function": "AGND1_23",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "27": {
+        "symbol_function": "~{MS}/AD/IFMD_27",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "28": {
+        "symbol_function": "MODE_28",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "8": {
+        "symbol_function": "DGND_8",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "14": {
+        "symbol_function": "ZEROL_14",
+        "net": "unconnected-(U4-ZEROL-Pad14)",
+        "pcb_net": null
+      },
+      "13": {
+        "symbol_function": "ZEROR_13",
+        "net": "unconnected-(U4-ZEROR-Pad13)",
+        "pcb_net": null
+      }
+    },
+    "U13": {
+      "4": {
+        "symbol_function": "V+_4",
+        "net": "/+5V",
+        "pcb_net": "+5V"
+      },
+      "1": {
+        "symbol_function": null,
+        "net": "/CV_1",
+        "pcb_net": "CV_1"
+      },
+      "7": {
+        "symbol_function": null,
+        "net": "/CV_2",
+        "pcb_net": "CV_2"
+      },
+      "8": {
+        "symbol_function": null,
+        "net": "/CV_3",
+        "pcb_net": "CV_3"
+      },
+      "14": {
+        "symbol_function": null,
+        "net": "/CV_4",
+        "pcb_net": "CV_4"
+      },
+      "2": {
+        "symbol_function": "-_2",
+        "net": "/SUM_1",
+        "pcb_net": "SUM_1"
+      },
+      "6": {
+        "symbol_function": "-_6",
+        "net": "/SUM_2",
+        "pcb_net": "SUM_2"
+      },
+      "9": {
+        "symbol_function": "-_9",
+        "net": "/SUM_3",
+        "pcb_net": "SUM_3"
+      },
+      "13": {
+        "symbol_function": "-_13",
+        "net": "/SUM_4",
+        "pcb_net": "SUM_4"
+      },
+      "10": {
+        "symbol_function": "+_10",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "11": {
+        "symbol_function": "V-_11",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "12": {
+        "symbol_function": "+_12",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "3": {
+        "symbol_function": "+_3",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "5": {
+        "symbol_function": "+_5",
+        "net": "GND",
+        "pcb_net": "GND"
+      }
+    },
+    "U14": {
+      "4": {
+        "symbol_function": "V+_4",
+        "net": "/+5V",
+        "pcb_net": "+5V"
+      },
+      "1": {
+        "symbol_function": null,
+        "net": "/CV_5",
+        "pcb_net": "CV_5"
+      },
+      "7": {
+        "symbol_function": null,
+        "net": "/CV_6",
+        "pcb_net": "CV_6"
+      },
+      "8": {
+        "symbol_function": null,
+        "net": "/CV_7",
+        "pcb_net": "CV_7"
+      },
+      "14": {
+        "symbol_function": null,
+        "net": "/CV_8",
+        "pcb_net": "CV_8"
+      },
+      "2": {
+        "symbol_function": "-_2",
+        "net": "/SUM_5",
+        "pcb_net": "SUM_5"
+      },
+      "6": {
+        "symbol_function": "-_6",
+        "net": "/SUM_6",
+        "pcb_net": "SUM_6"
+      },
+      "9": {
+        "symbol_function": "-_9",
+        "net": "/SUM_7",
+        "pcb_net": "SUM_7"
+      },
+      "13": {
+        "symbol_function": "-_13",
+        "net": "/SUM_8",
+        "pcb_net": "SUM_8"
+      },
+      "10": {
+        "symbol_function": "+_10",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "11": {
+        "symbol_function": "V-_11",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "12": {
+        "symbol_function": "+_12",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "3": {
+        "symbol_function": "+_3",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "5": {
+        "symbol_function": "+_5",
+        "net": "GND",
+        "pcb_net": "GND"
+      }
+    },
+    "U15": {
+      "4": {
+        "symbol_function": "V+_4",
+        "net": "/+5V",
+        "pcb_net": "+5V"
+      },
+      "1": {
+        "symbol_function": null,
+        "net": "/CVOUT_1_O",
+        "pcb_net": "CVOUT_1_O"
+      },
+      "7": {
+        "symbol_function": null,
+        "net": "/CVOUT_2_O",
+        "pcb_net": "CVOUT_2_O"
+      },
+      "2": {
+        "symbol_function": "-_2",
+        "net": "/CVO_FB_1",
+        "pcb_net": "CVO_FB_1"
+      },
+      "6": {
+        "symbol_function": "-_6",
+        "net": "/CVO_FB_2",
+        "pcb_net": "CVO_FB_2"
+      },
+      "3": {
+        "symbol_function": "+_3",
+        "net": "/CVO_FILT_1",
+        "pcb_net": "CVO_FILT_1"
+      },
+      "5": {
+        "symbol_function": "+_5",
+        "net": "/CVO_FILT_2",
+        "pcb_net": "CVO_FILT_2"
+      },
+      "8": {
+        "symbol_function": null,
+        "net": "/GATEOUT_1_O",
+        "pcb_net": "GATEOUT_1_O"
+      },
+      "14": {
+        "symbol_function": null,
+        "net": "/GATEOUT_2_O",
+        "pcb_net": "GATEOUT_2_O"
+      },
+      "10": {
+        "symbol_function": "+_10",
+        "net": "/GATE_OUT_1",
+        "pcb_net": "GATE_OUT_1"
+      },
+      "12": {
+        "symbol_function": "+_12",
+        "net": "/GATE_OUT_2",
+        "pcb_net": "GATE_OUT_2"
+      },
+      "13": {
+        "symbol_function": "-_13",
+        "net": "/VTH",
+        "pcb_net": "VTH"
+      },
+      "9": {
+        "symbol_function": "-_9",
+        "net": "/VTH",
+        "pcb_net": "VTH"
+      },
+      "11": {
+        "symbol_function": "V-_11",
+        "net": "GND",
+        "pcb_net": "GND"
+      }
+    },
+    "U12": {
+      "4": {
+        "symbol_function": "V+_4",
+        "net": "/+12V",
+        "pcb_net": "+12V"
+      },
+      "11": {
+        "symbol_function": "V-_11",
+        "net": "/-12V",
+        "pcb_net": "-12V"
+      },
+      "10": {
+        "symbol_function": "+_10",
+        "net": "/CODEC_VCOM",
+        "pcb_net": "CODEC_VCOM"
+      },
+      "12": {
+        "symbol_function": "+_12",
+        "net": "/CODEC_VCOM",
+        "pcb_net": "CODEC_VCOM"
+      },
+      "13": {
+        "symbol_function": "-_13",
+        "net": "/LINL_M",
+        "pcb_net": "LINL_M"
+      },
+      "14": {
+        "symbol_function": null,
+        "net": "/LINL_O",
+        "pcb_net": "LINL_O"
+      },
+      "6": {
+        "symbol_function": "-_6",
+        "net": "/OL_INV",
+        "pcb_net": "OL_INV"
+      },
+      "5": {
+        "symbol_function": "+_5",
+        "net": "/OL_NINV",
+        "pcb_net": "OL_NINV"
+      },
+      "7": {
+        "symbol_function": null,
+        "net": "/OL_OUT",
+        "pcb_net": "OL_OUT"
+      },
+      "2": {
+        "symbol_function": "-_2",
+        "net": "/OR_INV",
+        "pcb_net": "OR_INV"
+      },
+      "3": {
+        "symbol_function": "+_3",
+        "net": "/OR_NINV",
+        "pcb_net": "OR_NINV"
+      },
+      "1": {
+        "symbol_function": null,
+        "net": "/OR_OUT",
+        "pcb_net": "OR_OUT"
+      },
+      "9": {
+        "symbol_function": "-_9",
+        "net": "/RINR_M",
+        "pcb_net": "RINR_M"
+      },
+      "8": {
+        "symbol_function": null,
+        "net": "/RINR_O",
+        "pcb_net": "RINR_O"
+      }
+    },
+    "Q1": {
+      "3": {
+        "symbol_function": "C_3",
+        "net": "/GATE_IN_1",
+        "pcb_net": "GATE_IN_1"
+      },
+      "1": {
+        "symbol_function": "B_1",
+        "net": "/GBASE_1",
+        "pcb_net": "GBASE_1"
+      },
+      "2": {
+        "symbol_function": "E_2",
+        "net": "GND",
+        "pcb_net": "GND"
+      }
+    },
+    "Q2": {
+      "3": {
+        "symbol_function": "C_3",
+        "net": "/GATE_IN_2",
+        "pcb_net": "GATE_IN_2"
+      },
+      "1": {
+        "symbol_function": "B_1",
+        "net": "/GBASE_2",
+        "pcb_net": "GBASE_2"
+      },
+      "2": {
+        "symbol_function": "E_2",
+        "net": "GND",
+        "pcb_net": "GND"
+      }
+    },
+    "U16": {
+      "2": {
+        "symbol_function": "A_2",
+        "net": "/VREF_N10",
+        "pcb_net": "VREF_N10"
+      },
+      "1": {
+        "symbol_function": "K_1",
+        "net": "GND",
+        "pcb_net": "GND"
+      },
+      "3": {
+        "symbol_function": "NC_3",
+        "net": "unconnected-(U16-NC-Pad3)",
+        "pcb_net": null
+      }
+    }
+  }
+}

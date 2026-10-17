@@ -1,0 +1,133 @@
+{
+  "status": "Reviewed minimal schematic-only plan; PCB parity deliberately pending later redesign",
+  "capacitor_ownership": "No prior dedicated ownership is encoded. Explicit new assignment: C141\u2192U13, C142\u2192U14, C143\u2192U15. Physical relocation required in PCB redesign.",
+  "edits": [
+    {
+      "type": "label",
+      "uuid": "56ed39c5-dd65-4fe5-9c8e-13e9cc904794",
+      "position": [
+        "1610",
+        "564.19",
+        "0"
+      ],
+      "assert_text": "+5V",
+      "new_text": "+3V3A",
+      "target_pin": "C141.1"
+    },
+    {
+      "type": "label",
+      "uuid": "e2b44745-aeb0-4e77-8267-9b5725796231",
+      "position": [
+        "1340",
+        "580.19",
+        "0"
+      ],
+      "assert_text": "+5V",
+      "new_text": "+3V3A",
+      "target_pin": "C142.1"
+    },
+    {
+      "type": "label",
+      "uuid": "95807d3e-ccf7-45d6-ba80-fe20c4f80e11",
+      "position": [
+        "917.46",
+        "692.38",
+        "0"
+      ],
+      "assert_text": "+5V",
+      "new_text": "+3V3A",
+      "target_pin": "U13.4"
+    },
+    {
+      "type": "label",
+      "uuid": "540ca892-f44c-4037-82ae-2b3b5544231e",
+      "position": [
+        "1057.46",
+        "692.38",
+        "0"
+      ],
+      "assert_text": "+5V",
+      "new_text": "+3V3A",
+      "target_pin": "U14.4"
+    },
+    {
+      "type": "symbol_properties",
+      "reference": "R162",
+      "uuid": "6ab9825f-a97e-4094-ac07-61284422f3ca",
+      "assert_footprint": "Resistor_SMD:R_0402_1005Metric",
+      "assert_properties": {
+        "Value": "1K",
+        "MPN": "0402WGF1001TCE",
+        "LCSC": "C11702"
+      },
+      "new_properties": {
+        "Value": "100R",
+        "MPN": "RC0402FR-07100RL",
+        "LCSC": "C106232"
+      }
+    },
+    {
+      "type": "symbol_properties",
+      "reference": "R163",
+      "uuid": "9295a905-124c-4d97-89a3-a892a05322d6",
+      "assert_footprint": "Resistor_SMD:R_0402_1005Metric",
+      "assert_properties": {
+        "Value": "1K",
+        "MPN": "0402WGF1001TCE",
+        "LCSC": "C11702"
+      },
+      "new_properties": {
+        "Value": "100R",
+        "MPN": "RC0402FR-07100RL",
+        "LCSC": "C106232"
+      }
+    }
+  ],
+  "replacement_part_evidence": {
+    "source": "https://www.lcsc.com/product-detail/C106232.html?from=product",
+    "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/b426be3ce22c6de3e0c3a2248e49159e.pdf?productCode=C106232&from=product",
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-07100RL",
+    "lcsc": "C106232",
+    "resistance_ohm": 100,
+    "tolerance_percent": 1,
+    "power_w": 0.0625,
+    "package": "0402 (1.00x0.50mm)",
+    "datasheet_pages": {
+      "ordering": 2,
+      "dimensions": 4,
+      "rating": 5
+    }
+  },
+  "expected_native_net_delta": {
+    "/+5V_remove": [
+      "U13.4",
+      "U14.4",
+      "C141.1",
+      "C142.1"
+    ],
+    "/+3V3A_add": [
+      "U13.4",
+      "U14.4",
+      "C141.1",
+      "C142.1"
+    ],
+    "all_other_connections": "identical",
+    "changed_component_fields": [
+      "R162.Value",
+      "R162.MPN",
+      "R162.LCSC",
+      "R163.Value",
+      "R163.MPN",
+      "R163.LCSC"
+    ]
+  },
+  "do_not_change": [
+    "U15 pin4 +5V label caf0a015-b37a-452f-b891-debcf5701328",
+    "C143.1 +5V label 25f55a6a-68f8-4629-b3d3-d30466b139f6",
+    "other +5V and +5VA labels",
+    "component/footprint UUIDs",
+    "R/C transfer values and MCU connections",
+    "PCB before independent layout plan"
+  ]
+}

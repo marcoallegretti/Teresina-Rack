@@ -1,0 +1,257 @@
+{
+  "verdict": "Accepted as scoped electrical schematic candidate after serializer correction; no PCB/production acceptance",
+  "source_sha_matches_scope": true,
+  "native_component_count": 211,
+  "native_pin_count": 854,
+  "existing_pin_deltas": [
+    {
+      "pin": "R160.1",
+      "before": "/+3V3",
+      "after": "/GATEOUT_1_O"
+    },
+    {
+      "pin": "R160.2",
+      "before": "/VTH",
+      "after": "/GATEOUT_FB_1"
+    },
+    {
+      "pin": "R161.1",
+      "before": "/VTH",
+      "after": "/GATEOUT_FB_1"
+    },
+    {
+      "pin": "U15.13",
+      "before": "/VTH",
+      "after": "/GATEOUT_FB_2"
+    },
+    {
+      "pin": "U15.9",
+      "before": "/VTH",
+      "after": "/GATEOUT_FB_1"
+    }
+  ],
+  "old_pin_delta_matches_plan": true,
+  "all_existing_pin_attributes_preserved": true,
+  "new_pins_actual": {
+    "R171.1": "/GATEOUT_2_O",
+    "R171.2": "/GATEOUT_FB_2",
+    "R172.1": "/GATEOUT_FB_2",
+    "R172.2": "GND"
+  },
+  "new_pins_expected": {
+    "R171.1": "/GATEOUT_2_O",
+    "R171.2": "/GATEOUT_FB_2",
+    "R172.1": "/GATEOUT_FB_2",
+    "R172.2": "GND"
+  },
+  "new_pin_nets_match_plan": true,
+  "new_symbol_positions": {
+    "R171": {
+      "actual": [
+        "1340",
+        "620",
+        "0"
+      ],
+      "expected": [
+        1340,
+        620,
+        0
+      ]
+    },
+    "R172": {
+      "actual": [
+        "1385",
+        "620",
+        "0"
+      ],
+      "expected": [
+        1385,
+        620,
+        0
+      ]
+    }
+  },
+  "feedback_nets_actual": {
+    "/GATEOUT_FB_1": [
+      "R160.2",
+      "R161.1",
+      "U15.9"
+    ],
+    "/GATEOUT_FB_2": [
+      "R171.2",
+      "R172.1",
+      "U15.13"
+    ]
+  },
+  "Q_metadata_checks": {
+    "Q1": {
+      "changed_fields": [
+        "Datasheet",
+        "Manufacturer"
+      ],
+      "selection_preserved": true,
+      "code_preserved": true,
+      "manufacturer": "Jiangsu Changjing Electronics (JSCJ)",
+      "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/9335632bcfa83df8351353eab379720e.pdf?productCode=C20526&from=product"
+    },
+    "Q2": {
+      "changed_fields": [
+        "Datasheet",
+        "Manufacturer"
+      ],
+      "selection_preserved": true,
+      "code_preserved": true,
+      "manufacturer": "Jiangsu Changjing Electronics (JSCJ)",
+      "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/9335632bcfa83df8351353eab379720e.pdf?productCode=C20526&from=product"
+    }
+  },
+  "audio_part_checks": {
+    "C100": {
+      "Value": "2.2uF",
+      "MPN": "CL21B225KBYNNNE",
+      "LCSC": "C2762602",
+      "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "Manufacturer": "Samsung Electro-Mechanics",
+      "Datasheet": "https://datasheet.lcsc.com/datasheet/pdf/795373d432c2f73e9e5af1f8f1a729a4.pdf?productCode=C2762602&from=product"
+    },
+    "C103": {
+      "Value": "2.2uF",
+      "MPN": "CL21B225KBYNNNE",
+      "LCSC": "C2762602",
+      "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "Manufacturer": "Samsung Electro-Mechanics",
+      "Datasheet": "https://datasheet.lcsc.com/datasheet/pdf/795373d432c2f73e9e5af1f8f1a729a4.pdf?productCode=C2762602&from=product"
+    }
+  },
+  "MCU_gate_mapping_preserved": {
+    "U1.E1": {
+      "before": "/GATE_OUT_1",
+      "after": "/GATE_OUT_1",
+      "attributes": {
+        "ref": "U1",
+        "pin": "E1",
+        "pinfunction": "PC14_E1",
+        "pintype": "bidirectional"
+      }
+    },
+    "U1.D1": {
+      "before": "/GATE_OUT_2",
+      "after": "/GATE_OUT_2",
+      "attributes": {
+        "ref": "U1",
+        "pin": "D1",
+        "pinfunction": "PC13_D1",
+        "pintype": "bidirectional"
+      }
+    },
+    "U15.10": {
+      "before": "/GATE_OUT_1",
+      "after": "/GATE_OUT_1",
+      "attributes": {
+        "ref": "U15",
+        "pin": "10",
+        "pinfunction": "+_10",
+        "pintype": "input"
+      }
+    },
+    "U15.12": {
+      "before": "/GATE_OUT_2",
+      "after": "/GATE_OUT_2",
+      "attributes": {
+        "ref": "U15",
+        "pin": "12",
+        "pinfunction": "+_12",
+        "pintype": "input"
+      }
+    }
+  },
+  "raw_existing_changed_object_types": {
+    "symbol": 6,
+    "label": 5
+  },
+  "raw_new_object_count": 6,
+  "new_erc_records": [
+    {
+      "description": "Symbol pin or wire end off connection grid",
+      "items": [
+        {
+          "description": "Symbol R172 Pin 1 [Passive, Line]",
+          "pos": {
+            "x": 1385.0,
+            "y": 616.19
+          },
+          "uuid": "870068ce-c31c-469f-b187-988b84be17e7"
+        }
+      ],
+      "severity": "warning",
+      "type": "endpoint_off_grid"
+    },
+    {
+      "description": "Symbol pin or wire end off connection grid",
+      "items": [
+        {
+          "description": "Symbol R171 Pin 1 [Passive, Line]",
+          "pos": {
+            "x": 1340.0,
+            "y": 616.19
+          },
+          "uuid": "e08dda97-50cc-4a61-85dc-bda0fdcb103a"
+        }
+      ],
+      "severity": "warning",
+      "type": "endpoint_off_grid"
+    }
+  ],
+  "removed_erc_records": [],
+  "erc_waivers_and_severity_filters_unchanged": true,
+  "kicad_project_settings_bytes_unchanged": true,
+  "new_error_count": 0,
+  "new_warning_count": 2,
+  "candidate_sha256": "b2f87ee2049559ed1ed4f61d384682bda971ca9c31224ab6c06de133d95ceb64",
+  "raw_existing_objects_exact_expected": true,
+  "new_symbol_full_translation_checks": {
+    "R171": {
+      "position": [
+        "1340",
+        "620",
+        "0"
+      ],
+      "all_nonzero_property_positions_translated": true,
+      "instance_reference_correct": true,
+      "new_UUIDs_match_plan": true
+    },
+    "R172": {
+      "position": [
+        "1385",
+        "620",
+        "0"
+      ],
+      "all_nonzero_property_positions_translated": true,
+      "instance_reference_correct": true,
+      "new_UUIDs_match_plan": true
+    }
+  },
+  "all_document_UUIDs_unique": true,
+  "prior_failure": "Earlier export retained original resistor coordinates and caused wrong CV feedback/dangling gate labels; rejected and fixed using numeric set_value plus saved/reparsed equality.",
+  "pre_series_output_feedback_exact": true,
+  "VTH_absent": true,
+  "final_erc_counts": {
+    "('error', 'pin_to_pin')": 3,
+    "('warning', 'endpoint_off_grid')": 246,
+    "('warning', 'lib_symbol_mismatch')": 2,
+    "('warning', 'no_connect_connected')": 3,
+    "('warning', 'same_local_global_label')": 1
+  },
+  "final_feedback_membership": {
+    "/GATEOUT_FB_1": [
+      "R160.2",
+      "R161.1",
+      "U15.9"
+    ],
+    "/GATEOUT_FB_2": [
+      "R171.2",
+      "R172.1",
+      "U15.13"
+    ]
+  }
+}

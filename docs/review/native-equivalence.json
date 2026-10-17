@@ -1,0 +1,9 @@
+{
+  "component_count": 211,
+  "native_pin_count": 856,
+  "native_functional_nets_functions_types_preserved": true,
+  "all_component_fields_except_sheet_metadata_and_explicit_U3_documentary_description_preserved": true,
+  "explicit_library_identity_delta": "U3 AS4C16M32MSA to neutral SDRAM_16Mx32_FBGA90; physical part/pin functions/nets unchanged",
+  "output_xml_sha256": "cf3a57233874b9b04c34a0a223bac344ed61dc286abbc000010b809699c71151",
+  "scope": "Electrical reorganization verified. Visual and independent review pending; no PCB parity or production release."
+}

@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-13",
+  "baseline_commit": "09a374a24c77c10cfc12c9ae37e69187168445db",
+  "source_sha256": {
+    "TeresinaRack/TeresinaRack.kicad_sch": "33350e8cde0f281a0e96fa86dc61ab516e417809818376cc90123723e236106c",
+    "TeresinaRack/TeresinaRack.kicad_pcb": "526624d7e45ad2807d9467746a51554c834c6a301e7d7b57e1265abd3de4e2bb",
+    "TeresinaRack/TeresinaRack.kicad_pro": "f6705cb4b492af1e96d096f7f2f2aa8829f652b6beea5fcb6b904c3923e0f15e",
+    "TeresinaRack/TeresinaRack.kicad_dru": "accb1fdeb8ac18ce3487c75402638c55cf0f45eb227fbded018a8bdf17aa1094",
+    "TeresinaRack/TeresinaRack.kicad_sym": "ba61971d0e67c3b224a1342cc54c74d3e90aa6897c8c236144857fb8623577dc"
+  },
+  "tracked_electrical_files_unchanged": true,
+  "local_review_links_valid": true,
+  "review_json_valid": true,
+  "setup_repeatability": "install.sh, tools-install.sh, checksum, KiCad version, native C++/Rust imports and actual MCP stdio initialize/list/board_summary rerun successfully",
+  "design_status": "Incomplete review and provisional candidates. Production release blocked by unqualified stock-firmware SDRAM retention; full redesign/hardware acceptance unperformed.",
+  "organized_electrical_candidate": {
+    "path": "/workspace/cloud-setup/redesign/organized-candidate",
+    "native_comparison": {
+      "component_count": 211,
+      "native_pin_count": 856,
+      "native_functional_nets_functions_types_preserved": true,
+      "all_component_fields_except_sheet_metadata_and_explicit_U3_documentary_description_preserved": true,
+      "explicit_library_identity_delta": "U3 AS4C16M32MSA to neutral SDRAM_16Mx32_FBGA90; physical part/pin functions/nets unchanged",
+      "output_xml_sha256": "cf3a57233874b9b04c34a0a223bac344ed61dc286abbc000010b809699c71151",
+      "scope": "Electrical reorganization verified. Visual and independent review pending; no PCB parity or production release."
+    },
+    "erc_counts": {
+      "error": 3,
+      "warning": 1
+    },
+    "excluded_checks": [
+      {
+        "description": "Global label only appears once in the schematic",
+        "key": "single_global_label"
+      },
+      {
+        "description": "Four connection points are joined together",
+        "key": "four_way_junction"
+      },
+      {
+        "description": "SPICE model issue",
+        "key": "simulation_model_issue"
+      },
+      {
+        "description": "Assigned footprint doesn't match footprint filters",
+        "key": "footprint_filter"
+      }
+    ],
+    "schematic_sha256": {
+      "power.kicad_sch": "b231995cdd7f736b98fd320de97ce8df7460240e76a7f1bd1f4d8a5746396e26",
+      "mcu-clock.kicad_sch": "368d25ab41e4790c7dd2656cafa4e23dd4b122aa01b22685049f8fe01966e21b",
+      "usb-debug.kicad_sch": "924b55c3cecdf6124ff69d6168c94983e0fec1166c6f3402b9be6b9f5bd0edaf",
+      "carrier.kicad_sch": "548b5896ccdd91bf4e1fb6753f79367df41b22a119723f2ceeaf178ce8f2c16d",
+      "gates.kicad_sch": "43e93add645c303889fc7e21f12c645457de1c34571fd34efae4edc94976244b",
+      "cv-inputs.kicad_sch": "ad1776aa1b883fa6cef7a480ef722df63df4bd839ad66299b87295768ff5a692",
+      "aux-cv-outputs.kicad_sch": "c5d2e13b2b1ece0fdd04cc1c0d9bf7b22a241e7f51c916fa30c8d3a5e96278de",
+      "TeresinaRack.kicad_sch": "8ba58fdcf33c3ea8180b2189fd6f9e47c756651536c35bc4b4e87d232c54c018",
+      "memory-flash.kicad_sch": "0ea64a9c1405b5cf63ac45ae74cea62bb00fd6741b90de5112d2c89d06ada50a",
+      "codec-audio.kicad_sch": "ca759cbeb87f0fb5dde9af36be08ab1e5ffc5082678543603ec91dbaef733c0e"
+    },
+    "erc_sha256": "a2503d67be16b551970a63cc84d46e48687bd6a620eab251710ad92db8ca0de2",
+    "pdf_sha256": "4890fcdb3d4622a79a2d46c7acd3d092a108e3fcde31513e98fbc0352023c35e",
+    "pcb_sync": false,
+    "firmware_changes": false,
+    "scope": "Reviewed electrical/BOM/package repairs and three connected analog pages; all856pin nets/functions/types preserved, U3graphic/alias documentary normalization. Remaining functional sheet presentation and production layout unaccepted.",
+    "independent_analog_scope": "Pages8/9/10 pass native/raw/visual review; exact finalPDF/XML hashes match accepted reports. Other functional circuit pages remain drafts.",
+    "independent_sdram_graphic_scope": "All90physical pin metadata and85stubs/labels+5NCs correct; native graph preserved; memorysheetERC clean. RAM retention remains unqualified."
+  }
+}

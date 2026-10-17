@@ -1,0 +1,10 @@
+{
+  "tl074.pdf": "https://www.st.com/resource/en/datasheet/tl074.pdf",
+  "mcp6004.pdf": "https://ww1.microchip.com/downloads/aemDocuments/documents/MSLD/ProductDocuments/DataSheets/MCP6001-1R-1U-2-4-1-MHz-Low-Power-Op-Amp-DS20001733L.pdf",
+  "lm4040.pdf": "https://www.ti.com/lit/ds/symlink/lm4040.pdf",
+  "mmbt3904.pdf": "https://www.onsemi.com/pdf/datasheet/mmbt3904lt1-d.pdf",
+  "pcm3060.pdf": "https://www.ti.com/lit/ds/symlink/pcm3060.pdf",
+  "stm32h750.pdf": "https://www.st.com/resource/en/datasheet/stm32h750ib.pdf",
+  "ES_Daisy_Patch_SM_Schematic.pdf": "https://electro-smith.com/products/patch-submodule",
+  "ES_Patch_SM_datasheet_v1.0.5.pdf": "https://electro-smith.com/products/patch-submodule"
+}

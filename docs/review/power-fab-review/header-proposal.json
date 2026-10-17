@@ -1,0 +1,144 @@
+{
+  "date": "2026-10-13",
+  "MPN": "M20-9980545",
+  "manufacturer": "Harwin",
+  "LCSC": "C3338551",
+  "quantity_per_board": 4,
+  "retail_stock": 155,
+  "retail_unit_price_USD": 0.3515,
+  "JLC_assembly_allocation_status": "unverified",
+  "BOM_references": [
+    "J5",
+    "J6",
+    "J7",
+    "J8"
+  ],
+  "mechanical_nominal_mm": {
+    "pitch": 2.54,
+    "row_spacing": 2.54,
+    "post": 6.1,
+    "insulator_height": 2.54,
+    "tail": 3.0,
+    "pin_square": 0.64,
+    "body_length": 12.7,
+    "body_width": 5.08
+  },
+  "mechanical_maximums_mm": {
+    "post": 6.35,
+    "insulator_height": 2.64,
+    "tail": 3.25,
+    "pin_square": 0.66,
+    "top_height": 8.99,
+    "bottom_protrusion_on1p44PCB": 1.81,
+    "body_length": 13.2,
+    "body_width": 5.28
+  },
+  "material": {
+    "housing": "blackPA6T,UL94V0",
+    "pins": "brass",
+    "finish": "gold overnickel"
+  },
+  "solder_heat_rating": "260\u00b0C10smanufacturerprocessrecord;fullprofilemustmatch",
+  "finished_hole_requirement_mm": {
+    "nominal": 1.02,
+    "tolerance": 0.05,
+    "manufacturer_min": 0.97,
+    "manufacturer_max": 1.07,
+    "existing_CAD_drill": 1.016,
+    "JLC_general_minimum": 0.936,
+    "JLC_general_maximum": 1.146
+  },
+  "reference_map": {
+    "J5": {
+      "legacybank": "A",
+      "absolute_center_mm": [
+        7.0,
+        6.0
+      ],
+      "standard_library_coordinate_math_rotation_deg": 270,
+      "new_pad_to_legacy_pad": {
+        "1": "A10",
+        "2": "A1",
+        "3": "A9",
+        "4": "A2",
+        "5": "A8",
+        "6": "A3",
+        "7": "A7",
+        "8": "A4",
+        "9": "A6",
+        "10": "A5"
+      },
+      "warning": "Mathrotation convention; determineKiCad actual rotationfromtransformedpadcoordinates, notblindnumericangle reuse."
+    },
+    "J6": {
+      "legacybank": "B",
+      "absolute_center_mm": [
+        62.0,
+        7.0
+      ],
+      "standard_library_coordinate_math_rotation_deg": 0,
+      "new_pad_to_legacy_pad": {
+        "1": "B10",
+        "2": "B1",
+        "3": "B9",
+        "4": "B2",
+        "5": "B8",
+        "6": "B3",
+        "7": "B7",
+        "8": "B4",
+        "9": "B6",
+        "10": "B5"
+      },
+      "warning": "Mathrotation convention; determineKiCad actual rotationfromtransformedpadcoordinates, notblindnumericangle reuse."
+    },
+    "J7": {
+      "legacybank": "C",
+      "absolute_center_mm": [
+        62.0,
+        33.0
+      ],
+      "standard_library_coordinate_math_rotation_deg": 0,
+      "new_pad_to_legacy_pad": {
+        "1": "C10",
+        "2": "C1",
+        "3": "C9",
+        "4": "C2",
+        "5": "C8",
+        "6": "C3",
+        "7": "C7",
+        "8": "C4",
+        "9": "C6",
+        "10": "C5"
+      },
+      "warning": "Mathrotation convention; determineKiCad actual rotationfromtransformedpadcoordinates, notblindnumericangle reuse."
+    },
+    "J8": {
+      "legacybank": "D",
+      "absolute_center_mm": [
+        7.0,
+        34.0
+      ],
+      "standard_library_coordinate_math_rotation_deg": 270,
+      "new_pad_to_legacy_pad": {
+        "1": "D10",
+        "2": "D1",
+        "3": "D9",
+        "4": "D2",
+        "5": "D8",
+        "6": "D3",
+        "7": "D7",
+        "8": "D4",
+        "9": "D6",
+        "10": "D5"
+      },
+      "warning": "Mathrotation convention; determineKiCad actual rotationfromtransformedpadcoordinates, notblindnumericangle reuse."
+    }
+  },
+  "status": "candidateforphysicalcarrierfitandJLCprecisehole/assemblyreview;notproductionapproved",
+  "reference_URLs": {
+    "DRG-00478-Technical-Drawing-Datasheet-M20-998-pdf.pdf": "https://content.harwin.com/asset/1590d228-db5c-4836-ab0c-0f146730b624/DRG-00478-Technical-Drawing-Datasheet-M20-998-pdf.pdf",
+    "C001-C001XX-Component-Specification-M20-Series-2-54mm-pitch-PCB-connectors.pdf": "https://content.harwin.com/asset/92486137-0a45-4017-9b78-1edaa8709008/C001-C001XX-Component-Specification-M20-Series-2-54mm-pitch-PCB-connectors.pdf",
+    "MC-00173-Material-composition-for-M20-998-series.pdf": "https://content.harwin.com/asset/4bb177ac-7693-48b4-863e-81a103be23b6/MC-00173-Material-composition-for-M20-998-series.pdf"
+  },
+  "fallback": "JLC SMT-only plus manual4headersincontrolledfixture;machineBOM/CPLexcludeall4manualparts,canonicalBOMkeepsall4"
+}
