@@ -1,0 +1,9 @@
+SDRAM: FMC kernel=200.000000MHz, SDCLK=100.000000MHz, COUNT=2054, row interval=20.550000us, 8192-row interval=168.345600ms (manufacturer maximum64ms)
+SDRAM: conservative maximum COUNT for64ms including20-cycle safety allowance=floor(0.064/8192*SDCLK)-20=761; stockCOUNT=2054
+U1.F13 VCAP: Euclidean distance to C13=12.279683mm and C14=29.421600mm
+U1.M10 VCAP: Euclidean distance to C13=15.158022mm and C14=32.039308mm
+U1.G1 HSE: Euclidean distance to C37.1=38.968390mm
+U1.H1 HSE: Euclidean distance to C38.1=37.593362mm
+BOOT0 nominal: final=2.244898V, tau=7.034014ms, voltageat10ms=1.703177V, BOOT0VIHmin=1.161000V, discharge tau=22.000000ms
+Y1 board:2pads,3.2x1.5mm footprint; ordered crystal:C13738 X322516MLB4SI, manufacturerYSX321SL4pads,3.2x2.5mm,1and3signal/2and4GND
+C37=C38=18pF; seriesload=9.000pF; positive Cstray raises effectiveCL above9pF; exactorderedCL9pF is distributor metadata pending exact manufacturer ordering confirmation

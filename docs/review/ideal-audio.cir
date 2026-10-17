@@ -1,0 +1,40 @@
+Native-netlist audio MFB: ideal unsaturated high-gain opamps
+R110 n22 n143 18000
+R111 n143 n148 66500
+R112 n150 n143 39000
+R113 n23 n144 18000
+R114 n144 n149 66500
+R115 n144 0 39000
+R116 n150 n14 100
+R117 n24 n145 18000
+R118 n145 n151 66500
+R119 n153 n145 39000
+R120 n25 n146 18000
+R121 n146 n152 66500
+R122 n146 0 39000
+R123 n153 n15 100
+C120 n150 n148 1.8e-11
+C121 n143 n144 1e-10
+C122 n149 0 1.8e-11
+C123 n153 n151 1.8e-11
+C124 n145 n146 1e-10
+C125 n152 0 1.8e-11
+EU12_1 n153 0 n152 n151 1e8
+EU12_7 n150 0 n149 n148 1e8
+VLp n22 0 AC 0.5
+VLm n23 0 AC 0.5 180
+RloadL n14 0 100k
+VRp n24 0 AC 0.5
+VRm n25 0 AC 0.5 180
+RloadR n15 0 100k
+.control
+ac dec 100 10 10meg
+meas ac gain_L_100 FIND vm(n14) AT=100
+meas ac gain_L_1000 FIND vm(n14) AT=1000
+meas ac gain_L_20000 FIND vm(n14) AT=20000
+meas ac gain_R_100 FIND vm(n15) AT=100
+meas ac gain_R_1000 FIND vm(n15) AT=1000
+meas ac gain_R_20000 FIND vm(n15) AT=20000
+quit
+.endc
+.end

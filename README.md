@@ -1,12 +1,8 @@
 # Teresina-Rack
 
-**Version 0.1.0-alpha0** — design-validated (DRC/ERC/SPICE/DFM clean), **not yet fabricated or
-hardware-tested**. Treat everything below as pre-production until a first build is verified.
+**Version 0.1.0-alpha0 — under engineering review; not fabricated or hardware-tested.** The current PCB is a 12-layer baseline with confirmed electrical, BOM, package and layout findings. It is not approved for production.
 
-An open, self-fabricatable clone of the [Electro-Smith Daisy Patch SM](https://electro-smith.com/products/patch-sm)
-— the Eurorack DSP submodule — built around the STM32H750 + 64 MB SDRAM, designed to run **stock
-[libDaisy](https://github.com/electro-smith/libDaisy) `DaisyPatchSM` firmware unmodified** and to drop
-into carriers such as [kivu12 / eurorack-blocks](https://github.com/ohmtech-rdi/eurorack-blocks).
+The goal is an open, self-fabricatable Daisy Patch SM-compatible Eurorack submodule: the same carrier interface and libDaisy application compatibility through a small Teresina firmware variant. Source compatibility and hardware behavior remain qualification targets. See [the firmware policy](docs/firmware-policy.md) and [production review](docs/production-review.md).
 
 ![Board top](docs/board-top.png)
 
@@ -16,201 +12,71 @@ into carriers such as [kivu12 / eurorack-blocks](https://github.com/ohmtech-rdi/
 
 ![Perspective](docs/board-persp.png)
 
----
+## Production target
 
-## What it is
+**4 copper layers preferred; 6 acceptable if required; 8 the final fallback.** Evaluate in that order with new placement, BGA escape, timing, return-path and manufacturer review. Document the constraint and alternatives tried before increasing layer count. Twelve layers describe the existing file only and are outside the redesign target. See [the redesign plan](docs/redesign-plan.md).
 
-| | |
+Disposable four-layer MCU escape trials reached zero native clearance errors when six power-pad vias were filled/capped. The full board remains unrouted in those studies, and SDRAM escape at the inherited placement still fails. These results do not qualify a four-layer production design.
+
+## Existing hardware
+
+| Block | Baseline |
 |---|---|
-| Outline | **68 × 40 mm**, 1.6 mm, 12-layer, 40-pad through-hole pin-header connector |
-| MCU | STM32H750IBK6 (UFBGA-176, 480 MHz Cortex-M7) |
-| RAM | ISSI IS42S32160F-6BLI — 512 Mbit (64 MB) 16M×32 SDRAM, 3.3 V, 166 MHz, 32-bit FMC bus |
-| Flash | IS25LP064A — 8 MB QSPI |
-| Codec | PCM3060 (24-bit / 96 kHz), SAI1, control on I²C2 |
-| Analog | TL074 audio front-end, 3× MCP6004 CV/gate conversion, LM4040-10 V reference |
-| Power | Eurorack ±12 V in → reverse protection → TPS62170 buck (+3V3) + LD1117-5.0 LDO (+5V); ferrite-isolated +3V3A (STM32 analog) and +5VA (PCM3060 analog) rails |
-| I/O (via the 40 pin-header pads) | 2× audio in (AC), 2× audio out (DC), 8× bipolar CV in (−5…+5 V), 4× 0–3.3 V ADC in, 2× CV out (0–5 V), 2× gate in, 2× gate out, USB (FS + HS pairs), SDMMC, SPI2, I²C1, +5 V/+3V3 out |
-| On-board | micro-USB (DFU flashing), SWD header, reset + boot buttons, power/user LEDs |
+| Interface |68 × 40 mm, 40 through-hole mating pads; all 40 local pad geometries match official CAD |
+| MCU |STM32H750IBK6, UFBGA176+25 balls, 480 MHz Cortex-M7 |
+| RAM |IS42S32160F-6BLI prototype candidate, 64 MB, 3.3 V, 32-bit FMC; requires the Teresina refresh profile and hardware qualification |
+| Flash |IS25LP064A, 8 MB QSPI |
+| Codec |PCM3060, SAI1, I²C2 address 0x46 |
+| Analog |TL074 audio, MCP6004 CV/gates, LM4040-10 V reference |
+| Power |TPS62170 digital buck, LD1117 5 V stage; component selection/layout/budgets require correction |
+| Files |209 schematic component references, 214 PCB footprints including five fiducials |
 
-## Compatibility contract (verified against official sources)
+Manufacturer pin maps confirm the core/codec/analog signal assignments. 74 checked digital-net assignments agree with pinned libDaisy. Complete carrier fit, sequencing, analog performance and firmware execution still need first-article validation.
 
-The board was validated against the **official Electro-Smith references** — the Rev3 schematic PDF,
-datasheet v1.0.5, `Patch-SM_pinout.csv`, and the `DAISY_PATCH_SM.kicad_mod` footprint from
-[DaisyKiCad](https://github.com/electro-smith/DaisyKiCad) — not against this project's own notes.
+## Open compatibility findings
 
-| Check | Result |
+Official libDaisy v9.0.0 is the pinned firmware reference. Its stock refresh sweep is 168.35 ms against the proposed ISSI part's 64 ms requirement. An opt-in Teresina prototype now implements a conservative refresh profile and reviewed clock/init changes. Crossbuilds support a limited source-compatibility claim; stock binaries are unsupported and hardware tests remain unrun. See [the firmware decision](docs/firmware-policy.md) and [original retention check](docs/review/core-review/bounded-acceptance.md).
+
+An [expanded memory-replacement search](docs/memory-replacement-search.md) found no datasheet-backed fix for unchanged firmware. Etron EM63B325BK is an unresolved catalogue lead; it has not been qualified or selected.
+
+The review also confirms wrong ferrite/inductor/capacitor ordering data, crystal/diode footprint mismatches, CV amplifiers on the wrong supply, gate-output resistance differences and remote critical power/clock/decoupling loops. The earlier claims of an identical analog implementation and completed production validation are superseded by [the current findings](docs/production-review.md). Reviewed corrections are staged outside the checkout until the complete design can be synchronized.
+
+## Validation
+
+| Check | Baseline result and boundary |
 |---|---|
-| J5 pad positions vs official `DAISY_PATCH_SM` footprint | **40/40 exact** (position *and* numbering — carrier interlock guaranteed) |
-| Pad functions vs official pinout CSV | **40/40** |
-| STM32 ball assignments used by libDaisy firmware | **43/43** (CV_1–8, ADC_9–12, SDMMC1, SPI2, I²C1/I²C2, SAI1, USB, gates, DAC1, LED, boot) |
-| Analog circuits vs official Rev3 schematic | **Component-for-component identical** (see below) |
-| Codec strap/wiring vs libDaisy PCM3060 driver | I²C mode, address 0x46, correct SAI directions ✔ |
+| Native KiCad 10.0.7 DRC |0 errors, 0 unconnected, 414 warnings |
+| Native ERC |3 power-pin conflicts, 250 warnings; unresolved |
+| Native netlist→PCB |821 functional pad assignments agree; intentional NC aliases separately checked |
+| Connectivity |200 routed nets connected; native zone-refill agreement |
+| Copper hygiene |384 candidate findings; requires geometric review |
+| SPICE |63 generated tests pass; ideal channel benches also executed; device/rail/tolerance coverage incomplete |
+| EMC/thermal |Risk analyses executed; thermal budget incomplete; no compliance measurement |
+| Fabrication export |34 Gerbers, PTH/NPTH drills, CPL; baseline only |
 
-Analog blocks match the official design exactly:
+A clean native DRC does not resolve wrong ordered parts or prove stock-firmware retention, thermal safety, analog performance or carrier fit. See the full review for passed, failed and unrun checks.
 
-- **Audio in** (each ch): 2.2 µF AC coupling → inverting buffer 66K5 / 15K ‖ 220 pF, biased at codec
-  VCOM → 1K → PCM3060. (≈ −48 kHz anti-alias corner, ±5 V Eurorack level → codec level.)
-- **Audio out** (each ch): PCM3060 differential → differential MFB stage 18K / 66K5 / 39K / 18 pF /
-  100 pF bridge → 100 Ω, DC-coupled. SPICE-verified: flat ±0.12 dB to 20 kHz, ×2.167, −3 dB ≈ 144 kHz.
-- **CV in** (×8): inverting scaler 100K signal / 200K from −10 V reference / 33K ‖ 220 pF feedback —
-  maps −5…+5 V → 3.3…0 V exactly as `InitBipolarCv` expects (firmware flips polarity).
-- **CV out** (×2): DAC1 → non-inverting ×1.5167 (120K/62K — the official values) → 100 Ω. 0–3.3 V → 0–5 V.
-- **Gate in** (×2): 100K / 1M / MMBT3904 / 10K pull-up / 1K — 12 V-tolerant → 3.3 V logic.
-- **Gate out** (×2): MCP6004 (5 V rail) level shift → 1K series.
+## Development and fabrication
 
-Boot/flashing behaves like the original:
+Use KiCad 10 for the project under `TeresinaRack/`. The configured cloud environment retains checksum-verified KiCad 10.0.7, ngspice 47, kicad-tools, KiCadRoutingTools and kicad-happy; reproducible setup/startup instructions are saved in environment settings. Interactive GUI editing and hardware programming were not validated in the headless environment.
 
-- micro-USB is on **PA11/PA12 (OTG_FS)** → the STM32 ROM DFU bootloader enumerates on it
-  (`dfu-util` workflow works as on a real Patch SM). Edge pads A8/A9 carry the PB14/15 (OTG_HS) pair.
-- **PG3 → BOOT_FLASH strap** (4K7 + 2.2 µF into the BOOT0 node, official values) — enables
-  *software* re-boot to DFU (`System::ResetToBootloader`), important when the module is racked.
-- USB VBUS back-feeds +12 V through a Schottky so the MCU can be flashed without rack power.
-
-Corrections applied from a full evidence-based re-audit (official Rev3 schematic + component datasheets):
-
-- **Codec analog supply (critical).** The PCM3060 requires **5 V for its analog supply** (datasheet V_CC =
-  4.5–5.5 V; "5 V for analog, 3.3 V for digital"); pin 24 (V_CC) had been tied to the 3.3 V analog rail,
-  which starves the codec analog section — wrong VCOM (1.65 V vs 2.5 V) and reduced/distorted audio levels.
-  Fixed by adding a dedicated ferrite-filtered **+5VA** rail (FB9 off +5 V, with 100 nF + 10 µF local
-  decoupling) feeding U4 pin 24 — restoring correct VCOM and full-scale audio.
-- **Audio-output MFB.** 18 pF feedback caps (C120/C123) at the op-amp inverting input; 100 pF bridge caps
-  (C121/C124) across the two input junctions (N_OLA/N_OLB, N_ORA/N_ORB) — the canonical differential-MFB
-  topology, restoring codec-to-single-ended CMRR and phase margin.
-- **Gate-in.** Now component-for-component identical to the official — base pull-down 1 MΩ, collector
-  pull-up 10 kΩ, and the 1 kΩ collector series resistor (R202/R203, into PG13/PG14) fitted.
-- **Voltage reference.** U16 sourcing corrected to a genuine 10 V LM4040 (LM4040C10IDBZR / C201738) — the
-  BOM had carried a 3.0 V part number against the 10 V value, which would have broken CV in/out scaling.
-
-Remaining (accepted, benign) deviations from the original: gate-out uses an MCP6004 as a comparator
-(VTH 1.65 V) + 1 kΩ series instead of the official linear amp + 100 R — an equally-valid, arguably cleaner
-digital-gate output; and the PA9 VBUS-sense divider is omitted (libDaisy does not enable VBUS sensing; pin
-unconnected is within abs-max).
-
-## Design choices
-
-**12 layers with two fully solid power planes.** The dual-BGA density (STM32 + SDRAM, 0.65 mm pitch,
-via-in-pad fanout) cannot be routed on 8 layers *and* keep unbroken planes. Rather than fragment the
-ground plane (bad for an audio module), the board uses:
-
-| Layer | Role |
-|---|---|
-| F.Cu | components, escapes, GND pour |
-| **In1** | **GND plane — 100 % solid, zero signal traces** |
-| In2–In5 | signal (FMC/SDRAM bus, QSPI, SDMMC, analog interconnect) |
-| **In6** | **+3V3 plane — 100 % solid, zero signal traces** |
-| In7, In8 | signal (sparse: FMC_A4, USB pairs, boot strap) |
-| In9, In10 | signal (SDRAM control/address reroute: SDCLK, SDCKE0, BA0, A2, A9) |
-| B.Cu | components, escapes, GND pour |
-
-Every signal has a continuous ground return path directly under it. 18 GND stitching vias tie the
-outer pours to the plane; dedicated return vias accompany the USB layer transitions.
-
-**Via-in-pad BGA fanout** (829 vias, 0.3 mm / 0.15 mm drill) — JLCPCB resin-plugs via-in-pad by
-default on 6+ layer boards, so this is standard process, not an exotic option.
-
-**Sourcing-driven values.** All 51 distinct LCSC part numbers across the 204 placed parts were
-verified present in JLCPCB's live assembly library with stock (23 are "Extended" parts, ~$69 one-time
-setup total; the rest Basic/Preferred, no per-part fee). The **SDRAM is ISSI IS42S32160F-6BLI**
-(LCSC C1348852): the Alliance `AS4C16M32` family the Daisy uses isn't stocked at JLC, and its `-MSA`
-variant is a 1.8 V-class *mobile* part that Daisy runs out-of-spec at 3.3 V — so this board uses the
-pin-identical, **native-3.3 V** ISSI equivalent (same 90-ball footprint, same 16M×32 / 166 MHz-CL3
-timing, libDaisy-compatible with no firmware change). Component values follow the official Rev3
-schematic; the CV-output gain uses the official 120K/62K (×1.5167) directly (real Patch SM values,
-not a substitution).
-
-## Validation results
-
-All checks run on the committed design files with KiCad 10, the
-[kicad-happy](https://github.com/aklofas/kicad-happy) analysis suite, and ngspice 46.
-
-| Check | Result |
-|---|---|
-| KiCad DRC (severity: all) | **0 errors, 0 unconnected** · 414 warnings, all cosmetic (376 silk clipped-by-mask/edge, 2 courtyard, 2 back-text) — each enumerated & measured |
-| Copper planes | In1 = 0 traces, In6 = 0 traces (both fully solid) |
-| KiCad ERC | **0 real electrical errors** · 3 power-type `pin_to_pin` (STM32 dual-VCAP / GND↔GND / PWR_FLAG — benign), ~244 off-grid endpoints (schematic off-grid; netlist fully connected), 3 stray NC-flags on verified-correctly-wired pins (U8, R201), 1 lib-mismatch |
-| Schematic ↔ PCB congruence | **all pad-nodes congruent** — 0 mismatched nets, 0 missing (re-verified) |
-| SPICE (auto-generated testbenches) | **59/59 subcircuits pass** — RC filters, dividers, buck feedback (exactly 3.30 V), references |
-| SPICE (manual, audio MFB filter) | flat ±0.12 dB to 20 kHz, gain ×2.167, fc ≈ 144 kHz |
-| Gerber manufacturability analysis | **0 defects** (no mask slivers, acid traps, copper slivers) |
-| Thermal analysis | score 100/100, no findings |
-| EMC pre-compliance | no critical findings; USB-FS return paths stitched; buck input ferrite-filtered |
-
-**Independently re-audited (adversarial pass) — accepted margin items, with measured evidence:**
-- **Min spacing 0.09 mm** where USB/boot nets thread the BGA fanout (declared in `TeresinaRack.kicad_dru`;
-  equals JLCPCB's 3.5 mil limit — zero margin). Everything else keeps ≥ 0.10 mm.
-- **STM32 VCAP** decoupling: closest cap (C13) is **12 mm** from the balls. *Accepted* — the H7 core-LDO
-  tolerates this, and relocating it would require ripping up FMC escape routing (risk > benefit). C14 is a
-  redundant far cap.
-- **SDRAM decoupling improved**: added C204–C207 (100 nF 0402, F.Cu under U3) → every +3V3 ball now within
-  5 mm of a cap (**was 4/14, now 14/14**).
-- **R201** 0402 between the U1/U2 courtyards: real pad gaps **1.33 / 0.33 mm** — assembly-safe (a courtyard-
-  margin warning, not a collision).
-- **Via annular 0.075 mm** and **drill 0.15 mm** (813 vias) sit at JLC's finest tier — meets spec, zero margin.
-
-## Fabrication (JLCPCB)
-
-> ⚠️ **Cost note & roadmap — this board is currently 12-layer, which makes it expensive to fabricate.**
-> A 12-layer order at JLCPCB runs into the **hundreds of € for only a handful of boards** (before customs
-> and taxes), and the 0.15 mm vias push it into JLCPCB's finest, priciest fabrication tier. The layer
-> count grew during the dual-BGA (STM32 + SDRAM) routing to keep the routing tractable — **not** because
-> the design fundamentally requires 12 layers.
->
-> **The top priority for cost reduction is cutting the layer count: first from 12 to 8 layers, then to 6.**
-> This needs the dense STM32/SDRAM BGA-escape region re-routed more efficiently (interactive PCB layout)
-> and is tracked as **future work**. An automated reduction was attempted and is not tractable with the
-> current routing tooling — it requires hand-routing the BGA escapes.
-
-The board is entirely within **standard** JLCPCB 12-layer process — verified line-by-line against
-their published capability sheet:
-
-| Parameter | This board | JLCPCB 12-layer capability |
-|---|---|---|
-| Min track / spacing | 0.10 / 0.09 mm | 0.09 / 0.09 mm (3.5 mil) |
-| Vias | 0.30 mm ring / 0.15 mm drill | ≥ 0.25 mm / 0.15 mm |
-| Hole-to-hole | ≥ 0.20 mm | 0.20 mm |
-| Copper-to-edge | 0.20 mm | ≥ 0.20 mm |
-| Via-in-pad (829×, BGA) | yes | resin plug + cap — *default* for 6+ layers |
-| J5 connector (40 pads) | **through-hole pin-header** (`DAISY_PATCH_SM`) | THT assembly optional at order |
-
-**Order settings:** 12 layers · 1.6 mm · no controlled impedance · via covering *epoxy filled & capped*
-(default for this layer count). **J5 is a through-hole 2.54 mm pin-header — there are NO castellated
-holes;** if you don't want to hand-solder the 40 pins, enable JLC through-hole (THT) assembly for J5.
-Assembly is double-sided and the two BGAs are on **opposite** sides — **U1 (STM32) top, U3 (SDRAM)
-bottom** — with opamps/passives on both sides.
-
-**Generating the fabrication package** (outputs land in `TeresinaRack/fab/`, kept out of git):
+Keep every routing operation's before/after evidence and run native DRC/refill, independent connectivity and copper hygiene before accepting it. Use the actual selected JLCPCB process, not an unrelated generic profile. Final fabrication requires an accepted stackup, explicit filled/capped-via process, corrected sourcing-complete BOM, CPL/assembly drawings, header dimensions and first-article plan. The current files and exports are not an approved order package.
 
 ```sh
-kicad-cli pcb export gerbers -o fab/gerbers/ --no-protel-ext TeresinaRack.kicad_pcb
-kicad-cli pcb export drill --format excellon --excellon-separate-th -o fab/gerbers/ TeresinaRack.kicad_pcb
-kicad-cli pcb export pos --format csv --units mm --side both --use-drill-file-origin -o fab/TeresinaRack-CPL.csv TeresinaRack.kicad_pcb
+kicad-cli pcb drc --format json -o drc.json TeresinaRack.kicad_pcb
+kicad-cli sch erc --format json -o erc.json TeresinaRack.kicad_sch
 ```
 
-BOM: every footprint carries `LCSC` and `MPN` fields — export with your preferred BOM tool grouped
-by the `LCSC` field (51 groups / 208 parts). `J5` is the through-hole pin-header — exclude it from SMD
-assembly (populate the pins by hand, or add it as a THT assembly line). Fiducials: 3 on top, 2 on
-bottom, on GND, excluded from BOM/position files.
-
-## Firmware
-
-Any `DaisyPatchSM`-target firmware runs unmodified:
-
-1. **First flash / bare chip:** hold BOOT, tap RESET → STM32 ROM DFU appears on the micro-USB
-   (`dfu-util -a 0 -s 0x08000000:leave -D program.bin`), or use the SWD header (J4, 1.27 mm).
-2. **After the [Daisy bootloader](https://github.com/electro-smith/libDaisy) is installed:** normal
-   Daisy web-programmer / `make program-dfu` workflows work, including software reboot-to-DFU
-   (the PG3 strap makes this work exactly like the original module).
+Run from `TeresinaRack/` and inspect every report severity and unconnected item. Exit 0 alone does not establish a pass. Generated fabrication files belong in the ignored `fab/` directory.
 
 ## Repository layout
 
-```
-TeresinaRack/
-├── TeresinaRack/            KiCad 10 project (schematic, PCB, rules .kicad_dru)
-├── docs/                    board renders (PNG)
-├── DESIGN.md                design contract & pin map (working notes)
-├── bom/                     BOM working files
-└── README.md                this file
-```
+- `TeresinaRack/`: editable KiCad project, custom symbols and rules.
+- `docs/production-review.md`: current evidence, blockers and review limits.
+- `docs/redesign-plan.md`: requirements, 4 → 6 → 8 sequence and acceptance gates.
+- `docs/review/`: inventory, calculations and independent subsystem evidence.
+- `DESIGN.md`: historical working notes, superseded by the current review.
+- `bom/`: baseline BOM working files; not approved production sourcing.
 
 ## Acknowledgements
 

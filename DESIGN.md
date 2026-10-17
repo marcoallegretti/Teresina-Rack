@@ -1,5 +1,7 @@
 # Teresina-Rack — Daisy Patch SM–compatible module (STM32H750)
 
+> Historical working notes. Current evidence and requirements are in [production-review.md](docs/production-review.md) and [redesign-plan.md](docs/redesign-plan.md). Production target: **4 layers preferred, 6 acceptable fallback, 8 final fallback**. The existing 12-layer PCB is a baseline only. Claims below about compatibility, verified hardware or required layer count are superseded by the current review; production qualification remains open.
+
 **Goal:** A self-fabricable (JLCPCB PCBA) Eurorack DSP submodule that is **mechanically, pin-, and
 firmware-compatible with the Electro-Smith Daisy Patch SM (Rev2/Rev3)** — same 68 × 40 mm outline,
 same 40-pad connector layout, same pin functions — so it drops into a Daisy Patch.Init() (or any
