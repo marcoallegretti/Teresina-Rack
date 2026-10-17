@@ -1,0 +1,23 @@
+{
+  "U1": {
+    "expected_pins": 201,
+    "actual_pins": 201,
+    "mismatches": [],
+    "extra_pins": [],
+    "pcb_net_mismatches": []
+  },
+  "U3": {
+    "expected_pins": 90,
+    "actual_pins": 90,
+    "mismatches": [],
+    "extra_pins": [],
+    "pcb_net_mismatches": []
+  },
+  "U2": {
+    "expected_pins": 8,
+    "actual_pins": 8,
+    "mismatches": [],
+    "extra_pins": [],
+    "pcb_net_mismatches": []
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "status": "engineering proposal only; no CAD edits or production approval",
+  "date": "2026-10-13",
+  "sources": {
+    "TPS62135": "https://www.ti.com/lit/ds/symlink/tps62135.pdf",
+    "TPS62136": "https://www.ti.com/lit/ds/symlink/tps62136.pdf",
+    "Bourns": "https://www.bourns.com/docs/product-datasheets/srp4020ta.pdf"
+  },
+  "regulators": [
+    {
+      "mpn": "TPS62135RGXR",
+      "lcsc": "C167238",
+      "retail": 2141,
+      "switching_MHz_typ": 2.5,
+      "recommended_for_trial": true
+    },
+    {
+      "mpn": "TPS62136RGXR",
+      "lcsc": "C2865220",
+      "retail": 89,
+      "switching_MHz_typ": 1,
+      "recommended_for_trial": false
+    },
+    {
+      "mpn": "TPS621351RGXR",
+      "lcsc": "C2070706",
+      "retail": 3299,
+      "switching_MHz_typ": 2.5,
+      "variant": "no output discharge and no hiccup; alternative only"
+    }
+  ],
+  "pin_nets": {
+    "1 VIN": "LD_IN",
+    "2 SW": "SW_5V",
+    "3 GND": "GND",
+    "4 FB2": "NC",
+    "5 FB": "FB_5V",
+    "6 VOS": "+5V local output cap positive",
+    "7 PG": "NC or test point",
+    "8 EN": "LD_IN at local input capacitor",
+    "9 SS/TR": "SS_5V with4.7nF toGND",
+    "10 MODE": "LD_IN at local input capacitor",
+    "11 VSEL": "GND"
+  },
+  "advertised_export_limit_unchanged_A": 0.8,
+  "illustrative_max_known_internal_plus_export_A": 0.83804,
+  "footprint": "custom TI RGX0011A11pinVQFN-HR3x2mm; no KiCad10 match found; manufacturer drawing reviewed, CAD definition pending",
+  "parts": [
+    {
+      "mpn": "SRP4020TA-1R0M",
+      "lcsc": "C913245",
+      "retail_inventory_observed": 5464,
+      "footprint": "custom Bourns SRP4020TA4.45x4.06mm",
+      "role": "preferred L2 normal/fault margin at25C",
+      "product": "https://www.lcsc.com/product-detail/C913245.html",
+      "manufacturer_pdf": "https://datasheet.lcsc.com/datasheet/pdf/b2b37e0d8cf5712d1367acf6ed67b22b.pdf?productCode=C913245"
+    },
+    {
+      "mpn": "SRP4020TA-2R2M",
+      "lcsc": "C719179",
+      "retail_inventory_observed": 1256,
+      "footprint": "same custom Bourns land",
+      "role": "optional lower-ripple L2; fault saturation gate",
+      "product": "https://www.lcsc.com/product-detail/C719179.html",
+      "manufacturer_pdf": "https://datasheet.lcsc.com/datasheet/pdf/b2b37e0d8cf5712d1367acf6ed67b22b.pdf?productCode=C719179"
+    },
+    {
+      "mpn": "CL31A106KBHNNNE",
+      "lcsc": "C13585",
+      "retail_inventory_observed": 620120,
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "role": "Cin30uF nominal total, 3parallel1206; singlepartbeloweffective3uF minimum",
+      "product": "https://www.lcsc.com/product-detail/C13585.html",
+      "manufacturer_pdf": "https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf?productCode=C13585",
+      "quantity": 3
+    },
+    {
+      "mpn": "CL21A226MOQNNNE",
+      "lcsc": "C98190",
+      "retail_inventory_observed": 489320,
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "role": "Cout44uF nominal total, 2parallel0805; singlepartscreenbelow6uF minimum",
+      "product": "https://www.lcsc.com/product-detail/C98190.html",
+      "manufacturer_pdf": "https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf?productCode=C98190",
+      "quantity": 2
+    },
+    {
+      "mpn": "CL05B104KB54PNC",
+      "lcsc": "C307331",
+      "retail_inventory_observed": 36500,
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "role": "CinHF100nF50V",
+      "product": "https://www.lcsc.com/product-detail/C307331.html",
+      "manufacturer_pdf": "https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf?productCode=C307331"
+    },
+    {
+      "mpn": "RT0603BRD0760KL",
+      "lcsc": "C6460576",
+      "retail_inventory_observed": 4560,
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "role": "RtopA60k0.1percent25ppm",
+      "product": "https://www.lcsc.com/product-detail/C6460576.html",
+      "manufacturer_pdf": "https://datasheet.lcsc.com/datasheet/pdf/46d7760c582640714d605308a25a220a.pdf?productCode=C6460576"
+    },
+    {
+      "mpn": "0402WGF1401TCE",
+      "lcsc": "C39650",
+      "retail_inventory_observed": 12100,
+      "footprint": "Resistor_SMD:R_0402_1005Metric",
+      "role": "RtopB1.4k1percent100ppm",
+      "product": "https://www.lcsc.com/product-detail/C39650.html",
+      "manufacturer_pdf": "https://datasheet.lcsc.com/datasheet/pdf/0a975aaa49b7c97f38a963127be4a823.pdf?productCode=C39650"
+    },
+    {
+      "mpn": "RT0603BRD0710KL",
+      "lcsc": "C95204",
+      "retail_inventory_observed": 445760,
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "role": "Rbottom10k0.1percent25ppm",
+      "product": "https://www.lcsc.com/product-detail/C95204.html",
+      "manufacturer_pdf": "https://datasheet.lcsc.com/datasheet/pdf/46d7760c582640714d605308a25a220a.pdf?productCode=C95204"
+    },
+    {
+      "mpn": "0402B472K500NT",
+      "lcsc": "C1538",
+      "retail_inventory_observed": 724000,
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "role": "Css4.7nF50V X7R10percent",
+      "product": "https://www.lcsc.com/product-detail/C1538.html",
+      "manufacturer_pdf": "https://datasheet.lcsc.com/datasheet/pdf/09fe2daf22580a99fa7fea93ccb20fb7.pdf?productCode=C1538"
+    }
+  ],
+  "precision": {
+    "nominal_V": 4.997999999999999,
+    "min_V": 4.91247164181011,
+    "max_V": 5.084436777836132,
+    "min_error_percent": -1.7505671637978004,
+    "max_error_percent": 1.6887355567226425,
+    "corners_evaluated": 1024,
+    "temperature_C": [
+      -40,
+      125
+    ],
+    "includes": "independent initial resistor tolerance, +/-TCR x(T-25C), +/-1percent reference, +/-70nA feedback leakage",
+    "condition": "TI guarantees reference accuracy only converter VIN>=VOUT+1V; line/load typical numbers not stacked as guarantees",
+    "aging_and_solder_drift": "not included; must add source-backed limits before final guaranteed tolerance claim"
+  },
+  "soft_start": {
+    "Css_nom_nF": 4.7,
+    "I_SS_uA": [
+      2.3,
+      2.5,
+      2.7
+    ],
+    "ramp_ms_nom": 1.3159999999999996,
+    "ramp_ms_min_initial_tolerance": 1.0966666666666667,
+    "ramp_ms_max_initial_tolerance": 1.5734782608695652,
+    "startup_delay_us_typ_max": [
+      200,
+      300
+    ],
+    "temp_bias_aging": "X7R15percent temperature and unspecified DCbias/aging must qualify actual Css",
+    "illustrative_Ctotal_uF": 164,
+    "illustrative_load_A": 0.83804,
+    "max_initial_cap_charge_A": 0.7477203647416413,
+    "ramp_ms_min_with15percent_lowTCC": 0.9321666666666667,
+    "max_cap_charge_A_initialplusTCC": 0.8796710173431074
+  },
+  "LC_normal_estimates": [
+    {
+      "L_nom_uH": 1.0,
+      "frequency_MHz": 2.5,
+      "frequency_basis": "typical datasheet or explicit sensitivity only; no guaranteed minfrequency",
+      "L_min_assumed_uH": 0.7999999999999999,
+      "VIN_V": 17,
+      "ripple_pp_A": 1.7647058823529411,
+      "peak_at838mA_A": 1.7203929411764705,
+      "negative_peak_at_no_load_A": 0.8823529411764706,
+      "cap_ripple_mV_excluding_ESR": 8.823529411764705,
+      "LC_nom_kHz": 23.993510443917412,
+      "Cout_effective_assumption_uF": 10
+    },
+    {
+      "L_nom_uH": 1.0,
+      "frequency_MHz": 2.0,
+      "frequency_basis": "typical datasheet or explicit sensitivity only; no guaranteed minfrequency",
+      "L_min_assumed_uH": 0.7999999999999999,
+      "VIN_V": 17,
+      "ripple_pp_A": 2.2058823529411766,
+      "peak_at838mA_A": 1.9409811764705882,
+      "negative_peak_at_no_load_A": 1.1029411764705883,
+      "cap_ripple_mV_excluding_ESR": 13.786764705882355,
+      "LC_nom_kHz": 23.993510443917412,
+      "Cout_effective_assumption_uF": 10
+    },
+    {
+      "L_nom_uH": 2.2,
+      "frequency_MHz": 2.5,
+      "frequency_basis": "typical datasheet or explicit sensitivity only; no guaranteed minfrequency",
+      "L_min_assumed_uH": 1.76,
+      "VIN_V": 17,
+      "ripple_pp_A": 0.802139037433155,
+      "peak_at838mA_A": 1.2391095187165775,
+      "negative_peak_at_no_load_A": 0.4010695187165775,
+      "cap_ripple_mV_excluding_ESR": 4.010695187165774,
+      "LC_nom_kHz": 16.176421441299482,
+      "Cout_effective_assumption_uF": 10
+    },
+    {
+      "L_nom_uH": 2.2,
+      "frequency_MHz": 2.0,
+      "frequency_basis": "typical datasheet or explicit sensitivity only; no guaranteed minfrequency",
+      "L_min_assumed_uH": 1.76,
+      "VIN_V": 17,
+      "ripple_pp_A": 1.0026737967914439,
+      "peak_at838mA_A": 1.339376898395722,
+      "negative_peak_at_no_load_A": 0.5013368983957219,
+      "cap_ripple_mV_excluding_ESR": 6.266711229946524,
+      "LC_nom_kHz": 16.176421441299482,
+      "Cout_effective_assumption_uF": 10
+    },
+    {
+      "L_nom_uH": 2.2,
+      "frequency_MHz": 1.0,
+      "frequency_basis": "typical datasheet or explicit sensitivity only; no guaranteed minfrequency",
+      "L_min_assumed_uH": 1.76,
+      "VIN_V": 17,
+      "ripple_pp_A": 2.0053475935828877,
+      "peak_at838mA_A": 1.840713796791444,
+      "negative_peak_at_no_load_A": 1.0026737967914439,
+      "cap_ripple_mV_excluding_ESR": 25.066844919786096,
+      "LC_nom_kHz": 16.176421441299482,
+      "Cout_effective_assumption_uF": 10
+    }
+  ],
+  "fault_estimates": {
+    "1uH_Bourns_25C_Isat_20percentdrop_A": 8.5,
+    "1uH_Bourns_Irms40Crise_A": 5,
+    "1uH_initialminus20_and_saturation20_L_uH": 0.64,
+    "static_limit_max_A": 6.5,
+    "prop_delay_ns_typ": 50,
+    "short_peak_sensitivity_A": 7.828125,
+    "not_guaranteed": "50ns propagation delay and Isat temperature model not maximum guarantees; bench short-circuit, input surge and thermal qualification required",
+    "2.2uH_Bourns_Isat_A": 6,
+    "2.2uH_CJIANG_lower_Isat_A": 3.5,
+    "2.2uH_candidates_note": "both lower than6.5A maximum static converter current limit; not approved for arbitrary overload"
+  },
+  "limits": {
+    "effective_L_uH": [
+      0.6,
+      2.9
+    ],
+    "local_effective_Cout_uF": [
+      6,
+      200
+    ],
+    "effective_Cin_min_uF": 3,
+    "converter_operating_input_V": [
+      3,
+      17
+    ],
+    "absolute_input_V": 20,
+    "negative_current_limit_A_typ": 1.5,
+    "theta_JA_reference_C_per_W": 38.4,
+    "recommended_Tjmax_C": 125,
+    "loop": "direct localVOS; noferrite between converter localcap/sense; removeFB8 from mainexport path subjectCADreview",
+    "input6V": "afterdiode/bead noVIN>=6V precision guarantee;100percent-duty droop remains workloaddependent",
+    "retail_not_assembly": true
+  },
+  "capacitor_manufacturer_screens": {
+    "C13585": {
+      "DCbias_V": 17,
+      "DCbias_typical_percent": -78.33881924011843,
+      "TCC_typical_min_percent_minus40_to85": -11.268488452062817,
+      "initial_tol_plus_independent_typical_curves_screen_uF": 1.7298263796636477,
+      "basis": "manufacturer typical model, combined bias/T not guaranteed; no aging",
+      "source": "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL31A106KBHNNN"
+    },
+    "C98190": {
+      "DCbias_V": 5,
+      "DCbias_typical_percent": -62.61731243908729,
+      "TCC_typical_min_percent_minus40_to85": -12.2602933586398,
+      "initial_tol_plus_independent_typical_curves_screen_uF": 5.772705030505787,
+      "basis": "manufacturer typical model, combined bias/T not guaranteed; no aging",
+      "source": "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL21A226MOQNNN"
+    },
+    "C307331": {
+      "DCbias_V": 17,
+      "DCbias_typical_percent": -48.638433670827595,
+      "TCC_typical_min_percent_minus40_to85": -9.278824732699372,
+      "initial_tol_plus_independent_typical_curves_screen_uF": 0.04193623494856743,
+      "basis": "manufacturer typical model, combined bias/T not guaranteed; no aging",
+      "source": "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KB54PN"
+    }
+  },
+  "cap_arrays": {
+    "C209A_B_C": {
+      "qty": 3,
+      "mpn": "CL31A106KBHNNNE",
+      "nom_uF_each": 10,
+      "combined_typical_initial_screen_uF": 5.189479138990944,
+      "qualification_min_effective_uF": 3,
+      "recommended_qualification_margin_target_uF": 4.5
+    },
+    "C208A_B": {
+      "qty": 2,
+      "mpn": "CL21A226MOQNNNE",
+      "nom_uF_each": 22,
+      "combined_typical_initial_screen_uF": 11.545410061011575,
+      "qualification_min_effective_uF": 6,
+      "calculation_qualification_target_uF": 10
+    },
+    "single_units": "rejected; input and output screen below device minimum; arrays require combinedbias/T/aging confirmation",
+    "temperature": "X5Rcaps must stay within specifiedmaximum85C componenttemperature; IC125C junction doesnot extendMLCC rating"
+  }
+}

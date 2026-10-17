@@ -1,0 +1,2055 @@
+{
+  "C1525": {
+    "mpn": "CL05B104KO5NNNC",
+    "manufacturer": {
+      "@type": "Brand",
+      "name": "Samsung Electro-Mechanics"
+    },
+    "stock": 155100,
+    "attributes": {
+      "Package": "0402",
+      "Capacitance": "100nF",
+      "Temperature Coefficient": "X7R",
+      "Tolerance": "\u00b110%",
+      "Voltage Rating": "16V"
+    },
+    "native": [
+      {
+        "ref": "C1",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C2",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C3",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C4",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C5",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C6",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C7",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C8",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C9",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C10",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C16",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C18",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C19",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C20",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C21",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C22",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C23",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C24",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C25",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C26",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C29",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C30",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C31",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C32",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C39",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C44",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C51",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C53",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C57",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C59",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C61",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C63",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C102",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C105",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C112",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C113",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C140",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C141",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C142",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C143",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C202",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C204",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C205",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C206",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      },
+      {
+        "ref": "C207",
+        "value": "100nF",
+        "mpn": "CL05B104KO5NNNC"
+      }
+    ],
+    "mpn_match": true
+  },
+  "C1779": {
+    "mpn": "CL21A475KAQNNNE",
+    "manufacturer": "Samsung Electro-Mechanics",
+    "stock": 992360,
+    "native": [
+      {
+        "ref": "C11",
+        "value": "4.7uF",
+        "mpn": "CL21A475KAQNNNE"
+      },
+      {
+        "ref": "C12",
+        "value": "4.7uF",
+        "mpn": "CL21A475KAQNNNE"
+      },
+      {
+        "ref": "C27",
+        "value": "4.7uF",
+        "mpn": "CL21A475KAQNNNE"
+      },
+      {
+        "ref": "C28",
+        "value": "4.7uF",
+        "mpn": "CL21A475KAQNNNE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Capacitance": "4.7uF",
+      "Temperature Coefficient": "X5R",
+      "Tolerance": "\u00b110%",
+      "Voltage Rating": "25V"
+    },
+    "mpn_match": true
+  },
+  "C59461": {
+    "mpn": "CL10A226MQ8NRNC",
+    "manufacturer": {
+      "@type": "Brand",
+      "name": "Samsung Electro-Mechanics"
+    },
+    "stock": 4417080,
+    "attributes": {
+      "Package": "0603",
+      "Capacitance": "22uF",
+      "Temperature Coefficient": "X5R",
+      "Tolerance": "\u00b120%",
+      "Voltage Rating": "6.3V"
+    },
+    "native": [
+      {
+        "ref": "C13",
+        "value": "2.2uF",
+        "mpn": "CL10A226MQ8NRNC"
+      },
+      {
+        "ref": "C14",
+        "value": "2.2uF",
+        "mpn": "CL10A226MQ8NRNC"
+      },
+      {
+        "ref": "C50",
+        "value": "2.2uF",
+        "mpn": "CL10A226MQ8NRNC"
+      }
+    ],
+    "mpn_match": true
+  },
+  "C52923": {
+    "mpn": "CL05A105KA5NQNC",
+    "manufacturer": "Samsung Electro-Mechanics",
+    "stock": 3186300,
+    "native": [
+      {
+        "ref": "C15",
+        "value": "1uF",
+        "mpn": "CL05A105KA5NQNC"
+      },
+      {
+        "ref": "C17",
+        "value": "1uF",
+        "mpn": "CL05A105KA5NQNC"
+      },
+      {
+        "ref": "C48",
+        "value": "1uF",
+        "mpn": "CL05A105KA5NQNC"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Capacitance": "1uF",
+      "Temperature Coefficient": "X5R",
+      "Tolerance": "\u00b110%",
+      "Voltage Rating": "25V"
+    },
+    "mpn_match": true
+  },
+  "C15850": {
+    "mpn": "CL21A106KAYNNNE",
+    "manufacturer": "Samsung Electro-Mechanics",
+    "stock": 0,
+    "native": [
+      {
+        "ref": "C34",
+        "value": "10uF",
+        "mpn": "CL21A106KAYNNNE"
+      },
+      {
+        "ref": "C35",
+        "value": "10uF",
+        "mpn": "CL21A106KAYNNNE"
+      },
+      {
+        "ref": "C45",
+        "value": "10uF",
+        "mpn": "CL21A106KAYNNNE"
+      },
+      {
+        "ref": "C47",
+        "value": "10uF",
+        "mpn": "CL21A106KAYNNNE"
+      },
+      {
+        "ref": "C52",
+        "value": "10uF",
+        "mpn": "CL21A106KAYNNNE"
+      },
+      {
+        "ref": "C54",
+        "value": "10uF",
+        "mpn": "CL21A106KAYNNNE"
+      },
+      {
+        "ref": "C55",
+        "value": "10uF",
+        "mpn": "CL21A106KAYNNNE"
+      },
+      {
+        "ref": "C60",
+        "value": "10uF",
+        "mpn": "CL21A106KAYNNNE"
+      },
+      {
+        "ref": "C62",
+        "value": "10uF",
+        "mpn": "CL21A106KAYNNNE"
+      },
+      {
+        "ref": "C203",
+        "value": "10uF",
+        "mpn": "CL21A106KAYNNNE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Capacitance": "10uF",
+      "Temperature Coefficient": "X5R",
+      "Tolerance": "\u00b110%",
+      "Voltage Rating": "25V"
+    },
+    "mpn_match": true
+  },
+  "C98190": {
+    "mpn": "CL21A226MOQNNNE",
+    "manufacturer": "Samsung Electro-Mechanics",
+    "stock": 490820,
+    "native": [
+      {
+        "ref": "C36",
+        "value": "22uF",
+        "mpn": "CL21A226MOQNNNE"
+      },
+      {
+        "ref": "C46",
+        "value": "22uF",
+        "mpn": "CL21A226MOQNNNE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Capacitance": "22uF",
+      "Temperature Coefficient": "X5R",
+      "Tolerance": "\u00b120%",
+      "Voltage Rating": "16V"
+    },
+    "mpn_match": true
+  },
+  "C1549": {
+    "mpn": "0402CG180J500NT",
+    "manufacturer": "FH",
+    "stock": 504900,
+    "native": [
+      {
+        "ref": "C37",
+        "value": "18pF",
+        "mpn": "0402CG180J500NT"
+      },
+      {
+        "ref": "C38",
+        "value": "18pF",
+        "mpn": "0402CG180J500NT"
+      },
+      {
+        "ref": "C120",
+        "value": "18pF",
+        "mpn": "0402CG180J500NT"
+      },
+      {
+        "ref": "C122",
+        "value": "18pF",
+        "mpn": "0402CG180J500NT"
+      },
+      {
+        "ref": "C123",
+        "value": "18pF",
+        "mpn": "0402CG180J500NT"
+      },
+      {
+        "ref": "C125",
+        "value": "18pF",
+        "mpn": "0402CG180J500NT"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Capacitance": "18pF",
+      "Temperature Coefficient": "C0G",
+      "Tolerance": "\u00b15%",
+      "Voltage Rating": "50V"
+    },
+    "mpn_match": true
+  },
+  "C12891": {
+    "mpn": "CL31A226KAHNNNE",
+    "manufacturer": {
+      "@type": "Brand",
+      "name": "Samsung Electro-Mechanics"
+    },
+    "stock": 0,
+    "attributes": {
+      "Package": "1206",
+      "Capacitance": "22uF",
+      "Temperature Coefficient": "X5R",
+      "Tolerance": "\u00b110%",
+      "Voltage Rating": "25V"
+    },
+    "native": [
+      {
+        "ref": "C56",
+        "value": "22uF",
+        "mpn": "CL31A226KAHNNNE"
+      },
+      {
+        "ref": "C58",
+        "value": "22uF",
+        "mpn": "CL31A226KAHNNNE"
+      }
+    ],
+    "mpn_match": true
+  },
+  "C45783": {
+    "mpn": "CL21A226MAQNNNE",
+    "manufacturer": {
+      "@type": "Brand",
+      "name": "Samsung Electro-Mechanics"
+    },
+    "stock": 178980,
+    "attributes": {
+      "Package": "0805",
+      "Capacitance": "22uF",
+      "Temperature Coefficient": "X5R",
+      "Tolerance": "\u00b120%",
+      "Voltage Rating": "25V"
+    },
+    "native": [
+      {
+        "ref": "C100",
+        "value": "2.2uF",
+        "mpn": "CL21A226MAQNNNE"
+      },
+      {
+        "ref": "C103",
+        "value": "2.2uF",
+        "mpn": "CL21A226MAQNNNE"
+      }
+    ],
+    "mpn_match": true
+  },
+  "C1530": {
+    "mpn": "0402B221K500NT",
+    "manufacturer": "FH",
+    "stock": 606100,
+    "native": [
+      {
+        "ref": "C101",
+        "value": "220pF",
+        "mpn": "0402B221K500NT"
+      },
+      {
+        "ref": "C104",
+        "value": "220pF",
+        "mpn": "0402B221K500NT"
+      },
+      {
+        "ref": "C126",
+        "value": "220pF",
+        "mpn": "0402B221K500NT"
+      },
+      {
+        "ref": "C127",
+        "value": "220pF",
+        "mpn": "0402B221K500NT"
+      },
+      {
+        "ref": "C128",
+        "value": "220pF",
+        "mpn": "0402B221K500NT"
+      },
+      {
+        "ref": "C129",
+        "value": "220pF",
+        "mpn": "0402B221K500NT"
+      },
+      {
+        "ref": "C130",
+        "value": "220pF",
+        "mpn": "0402B221K500NT"
+      },
+      {
+        "ref": "C131",
+        "value": "220pF",
+        "mpn": "0402B221K500NT"
+      },
+      {
+        "ref": "C132",
+        "value": "220pF",
+        "mpn": "0402B221K500NT"
+      },
+      {
+        "ref": "C133",
+        "value": "220pF",
+        "mpn": "0402B221K500NT"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Capacitance": "220pF",
+      "Temperature Coefficient": "X7R",
+      "Tolerance": "\u00b110%",
+      "Voltage Rating": "50V"
+    },
+    "mpn_match": true
+  },
+  "C1546": {
+    "mpn": "0402CG101J500NT",
+    "manufacturer": "FH",
+    "stock": 1838000,
+    "native": [
+      {
+        "ref": "C121",
+        "value": "100pF",
+        "mpn": "0402CG101J500NT"
+      },
+      {
+        "ref": "C124",
+        "value": "100pF",
+        "mpn": "0402CG101J500NT"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Capacitance": "100pF",
+      "Temperature Coefficient": "C0G",
+      "Tolerance": "\u00b15%",
+      "Voltage Rating": "50V"
+    },
+    "mpn_match": true
+  },
+  "C1523": {
+    "mpn": "0402B102K500NT",
+    "manufacturer": "FH",
+    "stock": 541200,
+    "native": [
+      {
+        "ref": "C134",
+        "value": "1nF",
+        "mpn": "0402B102K500NT"
+      },
+      {
+        "ref": "C135",
+        "value": "1nF",
+        "mpn": "0402B102K500NT"
+      },
+      {
+        "ref": "C136",
+        "value": "1nF",
+        "mpn": "0402B102K500NT"
+      },
+      {
+        "ref": "C137",
+        "value": "1nF",
+        "mpn": "0402B102K500NT"
+      },
+      {
+        "ref": "C138",
+        "value": "1nF",
+        "mpn": "0402B102K500NT"
+      },
+      {
+        "ref": "C139",
+        "value": "1nF",
+        "mpn": "0402B102K500NT"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Capacitance": "1nF",
+      "Temperature Coefficient": "X7R",
+      "Tolerance": "\u00b110%",
+      "Voltage Rating": "50V"
+    },
+    "mpn_match": true
+  },
+  "C23630": {
+    "mpn": "CL10A225KO8NNNC",
+    "manufacturer": {
+      "@type": "Brand",
+      "name": "Samsung Electro-Mechanics"
+    },
+    "stock": 1482400,
+    "attributes": {
+      "Package": "0603",
+      "Capacitance": "2.2uF",
+      "Temperature Coefficient": "X5R",
+      "Tolerance": "\u00b110%",
+      "Voltage Rating": "16V"
+    },
+    "native": [
+      {
+        "ref": "C201",
+        "value": "2.2uF",
+        "mpn": "CL10A225KO8NNNC"
+      }
+    ],
+    "mpn_match": true
+  },
+  "C116953": {
+    "mpn": "NSR1020MW2T1G",
+    "manufacturer": {
+      "@type": "Brand",
+      "name": "onsemi"
+    },
+    "stock": 2655,
+    "attributes": {
+      "Package": "SOD-323",
+      "Diode Configuration": "1 Independent",
+      "Voltage - DC Reverse (Vr) (Max)": "20V",
+      "Voltage - Forward(Vf@If)": "540mV@1A",
+      "Reverse Leakage Current (Ir)": "40uA@15V",
+      "Non-Repetitive Peak Forward Surge Current": "5A",
+      "Current - Rectified": "1A"
+    },
+    "native": [
+      {
+        "ref": "D1",
+        "value": "NSR1020",
+        "mpn": "NSR1020MW2T1G"
+      },
+      {
+        "ref": "D2",
+        "value": "NSR1020",
+        "mpn": "NSR1020MW2T1G"
+      },
+      {
+        "ref": "D5",
+        "value": "NSR1020",
+        "mpn": "NSR1020MW2T1G"
+      }
+    ],
+    "mpn_match": true
+  },
+  "C965805": {
+    "mpn": "XL-1608SYGC-06",
+    "manufacturer": "XINGLIGHT",
+    "stock": 758800,
+    "native": [
+      {
+        "ref": "D3",
+        "value": "LED_USER",
+        "mpn": "XL-1608SYGC-06"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Installation method": "Top-mount",
+      "Color Temperature": "-",
+      "Peak Wavelength": "575nm",
+      "Lens Color": "Water Clear",
+      "Luminous Intensity": "60mcd",
+      "Viewing Angle": "120\u00b0",
+      "Forward Current": "25mA",
+      "Illumination Color": "Yellow Green",
+      "Lamp Holder Type": "1.6mm x 0.8mm square LED",
+      "Voltage - Forward(Vf)": "2.2V",
+      "Operating Temperature": "-40\u2103~+85\u2103",
+      "Diode Configuration": "Discrete Diode",
+      "Wavelength": "570nm~575nm"
+    },
+    "mpn_match": true
+  },
+  "C2286": {
+    "mpn": "KT-0603R",
+    "manufacturer": "Hubei KENTO Elec",
+    "stock": 4682900,
+    "native": [
+      {
+        "ref": "D4",
+        "value": "LED_PWR",
+        "mpn": "KT-0603R"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Installation method": "-",
+      "Color Temperature": "-",
+      "Peak Wavelength": "645nm",
+      "Lens Color": "Water Clear",
+      "Luminous Intensity": "300mcd",
+      "Viewing Angle": "120\u00b0",
+      "Forward Current": "20mA",
+      "Illumination Color": "Red",
+      "Lamp Holder Type": "1.6mm x 0.8mm square LED",
+      "Voltage - Forward(Vf)": "1.8V~2.4V",
+      "Operating Temperature": "-40\u2103~+85\u2103",
+      "Wavelength": "615nm~630nm",
+      "Diode Configuration": "Discrete Diode"
+    },
+    "mpn_match": true
+  },
+  "C559338": {
+    "mpn": "MCR03EZPFX3600",
+    "manufacturer": {
+      "@type": "Brand",
+      "name": "ROHM"
+    },
+    "stock": 700,
+    "attributes": {
+      "Package": "0603",
+      "Resistance": "360\u03a9",
+      "Power(Watts)": "100mW",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "native": [
+      {
+        "ref": "FB1",
+        "value": "600R@100MHz",
+        "mpn": "MCR03EZPFX3600"
+      },
+      {
+        "ref": "FB2",
+        "value": "600R@100MHz",
+        "mpn": "MCR03EZPFX3600"
+      }
+    ],
+    "mpn_match": true
+  },
+  "C175716": {
+    "mpn": "CR0805FR600P05Z",
+    "manufacturer": {
+      "@type": "Brand",
+      "name": "EVER OHMS"
+    },
+    "stock": 1600,
+    "attributes": {
+      "Package": "0805",
+      "Power(Watts)": "125mW",
+      "Resistance": "600m\u03a9",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1600ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "native": [
+      {
+        "ref": "FB3",
+        "value": "600R@100MHz",
+        "mpn": "CR0805FR600P05Z"
+      },
+      {
+        "ref": "FB5",
+        "value": "600R@100MHz",
+        "mpn": "CR0805FR600P05Z"
+      },
+      {
+        "ref": "FB7",
+        "value": "600R@100MHz",
+        "mpn": "CR0805FR600P05Z"
+      },
+      {
+        "ref": "FB8",
+        "value": "600R@100MHz",
+        "mpn": "CR0805FR600P05Z"
+      },
+      {
+        "ref": "FB9",
+        "value": "600R@100MHz",
+        "mpn": "CR0805FR600P05Z"
+      }
+    ],
+    "mpn_match": true
+  },
+  "C132563": {
+    "mpn": "10118194-0001LF",
+    "manufacturer": "Amphenol",
+    "stock": 45385,
+    "native": [
+      {
+        "ref": "J3",
+        "value": "USB_Micro-B",
+        "mpn": "10118194-0001LF"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Protocol Standard": "USB 2.0",
+      "Number of Ports": "1",
+      "Number of Contacts": "5P",
+      "Connector Type": "Micro-B",
+      "Voltage Rating": "100V",
+      "Operating Temperature": "-30\u2103~+80\u2103",
+      "Gender": "Female"
+    },
+    "mpn_match": true
+  },
+  "C5151848": {
+    "mpn": "SWD062R08E8T",
+    "manufacturer": "Samwin",
+    "stock": 23,
+    "native": [
+      {
+        "ref": "J4",
+        "value": "SWD",
+        "mpn": "SWD062R08E8T"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Output Capacitance(Coss)": "427pF",
+      "Ciss-Input Capacitance": "6.755nF",
+      "Pd - Power Dissipation": "142W",
+      "Configuration": "-",
+      "Operating Temperature": "-55\u2103~+150\u2103",
+      "Drain to Source Voltage": "80V",
+      "Current - Continuous Drain(Id)": "110A",
+      "Reverse Transfer Capacitance (Crss)": "314pF",
+      "RDS(on)": "6m\u03a9@10V",
+      "Number": "1 N-channel",
+      "Gate Charge(Qg)": "141nC@10V",
+      "Vgs": "\u00b120V",
+      "Gate Threshold Voltage (Vgs(th))": "2V",
+      "Type": "N-Channel"
+    },
+    "mpn_match": true
+  },
+  "C250233": {
+    "mpn": "NLCV32T-220K-EF",
+    "manufacturer": {
+      "@type": "Brand",
+      "name": "TDK"
+    },
+    "stock": 30100,
+    "attributes": {
+      "Package": "1210",
+      "Current Rating": "300mA",
+      "Inductance": "22uH",
+      "Tolerance": "\u00b110%",
+      "DC Resistance(DCR)": "770m\u03a9",
+      "Current - Saturation(Isat)": "-",
+      "Type": "Magnetic Shielded Inductor"
+    },
+    "native": [
+      {
+        "ref": "L1",
+        "value": "2.2uH",
+        "mpn": "NLCV32T-220K-EF"
+      }
+    ],
+    "mpn_match": true
+  },
+  "C20526": {
+    "mpn": "MMBT3904(RANGE:100-300)",
+    "manufacturer": "JSCJ",
+    "stock": 224700,
+    "native": [
+      {
+        "ref": "Q1",
+        "value": "MMBT3904",
+        "mpn": "MMBT3904(RANGE:100-300)"
+      },
+      {
+        "ref": "Q2",
+        "value": "MMBT3904",
+        "mpn": "MMBT3904(RANGE:100-300)"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Operating Temperature": "-55\u2103~+150\u2103",
+      "Current - Collector Cutoff": "100nA",
+      "Transition frequency(fT)": "300MHz",
+      "Collector - Emitter Voltage VCEO": "40V",
+      "Emitter-Base Voltage VEBO": "6V",
+      "DC Current Gain": "100",
+      "Current - Collector(Ic)": "200mA",
+      "Pd - Power Dissipation": "200mW",
+      "Number": "1 NPN",
+      "type": "NPN",
+      "Vce Saturation(VCE(sat))": "300mV"
+    },
+    "mpn_match": true
+  },
+  "C25900": {
+    "mpn": "0402WGF4701TCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 7245800,
+    "native": [
+      {
+        "ref": "R1",
+        "value": "4.7k",
+        "mpn": "0402WGF4701TCE"
+      },
+      {
+        "ref": "R2",
+        "value": "4.7k",
+        "mpn": "0402WGF4701TCE"
+      },
+      {
+        "ref": "R201",
+        "value": "4K7",
+        "mpn": "0402WGF4701TCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Resistance": "4.7k\u03a9",
+      "Power(Watts)": "62.5mW",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C25744": {
+    "mpn": "0402WGF1002TCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 305200,
+    "native": [
+      {
+        "ref": "R3",
+        "value": "10k",
+        "mpn": "0402WGF1002TCE"
+      },
+      {
+        "ref": "R4",
+        "value": "10k",
+        "mpn": "0402WGF1002TCE"
+      },
+      {
+        "ref": "R21",
+        "value": "10k",
+        "mpn": "0402WGF1002TCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Resistance": "10k\u03a9",
+      "Power(Watts)": "62.5mW",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C25128": {
+    "mpn": "0402WGF510KTCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 0,
+    "native": [
+      {
+        "ref": "R11",
+        "value": "5.1R",
+        "mpn": "0402WGF510KTCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Resistance": "5.1\u03a9",
+      "Power(Watts)": "62.5mW",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Tolerance": "\u00b11%",
+      "Temperature Coefficient": "\u00b1400ppm/\u2103",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C25792": {
+    "mpn": "0402WGF4702TCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 3138300,
+    "native": [
+      {
+        "ref": "R12",
+        "value": "47k",
+        "mpn": "0402WGF4702TCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Resistance": "47k\u03a9",
+      "Power(Watts)": "62.5mW",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C25756": {
+    "mpn": "0402WGF1502TCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 28800,
+    "native": [
+      {
+        "ref": "R13",
+        "value": "15k",
+        "mpn": "0402WGF1502TCE"
+      },
+      {
+        "ref": "R101",
+        "value": "15K",
+        "mpn": "0402WGF1502TCE"
+      },
+      {
+        "ref": "R104",
+        "value": "15K",
+        "mpn": "0402WGF1502TCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Resistance": "15k\u03a9",
+      "Power(Watts)": "62.5mW",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C11702": {
+    "mpn": "0402WGF1001TCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 0,
+    "native": [
+      {
+        "ref": "R14",
+        "value": "1k",
+        "mpn": "0402WGF1001TCE"
+      },
+      {
+        "ref": "R15",
+        "value": "1k",
+        "mpn": "0402WGF1001TCE"
+      },
+      {
+        "ref": "R102",
+        "value": "1K",
+        "mpn": "0402WGF1001TCE"
+      },
+      {
+        "ref": "R105",
+        "value": "1K",
+        "mpn": "0402WGF1001TCE"
+      },
+      {
+        "ref": "R148",
+        "value": "1K",
+        "mpn": "0402WGF1001TCE"
+      },
+      {
+        "ref": "R149",
+        "value": "1K",
+        "mpn": "0402WGF1001TCE"
+      },
+      {
+        "ref": "R150",
+        "value": "1K",
+        "mpn": "0402WGF1001TCE"
+      },
+      {
+        "ref": "R151",
+        "value": "1K",
+        "mpn": "0402WGF1001TCE"
+      },
+      {
+        "ref": "R152",
+        "value": "1K",
+        "mpn": "0402WGF1001TCE"
+      },
+      {
+        "ref": "R153",
+        "value": "1K",
+        "mpn": "0402WGF1001TCE"
+      },
+      {
+        "ref": "R162",
+        "value": "1K",
+        "mpn": "0402WGF1001TCE"
+      },
+      {
+        "ref": "R163",
+        "value": "1K",
+        "mpn": "0402WGF1001TCE"
+      },
+      {
+        "ref": "R202",
+        "value": "1K",
+        "mpn": "0402WGF1001TCE"
+      },
+      {
+        "ref": "R203",
+        "value": "1K",
+        "mpn": "0402WGF1001TCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Resistance": "1k\u03a9",
+      "Power(Watts)": "62.5mW",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C327329": {
+    "mpn": "RC0402FR-0766K5L",
+    "manufacturer": "YAGEO",
+    "stock": 0,
+    "native": [
+      {
+        "ref": "R100",
+        "value": "66K5",
+        "mpn": "RC0402FR-0766K5L"
+      },
+      {
+        "ref": "R103",
+        "value": "66K5",
+        "mpn": "RC0402FR-0766K5L"
+      },
+      {
+        "ref": "R111",
+        "value": "66K5",
+        "mpn": "RC0402FR-0766K5L"
+      },
+      {
+        "ref": "R114",
+        "value": "66K5",
+        "mpn": "RC0402FR-0766K5L"
+      },
+      {
+        "ref": "R118",
+        "value": "66K5",
+        "mpn": "RC0402FR-0766K5L"
+      },
+      {
+        "ref": "R121",
+        "value": "66K5",
+        "mpn": "RC0402FR-0766K5L"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Resistance": "66.5k\u03a9",
+      "Power(Watts)": "62.5mW",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C25762": {
+    "mpn": "0402WGF1802TCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 325300,
+    "native": [
+      {
+        "ref": "R110",
+        "value": "18K",
+        "mpn": "0402WGF1802TCE"
+      },
+      {
+        "ref": "R113",
+        "value": "18K",
+        "mpn": "0402WGF1802TCE"
+      },
+      {
+        "ref": "R117",
+        "value": "18K",
+        "mpn": "0402WGF1802TCE"
+      },
+      {
+        "ref": "R120",
+        "value": "18K",
+        "mpn": "0402WGF1802TCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Resistance": "18k\u03a9",
+      "Power(Watts)": "62.5mW",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C25783": {
+    "mpn": "0402WGF3902TCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 67100,
+    "native": [
+      {
+        "ref": "R112",
+        "value": "39K",
+        "mpn": "0402WGF3902TCE"
+      },
+      {
+        "ref": "R115",
+        "value": "39K",
+        "mpn": "0402WGF3902TCE"
+      },
+      {
+        "ref": "R119",
+        "value": "39K",
+        "mpn": "0402WGF3902TCE"
+      },
+      {
+        "ref": "R122",
+        "value": "39K",
+        "mpn": "0402WGF3902TCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Power(Watts)": "62.5mW",
+      "Resistance": "39k\u03a9",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C106232": {
+    "mpn": "RC0402FR-07100RL",
+    "manufacturer": "YAGEO",
+    "stock": 8433300,
+    "native": [
+      {
+        "ref": "R116",
+        "value": "100R",
+        "mpn": "RC0402FR-07100RL"
+      },
+      {
+        "ref": "R123",
+        "value": "100R",
+        "mpn": "RC0402FR-07100RL"
+      },
+      {
+        "ref": "R158",
+        "value": "100R",
+        "mpn": "RC0402FR-07100RL"
+      },
+      {
+        "ref": "R159",
+        "value": "100R",
+        "mpn": "RC0402FR-07100RL"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Resistance": "100\u03a9",
+      "Power(Watts)": "62.5mW",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C25741": {
+    "mpn": "0402WGF1003TCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 1578600,
+    "native": [
+      {
+        "ref": "R124",
+        "value": "100K",
+        "mpn": "0402WGF1003TCE"
+      },
+      {
+        "ref": "R125",
+        "value": "100K",
+        "mpn": "0402WGF1003TCE"
+      },
+      {
+        "ref": "R126",
+        "value": "100K",
+        "mpn": "0402WGF1003TCE"
+      },
+      {
+        "ref": "R127",
+        "value": "100K",
+        "mpn": "0402WGF1003TCE"
+      },
+      {
+        "ref": "R128",
+        "value": "100K",
+        "mpn": "0402WGF1003TCE"
+      },
+      {
+        "ref": "R129",
+        "value": "100K",
+        "mpn": "0402WGF1003TCE"
+      },
+      {
+        "ref": "R130",
+        "value": "100K",
+        "mpn": "0402WGF1003TCE"
+      },
+      {
+        "ref": "R131",
+        "value": "100K",
+        "mpn": "0402WGF1003TCE"
+      },
+      {
+        "ref": "R160",
+        "value": "100K",
+        "mpn": "0402WGF1003TCE"
+      },
+      {
+        "ref": "R161",
+        "value": "100K",
+        "mpn": "0402WGF1003TCE"
+      },
+      {
+        "ref": "R164",
+        "value": "100K",
+        "mpn": "0402WGF1003TCE"
+      },
+      {
+        "ref": "R165",
+        "value": "100K",
+        "mpn": "0402WGF1003TCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Resistance": "100k\u03a9",
+      "Power(Watts)": "62.5mW",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C25764": {
+    "mpn": "0402WGF2003TCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 1545100,
+    "native": [
+      {
+        "ref": "R132",
+        "value": "200K",
+        "mpn": "0402WGF2003TCE"
+      },
+      {
+        "ref": "R133",
+        "value": "200K",
+        "mpn": "0402WGF2003TCE"
+      },
+      {
+        "ref": "R134",
+        "value": "200K",
+        "mpn": "0402WGF2003TCE"
+      },
+      {
+        "ref": "R135",
+        "value": "200K",
+        "mpn": "0402WGF2003TCE"
+      },
+      {
+        "ref": "R136",
+        "value": "200K",
+        "mpn": "0402WGF2003TCE"
+      },
+      {
+        "ref": "R137",
+        "value": "200K",
+        "mpn": "0402WGF2003TCE"
+      },
+      {
+        "ref": "R138",
+        "value": "200K",
+        "mpn": "0402WGF2003TCE"
+      },
+      {
+        "ref": "R139",
+        "value": "200K",
+        "mpn": "0402WGF2003TCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Power(Watts)": "62.5mW",
+      "Resistance": "200k\u03a9",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C25779": {
+    "mpn": "0402WGF3302TCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 442700,
+    "native": [
+      {
+        "ref": "R140",
+        "value": "33K",
+        "mpn": "0402WGF3302TCE"
+      },
+      {
+        "ref": "R141",
+        "value": "33K",
+        "mpn": "0402WGF3302TCE"
+      },
+      {
+        "ref": "R142",
+        "value": "33K",
+        "mpn": "0402WGF3302TCE"
+      },
+      {
+        "ref": "R143",
+        "value": "33K",
+        "mpn": "0402WGF3302TCE"
+      },
+      {
+        "ref": "R144",
+        "value": "33K",
+        "mpn": "0402WGF3302TCE"
+      },
+      {
+        "ref": "R145",
+        "value": "33K",
+        "mpn": "0402WGF3302TCE"
+      },
+      {
+        "ref": "R146",
+        "value": "33K",
+        "mpn": "0402WGF3302TCE"
+      },
+      {
+        "ref": "R147",
+        "value": "33K",
+        "mpn": "0402WGF3302TCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Power(Watts)": "62.5mW",
+      "Resistance": "33k\u03a9",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C25750": {
+    "mpn": "0402WGF1203TCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 468700,
+    "native": [
+      {
+        "ref": "R154",
+        "value": "120K",
+        "mpn": "0402WGF1203TCE"
+      },
+      {
+        "ref": "R155",
+        "value": "120K",
+        "mpn": "0402WGF1203TCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Power(Watts)": "62.5mW",
+      "Resistance": "120k\u03a9",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C2909375": {
+    "mpn": "FRC0402F6202TS",
+    "manufacturer": "FOJAN",
+    "stock": 393100,
+    "native": [
+      {
+        "ref": "R156",
+        "value": "62K",
+        "mpn": "FRC0402F6202TS"
+      },
+      {
+        "ref": "R157",
+        "value": "62K",
+        "mpn": "FRC0402F6202TS"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Power(Watts)": "62.5mW",
+      "Resistance": "62k\u03a9",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C26083": {
+    "mpn": "0402WGF1004TCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 459600,
+    "native": [
+      {
+        "ref": "R166",
+        "value": "1M",
+        "mpn": "0402WGF1004TCE"
+      },
+      {
+        "ref": "R167",
+        "value": "1M",
+        "mpn": "0402WGF1004TCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Power(Watts)": "62.5mW",
+      "Resistance": "1M\u03a9",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C72443": {
+    "mpn": "KMR221GLFS",
+    "manufacturer": "C&K",
+    "stock": 0,
+    "native": [
+      {
+        "ref": "R168",
+        "value": "10K",
+        "mpn": "0402WGF1002TCE"
+      },
+      {
+        "ref": "R169",
+        "value": "10K",
+        "mpn": "0402WGF1002TCE"
+      },
+      {
+        "ref": "SW1",
+        "value": "RESET",
+        "mpn": "KMR231NGLFS"
+      },
+      {
+        "ref": "SW2",
+        "value": "BOOT",
+        "mpn": "KMR231NGLFS"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Voltage Rating": "32V",
+      "Switching Life": "-",
+      "Operating Temperature": "-40\u2103~+85\u2103",
+      "Width": "2.8mm",
+      "Termination Style": "Gull Wing",
+      "Actuator Style": "Round Button",
+      "With Lamp": "-",
+      "Mounting Type": "Surface Mount,Vertical",
+      "Length": "4.6mm",
+      "Circuit": "SPST",
+      "Operating Force": "2N",
+      "Height": "1.9mm",
+      "Contact Current": "50mA"
+    },
+    "mpn_match": false
+  },
+  "C4109": {
+    "mpn": "0402WGF2001TCE",
+    "manufacturer": "UNI-ROYAL",
+    "stock": 5771600,
+    "native": [
+      {
+        "ref": "R170",
+        "value": "2K",
+        "mpn": "0402WGF2001TCE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Resistance": "2k\u03a9",
+      "Power(Watts)": "62.5mW",
+      "Voltage Rating": "50V",
+      "Type": "Thick Film Resistor",
+      "Temperature Coefficient": "\u00b1100ppm/\u2103",
+      "Tolerance": "\u00b11%",
+      "Operating Temperature": "-55\u2103~+155\u2103"
+    },
+    "mpn_match": true
+  },
+  "C730200": {
+    "mpn": "STM32H750IBK6",
+    "manufacturer": "ST",
+    "stock": 866,
+    "native": [
+      {
+        "ref": "U1",
+        "value": "STM32H750IBK6",
+        "mpn": "STM32H750IBK6"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "DAC (Bit)": "12bit",
+      "ADC (Bit)": "16bit",
+      "Number of I/O": "140",
+      "Operating Temperature": "-40\u2103~+85\u2103",
+      "Voltage - Supply": "1.62V~3.6V",
+      "Program Memory Type": "FLASH",
+      "EEPROM": "-",
+      "Program Storage Size": "128KB",
+      "CPU Core": "ARM Cortex-M7",
+      "Core Size": "32 Bit",
+      "CPU Maximum Speed": "480MHz",
+      "Oscillator Type": "Built-in"
+    },
+    "mpn_match": true
+  },
+  "C2841348": {
+    "mpn": "IS25LP064A-JBLE-TR",
+    "manufacturer": "ISSI",
+    "stock": 5,
+    "native": [
+      {
+        "ref": "U2",
+        "value": "IS25LP064A",
+        "mpn": "IS25LP064A-JBLE"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Operating Temperature": "-40\u2103~+105\u2103",
+      "Features": "Write enable latch;Hardware write protection;Software write protection;Power lock protection",
+      "Memory Size": "64Mbit",
+      "Voltage - Supply": "2.3V~3.6V",
+      "Program / Erase Cycles": "100,000 cycles",
+      "Clock Frequency": "133MHz",
+      "Data Retention - TDR (Year)": "20 Years",
+      "Block Erase Time(tBE)": "-",
+      "Write Cycle Time(tWC)": "-",
+      "Page Programming Time (Tpp)": "200us",
+      "Standby Supply Current": "10uA",
+      "Interface": "SPI"
+    },
+    "mpn_match": false
+  },
+  "C1348852": {
+    "mpn": "IS42S32160F-6BLI",
+    "manufacturer": "ISSI",
+    "stock": 0,
+    "native": [
+      {
+        "ref": "U3",
+        "value": "IS42S32160F-6BLI",
+        "mpn": "IS42S32160F-6BLI"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Operating Temperature": "-40\u2103~+85\u2103",
+      "Refresh Current": "-",
+      "Features": "High-speed clock synchronization;Auto precharge;Automatic column address generation;Auto refresh",
+      "Memory Size": "512Mbit",
+      "Voltage - Supply": "3V~3.6V;-",
+      "Clock Frequency": "167MHz"
+    },
+    "mpn_match": true
+  },
+  "C2651841": {
+    "mpn": "PCM3060PWR",
+    "manufacturer": "TI",
+    "stock": 1925,
+    "native": [
+      {
+        "ref": "U4",
+        "value": "PCM3060",
+        "mpn": "PCM3060PWR"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Operating Temperature": "-25\u2103~+85\u2103",
+      "Voltage - Supply": "4.5V~5.5V;2.7V~3.6V",
+      "Type": "Encoder/decoder",
+      "Interface": "Serial",
+      "Features": "Asynchronous sample rate conversion;On-chip digital gain;Mute control;Master-slave clock negotiation;Power-down and reset protection",
+      "Sampling Rate": "16kHz~192kHz"
+    },
+    "mpn_match": true
+  },
+  "C124041": {
+    "mpn": "TPS62170DSGR",
+    "manufacturer": {
+      "@type": "Brand",
+      "name": "TI"
+    },
+    "stock": 293,
+    "attributes": {
+      "Package": "WSON-8-EP(2x2)",
+      "Operating Temperature": "-40\u2103~+85\u2103@(TA)",
+      "Frequency - Switching": "2.25MHz",
+      "Function": "Step-down type",
+      "Number of Outputs": "1",
+      "Features": "Overcurrent Protection;Operating status indication;Light load efficient mode",
+      "Output Type": "Adjustable",
+      "Topology": "Buck",
+      "Operating Voltage": "3V~17V",
+      "Switch tube (built-in/external)": "Built-in",
+      "Output Voltage": "900mV~6V",
+      "Output Current": "500mA",
+      "Quiescent Current": "17uA"
+    },
+    "native": [
+      {
+        "ref": "U6",
+        "value": "TPS62170DSGR",
+        "mpn": "TPS62170DSGR"
+      }
+    ],
+    "mpn_match": true
+  },
+  "C81157": {
+    "mpn": "LD1117S50CTR",
+    "manufacturer": {
+      "@type": "Brand",
+      "name": "ST"
+    },
+    "stock": 6670,
+    "attributes": {
+      "Package": "SOT-223-3",
+      "Output Voltage": "5V",
+      "Number of Outputs": "1",
+      "Operating Temperature": "-40\u2103~+125\u2103@(Tj)",
+      "Supply Current (Iq)": "5mA",
+      "Output Configuration": "Positive",
+      "Operating Voltage": "15V",
+      "Output Current": "800mA",
+      "Features": "Over Current Protection;Thermal shutdown",
+      "Output Type": "Fixed"
+    },
+    "native": [
+      {
+        "ref": "U7",
+        "value": "LD1117S50",
+        "mpn": "LD1117S50CTR"
+      }
+    ],
+    "mpn_match": true
+  },
+  "C7519": {
+    "mpn": "USBLC6-2SC6",
+    "manufacturer": "ST",
+    "stock": 35890,
+    "native": [
+      {
+        "ref": "U8",
+        "value": "USBLC6-2SC6",
+        "mpn": "USBLC6-2SC6"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Clamping Voltage": "17V",
+      "Operating Temperature": "-40\u2103~+125\u2103@(Tj)",
+      "Peak Pulse Current (Ipp)": "5A",
+      "Number of Channels": "2",
+      "Voltage - Breakdown": "6V",
+      "type": "ESD",
+      "Reverse Leakage Current (Ir)": "150nA",
+      "Polarity": "Unidirectional",
+      "Reverse Stand-Off Voltage (Vrwm)": "5.25V"
+    },
+    "mpn_match": true
+  },
+  "C107644": {
+    "mpn": "TL074IDT",
+    "manufacturer": "ST",
+    "stock": 8250,
+    "native": [
+      {
+        "ref": "U12",
+        "value": "TL074",
+        "mpn": "TL074IDT"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Output Current": "60mA",
+      "Number of Channels": "Four channels",
+      "Vos - Input Offset Voltage": "3mV",
+      "Slew Rate": "13V/us",
+      "Input Offset Current(Ios)": "100pA",
+      "Operating Temperature": "-40\u2103~+125\u2103",
+      "Common Mode Rejection Ratio(CMRR)": "86dB",
+      "Ib - Input Bias Current": "20pA",
+      "Input Offset Voltage Drift(Vos TC)": "5uV/\u2103",
+      "Quiescent Current": "1.4mA",
+      "Gain Bandwidth Product": "3MHz",
+      "Features": "Short-Circuit  Protection;Built-in compensation;Latch-up suppression",
+      "Input Voltage Noise Density": "15nV/\u221aHz@1kHz",
+      "Rail to Rail": "-",
+      "Single Supply": "6V~36V"
+    },
+    "mpn_match": true
+  },
+  "C7378": {
+    "mpn": "MCP6004T-I/SL",
+    "manufacturer": "MICROCHIP",
+    "stock": 21804,
+    "native": [
+      {
+        "ref": "U13",
+        "value": "MCP6004",
+        "mpn": "MCP6004T-I/SL"
+      },
+      {
+        "ref": "U14",
+        "value": "MCP6004",
+        "mpn": "MCP6004T-I/SL"
+      },
+      {
+        "ref": "U15",
+        "value": "MCP6004",
+        "mpn": "MCP6004T-I/SL"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Output Current": "23mA",
+      "Number of Channels": "4",
+      "Vos - Input Offset Voltage": "4.5mV",
+      "Slew Rate": "600V/ms",
+      "Input Offset Current(Ios)": "1pA",
+      "Operating Temperature": "-40\u2103~+125\u2103",
+      "Common Mode Rejection Ratio(CMRR)": "76dB",
+      "Ib - Input Bias Current": "1pA",
+      "Input Offset Voltage Drift(Vos TC)": "2uV/\u2103",
+      "Gain Bandwidth Product": "1MHz",
+      "Quiescent Current": "100uA",
+      "Features": "ESD protection",
+      "Input Voltage Noise Density": "28nV/\u221aHz@1kHz",
+      "Dual Supply": "-",
+      "Rail to Rail": "Rail-to-Rail Input, Rail-to-Rail Output",
+      "Single Supply": "1.8V~6V"
+    },
+    "mpn_match": true
+  },
+  "C201738": {
+    "mpn": "LM4040C10IDBZR",
+    "manufacturer": "TI",
+    "stock": 8426,
+    "native": [
+      {
+        "ref": "U16",
+        "value": "LM4040DBZ-10",
+        "mpn": "LM4040C10IDBZR"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Quiescent Current": "45uA",
+      "Output Voltage": "10V",
+      "Tolerance": "\u00b10.5%",
+      "Voltage - Supply": "-",
+      "Minimum Cathode Current for Regulation": "45uA",
+      "Reference Type": "Parallel",
+      "Noise - 1/10Hz to 10Hz": "-",
+      "Output Current": "15mA",
+      "Operating Temperature": "-40\u2103~+85\u2103",
+      "Features": "-",
+      "Noise - 10Hz to 10kHz": "35uVrms",
+      "Output Type": "Fixed"
+    },
+    "mpn_match": true
+  },
+  "C13738": {
+    "mpn": "X322516MLB4SI",
+    "manufacturer": "YXC Crystal Oscillators",
+    "stock": 2700,
+    "native": [
+      {
+        "ref": "Y1",
+        "value": "16MHz",
+        "mpn": "X322516MLB4SI"
+      }
+    ],
+    "status": 200,
+    "attributes": {
+      "Frequency Stability": "\u00b120ppm",
+      "Operating Temperature": "-40\u2103~+85\u2103",
+      "Load Capacitance": "9pF",
+      "Equivalent Series Resistance(ESR)": "50\u03a9",
+      "Normal temperature Frequency Tolerance": "\u00b110ppm",
+      "Frequency": "16MHz"
+    },
+    "mpn_match": true
+  },
+  "nominal_mismatches": [
+    {
+      "ref": "C13",
+      "declared": "2.2uF",
+      "actual": "22uF",
+      "MPN": "CL10A226MQ8NRNC",
+      "LCSC": "C59461"
+    },
+    {
+      "ref": "C14",
+      "declared": "2.2uF",
+      "actual": "22uF",
+      "MPN": "CL10A226MQ8NRNC",
+      "LCSC": "C59461"
+    },
+    {
+      "ref": "C50",
+      "declared": "2.2uF",
+      "actual": "22uF",
+      "MPN": "CL10A226MQ8NRNC",
+      "LCSC": "C59461"
+    },
+    {
+      "ref": "C100",
+      "declared": "2.2uF",
+      "actual": "22uF",
+      "MPN": "CL21A226MAQNNNE",
+      "LCSC": "C45783"
+    },
+    {
+      "ref": "C103",
+      "declared": "2.2uF",
+      "actual": "22uF",
+      "MPN": "CL21A226MAQNNNE",
+      "LCSC": "C45783"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "C13585": {
+    "DCbias_V": 17,
+    "DCbias_typical_percent": -78.33881924011843,
+    "TCC_typical_min_percent_minus40_to85": -11.268488452062817,
+    "initial_tol_plus_independent_typical_curves_screen_uF": 1.7298263796636477,
+    "basis": "manufacturer typical model, combined bias/T not guaranteed; no aging",
+    "source": "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL31A106KBHNNN"
+  },
+  "C98190": {
+    "DCbias_V": 5,
+    "DCbias_typical_percent": -62.61731243908729,
+    "TCC_typical_min_percent_minus40_to85": -12.2602933586398,
+    "initial_tol_plus_independent_typical_curves_screen_uF": 5.772705030505787,
+    "basis": "manufacturer typical model, combined bias/T not guaranteed; no aging",
+    "source": "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL21A226MOQNNN"
+  },
+  "C307331": {
+    "DCbias_V": 17,
+    "DCbias_typical_percent": -48.638433670827595,
+    "TCC_typical_min_percent_minus40_to85": -9.278824732699372,
+    "initial_tol_plus_independent_typical_curves_screen_uF": 0.04193623494856743,
+    "basis": "manufacturer typical model, combined bias/T not guaranteed; no aging",
+    "source": "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KB54PN"
+  }
+}

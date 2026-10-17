@@ -1,0 +1,1209 @@
+{
+  "sheet_sha256": "0ea64a9c1405b5cf63ac45ae74cea62bb00fd6741b90de5112d2c89d06ada50a",
+  "pin_count": 90,
+  "rows": [
+    {
+      "number": "J1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "58.42"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "58.42"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "J2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "55.88"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "55.88"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "J8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "53.34"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "53.34"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "J9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "50.8"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "50.80"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "K7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "48.26"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "48.26"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "K8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "45.72"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "45.72"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "G8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "43.18"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "43.18"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "G9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "40.64"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "40.64"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "F7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "38.1"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "38.10"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "F3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "35.56"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "35.56"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "G1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "33.02"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "33.02"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "G2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "30.48"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "30.48"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "G3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "27.94"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "27.94"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "H1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "25.4"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "25.40"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "H2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "22.86"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "22.86"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "J3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "20.32"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "20.32"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "G7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "17.78"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "17.78"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "H9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "15.24"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "15.24"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "H3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "12.7"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "12.70"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "J7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "10.16"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "10.16"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "H8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "7.62"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "7.62"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "K9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "5.08"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "5.08"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "K1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "2.54"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "2.54"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "F8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "0"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-0.00"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "F2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-2.54"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-2.54"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "A3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-6.35"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-6.35"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "F1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-8.89"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-8.89"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "L3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-11.43"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-11.43"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "R3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-13.97"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-13.97"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "B3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-16.51"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-16.51"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "B8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-19.05"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-19.05"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "C1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-21.59"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-21.59"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "D1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-24.13"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-24.13"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "E9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-26.67"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-26.67"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "L9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-29.21"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-29.21"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "M1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-31.75"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-31.75"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "N1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-34.29"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-34.29"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "P3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-36.83"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-36.83"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "P8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-39.37"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-39.37"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "E3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-41.91"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-41.91"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "E7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-44.45"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-44.45"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "H7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-46.99"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-46.99"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "K2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-49.53"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-49.53"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "K3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "-25.4",
+        "-52.07"
+      ],
+      "expected_local_mm": [
+        "-25.40",
+        "-52.07"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "R8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "58.42"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "58.42"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "N7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "55.88"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "55.88"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "R9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "53.34"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "53.34"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "N8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "50.8"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "50.80"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "P9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "48.26"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "48.26"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "M8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "45.72"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "45.72"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "M7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "43.18"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "43.18"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "L8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "40.64"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "40.64"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "L2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "38.1"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "38.10"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "M3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "35.56"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "35.56"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "M2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "33.02"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "33.02"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "P1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "30.48"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "30.48"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "N2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "27.94"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "27.94"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "R1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "25.4"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "25.40"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "N3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "22.86"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "22.86"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "R2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "20.32"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "20.32"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "E8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "17.78"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "17.78"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "D7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "15.24"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "15.24"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "D8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "12.7"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "12.70"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "B9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "10.16"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "10.16"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "C8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "7.62"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "7.62"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "A9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "5.08"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "5.08"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "C7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "2.54"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "2.54"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "A8",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "0"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-0.00"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "A2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-2.54"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-2.54"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "C3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-5.08"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-5.08"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "A1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-7.62"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-7.62"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "C2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-10.16"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-10.16"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "B1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-12.7"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-12.70"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "D2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-15.24"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-15.24"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "D3",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-17.78"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-17.78"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "E2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-20.32"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-20.32"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "A7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-24.13"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-24.13"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "F9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-26.67"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-26.67"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "L7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-29.21"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-29.21"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "R7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-31.75"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-31.75"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "B2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-34.29"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-34.29"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "B7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-36.83"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-36.83"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "C9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-39.37"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-39.37"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "D9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-41.91"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-41.91"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "E1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-44.45"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-44.45"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "L1",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-46.99"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-46.99"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "M9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-49.53"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-49.53"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "N9",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-52.07"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-52.07"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "P2",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-54.61"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-54.61"
+      ],
+      "numeric_position_match": true
+    },
+    {
+      "number": "P7",
+      "metadata_unchanged": true,
+      "actual_local_mm": [
+        "25.4",
+        "-57.15"
+      ],
+      "expected_local_mm": [
+        "25.40",
+        "-57.15"
+      ],
+      "numeric_position_match": true
+    }
+  ],
+  "all_pin_numbers_names_types_shapes_lengths_directions_visibility_preserved": true,
+  "signed_zero_is_numerically_zero": true,
+  "cache_external_exact_match": true,
+  "distinct_grid_positions": 90,
+  "minimum_same_side_spacing_mm": {
+    "0": "2.54",
+    "180": "2.54"
+  },
+  "connected_stubs_checked": 85,
+  "individual_nc_markers_checked": 5,
+  "physical_U3_fields_preserved": true,
+  "U3_description": "IS42S32160F-6BLI candidate,512Mb(16Mx32),3.3V SDRAM,90-ball FBGA; stock-firmware clock/refresh compatibility unqualified.",
+  "native_netlist_sha256": "cf3a57233874b9b04c34a0a223bac344ed61dc286abbc000010b809699c71151",
+  "native_components_checked": 211,
+  "native_pin_nodes_checked": 856,
+  "native_graph_differences": [],
+  "native_pin_metadata_differences": [],
+  "physical_component_differences": [],
+  "erc_date": "2026-10-13T13:51:25",
+  "erc_counts": {
+    "lib_symbol_mismatch": 1,
+    "pin_to_pin": 3
+  },
+  "memory_sheet_erc_violations": [],
+  "failures": [],
+  "passed": true,
+  "external_original_definitions_unchanged": true,
+  "external_added_symbols": [
+    "SDRAM_16Mx32_FBGA90"
+  ],
+  "rendered_pdf_sha256": "4890fcdb3d4622a79a2d46c7acd3d092a108e3fcde31513e98fbc0352023c35e",
+  "rendered_memory_page": 4,
+  "visual_review": "All 90 pins remain separately represented; labels and individual NC markers are readable on page 4. Layout remains compact at top-left with ample unused space; further document layout can improve readability without changing electrical interpretation."
+}

@@ -1,0 +1,266 @@
+{
+  "status": "PASS for bounded source/linked prototype review; hardware tests unrun, production unqualified",
+  "passed": true,
+  "scope_sha256": "d2e0eefd56e0e95f6db4a2e0e32e522be9e45742e8b5fe8b58a856551bffd621",
+  "artifact_manifest_sha256": "098f8ba0deeafc23bae6cdfc81a688da6d4243958309eb0ff588ae8ad75ec7a8",
+  "source_hashes": {
+    "libDaisy/Makefile": "0f52afe06098da325a64258ff23da0fe262b3f83ad92ad90ab1354d1b144e94e",
+    "libDaisy/core/Makefile": "09871cf8a8111f79e7a05035d102d34c782c573fc6ad71f3f422ff7837f16383",
+    "libDaisy/src/daisy_patch_sm.cpp": "0cdd76b1b838134225406b2abacdfdb813f97fd5cba48e7db960876e404cb529",
+    "libDaisy/src/dev/sdram.cpp": "bc444b20e964b6b50b4ef98660c53034e541b03a09fd5913e26b1fc2d7de3df8",
+    "libDaisy/src/dev/teresina_sdram_profile.h": "adac3a71a55661fd64c8aea1f372c112c94bb245097193d37398472998069bc2",
+    "libDaisy/src/sys/system.cpp": "887ec08fc96348f1259eb664fcd127e8483d7a07e7856668dd571115576877f3",
+    "bootloader-source/bootloader/main.cpp": "72fea0ff76f2e77c44bbd145e325dd47a5d84776bd8ebc95c3dad5a82fcb275f",
+    "bootloader-source/shared/bootloader.cpp": "9c617851a97fd51996ec40b40f6cb30e6b94fb965e7eff43fac0d4b53ee5f2c2",
+    "bootloader-source/shared/bootloader.h": "aeec7d75a5b5c1368e2ee9ae5759980be168654a7c255aba3afe47291768d30d"
+  },
+  "patch_hashes": {
+    "libDaisy-teresina.patch": "bb2a35363e26949827c61dcb0887192e3335f334e068b464d4aac589850881ba",
+    "bootloader-teresina.patch": "035b33be0245d109dc164dad30316ac134d7c8508f89a36ab37c794ae9d3ff2a"
+  },
+  "source_deltas": {
+    "SDK": [
+      "Makefile",
+      "core/Makefile",
+      "src/daisy_patch_sm.cpp",
+      "src/dev/sdram.cpp",
+      "src/dev/teresina_sdram_profile.h",
+      "src/sys/system.cpp"
+    ],
+    "bootloader": [
+      "bootloader/main.cpp",
+      "shared/bootloader.cpp",
+      "shared/bootloader.h"
+    ]
+  },
+  "artifacts": {
+    "libDaisy/build/libdaisy.a": {
+      "sha256": "550b00ac839567f33adf35b61a0b9f98df5fec64679be96fe55fab12e9bae5cc",
+      "bytes": 8062874,
+      "hash_matches": true,
+      "bytes_match": true
+    },
+    "bootloader-source/bootloader/build/dsy_bootloader_v6_4-teresina-intdfu-2000ms.elf": {
+      "sha256": "1aa76ac2d17813a1d70c62a21bc4e7753a8c8642e1d24f2f2bf729fb0ceb2d56",
+      "bytes": 1836468,
+      "hash_matches": true,
+      "bytes_match": true
+    },
+    "bootloader-source/bootloader/build/dsy_bootloader_v6_4-teresina-intdfu-2000ms.bin": {
+      "sha256": "233d70f5fe24a7941fffa6cd1e90966cacebe9886d3fbf1fa3f26c75f19954a8",
+      "bytes": 107388,
+      "hash_matches": true,
+      "bytes_match": true
+    },
+    "apps/memory-test/build/teresina_memory_test.elf": {
+      "sha256": "1fe9bd9e692941a422c258e17354be43e54e5a23564edc9c4a2ea022ae057ed9",
+      "bytes": 1634540,
+      "hash_matches": true,
+      "bytes_match": true
+    },
+    "apps/passthrough/build-BOOT_NONE/teresina_passthrough.elf": {
+      "sha256": "a948e5ea28c1f42c52160606ed15512e5bed1cffed116c123b6a573033a10e1b",
+      "bytes": 1634704,
+      "hash_matches": true,
+      "bytes_match": true
+    },
+    "apps/passthrough/build-BOOT_QSPI/teresina_passthrough.elf": {
+      "sha256": "2c5d174bc3f5a2a907773aa978887a269cdd5d16f3eff2b10209c726980aa996",
+      "bytes": 1634076,
+      "hash_matches": true,
+      "bytes_match": true
+    },
+    "apps/passthrough/build-BOOT_SRAM/teresina_passthrough.elf": {
+      "sha256": "7a11db60296a53d32fd85f021dab2fc7f17ceab758658b5640d2094c58424b37",
+      "bytes": 1634488,
+      "hash_matches": true,
+      "bytes_match": true
+    }
+  },
+  "linked_reviews": [
+    {
+      "elf": "bootloader-source/bootloader/build/dsy_bootloader_v6_4-teresina-intdfu-2000ms.elf",
+      "sha256": "1aa76ac2d17813a1d70c62a21bc4e7753a8c8642e1d24f2f2bf729fb0ceb2d56",
+      "entry": "Entry point address:               0x8000ed5",
+      "checks": {
+        "count369_at_refresh_write": true,
+        "geometry_gate_compares_0x1e9": true,
+        "RGE2_actual_register_gate": true,
+        "M3_encoded_register_gate": true,
+        "PLL2_N37_encoded_gate": true,
+        "RevV_before_HAL_Init": true,
+        "fresh_COUNT_and_SDCLK_before_HAL_Init": true,
+        "PLL1_both_integer_N_values": true,
+        "four_checked_startup_commands": true
+      }
+    },
+    {
+      "elf": "apps/memory-test/build/teresina_memory_test.elf",
+      "sha256": "1fe9bd9e692941a422c258e17354be43e54e5a23564edc9c4a2ea022ae057ed9",
+      "entry": "Entry point address:               0x8000319",
+      "checks": {
+        "count369_at_refresh_write": true,
+        "geometry_gate_compares_0x1e9": true,
+        "RGE2_actual_register_gate": true,
+        "M3_encoded_register_gate": true,
+        "PLL2_N37_encoded_gate": true,
+        "RevV_before_HAL_Init": true,
+        "fresh_COUNT_and_SDCLK_before_HAL_Init": true,
+        "PLL1_both_integer_N_values": true,
+        "four_checked_startup_commands": true
+      }
+    },
+    {
+      "elf": "apps/passthrough/build-BOOT_NONE/teresina_passthrough.elf",
+      "sha256": "a948e5ea28c1f42c52160606ed15512e5bed1cffed116c123b6a573033a10e1b",
+      "entry": "Entry point address:               0x8000319",
+      "checks": {
+        "count369_at_refresh_write": true,
+        "geometry_gate_compares_0x1e9": true,
+        "RGE2_actual_register_gate": true,
+        "M3_encoded_register_gate": true,
+        "PLL2_N37_encoded_gate": true,
+        "RevV_before_HAL_Init": true,
+        "fresh_COUNT_and_SDCLK_before_HAL_Init": true,
+        "PLL1_both_integer_N_values": true,
+        "four_checked_startup_commands": true
+      }
+    },
+    {
+      "elf": "apps/passthrough/build-BOOT_QSPI/teresina_passthrough.elf",
+      "sha256": "2c5d174bc3f5a2a907773aa978887a269cdd5d16f3eff2b10209c726980aa996",
+      "entry": "Entry point address:               0x90040319",
+      "checks": {
+        "count369_at_refresh_write": true,
+        "geometry_gate_compares_0x1e9": true,
+        "RGE2_actual_register_gate": true,
+        "M3_encoded_register_gate": true,
+        "PLL2_N37_encoded_gate": true,
+        "RevV_before_HAL_Init": true,
+        "fresh_COUNT_and_SDCLK_before_HAL_Init": true,
+        "PLL1_both_integer_N_values": true,
+        "four_checked_startup_commands": true
+      }
+    },
+    {
+      "elf": "apps/passthrough/build-BOOT_SRAM/teresina_passthrough.elf",
+      "sha256": "7a11db60296a53d32fd85f021dab2fc7f17ceab758658b5640d2094c58424b37",
+      "entry": "Entry point address:               0x24000319",
+      "checks": {
+        "count369_at_refresh_write": true,
+        "geometry_gate_compares_0x1e9": true,
+        "RGE2_actual_register_gate": true,
+        "M3_encoded_register_gate": true,
+        "PLL2_N37_encoded_gate": true,
+        "RevV_before_HAL_Init": true,
+        "fresh_COUNT_and_SDCLK_before_HAL_Init": true,
+        "PLL1_both_integer_N_values": true,
+        "four_checked_startup_commands": true
+      }
+    }
+  ],
+  "SDK_default_off_machine_code_and_relocations": {
+    "sdram.o": true,
+    "daisy_patch_sm.o": true,
+    "system.o": true
+  },
+  "SDK_added_or_removed_global_symbols": [],
+  "SDK_existing_public_headers_unchanged": true,
+  "bootloader_API_delta": "Additive ProcessControls method; AudioProcess and other existing APIs preserved",
+  "make_question_profile_exit_codes": {
+    "0": 1,
+    "1": 0,
+    "": 2,
+    "0 1": 2,
+    "invalid": 2
+  },
+  "host_profile_test": "Profile: COUNT369; 17 invalid clock cases rejected; 7936 arithmetic cases meet the refresh bound.",
+  "bootloader_flash_bytes": 107388,
+  "bootloader_flash_limit_bytes": 131072,
+  "bootloader_flash_headroom_bytes": 23684,
+  "bootloader_flash_headroom_percent": 18.0694580078125,
+  "runtime_clock_modes_hz": {
+    "Boost": 478400000,
+    "Default": 398400000,
+    "PLL2_R": 200000000,
+    "SDCLK": 100000000
+  },
+  "refresh_count": 369,
+  "hardware_tests_run": false,
+  "production_qualified": false,
+  "failures": [],
+  "explicit_limits": [
+    "Oscillator frequency/load/startup/drive and1000ppm bound require hardware qualification",
+    "SDRAM command timing/max-load refresh/temperature/supply tests unrun",
+    "TimerHandle nominal microsecond conversion bias0.08368% Boost/0.10050% Default; no exact timing equivalence",
+    "Upstream USB/SD internal initialization statuses are not comprehensively propagated",
+    "Only selected SDK/archive/profile supported; stock or arbitrary third-party binaries unsupported",
+    "Concurrent conflicting profile builds in one directory unsupported",
+    "No live clock/FMC reinitialization, SDRAM execution/early-access or retention-across-reset support",
+    "Acceptance excludes complete FMC/SDRAM timing qualification; RM TRAS decode gives50ns, TXSR70ns has zero positive-clock margin for unsupported self-refresh"
+  ],
+  "linked_maps": [
+    {
+      "map": "bootloader-source/bootloader/build/dsy_bootloader_v6_4-teresina-intdfu-2000ms.map",
+      "sha256": "6edae47c60fa7ae056b801faa436aa7f55621d95b1b97d8d862ece53557fd805",
+      "SDRAM_sections": [
+        ".sdram_bss      0xc0000000        0x0"
+      ],
+      "SDK_archive_is_candidate": true
+    },
+    {
+      "map": "apps/memory-test/build/teresina_memory_test.map",
+      "sha256": "d4bebda0def2c7fc9d34d71aeb25e349e35c8ddd2a52a9ad8916107a8900ff6f",
+      "SDRAM_sections": [
+        ".sdram_bss      0xc0000000        0x0"
+      ],
+      "SDK_archive_is_candidate": true
+    },
+    {
+      "map": "apps/passthrough/build-BOOT_NONE/teresina_passthrough.map",
+      "sha256": "575a6e62bb04f6fb63f975885408615b1edbf89ec27ef44794becbc9d277626b",
+      "SDRAM_sections": [
+        ".sdram_bss      0xc0000000        0x0"
+      ],
+      "SDK_archive_is_candidate": true
+    },
+    {
+      "map": "apps/passthrough/build-BOOT_QSPI/teresina_passthrough.map",
+      "sha256": "cc3a379a29520f96806385eca7645cdd121b71d0d6cf3bea6d88e2107f75a486",
+      "SDRAM_sections": [
+        ".sdram_bss      0xc0000000        0x0"
+      ],
+      "SDK_archive_is_candidate": true
+    },
+    {
+      "map": "apps/passthrough/build-BOOT_SRAM/teresina_passthrough.map",
+      "sha256": "0a1d02765a1362694822e99874265ed5e635377719a7019c776b401c4c3efe22",
+      "SDRAM_sections": [
+        ".sdram_bss      0xc0000000        0x0"
+      ],
+      "SDK_archive_is_candidate": true
+    }
+  ],
+  "acceptance_scope": "Refresh arithmetic, guarded fresh initialization and digital reset-mediated boot/application integration; not all FMC/SDRAM timings",
+  "timing_decode_note": {
+    "SelfRefreshTime_API_cycles": 4,
+    "HAL_TRAS_register_value": 3,
+    "RM0433_TRAS_cycles": 5,
+    "nominal_TRAS_ns": 50,
+    "ISSI_minus6_min_TRAS_ns": 42,
+    "TXSR_cycles": 7,
+    "nominal_TXSR_ns": 70,
+    "ISSI_minus6_min_TXSR_ns": 70,
+    "TXSR_ns_at_positive1000ppm": 69.93006993006993,
+    "self_refresh_supported": false,
+    "source_pages": {
+      "RM0433_rev9": [
+        875
+      ],
+      "ISSI_revB": [
+        16
+      ]
+    },
+    "qualification_prerequisite": "Separate full memory timing budget required before first-article/production freeze; self-refresh needs positive-frequency margin correction before support."
+  }
+}

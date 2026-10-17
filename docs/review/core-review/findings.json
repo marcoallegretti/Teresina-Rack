@@ -1,0 +1,149 @@
+[
+  {
+    "detector": "deep_review",
+    "category": "firmware_compatibility",
+    "severity": "error",
+    "confidence": "high",
+    "summary": "U3 stock-firmware refresh interval exceeds the manufacturer retention requirement",
+    "description": "Stock libDaisy 08087203 configures SDCLK 100 MHz and COUNT 2054, yielding 168.3456 ms for 8192 rows. ISSI RevB pp1,16 requires 8192 refreshes per 64 ms. ST RM0433 Rev9 pp877\u2013878 explicitly clocks COUNT with SDCLK and defines COUNT+1. Both source URLs are documented in core-review.md. Routing cannot correct the discrepancy.",
+    "recommendation": "Resolve a manufacturer-supported RAM and approved stock firmware combination. Do not modify application or bootloader privately under the 1:1 firmware requirement.",
+    "components": [
+      "U3"
+    ],
+    "nets": [
+      "/FMC_SDCLK"
+    ],
+    "evidence": {
+      "components": [
+        "U3"
+      ],
+      "nets": [
+        "/FMC_SDCLK"
+      ],
+      "computation": {
+        "description": "Native pad coordinates and literal pinned firmware settings independently checked against manufacturer sources documented in core-review.md",
+        "script": "/workspace/cloud-setup/redesign/core-review/check-core-calc.py",
+        "result": "SDRAM: FMC kernel=200.000000MHz, SDCLK=100.000000MHz, COUNT=2054, row interval=20.550000us, 8192-row interval=168.345600ms (manufacturer maximum64ms)"
+      },
+      "datasheet": [
+        {
+          "mpn": "IS42S32160F-6BLI",
+          "page": 1,
+          "quote": "8K refresh cycles every 64 ms"
+        }
+      ]
+    }
+  },
+  {
+    "detector": "deep_review",
+    "category": "package_pinout",
+    "severity": "error",
+    "confidence": "high",
+    "summary": "Y1 ordered crystal is a four-pad 3.2\u00d72.5 mm package on a two-pad 3.2\u00d71.5 mm footprint",
+    "description": "Native design specifies Crystal_SMD_3215-2Pin. The manufacturer YSX321SL PDF supplied for C13738, p1, specifies 3.2\u00d72.5 mm and terminals 1/3 crystal, 2/4 GND. LCSC identifies X322516MLB4SI as SMD3225-4P. This scanned PDF was inspected as crystal-page.png.",
+    "recommendation": "Replace symbol and footprint with the exact four-pad land pattern, ground case pads and preserve 16 MHz; alternatively select a genuinely matching two-pad MPN.",
+    "components": [
+      "Y1"
+    ],
+    "nets": [
+      "/OSC_IN",
+      "/OSC_OUT"
+    ],
+    "evidence": {
+      "components": [
+        "Y1"
+      ],
+      "nets": [
+        "/OSC_IN",
+        "/OSC_OUT"
+      ],
+      "computation": {
+        "description": "Native pad coordinates and literal pinned firmware settings independently checked against manufacturer sources documented in core-review.md",
+        "script": "/workspace/cloud-setup/redesign/core-review/check-core-calc.py",
+        "result": "Y1 board:2pads,3.2x1.5mm footprint; ordered crystal:C13738 X322516MLB4SI, manufacturerYSX321SL4pads,3.2x2.5mm,1and3signal/2and4GND"
+      }
+    }
+  },
+  {
+    "detector": "deep_review",
+    "category": "required_externals",
+    "severity": "error",
+    "confidence": "high",
+    "summary": "U1 VCAP capacitors are remote and their BOM orders 22 \u00b5F instead of required 2.2 \u00b5F",
+    "description": "F13-to-C13/C14 distances are 12.280/29.422 mm; M10 distances are 15.158/32.039 mm. Both schematic values say 2.2 \u00b5F, but native XML BOM orders CL10A226MQ8NRNC/C59461, which is 22 \u00b5F \u00b120%, 6.3 V X5R. Samsung catalog PDF p20 lists the 22 \u00b5F base code; exact LCSC product confirms complete MPN. ST DS12556 pp96,201 requires 2.2 \u00b5F \u00b120%, ESR <100 m\u03a9. Nominal 22 \u00b5F is not a compliant substitution.",
+    "recommendation": "Select a verified 2.2 \u00b5F low-ESR part with compliant effective capacitance, correct both MPN and LCSC mapping, and place one directly at each VCAP ball with a short ground return.",
+    "components": [
+      "U1",
+      "C13",
+      "C14"
+    ],
+    "nets": [
+      "/VCAP"
+    ],
+    "evidence": {
+      "components": [
+        "U1",
+        "C13",
+        "C14"
+      ],
+      "nets": [
+        "/VCAP"
+      ],
+      "computation": {
+        "description": "Native pad coordinates and literal pinned firmware settings independently checked against manufacturer sources documented in core-review.md",
+        "script": "/workspace/cloud-setup/redesign/core-review/check-core-calc.py",
+        "result": "U1.F13 VCAP: Euclidean distance to C13=12.279683mm and C14=29.421600mm"
+      },
+      "datasheet": [
+        {
+          "mpn": "STM32H750IBK6",
+          "page": 92,
+          "quote": "These capacitors must be placed as close as possible to, or below, the appropriate pins on the underside of the PCB"
+        }
+      ]
+    }
+  },
+  {
+    "detector": "deep_review",
+    "category": "oscillator_layout",
+    "severity": "error",
+    "confidence": "high",
+    "summary": "HSE load capacitors are approximately 38 mm from MCU oscillator pins",
+    "description": "Native C37.1-to-G1 distance is 38.968 mm; C38.1-to-H1 is 37.593 mm. Capacitors are also over 42 mm from crystal signal pads. DS12556 pp115,219 requires resonator and load capacitors close to oscillator pins.",
+    "recommendation": "Rebuild the complete 16 MHz crystal loop beside G1/H1 with local capacitor ground and grounded case pads, away from memory clocks and switching returns.",
+    "components": [
+      "U1",
+      "Y1",
+      "C37",
+      "C38"
+    ],
+    "nets": [
+      "/OSC_IN",
+      "/OSC_OUT"
+    ],
+    "evidence": {
+      "components": [
+        "U1",
+        "Y1",
+        "C37",
+        "C38"
+      ],
+      "nets": [
+        "/OSC_IN",
+        "/OSC_OUT"
+      ],
+      "computation": {
+        "description": "Native pad coordinates and literal pinned firmware settings independently checked against manufacturer sources documented in core-review.md",
+        "script": "/workspace/cloud-setup/redesign/core-review/check-core-calc.py",
+        "result": "U1.G1 HSE: Euclidean distance to C37.1=38.968390mm"
+      },
+      "datasheet": [
+        {
+          "mpn": "STM32H750IBK6",
+          "page": 219,
+          "quote": "the resonator and the load capacitors have to be placed as close as possible to the oscillator pins"
+        }
+      ]
+    }
+  }
+]

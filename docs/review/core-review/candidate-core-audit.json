@@ -1,0 +1,101 @@
+{
+  "candidate_xml": "/workspace/cloud-setup/redesign/core-candidate/native-netlist.xml",
+  "strategy": "yxc",
+  "prototype_cap_values": false,
+  "checks": [
+    {
+      "ref": "C13",
+      "field": "Value",
+      "expected": "2.2uF",
+      "actual": "2.2uF",
+      "passed": true
+    },
+    {
+      "ref": "C13",
+      "field": "MPN",
+      "expected": "CL21B225KAFNNNE",
+      "actual": "CL21B225KAFNNNE",
+      "passed": true
+    },
+    {
+      "ref": "C13",
+      "field": "LCSC",
+      "expected": "C19110",
+      "actual": "C19110",
+      "passed": true
+    },
+    {
+      "ref": "C13",
+      "field": "Footprint",
+      "expected": "Capacitor_SMD:C_0805_2012Metric",
+      "actual": "Capacitor_SMD:C_0805_2012Metric",
+      "passed": true
+    },
+    {
+      "ref": "C14",
+      "field": "Value",
+      "expected": "2.2uF",
+      "actual": "2.2uF",
+      "passed": true
+    },
+    {
+      "ref": "C14",
+      "field": "MPN",
+      "expected": "CL21B225KAFNNNE",
+      "actual": "CL21B225KAFNNNE",
+      "passed": true
+    },
+    {
+      "ref": "C14",
+      "field": "LCSC",
+      "expected": "C19110",
+      "actual": "C19110",
+      "passed": true
+    },
+    {
+      "ref": "C14",
+      "field": "Footprint",
+      "expected": "Capacitor_SMD:C_0805_2012Metric",
+      "actual": "Capacitor_SMD:C_0805_2012Metric",
+      "passed": true
+    },
+    {
+      "ref": "Y1",
+      "field": "Value",
+      "expected": "16MHz",
+      "actual": "16MHz",
+      "passed": true
+    },
+    {
+      "ref": "Y1",
+      "field": "MPN",
+      "expected": "X322516MLB4SI",
+      "actual": "X322516MLB4SI",
+      "passed": true
+    },
+    {
+      "ref": "Y1",
+      "field": "LCSC",
+      "expected": "C13738",
+      "actual": "C13738",
+      "passed": true
+    },
+    {
+      "ref": "Y1",
+      "field": "lib_id",
+      "expected": "Device:Crystal_GND24",
+      "actual": "Device:Crystal_GND24",
+      "passed": true
+    },
+    {
+      "ref": "Y1",
+      "field": "Footprint",
+      "expected": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+      "actual": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "passed": true,
+  "scope": "Explicit core fields, complete MCU/SDRAM/QSPI pin nets/functions and crystal/VCAP topology; does not establish layout or hardware qualification"
+}

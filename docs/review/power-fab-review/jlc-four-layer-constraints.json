@@ -1,0 +1,50 @@
+{
+  "source": "https://jlcpcb.com/capabilities/pcb-capabilities",
+  "verified_date": "2026-10-13",
+  "target": {
+    "layers": 4,
+    "outer_copper_oz": 1,
+    "inner_copper_oz": 0.5,
+    "thickness_mm": 1.6,
+    "candidate_stackup": "JLC04161H-3313",
+    "surface_finish": "ENIG",
+    "via_protection": "epoxy filled and copper capped wherever pad/paste contains an open barrel"
+  },
+  "published_limits_mm": {
+    "multilayer_track_width": 0.09,
+    "multilayer_track_spacing": 0.09,
+    "bga_pad_track_local": 0.09,
+    "via_drill": 0.15,
+    "via_land": 0.25,
+    "via_land_minus_drill_minimum": 0.1,
+    "via_land_minus_drill_preferred": 0.15,
+    "via_hole_hole": 0.2,
+    "via_hole_track": 0.2,
+    "inner_via_hole_copper": 0.2,
+    "pth_hole_track_minimum": 0.28,
+    "pth_hole_track_preferred": 0.35,
+    "npth_hole_track": 0.2,
+    "pth_annular_absolute_minimum": 0.15,
+    "pth_annular_preferred": 0.2
+  },
+  "pilot_vias": [
+    {
+      "land_mm": 0.35,
+      "drill_mm": 0.2,
+      "annular_mm": 0.075,
+      "allowed": true,
+      "caution": "Copper corridor .65-.35=.30 exactly fits .10 trace+.10 clearance each side, but other-net drilled-hole-to-track .20 cannot fit through a straight adjacent-via .65-pitch corridor (.45 available versus .50 required). Use actual geometry and drill rules."
+    },
+    {
+      "land_mm": 0.3,
+      "drill_mm": 0.15,
+      "annular_mm": 0.075,
+      "allowed": true,
+      "caution": "Straight .65-pitch drill corridor admits .09 trace with .20 hole clearance each side with .01 nominal spare, requiring tolerance and vendor review."
+    }
+  ],
+  "not_applicable": {
+    "0.10_drill": "Published only for thickness<=1mm, ENIG/OSP; cannot assume for 1.6mm."
+  },
+  "limits": "These are manufacturer published capabilities, not a quotation or guarantee of full-board routability. Same-net land connections and isolated barrel/paste process require explicit handling."
+}

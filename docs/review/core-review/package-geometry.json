@@ -1,0 +1,26 @@
+{
+  "U1": {
+    "layer": "F.Cu",
+    "rotation": 0.0,
+    "actual_count": 201,
+    "expected_count": 201,
+    "missing": [],
+    "mismatches": []
+  },
+  "U2": {
+    "layer": "F.Cu",
+    "rotation": 0.0,
+    "actual_count": 8,
+    "expected_count": 8,
+    "missing": [],
+    "mismatches": []
+  },
+  "U3": {
+    "layer": "B.Cu",
+    "rotation": 180.0,
+    "actual_count": 90,
+    "expected_count": 90,
+    "missing": [],
+    "mismatches": []
+  }
+}

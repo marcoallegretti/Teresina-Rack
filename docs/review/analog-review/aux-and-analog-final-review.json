@@ -1,0 +1,117 @@
+{
+  "verdict": "Scoped native and visual acceptance for analog pages8/9/10, not whole schematic or production",
+  "native_components": 211,
+  "native_pins": 856,
+  "all_native_pin_nets_functions_types_preserved": true,
+  "only_nonsheet_documentary_field_delta": [
+    [
+      "U3",
+      "description"
+    ],
+    [
+      "U3",
+      "fields",
+      "Description"
+    ]
+  ],
+  "U3_alias_description_review": "Separate core-agent review accepted documentary normalization; analog audit independently constrained all native deltas to Description only.",
+  "raw_analog_instances_verified": 84,
+  "raw_analog_units_libIDs_symbol_pin_UUIDs_electrical_fields_preserved": true,
+  "RC_feedback_membership": {
+    "CVO_FILT_1": [
+      "C138.1",
+      "R152.2",
+      "U15.3"
+    ],
+    "CVO_FILT_2": [
+      "C139.1",
+      "R153.2",
+      "U15.5"
+    ],
+    "CVO_FB_1": [
+      "R154.1",
+      "R156.1",
+      "U15.2"
+    ],
+    "CVO_FB_2": [
+      "R155.1",
+      "R157.1",
+      "U15.6"
+    ],
+    "CVOUT_1_O": [
+      "R156.2",
+      "R158.1",
+      "U15.1"
+    ],
+    "CVOUT_2_O": [
+      "R157.2",
+      "R159.1",
+      "U15.7"
+    ]
+  },
+  "aux_ADC_mapping": {
+    "9": {
+      "members": [
+        "C134.1",
+        "R148.2",
+        "U1.N2"
+      ],
+      "MCU_symbol_function": "PA1_N2",
+      "scope": "Preserved from core; not a new firmware qualification assertion"
+    },
+    "10": {
+      "members": [
+        "C135.1",
+        "R149.2",
+        "U1.N3"
+      ],
+      "MCU_symbol_function": "PA0_N3",
+      "scope": "Preserved from core; not a new firmware qualification assertion"
+    },
+    "11": {
+      "members": [
+        "C136.1",
+        "R150.2",
+        "U1.M5"
+      ],
+      "MCU_symbol_function": "PC3_C_M5",
+      "scope": "Preserved from core; not a new firmware qualification assertion"
+    },
+    "12": {
+      "members": [
+        "C137.1",
+        "R151.2",
+        "U1.M4"
+      ],
+      "MCU_symbol_function": "PC2_C_M4",
+      "scope": "Preserved from core; not a new firmware qualification assertion"
+    }
+  },
+  "PDF_newer_than_three_reviewed_sheets": true,
+  "PDF_sha256": "4890fcdb3d4622a79a2d46c7acd3d092a108e3fcde31513e98fbc0352023c35e",
+  "sheet_hashes": {
+    "cv-inputs.kicad_sch": "ad1776aa1b883fa6cef7a480ef722df63df4bd839ad66299b87295768ff5a692",
+    "aux-cv-outputs.kicad_sch": "c5d2e13b2b1ece0fdd04cc1c0d9bf7b22a241e7f51c916fa30c8d3a5e96278de",
+    "gates.kicad_sch": "43e93add645c303889fc7e21f12c645457de1c34571fd34efae4edc94976244b"
+  },
+  "XML_sha256": "cf3a57233874b9b04c34a0a223bac344ed61dc286abbc000010b809699c71151",
+  "ERC_counts": {
+    "('warning', 'lib_symbol_mismatch')": 1,
+    "('error', 'pin_to_pin')": 3
+  },
+  "visual_evidence": [
+    "final-aux-page-08.png",
+    "final-aux-page-09.png",
+    "final-aux-page-10.png",
+    "final-aux-right-crop.png"
+  ],
+  "prior_failures_rejected": [
+    "AuxRC withoutTjunction invalidatednativeconnection; fixedandverified",
+    "ADC10/12rightlabel boxes crossedinnerframe; shiftedgroupsleft6.35mm;finalcropclear"
+  ],
+  "limits": [
+    "Other sheets presentationdrafts",
+    "Noanalogdevice/fault/headroom/bypassplacementorPCBqualification",
+    "Intrinsic3ERCerrors+1TPSlibrarymismatchremain"
+  ]
+}

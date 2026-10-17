@@ -1,0 +1,14 @@
+{
+  "comparison": "PCB J5 local geometry versus official DAISY_PATCH_SM footprint downloaded from official documentation CAD link",
+  "pad_count": 40,
+  "mismatches": {},
+  "board_at": [
+    "at",
+    "34",
+    "20"
+  ],
+  "board_layer": [
+    "layer",
+    "F.Cu"
+  ]
+}

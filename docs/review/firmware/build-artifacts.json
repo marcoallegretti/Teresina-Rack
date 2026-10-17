@@ -1,0 +1,30 @@
+{
+  "libDaisy/build/libdaisy.a": {
+    "sha256": "550b00ac839567f33adf35b61a0b9f98df5fec64679be96fe55fab12e9bae5cc",
+    "bytes": 8062874
+  },
+  "bootloader-source/bootloader/build/dsy_bootloader_v6_4-teresina-intdfu-2000ms.elf": {
+    "sha256": "1aa76ac2d17813a1d70c62a21bc4e7753a8c8642e1d24f2f2bf729fb0ceb2d56",
+    "bytes": 1836468
+  },
+  "bootloader-source/bootloader/build/dsy_bootloader_v6_4-teresina-intdfu-2000ms.bin": {
+    "sha256": "233d70f5fe24a7941fffa6cd1e90966cacebe9886d3fbf1fa3f26c75f19954a8",
+    "bytes": 107388
+  },
+  "apps/memory-test/build/teresina_memory_test.elf": {
+    "sha256": "1fe9bd9e692941a422c258e17354be43e54e5a23564edc9c4a2ea022ae057ed9",
+    "bytes": 1634540
+  },
+  "apps/passthrough/build-BOOT_NONE/teresina_passthrough.elf": {
+    "sha256": "a948e5ea28c1f42c52160606ed15512e5bed1cffed116c123b6a573033a10e1b",
+    "bytes": 1634704
+  },
+  "apps/passthrough/build-BOOT_QSPI/teresina_passthrough.elf": {
+    "sha256": "2c5d174bc3f5a2a907773aa978887a269cdd5d16f3eff2b10209c726980aa996",
+    "bytes": 1634076
+  },
+  "apps/passthrough/build-BOOT_SRAM/teresina_passthrough.elf": {
+    "sha256": "7a11db60296a53d32fd85f021dab2fc7f17ceab758658b5640d2094c58424b37",
+    "bytes": 1634488
+  }
+}

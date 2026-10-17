@@ -1,0 +1,428 @@
+{
+  "review_date": "2026-10-13",
+  "recorded_at_utc": "2026-10-13T17:09:16.793801+00:00",
+  "firmware_commit": "08087203debc646d3710ec8caa35bac6cf20ab5e",
+  "stock_sdclk_hz": 100000000,
+  "stock_count": 2054,
+  "stock_unloaded_command_interval_us": 20.55,
+  "qualification_scope": "Public-datasheet retention screening for unchanged firmware and preserved64MiB/3.3V/32-bit FMC contract; no hardware or complete package/timing/sourcing qualification",
+  "conclusion": "No demonstrably compatible replacement found. Etron EM63B325BK is unresolved, not qualified. Bounded search, not proof of global nonexistence.",
+  "candidates": [
+    {
+      "part_or_family": "ISSI IS42S32160F-6BLI",
+      "source_id": "issi-f",
+      "normal_refresh_commands": 8192,
+      "maximum_sweep_ms": 64,
+      "other_observations": "3.3V,16Mx32,BGA90",
+      "disposition": "fail-refresh",
+      "pdf_pages": [
+        1,
+        4,
+        16,
+        59
+      ],
+      "max_average_command_interval_us": 7.8125,
+      "stock_unloaded_command_sweep_ms": 168.34560000000002
+    },
+    {
+      "part_or_family": "ISSI IS42S32160D-6BLI family",
+      "source_id": "issi-d-mirror",
+      "normal_refresh_commands": 8192,
+      "maximum_sweep_ms": 64,
+      "other_observations": "3.3V,16Mx32,BGA90",
+      "disposition": "fail-refresh",
+      "pdf_pages": [
+        1,
+        19
+      ],
+      "max_average_command_interval_us": 7.8125,
+      "stock_unloaded_command_sweep_ms": 168.34560000000002
+    },
+    {
+      "part_or_family": "Alliance AS4C16M32SB-6BIN",
+      "source_id": "alliance-sb",
+      "normal_refresh_commands": 8192,
+      "maximum_sweep_ms": 64,
+      "other_observations": "3.3V,16Mx32,BGA90",
+      "disposition": "fail-refresh",
+      "pdf_pages": [
+        2,
+        17
+      ],
+      "max_average_command_interval_us": 7.8125,
+      "stock_unloaded_command_sweep_ms": 168.34560000000002
+    },
+    {
+      "part_or_family": "Alliance AS4C16M32MSA-6BIN",
+      "source_id": "alliance-msa",
+      "normal_refresh_commands": 8192,
+      "maximum_sweep_ms": 64,
+      "other_observations": "1.8V,16Mx32,BGA90",
+      "disposition": "fail-refresh-and-voltage",
+      "pdf_pages": [
+        1,
+        14,
+        15
+      ],
+      "max_average_command_interval_us": 7.8125,
+      "stock_unloaded_command_sweep_ms": 168.34560000000002
+    },
+    {
+      "part_or_family": "Micron MT48H16M32LF/LG",
+      "source_id": "micron-mobile512",
+      "normal_refresh_commands": 8192,
+      "maximum_sweep_ms": 64,
+      "other_observations": "1.7-1.95V,16Mx32,BGA90; LF geometry matches; LG reduced-page geometry differs",
+      "disposition": "fail-refresh-and-voltage",
+      "pdf_pages": [
+        1,
+        20,
+        21
+      ],
+      "max_average_command_interval_us": 7.8125,
+      "stock_unloaded_command_sweep_ms": 168.34560000000002
+    },
+    {
+      "part_or_family": "Micron MT48LC32M16A2",
+      "source_id": "micron-sdr512",
+      "normal_refresh_commands": 8192,
+      "maximum_sweep_ms": 64,
+      "other_observations": "3.3V,32Mx16,TSOP54",
+      "disposition": "fail-refresh-and-single-device-interface",
+      "pdf_pages": [
+        1,
+        18,
+        27
+      ],
+      "max_average_command_interval_us": 7.8125,
+      "stock_unloaded_command_sweep_ms": 168.34560000000002
+    },
+    {
+      "part_or_family": "Micron MT48LC4M32B2",
+      "source_id": "micron-sdr128",
+      "normal_refresh_commands": 4096,
+      "maximum_sweep_ms": 64,
+      "other_observations": "3.3V,4Mx32,16MiB,optionalBGA90",
+      "disposition": "fail-refresh-and-capacity-geometry",
+      "pdf_pages": [
+        1,
+        19
+      ],
+      "max_average_command_interval_us": 15.625,
+      "stock_unloaded_command_sweep_ms": 84.17280000000001
+    },
+    {
+      "part_or_family": "Nanya NT5SV16M16CS",
+      "source_id": "nanya-sdr256",
+      "normal_refresh_commands": 8192,
+      "maximum_sweep_ms": 64,
+      "other_observations": "3.3V,16Mx16,256Mb,TSOP54",
+      "disposition": "fail-refresh-and-single-device-interface",
+      "pdf_pages": [
+        1,
+        39
+      ],
+      "max_average_command_interval_us": 7.8125,
+      "stock_unloaded_command_sweep_ms": 168.34560000000002
+    },
+    {
+      "part_or_family": "Etron EM63A325BK industrial family",
+      "source_id": "etron-sdr256",
+      "normal_refresh_commands": 4096,
+      "maximum_sweep_ms": 64,
+      "other_observations": "3.3V,8Mx32,32MiB,BGA90",
+      "disposition": "fail-refresh-and-capacity",
+      "pdf_pages": [
+        1,
+        17
+      ],
+      "max_average_command_interval_us": 15.625,
+      "stock_unloaded_command_sweep_ms": 84.17280000000001
+    },
+    {
+      "part_or_family": "Etron EM638325BK industrial family",
+      "source_id": "etron-sdr64",
+      "normal_refresh_commands": 4096,
+      "maximum_sweep_ms": 64,
+      "other_observations": "3.3V,2Mx32,8MiB,BGA90; physical2048-row banks do not replace published4096-refresh command requirement",
+      "disposition": "fail-refresh-and-capacity",
+      "pdf_pages": [
+        1,
+        16
+      ],
+      "max_average_command_interval_us": 15.625,
+      "stock_unloaded_command_sweep_ms": 84.17280000000001
+    },
+    {
+      "part_or_family": "Etron EM63B165BM industrial family",
+      "source_id": "etron-sdr512x16",
+      "normal_refresh_commands": 8192,
+      "maximum_sweep_ms": 64,
+      "other_observations": "3.3V,32Mx16,BGA54,stacked-die ordering",
+      "disposition": "fail-refresh-and-single-device-interface",
+      "pdf_pages": [
+        1,
+        17
+      ],
+      "max_average_command_interval_us": 7.8125,
+      "stock_unloaded_command_sweep_ms": 168.34560000000002
+    },
+    {
+      "part_or_family": "ESMT M12L5121632A-6BG2T",
+      "source_id": "esmt-sdr512x16",
+      "normal_refresh_commands": 8192,
+      "maximum_sweep_ms": 64,
+      "other_observations": "3.3V,32Mx16,BGA54",
+      "disposition": "fail-refresh-and-single-device-interface",
+      "pdf_pages": [
+        1,
+        12
+      ],
+      "max_average_command_interval_us": 7.8125,
+      "stock_unloaded_command_sweep_ms": 168.34560000000002
+    },
+    {
+      "part_or_family": "AP Memory APS512XXN-OBR-BG",
+      "source_id": "ap-psram512",
+      "normal_refresh_commands": null,
+      "maximum_sweep_ms": null,
+      "other_observations": "1.8V,self-managed refresh,octalDDR x8/x16,BGA24",
+      "disposition": "fail-voltage-and-protocol",
+      "pdf_pages": [
+        1,
+        3,
+        7,
+        10
+      ]
+    },
+    {
+      "part_or_family": "Etron EM63B325BK catalogue lead",
+      "source_id": "etron-catalog",
+      "normal_refresh_commands": null,
+      "maximum_sweep_ms": null,
+      "other_observations": "Catalogue:3.3V,16Mx32,BGA90 8x13mm industrial; datasheet column links to sales-support",
+      "disposition": "unresolved-no-public-retention-proof",
+      "pdf_pages": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "etron-catalog",
+      "url": "https://etron.com/industrial-dram-pl/sdram/",
+      "status": 200,
+      "final_url": "https://etron.com/industrial-dram-pl/sdram/",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 135958,
+      "sha256": "444d27e42a8f7eee453b07098ff17b54d342e5a8417a59d3b31e87fb01f6db0d",
+      "path": "etron-catalog.html",
+      "pdf_valid_header": false
+    },
+    {
+      "id": "issi-d",
+      "url": "https://www.issi.com/WW/pdf/42-45R-S_86400D-16320D-32160D.pdf",
+      "status": 200,
+      "final_url": "https://www.issi.com/WW/pdf/42-45R-S_86400D-16320D-32160D.pdf",
+      "content_type": "text/html",
+      "bytes": 1157,
+      "sha256": "7dc5f9dc597fdd770a4f50a76bce9ca7b0e109d6121a34f7c621aa892ab5defb",
+      "path": "issi-d.html",
+      "pdf_valid_header": false
+    },
+    {
+      "id": "micron-mobile512",
+      "url": "https://media.digikey.com/PDF/Data%20Sheets/Micron%20Technology%20Inc%20PDFs/MT48H32M16LF,16M32LF,LG.pdf",
+      "status": 200,
+      "final_url": "https://media.digikey.com/PDF/Data%20Sheets/Micron%20Technology%20Inc%20PDFs/MT48H32M16LF,16M32LF,LG.pdf",
+      "content_type": "application/pdf",
+      "bytes": 2498038,
+      "sha256": "3d085e992273994a8d75a48d2905a854b069f419f55330ec59a0bda67544988d",
+      "path": "micron-mobile512.pdf",
+      "pdf_valid_header": true,
+      "text_extract_exit": 0
+    },
+    {
+      "id": "micron-sdr512",
+      "url": "https://www.mouser.com/datasheet/2/12/512M-SDRAM-MT48LC32M16A2P-20140714-1288428.pdf",
+      "status": 200,
+      "final_url": "https://www.mouser.com/datasheet/2/12/512M-SDRAM-MT48LC32M16A2P-20140714-1288428.pdf",
+      "content_type": "application/pdf",
+      "bytes": 3750707,
+      "sha256": "fb31fa95322a9e0f93c90f390c22f79a01b66f2aae67db7fa99288d81462e991",
+      "path": "micron-sdr512.pdf",
+      "pdf_valid_header": true,
+      "text_extract_exit": 0
+    },
+    {
+      "id": "micron-sdr128",
+      "url": "https://media.digikey.com/pdf/Data%20Sheets/Micron%20Technology%20Inc%20PDFs/DS_557_MT48LC4M32B2.pdf",
+      "status": 200,
+      "final_url": "https://media.digikey.com/pdf/Data%20Sheets/Micron%20Technology%20Inc%20PDFs/DS_557_MT48LC4M32B2.pdf",
+      "content_type": "application/pdf",
+      "bytes": 2128676,
+      "sha256": "575cee6efb5d5b99653827eee625b7307d4d45a6531babb5babfb35f7e970823",
+      "path": "micron-sdr128.pdf",
+      "pdf_valid_header": true,
+      "text_extract_exit": 0
+    },
+    {
+      "id": "ap-psram512",
+      "url": "https://www.mouser.com/datasheet/2/1127/APMemoryTechnology_PSRAM_OPI_Xccela_512Mb-2949655.pdf",
+      "status": 200,
+      "final_url": "https://www.mouser.com/datasheet/2/1127/APMemoryTechnology_PSRAM_OPI_Xccela_512Mb-2949655.pdf",
+      "content_type": "application/pdf",
+      "bytes": 1225361,
+      "sha256": "c5c507346c5466ce7c7f674febf300dc5545ef0b23d05b136211dcfe4320b896",
+      "path": "ap-psram512.pdf",
+      "pdf_valid_header": true,
+      "text_extract_exit": 0
+    },
+    {
+      "id": "winbond-psram",
+      "url": "https://www.winbond.com/productResource-files/DA05-0009.pdf",
+      "status": 200,
+      "final_url": "https://www.winbond.com/productResource-files/DA05-0009.pdf",
+      "content_type": "application/pdf",
+      "bytes": 780225,
+      "sha256": "9115e2fd379dd3cb0a8573cceedbc6d4937c616eee78cc1ee672093067daff78",
+      "path": "winbond-psram.pdf",
+      "pdf_valid_header": true,
+      "text_extract_exit": 0
+    },
+    {
+      "id": "nanya-sdr256",
+      "url": "https://assets.sourcengine.com/datasheets/4c7058eb-82e9-4edd-b9c5-6333f8eb55e5.pdf",
+      "status": 200,
+      "final_url": "https://assets.sourcengine.com/datasheets/4c7058eb-82e9-4edd-b9c5-6333f8eb55e5.pdf",
+      "content_type": "application/pdf",
+      "bytes": 754377,
+      "sha256": "d1b62b056de1960651cdd1404b0444c17408b73f093ac52649372e19f44125fc",
+      "path": "nanya-sdr256.pdf",
+      "pdf_valid_header": true,
+      "text_extract_exit": 0
+    },
+    {
+      "id": "issi-d-mirror",
+      "url": "https://media.digikey.com/pdf/Data%20Sheets/ISSI%20PDFs/IS42_45R_S_86400D_16320D_32160D.pdf",
+      "status": 200,
+      "final_url": "https://media.digikey.com/pdf/Data%20Sheets/ISSI%20PDFs/IS42_45R_S_86400D_16320D_32160D.pdf",
+      "content_type": "application/pdf",
+      "bytes": 1397836,
+      "sha256": "55034f5eb78f3351b4329b123418a766b3b687c5c45dc40d3ece4ac834b51089",
+      "path": "issi-d-mirror.pdf",
+      "pdf_valid_header": true,
+      "text_extract_exit": 0
+    },
+    {
+      "id": "etron-sdr64",
+      "url": "https://etron.com/wp-content/uploads/2022/04/EM638325-Industrial_Rev-3.2.pdf",
+      "status": 200,
+      "final_url": "https://etron.com/wp-content/uploads/2022/04/EM638325-Industrial_Rev-3.2.pdf",
+      "content_type": "application/pdf",
+      "bytes": 472495,
+      "sha256": "b7a903732e51f5ed890ab88c7e7b1caa11fbd08ac1bd8eb0ecc81fa4cc5c55df",
+      "path": "etron-sdr64.pdf",
+      "pdf_valid_header": true,
+      "text_extract_exit": 0
+    },
+    {
+      "id": "etron-sdr256",
+      "url": "https://etron.com/wp-content/uploads/2024/09/EM63A325TSBK-Industrial_Rev-2.1.pdf",
+      "status": 200,
+      "final_url": "https://etron.com/wp-content/uploads/2024/09/EM63A325TSBK-Industrial_Rev-2.1.pdf",
+      "content_type": "application/pdf",
+      "bytes": 713525,
+      "sha256": "fee6f4219a6fa18cd075d2a6eb39fd6c32a4db4e0b02ad02bb21453adf21ff8c",
+      "path": "etron-sdr256.pdf",
+      "pdf_valid_header": true,
+      "text_extract_exit": 0
+    },
+    {
+      "id": "etron-sdr512x16",
+      "url": "https://etron.com/wp-content/uploads/2022/04/EM63B165TSBM-Industrial_Rev-2.4.pdf",
+      "status": 200,
+      "final_url": "https://etron.com/wp-content/uploads/2022/04/EM63B165TSBM-Industrial_Rev-2.4.pdf",
+      "content_type": "application/pdf",
+      "bytes": 880464,
+      "sha256": "fe7af93c656b45e454f9014f1309d877fcafcb920270a3ea882e46610c72d377",
+      "path": "etron-sdr512x16.pdf",
+      "pdf_valid_header": true,
+      "text_extract_exit": 0
+    },
+    {
+      "id": "esmt-sdr512x16",
+      "url": "https://www.eonssi.com/upload/pdf/ESMT/datasheets/M12L5121632A(2T).pdf",
+      "status": 200,
+      "final_url": "https://www.eonssi.com/upload/pdf/ESMT/datasheets/M12L5121632A(2T).pdf",
+      "content_type": "application/pdf",
+      "bytes": 1738333,
+      "sha256": "5802ddca1b3492e4cc2968cca993f97dd633653a3733730295bc7d8b24f33562",
+      "path": "esmt-sdr512x16.pdf",
+      "pdf_valid_header": true,
+      "text_extract_exit": 0
+    },
+    {
+      "id": "esmt-product",
+      "url": "https://www.esmt.com.tw/en/product/item/M12L5121632A-2T",
+      "status": 200,
+      "final_url": "https://www.esmt.com.tw/en/product/item/M12L5121632A-2T",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 175470,
+      "sha256": "25b9c807cd02f37aafb9e6e412a410b763df3ad82a347fdf23f0d8986e850591",
+      "path": "esmt-product.html",
+      "pdf_valid_header": false
+    },
+    {
+      "id": "etron-specialty-catalog",
+      "url": "https://etron.com/specialty-dram-pl/sdram/",
+      "status": 200,
+      "final_url": "https://etron.com/specialty-dram-pl/sdram/",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 135479,
+      "sha256": "998013f7c7cb2c60132f449d0cc6e35b7d82a530c0b0c41d99c97f4341c2e749",
+      "path": "etron-specialty-catalog.html",
+      "pdf_valid_header": false
+    },
+    {
+      "id": "samsung-mobile512-page",
+      "url": "https://www.alldatasheet.com/datasheet-pdf/pdf/97326/SAMSUNG/K4S51323PF-MF75.html",
+      "status": 200,
+      "final_url": "https://www.alldatasheet.com/datasheet-pdf/pdf/97326/SAMSUNG/K4S51323PF-MF75.html",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 52332,
+      "sha256": "caec6c50bdff5cc08a72289edbbfb7905f13917ee9fce0e3fcff033d0cb0862d",
+      "path": "samsung-mobile512-page.html",
+      "pdf_valid_header": false
+    },
+    {
+      "id": "issi-f",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/69b92f7b55b6d6826cdb34801f64d6a4.pdf?productCode=C1348852",
+      "path": "/workspace/cloud-setup/redesign/core-review/C1348852.pdf",
+      "retained_from_prior_review": true,
+      "sha256": "7c25725ba75188fd44631ac0be0deed9da2f1a8b7307eda1bbc1c46a8a532713",
+      "bytes": 1310658,
+      "pdf_valid_header": true
+    },
+    {
+      "id": "alliance-sb",
+      "url": "https://www.alliancememory.com/wp-content/uploads/AllianceMemory_512Mb_AS4C16M32SB-6BxN_Datasheet_16Feb2023_ver1.0.pdf",
+      "path": "/workspace/cloud-setup/redesign/core-review/AS4C16M32SB.pdf",
+      "retained_from_prior_review": true,
+      "sha256": "22f13f2e76e025bc50a6a94e4f8224700e3b8c54a561620e98997355f1513673",
+      "bytes": 2881415,
+      "pdf_valid_header": true
+    },
+    {
+      "id": "alliance-msa",
+      "url": "https://www.alliancememory.com/wp-content/uploads/20171206_AllianceMemory_512M_LPSDRAM_AS4C16M32MSA-6BINTR_rev1.0_Dec2017.pdf",
+      "path": "/workspace/cloud-setup/redesign/core-review/alliance-msa.pdf",
+      "retained_from_prior_review": true,
+      "sha256": "481509d2e75702448b7937e8bd61498053ec97eb4523f3c30e78bfee0b0a0e76",
+      "bytes": 2429006,
+      "pdf_valid_header": true
+    }
+  ],
+  "search_method": "DuckDuckGo HTML discovery, manufacturer catalogues and manufacturer-branded datasheets. Snippets and academic retention results are not guarantees. Google landing pages, irrelevant Bing results and ISSI HTML anti-bot response excluded.",
+  "manufacturer_contacts_sent": false,
+  "cad_or_firmware_changes": false,
+  "new_valid_pdf_count": 11
+}

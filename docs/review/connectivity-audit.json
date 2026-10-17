@@ -1,0 +1,901 @@
+{
+  "basis": "native KiCad netlist versus raw PCB plus pinned libDaisy source; physical package pinouts are not validated without manufacturer datasheets",
+  "footprints": 214,
+  "schematic_components": 209,
+  "matched_functional_pads": 821,
+  "intentional_no_connect_pads": 36,
+  "mechanical_pads": 11,
+  "pad_mismatches": [
+    {
+      "reference": "U3",
+      "pad": "E3",
+      "schematic": "unconnected-(U3-NC-PadE3)",
+      "pcb": "NC_U3_E3"
+    },
+    {
+      "reference": "U3",
+      "pad": "E7",
+      "schematic": "unconnected-(U3-NC-PadE7)",
+      "pcb": "NC_U3_E7"
+    },
+    {
+      "reference": "U3",
+      "pad": "H7",
+      "schematic": "unconnected-(U3-NC-PadH7)",
+      "pcb": "NC_U3_H7"
+    },
+    {
+      "reference": "U3",
+      "pad": "K2",
+      "schematic": "unconnected-(U3-NC-PadK2)",
+      "pcb": "NC_U3_K2"
+    },
+    {
+      "reference": "U3",
+      "pad": "K3",
+      "schematic": "unconnected-(U3-NC-PadK3)",
+      "pcb": "NC_U3_K3"
+    }
+  ],
+  "missing_footprints": [],
+  "extra_footprints": [
+    "FIDB1",
+    "FIDB2",
+    "FIDF1",
+    "FIDF2",
+    "FIDF3"
+  ],
+  "firmware_checks": [
+    {
+      "net": "BOOT_FLASH",
+      "port": "PG3",
+      "ball": "K15",
+      "actual_net": "BOOT_FLASH",
+      "match": true
+    },
+    {
+      "net": "FMC_A0",
+      "port": "PF0",
+      "ball": "E2",
+      "actual_net": "FMC_A0",
+      "match": true
+    },
+    {
+      "net": "FMC_A1",
+      "port": "PF1",
+      "ball": "H3",
+      "actual_net": "FMC_A1",
+      "match": true
+    },
+    {
+      "net": "FMC_A10",
+      "port": "PG0",
+      "ball": "N7",
+      "actual_net": "FMC_A10",
+      "match": true
+    },
+    {
+      "net": "FMC_A11",
+      "port": "PG1",
+      "ball": "M7",
+      "actual_net": "FMC_A11",
+      "match": true
+    },
+    {
+      "net": "FMC_A12",
+      "port": "PG2",
+      "ball": "L15",
+      "actual_net": "FMC_A12",
+      "match": true
+    },
+    {
+      "net": "FMC_A2",
+      "port": "PF2",
+      "ball": "H2",
+      "actual_net": "FMC_A2",
+      "match": true
+    },
+    {
+      "net": "FMC_A3",
+      "port": "PF3",
+      "ball": "J2",
+      "actual_net": "FMC_A3",
+      "match": true
+    },
+    {
+      "net": "FMC_A4",
+      "port": "PF4",
+      "ball": "J3",
+      "actual_net": "FMC_A4",
+      "match": true
+    },
+    {
+      "net": "FMC_A5",
+      "port": "PF5",
+      "ball": "K3",
+      "actual_net": "FMC_A5",
+      "match": true
+    },
+    {
+      "net": "FMC_A6",
+      "port": "PF12",
+      "ball": "P6",
+      "actual_net": "FMC_A6",
+      "match": true
+    },
+    {
+      "net": "FMC_A7",
+      "port": "PF13",
+      "ball": "N6",
+      "actual_net": "FMC_A7",
+      "match": true
+    },
+    {
+      "net": "FMC_A8",
+      "port": "PF14",
+      "ball": "R7",
+      "actual_net": "FMC_A8",
+      "match": true
+    },
+    {
+      "net": "FMC_A9",
+      "port": "PF15",
+      "ball": "P7",
+      "actual_net": "FMC_A9",
+      "match": true
+    },
+    {
+      "net": "FMC_BA0",
+      "port": "PG4",
+      "ball": "K14",
+      "actual_net": "FMC_BA0",
+      "match": true
+    },
+    {
+      "net": "FMC_BA1",
+      "port": "PG5",
+      "ball": "K13",
+      "actual_net": "FMC_BA1",
+      "match": true
+    },
+    {
+      "net": "FMC_D0",
+      "port": "PD14",
+      "ball": "M14",
+      "actual_net": "FMC_D0",
+      "match": true
+    },
+    {
+      "net": "FMC_D1",
+      "port": "PD15",
+      "ball": "L14",
+      "actual_net": "FMC_D1",
+      "match": true
+    },
+    {
+      "net": "FMC_D10",
+      "port": "PE13",
+      "ball": "N11",
+      "actual_net": "FMC_D10",
+      "match": true
+    },
+    {
+      "net": "FMC_D11",
+      "port": "PE14",
+      "ball": "P11",
+      "actual_net": "FMC_D11",
+      "match": true
+    },
+    {
+      "net": "FMC_D12",
+      "port": "PE15",
+      "ball": "R11",
+      "actual_net": "FMC_D12",
+      "match": true
+    },
+    {
+      "net": "FMC_D13",
+      "port": "PD8",
+      "ball": "P15",
+      "actual_net": "FMC_D13",
+      "match": true
+    },
+    {
+      "net": "FMC_D14",
+      "port": "PD9",
+      "ball": "P14",
+      "actual_net": "FMC_D14",
+      "match": true
+    },
+    {
+      "net": "FMC_D15",
+      "port": "PD10",
+      "ball": "N15",
+      "actual_net": "FMC_D15",
+      "match": true
+    },
+    {
+      "net": "FMC_D16",
+      "port": "PH8",
+      "ball": "M12",
+      "actual_net": "FMC_D16",
+      "match": true
+    },
+    {
+      "net": "FMC_D17",
+      "port": "PH9",
+      "ball": "M13",
+      "actual_net": "FMC_D17",
+      "match": true
+    },
+    {
+      "net": "FMC_D18",
+      "port": "PH10",
+      "ball": "L13",
+      "actual_net": "FMC_D18",
+      "match": true
+    },
+    {
+      "net": "FMC_D19",
+      "port": "PH11",
+      "ball": "L12",
+      "actual_net": "FMC_D19",
+      "match": true
+    },
+    {
+      "net": "FMC_D2",
+      "port": "PD0",
+      "ball": "B12",
+      "actual_net": "FMC_D2",
+      "match": true
+    },
+    {
+      "net": "FMC_D20",
+      "port": "PH12",
+      "ball": "K12",
+      "actual_net": "FMC_D20",
+      "match": true
+    },
+    {
+      "net": "FMC_D21",
+      "port": "PH13",
+      "ball": "E12",
+      "actual_net": "FMC_D21",
+      "match": true
+    },
+    {
+      "net": "FMC_D22",
+      "port": "PH14",
+      "ball": "E13",
+      "actual_net": "FMC_D22",
+      "match": true
+    },
+    {
+      "net": "FMC_D23",
+      "port": "PH15",
+      "ball": "D13",
+      "actual_net": "FMC_D23",
+      "match": true
+    },
+    {
+      "net": "FMC_D24",
+      "port": "PI0",
+      "ball": "E14",
+      "actual_net": "FMC_D24",
+      "match": true
+    },
+    {
+      "net": "FMC_D25",
+      "port": "PI1",
+      "ball": "D14",
+      "actual_net": "FMC_D25",
+      "match": true
+    },
+    {
+      "net": "FMC_D26",
+      "port": "PI2",
+      "ball": "C14",
+      "actual_net": "FMC_D26",
+      "match": true
+    },
+    {
+      "net": "FMC_D27",
+      "port": "PI3",
+      "ball": "C13",
+      "actual_net": "FMC_D27",
+      "match": true
+    },
+    {
+      "net": "FMC_D28",
+      "port": "PI6",
+      "ball": "C3",
+      "actual_net": "FMC_D28",
+      "match": true
+    },
+    {
+      "net": "FMC_D29",
+      "port": "PI7",
+      "ball": "C2",
+      "actual_net": "FMC_D29",
+      "match": true
+    },
+    {
+      "net": "FMC_D3",
+      "port": "PD1",
+      "ball": "C12",
+      "actual_net": "FMC_D3",
+      "match": true
+    },
+    {
+      "net": "FMC_D30",
+      "port": "PI9",
+      "ball": "D3",
+      "actual_net": "FMC_D30",
+      "match": true
+    },
+    {
+      "net": "FMC_D31",
+      "port": "PI10",
+      "ball": "E3",
+      "actual_net": "FMC_D31",
+      "match": true
+    },
+    {
+      "net": "FMC_D4",
+      "port": "PE7",
+      "ball": "R8",
+      "actual_net": "FMC_D4",
+      "match": true
+    },
+    {
+      "net": "FMC_D5",
+      "port": "PE8",
+      "ball": "P8",
+      "actual_net": "FMC_D5",
+      "match": true
+    },
+    {
+      "net": "FMC_D6",
+      "port": "PE9",
+      "ball": "P9",
+      "actual_net": "FMC_D6",
+      "match": true
+    },
+    {
+      "net": "FMC_D7",
+      "port": "PE10",
+      "ball": "R9",
+      "actual_net": "FMC_D7",
+      "match": true
+    },
+    {
+      "net": "FMC_D8",
+      "port": "PE11",
+      "ball": "P10",
+      "actual_net": "FMC_D8",
+      "match": true
+    },
+    {
+      "net": "FMC_D9",
+      "port": "PE12",
+      "ball": "R10",
+      "actual_net": "FMC_D9",
+      "match": true
+    },
+    {
+      "net": "FMC_NBL0",
+      "port": "PE0",
+      "ball": "A4",
+      "actual_net": "FMC_NBL0",
+      "match": true
+    },
+    {
+      "net": "FMC_NBL1",
+      "port": "PE1",
+      "ball": "A3",
+      "actual_net": "FMC_NBL1",
+      "match": true
+    },
+    {
+      "net": "FMC_NBL2",
+      "port": "PI4",
+      "ball": "D4",
+      "actual_net": "FMC_NBL2",
+      "match": true
+    },
+    {
+      "net": "FMC_NBL3",
+      "port": "PI5",
+      "ball": "C4",
+      "actual_net": "FMC_NBL3",
+      "match": true
+    },
+    {
+      "net": "FMC_SDCKE0",
+      "port": "PH2",
+      "ball": "F4",
+      "actual_net": "FMC_SDCKE0",
+      "match": true
+    },
+    {
+      "net": "FMC_SDCLK",
+      "port": "PG8",
+      "ball": "H14",
+      "actual_net": "FMC_SDCLK",
+      "match": true
+    },
+    {
+      "net": "FMC_SDNCAS",
+      "port": "PG15",
+      "ball": "B7",
+      "actual_net": "FMC_SDNCAS",
+      "match": true
+    },
+    {
+      "net": "FMC_SDNE0",
+      "port": "PH3",
+      "ball": "G4",
+      "actual_net": "FMC_SDNE0",
+      "match": true
+    },
+    {
+      "net": "FMC_SDNRAS",
+      "port": "PF11",
+      "ball": "R6",
+      "actual_net": "FMC_SDNRAS",
+      "match": true
+    },
+    {
+      "net": "FMC_SDNWE",
+      "port": "PH5",
+      "ball": "J4",
+      "actual_net": "FMC_SDNWE",
+      "match": true
+    },
+    {
+      "net": "I2C2_SCL",
+      "port": "PB10",
+      "ball": "R12",
+      "actual_net": "I2C2_SCL",
+      "match": true
+    },
+    {
+      "net": "I2C2_SDA",
+      "port": "PB11",
+      "ball": "R13",
+      "actual_net": "I2C2_SDA",
+      "match": true
+    },
+    {
+      "net": "LED_USER",
+      "port": "PC7",
+      "ball": "G15",
+      "actual_net": "LED_USER",
+      "match": true
+    },
+    {
+      "net": "QSPI_CLK",
+      "port": "PF10",
+      "ball": "L1",
+      "actual_net": "QSPI_CLK",
+      "match": true
+    },
+    {
+      "net": "QSPI_IO0",
+      "port": "PF8",
+      "ball": "L3",
+      "actual_net": "QSPI_IO0",
+      "match": true
+    },
+    {
+      "net": "QSPI_IO1",
+      "port": "PF9",
+      "ball": "L2",
+      "actual_net": "QSPI_IO1",
+      "match": true
+    },
+    {
+      "net": "QSPI_IO2",
+      "port": "PF7",
+      "ball": "K1",
+      "actual_net": "QSPI_IO2",
+      "match": true
+    },
+    {
+      "net": "QSPI_IO3",
+      "port": "PF6",
+      "ball": "K2",
+      "actual_net": "QSPI_IO3",
+      "match": true
+    },
+    {
+      "net": "QSPI_NCS",
+      "port": "PG6",
+      "ball": "J15",
+      "actual_net": "QSPI_NCS",
+      "match": true
+    },
+    {
+      "net": "SAI1_FS",
+      "port": "PE4",
+      "ball": "B1",
+      "actual_net": "SAI1_FS",
+      "match": true
+    },
+    {
+      "net": "SAI1_MCLK",
+      "port": "PE2",
+      "ball": "A2",
+      "actual_net": "SAI1_MCLK",
+      "match": true
+    },
+    {
+      "net": "SAI1_SCK",
+      "port": "PE5",
+      "ball": "B2",
+      "actual_net": "SAI1_SCK",
+      "match": true
+    },
+    {
+      "net": "SAI1_SDA",
+      "port": "PE6",
+      "ball": "B3",
+      "actual_net": "SAI1_SDA",
+      "match": true
+    },
+    {
+      "net": "SAI1_SDB",
+      "port": "PE3",
+      "ball": "A1",
+      "actual_net": "SAI1_SDB",
+      "match": true
+    },
+    {
+      "net": "USB_FS_DM",
+      "port": "PA11",
+      "ball": "C15",
+      "actual_net": "USB_FS_DM",
+      "match": true
+    },
+    {
+      "net": "USB_FS_DP",
+      "port": "PA12",
+      "ball": "B15",
+      "actual_net": "USB_FS_DP",
+      "match": true
+    }
+  ],
+  "connector": [
+    {
+      "pad": "A1",
+      "gpio": null,
+      "gpio_net": null,
+      "connector_net": "INPUT_-12V",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "A2",
+      "gpio": "PA1",
+      "gpio_net": "ADC_9",
+      "connector_net": "ADCJACK_9",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "A3",
+      "gpio": "PA0",
+      "gpio_net": "ADC_10",
+      "connector_net": "ADCJACK_10",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "A4",
+      "gpio": null,
+      "gpio_net": null,
+      "connector_net": "GND",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "A5",
+      "gpio": null,
+      "gpio_net": null,
+      "connector_net": "INPUT_+12V",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "A6",
+      "gpio": null,
+      "gpio_net": null,
+      "connector_net": "+5V",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "A7",
+      "gpio": null,
+      "gpio_net": null,
+      "connector_net": "GND",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "A8",
+      "gpio": "PB14",
+      "gpio_net": "USB_DM",
+      "connector_net": "USB_DM",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "A9",
+      "gpio": "PB15",
+      "gpio_net": "USB_DP",
+      "connector_net": "USB_DP",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "A10",
+      "gpio": null,
+      "gpio_net": null,
+      "connector_net": "+3V3",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "B1",
+      "gpio": null,
+      "gpio_net": null,
+      "connector_net": "AUDIO_OUT_R",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "B2",
+      "gpio": null,
+      "gpio_net": null,
+      "connector_net": "AUDIO_OUT_L",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "B3",
+      "gpio": null,
+      "gpio_net": null,
+      "connector_net": "INPUT_AUDIO_RIGHT",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "B4",
+      "gpio": null,
+      "gpio_net": null,
+      "connector_net": "INPUT_AUDIO_LEFT",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "B5",
+      "gpio": "PC14",
+      "gpio_net": "GATE_OUT_1",
+      "connector_net": "GATEOUT_1",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "B6",
+      "gpio": "PC13",
+      "gpio_net": "GATE_OUT_2",
+      "connector_net": "GATEOUT_2",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "B7",
+      "gpio": "PB8",
+      "gpio_net": "I2C1_SCL",
+      "connector_net": "I2C1_SCL",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "B8",
+      "gpio": "PB9",
+      "gpio_net": "I2C1_SDA",
+      "connector_net": "I2C1_SDA",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "B9",
+      "gpio": "PG14",
+      "gpio_net": "GATE_IN_2_MCU",
+      "connector_net": "GATEJACK_2",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "B10",
+      "gpio": "PG13",
+      "gpio_net": "GATE_IN_1_MCU",
+      "connector_net": "GATEJACK_1",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "C1",
+      "gpio": "PA5",
+      "gpio_net": "CV_OUT_2",
+      "connector_net": "CVOUT_2",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "C2",
+      "gpio": "PA7",
+      "gpio_net": "CV_4",
+      "connector_net": "CVJACK_4",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "C3",
+      "gpio": "PA2",
+      "gpio_net": "CV_3",
+      "connector_net": "CVJACK_3",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "C4",
+      "gpio": "PA6",
+      "gpio_net": "CV_2",
+      "connector_net": "CVJACK_2",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "C5",
+      "gpio": "PA3",
+      "gpio_net": "CV_1",
+      "connector_net": "CVJACK_1",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "C6",
+      "gpio": "PB1",
+      "gpio_net": "CV_5",
+      "connector_net": "CVJACK_5",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "C7",
+      "gpio": "PC4",
+      "gpio_net": "CV_6",
+      "connector_net": "CVJACK_6",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "C8",
+      "gpio": "PC0",
+      "gpio_net": "CV_7",
+      "connector_net": "CVJACK_7",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "C9",
+      "gpio": "PC1",
+      "gpio_net": "CV_8",
+      "connector_net": "CVJACK_8",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "C10",
+      "gpio": "PA4",
+      "gpio_net": "CV_OUT_1",
+      "connector_net": "CVOUT_1",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "D1",
+      "gpio": "PB4",
+      "gpio_net": "SPI2_CS",
+      "connector_net": "SPI2_CS",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "D2",
+      "gpio": "PC11",
+      "gpio_net": "SDMMC1_D3",
+      "connector_net": "SDMMC1_D3",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "D3",
+      "gpio": "PC10",
+      "gpio_net": "SDMMC1_D2",
+      "connector_net": "SDMMC1_D2",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "D4",
+      "gpio": "PC9",
+      "gpio_net": "SDMMC1_D1",
+      "connector_net": "SDMMC1_D1",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "D5",
+      "gpio": "PC8",
+      "gpio_net": "SDMMC1_D0",
+      "connector_net": "SDMMC1_D0",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "D6",
+      "gpio": "PC12",
+      "gpio_net": "SDMMC1_CK",
+      "connector_net": "SDMMC1_CK",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "D7",
+      "gpio": "PD2",
+      "gpio_net": "SDMMC1_CMD",
+      "connector_net": "SDMMC1_CMD",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "D8",
+      "gpio": "PC2",
+      "gpio_net": "ADC_12",
+      "connector_net": "ADCJACK_12",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "D9",
+      "gpio": "PC3",
+      "gpio_net": "ADC_11",
+      "connector_net": "ADCJACK_11",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    },
+    {
+      "pad": "D10",
+      "gpio": "PD3",
+      "gpio_net": "SPI2_SCK",
+      "connector_net": "SPI2_SCK",
+      "path_review": "buffer/scaler/protection path must be checked; direct equality is not required"
+    }
+  ],
+  "input_sha256": {
+    "TeresinaRack/TeresinaRack.kicad_sch": "33350e8cde0f281a0e96fa86dc61ab516e417809818376cc90123723e236106c",
+    "TeresinaRack/TeresinaRack.kicad_pcb": "526624d7e45ad2807d9467746a51554c834c6a301e7d7b57e1265abd3de4e2bb"
+  },
+  "nc_alias_review": [
+    {
+      "reference": "U3",
+      "pad": "E3",
+      "schematic": "unconnected-(U3-NC-PadE3)",
+      "pcb": "NC_U3_E3",
+      "pad_users": 1,
+      "route_users": 0,
+      "isolated": true
+    },
+    {
+      "reference": "U3",
+      "pad": "E7",
+      "schematic": "unconnected-(U3-NC-PadE7)",
+      "pcb": "NC_U3_E7",
+      "pad_users": 1,
+      "route_users": 0,
+      "isolated": true
+    },
+    {
+      "reference": "U3",
+      "pad": "H7",
+      "schematic": "unconnected-(U3-NC-PadH7)",
+      "pcb": "NC_U3_H7",
+      "pad_users": 1,
+      "route_users": 0,
+      "isolated": true
+    },
+    {
+      "reference": "U3",
+      "pad": "K2",
+      "schematic": "unconnected-(U3-NC-PadK2)",
+      "pcb": "NC_U3_K2",
+      "pad_users": 1,
+      "route_users": 0,
+      "isolated": true
+    },
+    {
+      "reference": "U3",
+      "pad": "K3",
+      "schematic": "unconnected-(U3-NC-PadK3)",
+      "pcb": "NC_U3_K3",
+      "pad_users": 1,
+      "route_users": 0,
+      "isolated": true
+    }
+  ]
+}

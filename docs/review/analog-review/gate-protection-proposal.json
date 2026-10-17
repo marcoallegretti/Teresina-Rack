@@ -1,0 +1,78 @@
+{
+  "status": "Read-only bounded engineering proposal; no CAD edits or fault-certification claim",
+  "negative_gate_input": {
+    "part": {
+      "manufacturer": "JSCJ (Jiangsu Changjiang/Changjing Electronics)",
+      "MPN": "1N4148WS",
+      "LCSC": "C2128",
+      "package": "SOD-323",
+      "source_url": "https://www.lcsc.com/product-detail/C2128.html?from=product",
+      "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/460cf88f750c4519b4ed435068ee729e.pdf?productCode=C2128&from=product",
+      "evidence_pdf": "C2128.pdf",
+      "page": 1,
+      "specifications": {
+        "VF_max_at_1mA_25C_V": 0.715,
+        "IR_max_at_20V_25C_A": 2.5e-08,
+        "capacitance_max_at0V_1MHz_pF": 2,
+        "DC_reverse_V": 100,
+        "average_forward_A": 0.15
+      }
+    },
+    "proposed_connections": {
+      "D6.1_K": "GBASE_1",
+      "D6.2_A": "GND",
+      "D7.1_K": "GBASE_2",
+      "D7.2_A": "GND"
+    },
+    "suggested_symbol": "Device:D",
+    "suggested_footprint": "Diode_SMD:D_SOD323 (supplier-outline/stripe-to-pad validation still required)",
+    "preserve": [
+      "Q1/Q2 exactJSCJ/C20526 selection and1B2E3C",
+      "existing100kbase-series/1Mpulldown/10kcollector-pullup/1kMCUseries",
+      "PG13/PG14 mappings and active-low gate logic",
+      "all other signal nets"
+    ],
+    "scope": "Static negative source down to\u221217V relativeGND, through existing100k\u00b11% series; not ESD/fast surge standard or arbitrary external voltage guarantee",
+    "current_absolute_bound_A": 0.00017171717171717173,
+    "unprotected_base_demand_at_neg12_V": -10.909090909090908,
+    "clamp_argument": "At25\u00b0C current bound171.7\u00b5A<1mA VF test, so a monotonic forward diode would clamp reverseB-E near/below0.715V, far below exactQ6V VEBO. Cold/fulltemperature/dynamic behavior still requires qualification.",
+    "layout": "Put clamp betweenQbase/emitterGND locally;route protected base node short and return clamp current locally awayfromADC/VCOM. It does not rely on3.3V supply being present.",
+    "open": [
+      "Linked exact diodePDF lacks a package-dimensional drawing; confirm manufacturer package outline and assembly stripe/pad orientation before PCB approval.",
+      "Positive input threshold/polarity topology unchanged, but diode leakage/capacitance can alter thresholds/edges; validate actual temperature and poweroff behavior.",
+      "Two clamp parts addition must produce exactlyfour new pins and retain all existingpin nets."
+    ]
+  },
+  "gate_output_series": {
+    "existing": {
+      "R162_R163": "YAGEO RC0402FR-07100RL/C106232,100\u03a9\u00b11%,62.5mW0402",
+      "normal_load_10kohm_power_W": 2.525e-05,
+      "I_RMS_limits_mA_with101ohm": {
+        "70C": 24.87592975524973,
+        "85C": 22.574538411844934,
+        "105C": 19.07896718730308,
+        "125C": 14.778504435852517
+      }
+    },
+    "MCP_source": "MCP6004 datasheetp3:ISC\u00b123mA typical atVDD5.5V, output/supply pinabsolute\u00b130mA, OutputShortCircuitCurrentContinuous; typical ISC is NOT guaranteed maximum",
+    "failure_qualification": "23mA yields53.429mW at101\u03a9, exceeding85\u00b0C derated51.471mW ofexisting0402; cannot certify continuousshort fromtypical current oropampContinuous statement alone.30mA wouldyield90.9mW.",
+    "higher_power_option": {
+      "manufacturer": "UNI-ROYAL",
+      "MPN": "0805W8F1000T5E",
+      "LCSC": "C17408",
+      "rating": "100\u03a9\u00b11%,125mW0805",
+      "source_url": "https://www.lcsc.com/product-detail/C17408.html?from=product",
+      "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/0a975aaa49b7c97f38a963127be4a823.pdf?productCode=C17408",
+      "manufacturer_basis": "C25750.pdf sameUNI-ROYALfamily; p2 codeW8=1/8W, p4/5geometryratings and p6derating",
+      "I_RMS_limit_at85C101ohm_mA": 31.925218030307395,
+      "status": "Candidateonly: same100\u03a9 transfer, larger0805 footprint; placement/CPL/currentbound/thermal verification required. A largerresistor doesnotprotectopampagainstexternallyforcedout-of-railvoltages."
+    },
+    "allowed_normal_output_contract": "Publishedgateoutput0\u20265V. External\u00b112V mispatch is outside that output rating andis not certified by thisproposal.",
+    "tests": [
+      "Measure fulltime current/power under shorttoGND andopposing0/5V sources atmaxratedVDD/temperature; verify opampthermal andresistorRMS/pulse envelope.",
+      "Test startup/unpowered rails/cable capacitance withpre-seriesfeedback retained.",
+      "Any adoption of0805 mustkeepvalue100\u03a9 and MCU/channelfeedback mappings unchanged.",
+      "Before productionacceptance bound maximumshortcurrent bymanufacturer specification orvalidateddesign; do not substitute absolute-pin30mA rating forcurrent-limitermaximum."
+    ]
+  }
+}

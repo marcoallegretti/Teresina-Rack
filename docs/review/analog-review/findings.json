@@ -1,0 +1,235 @@
+[
+  {
+    "detector": "deep_review",
+    "category": "analog_decoupling",
+    "severity": "warning",
+    "confidence": "high",
+    "summary": "U12 TL074 bypasses are remote from supply pins; nearest 100nF centres are 22.354 mm and 28.788 mm away",
+    "recommendation": "Place one local bypass per +/- supply pin with controlled short loop. This is a confirmed placement fact; no oscillation or distortion failure is claimed without a model/bench.",
+    "evidence": {
+      "components": [
+        "U12",
+        "C112",
+        "C113"
+      ],
+      "datasheet": [],
+      "computation": {
+        "description": "Independent computation from schematic/PCB analyzer values, checked against native XML and raw pad geometry",
+        "script": "check_analog.py",
+        "result": "Bypass U12 +12V: closest 100nF capacitor centre=C112 at 22.354 mm from supply pad centre; opposite-side distance is projected only"
+      }
+    },
+    "evidence_checked": "full",
+    "components": [
+      "U12",
+      "C112",
+      "C113"
+    ],
+    "finding_id": "deep_review:96c3f92edfbe"
+  },
+  {
+    "detector": "deep_review",
+    "category": "analog_decoupling",
+    "severity": "warning",
+    "confidence": "high",
+    "summary": "U13/U14 local bypass capacitors are farther than Microchip 2 mm placement requirement",
+    "recommendation": "Place each dedicated 100nF at its own VDD pin with short ground return; raw supply-pad geometry gives U13 9.006mm, U14 5.546mm to nearest 100nF centre. Opposite-side capacitor needs very short via connection.",
+    "evidence": {
+      "components": [
+        "U13",
+        "U14",
+        "C143"
+      ],
+      "datasheet": [
+        {
+          "mpn": "MCP6004T-I/SL",
+          "page": 14,
+          "quote": "bypass capacitor (i.e., 0.01 \u00b5F to 0.1 \u00b5F) within 2 mm"
+        }
+      ],
+      "computation": {
+        "description": "Independent computation from schematic/PCB analyzer values, checked against native XML and raw pad geometry",
+        "script": "check_analog.py",
+        "result": "Bypass U13 +5V: closest 100nF capacitor centre=C143 at 9.006 mm from supply pad centre; opposite-side distance is projected only"
+      }
+    },
+    "evidence_checked": "full",
+    "components": [
+      "U13",
+      "U14",
+      "C143"
+    ],
+    "finding_id": "deep_review:dcc4d01589f5"
+  },
+  {
+    "detector": "deep_review",
+    "category": "analog_headroom",
+    "severity": "warning",
+    "confidence": "high",
+    "summary": "U15 full-scale CV output calculation demands 5.005 V on nominal 5 V opamp rail; ideal 5.000 V loaded result does not prove rail headroom",
+    "recommendation": "Match official tolerated endpoint behavior using exact device macro model and loading/temperature sweeps; do not change published gain or supply casually. Reference uses same gain and rail.",
+    "evidence": {
+      "components": [
+        "U15",
+        "R154",
+        "R156",
+        "R158"
+      ],
+      "datasheet": [
+        {
+          "mpn": "MCP6004T-I/SL",
+          "page": 3,
+          "quote": "Maximum Output Voltage Swing"
+        }
+      ],
+      "computation": {
+        "description": "Independent computation from schematic/PCB analyzer values, checked against native XML and raw pad geometry",
+        "script": "check_analog.py",
+        "result": "CV output: gain=1.516666667; demanded unloaded full scale=5.005000 V on +5 V supply"
+      }
+    },
+    "description": "The Patch SM power input values \u00b16\u202617V are absolute ratings, not a guaranteed full-performance operating range; typical operation is \u00b112V. The LM4040 -10V shunt headroom analysis is a qualification limit at low negative supply, not evidence of failure within a guaranteed operating range. Separate input-audio BOM review finds C100/C103 displayed2.2uF but exactCL21A226MAQNNNE/C45783 nominal22uF (Samsung product JSON/catalog in power-fab-review); full review documents both nominal coupling transfers. These facts do not change the accepted four-label/six-field candidate scope.",
+    "evidence_checked": "full",
+    "components": [
+      "U15",
+      "R154",
+      "R156",
+      "R158"
+    ],
+    "finding_id": "deep_review:adf015d87599"
+  },
+  {
+    "detector": "deep_review",
+    "category": "analog_supply",
+    "severity": "error",
+    "confidence": "high",
+    "summary": "U13/U14 CV converters run at 5 V instead of official 3.3 V analog rail; negative external CV overrange can drive MCU ADC above its 4 V absolute maximum",
+    "recommendation": "Move U13/U14 and their local bypass capacitors to a correctly decoupled +3V3 analog supply. Retain nominal R/C transfer, review power-sequence/backpower and add supported current-limiting/protection if required by worst-case fault analysis. Official Rev3 sheet4 explicitly uses +3V3_A.",
+    "evidence": {
+      "components": [
+        "U13",
+        "U14",
+        "U1"
+      ],
+      "datasheet": [
+        {
+          "mpn": "STM32H750IBK6",
+          "page": 94,
+          "quote": "When an FT_a pin is used by an analog peripheral such as an ADC, the maximum VIN is 4 V."
+        }
+      ],
+      "computation": {
+        "description": "Independent computation from schematic/PCB analyzer values, checked against native XML and raw pad geometry",
+        "script": "check_analog.py",
+        "result": "CV: slope=-0.330000; offset=1.650000 V; demanded outputs at Vin -12/-5/0/+5/+12 V = 5.610, 3.300, 1.650, 0.000, -2.310 V"
+      }
+    },
+    "evidence_checked": "full",
+    "components": [
+      "U13",
+      "U14",
+      "U1"
+    ],
+    "finding_id": "deep_review:745256998f0e"
+  },
+  {
+    "detector": "deep_review",
+    "category": "gate_protection",
+    "severity": "warning",
+    "confidence": "high",
+    "summary": "Copied Q1/Q2 reference circuit lacks explicit reverse base-emitter clamp; negative rail gate tolerance remains unqualified for exact chosen transistor",
+    "recommendation": "Resolve exact orderable part first, then add reviewed anti-parallel B-E clamp or document a manufacturer-approved reverse-current operating envelope. Onsemi nominal device has 6V max VEBO. Original Rev3 has the same unprotected topology, so this is a source-design risk, not a claimed circuit omission relative to the reference.",
+    "evidence": {
+      "components": [
+        "Q1",
+        "Q2",
+        "R164",
+        "R165",
+        "R166",
+        "R167"
+      ],
+      "datasheet": [
+        {
+          "mpn": "MMBT3904L",
+          "page": 1,
+          "quote": "Emitter - Base Voltage VEBO 6.0 Vdc"
+        }
+      ],
+      "computation": {
+        "description": "Independent computation from schematic/PCB analyzer values, checked against native XML and raw pad geometry",
+        "script": "check_analog.py",
+        "result": "Gate input: unloaded Vbase at -12 V = -10.909091 V; reverse 6 V reached at input -6.600000 V"
+      }
+    },
+    "evidence_checked": "full",
+    "components": [
+      "Q1",
+      "Q2",
+      "R164",
+      "R165",
+      "R166",
+      "R167"
+    ],
+    "finding_id": "deep_review:6f80d4e2c4fd"
+  },
+  {
+    "detector": "deep_review",
+    "category": "interface_impedance",
+    "severity": "error",
+    "confidence": "high",
+    "summary": "R162/R163 set gate output impedance to 1 kOhm, ten times published 100 Ohm interface",
+    "recommendation": "Use reviewed 100 Ohm output isolation and preserve published loading/voltage envelope. Consider official non-inverting 120k/62k gate gain rather than unqualified saturated-comparator variant.",
+    "evidence": {
+      "components": [
+        "U15",
+        "R162",
+        "R163"
+      ],
+      "datasheet": [
+        {
+          "mpn": "DaisyPatchSM",
+          "page": 12,
+          "quote": "Output Impedence: 100R"
+        }
+      ],
+      "computation": {
+        "description": "Independent computation from schematic/PCB analyzer values, checked against native XML and raw pad geometry",
+        "script": "check_analog.py",
+        "result": "Gate output: series resistance R162/R163 = 1000/1000 ohm; official output impedance 100 ohm"
+      }
+    },
+    "evidence_checked": "full",
+    "components": [
+      "U15",
+      "R162",
+      "R163"
+    ],
+    "finding_id": "deep_review:a477868833e8"
+  },
+  {
+    "detector": "deep_review",
+    "category": "sourcing",
+    "severity": "warning",
+    "confidence": "high",
+    "summary": "Q1/Q2 order identifier MMBT3904(RANGE:100-300) is not an exact orderable manufacturer part; attached PZT3904 URL refers to a different package family",
+    "recommendation": "Use exact manufacturer and orderable SOT23 MPN and its datasheet; validate pads 1B/2E/3C and reverse-voltage rating before substitution.",
+    "evidence": {
+      "components": [
+        "Q1",
+        "Q2"
+      ],
+      "datasheet": [],
+      "computation": {
+        "description": "Independent computation from schematic/PCB analyzer values, checked against native XML and raw pad geometry",
+        "script": "check_analog.py",
+        "result": "Sourcing Q1/Q2: Q1 mpn=MMBT3904(RANGE:100-300) datasheet=https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf; Q2 mpn=MMBT3904(RANGE:100-300) datasheet=https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf"
+      }
+    },
+    "evidence_checked": "full",
+    "components": [
+      "Q1",
+      "Q2"
+    ],
+    "finding_id": "deep_review:f3203cc3750c"
+  }
+]
