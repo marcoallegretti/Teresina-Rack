@@ -11,6 +11,7 @@ This repository is **not fab-ready**. No BOM line may be labelled â€œorderableâ€
 - C13/C14: the schematic value is 2.2 uF but the listed MPN `CL10A226MQ8NRNC` is 22 uF. The exact capacitor and local placement must be corrected in the source CAD.
 - Current inventory gaps: C1523, C1549, C25744, C327329, C59461 and C98190 are unavailable in the recorded source snapshot.
 - The electrical candidate still has unresolved ERC, placement, routing, DFM and first-article hardware checks.
+- Baseline PCB DRC (KiCad 10) reports **414 violations**: 199 silkscreen-over-copper, 195 silkscreen overlaps, 16 edge-clearance violations, 2 courtyard overlaps and 2 back-layer text violations. It reports zero unconnected items, but that does not make the board production-ready.
 
 ## Release rule
 
